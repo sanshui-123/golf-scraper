@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-07-22T06:51:10.881Z",
+  "totalProcessed": 231,
+  "totalUnprocessed": 6,
+  "unprocessedByWebsite": {
+    "golf.com": [
+      "https://golf.com/news/sights-sounds-open-championship-thursday/",
+      "https://golf.com/news/phil-mickelson-open-championship-lead-sleeping/"
+    ],
+    "golfmonthly.com": [
+      "https://www.golfmonthly.com/news/live/the-open-championship-2025-leaderboard-scores",
+      "https://www.golfmonthly.com/news/early-late-vs-late-early-is-there-a-draw-advantage-at-the-open-championship-this-year",
+      "https://www.golfmonthly.com/news/what-did-we-learn-from-mark-darbons-slick-first-open-press-conference",
+      "https://www.golfmonthly.com/news/wyndham-clark-banned-from-oakmont-after-us-open-incident"
+    ],
+    "mygolfspy.com": [],
+    "golfwrx.com": []
+  }
+}

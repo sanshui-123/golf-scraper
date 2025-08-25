@@ -1,0 +1,41 @@
+{
+  "name": "backup_2025-07-07T13-27-20-260Z",
+  "created": "2025-07-07T13:27:20.633Z",
+  "stats": {
+    "totalDays": 3,
+    "totalArticles": 33,
+    "totalImages": 91,
+    "totalSize": 194499522,
+    "dateRange": {
+      "oldest": "2025-07-04",
+      "newest": "2025-07-07"
+    },
+    "dailyBreakdown": [
+      {
+        "date": "2025-07-04",
+        "articles": 14,
+        "images": 18,
+        "size": 29162254,
+        "hasWechat": false,
+        "hasImages": true
+      },
+      {
+        "date": "2025-07-05",
+        "articles": 13,
+        "images": 15,
+        "size": 34824297,
+        "hasWechat": false,
+        "hasImages": true
+      },
+      {
+        "date": "2025-07-07",
+        "articles": 6,
+        "images": 58,
+        "size": 130512971,
+        "hasWechat": true,
+        "hasImages": true
+      }
+    ]
+  },
+  "originalPath": "/Users/sanshui/Desktop/cursor/golf_content"
+}

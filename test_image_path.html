@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片路径测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #4CAF50;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>图片路径测试页面</h1>
+    
+    <div class="test-section">
+        <h2>测试1：直接路径</h2>
+        <p>路径: /golf_content/2025-07-12/images/article_17_img_1.jpg</p>
+        <img src="/golf_content/2025-07-12/images/article_17_img_1.jpg" 
+             alt="测试图片1" 
+             onload="document.getElementById('test1').innerHTML='<span class=success>✅ 加载成功</span>'"
+             onerror="document.getElementById('test1').innerHTML='<span class=error>❌ 加载失败: ' + this.src + '</span>'">
+        <div id="test1">⏳ 加载中...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>测试2：检查其他文章的图片</h2>
+        <p>路径: /golf_content/2025-07-12/images/article_02_img_1.jpg</p>
+        <img src="/golf_content/2025-07-12/images/article_02_img_1.jpg" 
+             alt="测试图片2" 
+             onload="document.getElementById('test2').innerHTML='<span class=success>✅ 加载成功</span>'"
+             onerror="document.getElementById('test2').innerHTML='<span class=error>❌ 加载失败: ' + this.src + '</span>'">
+        <div id="test2">⏳ 加载中...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>调试信息</h2>
+        <p>当前页面URL: <span id="currentUrl"></span></p>
+        <p>测试时间: <span id="testTime"></span></p>
+        <p>浏览器控制台可能有更多错误信息，请按F12查看</p>
+    </div>
+    
+    <script>
+        document.getElementById('currentUrl').textContent = window.location.href;
+        document.getElementById('testTime').textContent = new Date().toLocaleString();
+        
+        // 测试图片加载
+        console.log('开始测试图片加载...');
+        
+        // 添加全局错误监听
+        window.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                console.error('图片加载失败:', e.target.src);
+                console.error('错误详情:', e);
+            }
+        }, true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "proxies": [
+    {
+      "type": "http",
+      "host": "156.243.229.75",
+      "port": 44001,
+      "name": "主HTTP代理",
+      "auth": {
+        "user": "kDE689f608bddea8",
+        "pass": "CnWKy70ZYI2EmvGq3Z"
+      }
+    }
+  ],
+  "rotationStrategy": "single",
+  "dailyLimit": 100,
+  "retryWithNextProxy": false,
+  "proxyTestUrl": "https://matrix.tencent.com/ai-detect/",
+  "smartConfig": {
+    "enableSmartManagement": false,
+    "healthCheckInterval": 300000,
+    "minSuccessRate": 0.3,
+    "maxConsecutiveFailures": 5,
+    "maxResponseTime": 10000,
+    "targetUrl": "https://matrix.tencent.com/ai-detect/",
+    "testText": "这是一个测试文本，用于检测AI概率。"
+  }
+}

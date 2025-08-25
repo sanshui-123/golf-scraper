@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片加载测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .article-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .status {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .warning { background: #fff3cd; color: #856404; }
+        .error { background: #f8d7da; color: #721c24; }
+        #console-output {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 图片加载测试页面</h1>
+    
+    <div class="test-section">
+        <h2>📊 测试结果统计</h2>
+        <div id="test-stats">正在检测...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>🖼️ 图片加载测试</h2>
+        
+        <h3>测试1：正常图片</h3>
+        <div class="image-container">
+            <img src="/golf_content/2025-07-12/images/article_17_img_1.jpg" 
+                 alt="测试图片1" class="article-image">
+        </div>
+        
+        <h3>测试2：错误路径图片</h3>
+        <div class="image-container">
+            <img src="/golf_content/2025-07-12/images/nonexistent.jpg" 
+                 alt="不存在的图片" class="article-image">
+        </div>
+        
+        <h3>测试3：完全错误的URL</h3>
+        <div class="image-container">
+            <img src="/invalid/path/image.jpg" 
+                 alt="无效路径图片" class="article-image">
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>📝 控制台输出</h2>
+        <div id="console-output"></div>
+        <button onclick="clearConsole()">清空日志</button>
+    </div>
+    
+    <script>
+        let consoleOutput = document.getElementById('console-output');
+        let originalLog = console.log;
+        let originalError = console.error;
+        let originalWarn = console.warn;
+        
+        function addToConsole(type, message) {
+            const timestamp = new Date().toLocaleTimeString();
+            const line = `[${timestamp}] ${type.toUpperCase()}: ${message}\n`;
+            consoleOutput.textContent += line;
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+        
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            addToConsole('log', args.join(' '));
+        };
+        
+        console.error = function(...args) {
+            originalError.apply(console, args);
+            addToConsole('error', args.join(' '));
+        };
+        
+        console.warn = function(...args) {
+            originalWarn.apply(console, args);
+            addToConsole('warn', args.join(' '));
+        };
+        
+        function clearConsole() {
+            consoleOutput.textContent = '';
+        }
+        
+        // 图片加载统计
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🧪 开始图片加载测试...');
+            
+            const images = document.querySelectorAll('.article-image');
+            let loadedCount = 0;
+            let errorCount = 0;
+            let totalCount = images.length;
+            
+            function updateStats() {
+                const stats = document.getElementById('test-stats');
+                stats.innerHTML = `
+                    <div class="status success">✅ 成功加载: ${loadedCount}/${totalCount}</div>
+                    <div class="status error">❌ 加载失败: ${errorCount}/${totalCount}</div>
+                    <div class="status warning">⏳ 等待中: ${totalCount - loadedCount - errorCount}/${totalCount}</div>
+                `;
+            }
+            
+            images.forEach((img, index) => {
+                console.log(`测试图片 ${index + 1}: ${img.src}`);
+                
+                img.onload = function() {
+                    loadedCount++;
+                    console.log(`✅ 图片 ${index + 1} 加载成功`);
+                    updateStats();
+                };
+                
+                img.onerror = function() {
+                    errorCount++;
+                    console.error(`❌ 图片 ${index + 1} 加载失败: ${this.src}`);
+                    updateStats();
+                };
+                
+                // 检查已缓存的图片
+                if (img.complete) {
+                    if (img.naturalWidth > 0) {
+                        img.onload();
+                    } else {
+                        img.onerror();
+                    }
+                }
+            });
+            
+            updateStats();
+            
+            // 5秒后显示最终结果
+            setTimeout(() => {
+                console.log(`🎯 测试完成! 成功: ${loadedCount}, 失败: ${errorCount}`);
+                if (errorCount === 0) {
+                    console.log('🎉 所有图片加载正常!');
+                } else {
+                    console.log('⚠️ 部分图片加载失败，请检查路径和服务器配置');
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

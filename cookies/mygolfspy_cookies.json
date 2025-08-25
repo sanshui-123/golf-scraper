@@ -1,0 +1,790 @@
+[
+  {
+    "name": "lidid",
+    "value": "a55eb55d-3931-4760-a7e5-952c0e254451",
+    "domain": ".liadm.com",
+    "path": "/j",
+    "expires": 1787374719.344779,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "tluidp",
+    "value": "3363955539655944037798",
+    "domain": ".3lift.com",
+    "path": "/",
+    "expires": 1760454849.014302,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "tluid",
+    "value": "3363955539655944037798",
+    "domain": ".3lift.com",
+    "path": "/",
+    "expires": 1760454849.014397,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "usprivacy",
+    "value": "1YNY",
+    "domain": "mygolfspy.com",
+    "path": "/",
+    "expires": 1787374717.097183,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_li_dcdm_c",
+    "value": ".mygolfspy.com",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_lc2_fpi",
+    "value": "ede6ef41dca6--01k09wskzn3z4m28css436ry66",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1787373678.173699,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_lc2_fpi_meta",
+    "value": "%7B%22w%22%3A1752678846453%7D",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1787238846.454028,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_ga",
+    "value": "GA1.1.1580136636.1752226298",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1787374715.227936,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "_fbp",
+    "value": "fb.1.1752226298499.14290624558339494",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1760590715,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "uids",
+    "value": "eyJ0ZW1wVUlEcyI6eyJ0cmlwbGVsaWZ0Ijp7InVpZCI6IjMzNjM5NTU1Mzk2NTU5NDQwMzc3OTgiLCJleHBpcmVzIjoiMjAyNS0wNy0zMFQxNToxNDowNy42Mzc3ODI5MzNaIn19fQ==",
+    "domain": ".pbs.yahoo.com",
+    "path": "/",
+    "expires": 1768403647.698106,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_cc_dc",
+    "value": "3",
+    "domain": ".crwdcntrl.net",
+    "path": "/",
+    "expires": 1776006240.738758,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_cc_id",
+    "value": "fe73f47c293d83d090fb825fa8e424e4",
+    "domain": ".crwdcntrl.net",
+    "path": "/",
+    "expires": 1776139439.912634,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_cc_id",
+    "value": "fe73f47c293d83d090fb825fa8e424e4",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1776140674,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "ccuid",
+    "value": "f8c8a2a6-264c-4991-a4bb-0dddcfd043a4",
+    "domain": ".ccgateway.net",
+    "path": "/",
+    "expires": 1760368448.024833,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "A3",
+    "value": "d=AQABBL_Bd2gCEGI3bGNzos_nysDkjzn6Vt0FEgEBAQETeWiBaNwr0iMA_eMCAA&S=AQAAAnf_o72-0IEbSELGoATU85Y",
+    "domain": ".yahoo.com",
+    "path": "/",
+    "expires": 1784371277.699631,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "li_sugr",
+    "value": "e7230a10-f81c-4cfe-9b45-3b5cf58ba5fb",
+    "domain": ".linkedin.com",
+    "path": "/",
+    "expires": 1760454848.21038,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "bcookie",
+    "value": "\"v=2&4685d62b-5554-41d9-8a18-fd4eb404a3e9\"",
+    "domain": ".linkedin.com",
+    "path": "/",
+    "expires": 1784214849.210422,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "MUID",
+    "value": "1B060CBDA39E6FBF1AA01A96A2706E8E",
+    "domain": ".bing.com",
+    "path": "/",
+    "expires": 1786374848.393041,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "TDID",
+    "value": "1ba976b0-f514-418b-96e6-5624234c4b75",
+    "domain": ".adsrvr.org",
+    "path": "/",
+    "expires": 1784350715.178697,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_rcid",
+    "value": "qrVw4oHNjeoUcm/HkvaBsgLhLaEBCwb3nxU+S/umtMxw0YlIMZQsoc10KxbNqN/Y+0kyzJiC3lJerX0VLz7Du4Cc68IyIU0sa8q3U/AA349N5f2/6TNneQ/ciJSZrs9NIm9fb+HMCaimcXmdosuI2ojImvdXLZ8UWatfpx+ao33RmW1iUuMMDYG91JPz993KsdEn0fV+a7v/ZYbSuqFK04DU5pJqvekKdJFXNGa5Osr7EZywRPFCuILp6COXiMClBg==",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1787238849.323883,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Strict"
+  },
+  {
+    "name": "lidid",
+    "value": "a55eb55d-3931-4760-a7e5-952c0e254451",
+    "domain": ".liadm.com",
+    "path": "/",
+    "expires": 1787374722.329995,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "id5",
+    "value": "ea4684df-3568-71c4-8ade-f89336d3e67d#1752678850021#1",
+    "domain": ".id5-sync.com",
+    "path": "/",
+    "expires": 1760454850.126118,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sessionid",
+    "value": "h-4a77a3e69b344544a9817734d6739c06_t-1752679488",
+    "domain": ".rkdms.com",
+    "path": "/",
+    "expires": 1784349676.669106,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "adt_i",
+    "value": "{\"liveIntent\":{\"d\":\"v7wHtzItriZOxCmPFStvE7mdkQHmDNuYZtHK_YLXj59PAlq4kYyRyI84_BAtKF3NFYGmEqGLp85fQlGwMj-PEuw3SamrPa30zvQh-7X4BQzlkJ_iCyd7UUDTqWswgD3dN4TXt5Au4l4aKE520nzY_9M-6GByzShurLeG2iQjbvCeRjvEm_fzOgAOp7r9bJ3D3EVe_Fjiw17HDYSiDn4bjvo9NGZverDTitImBXiFKm8YWpilq2LVSK_tFazEYMbwFRrreBwruG-cD9clKwYzYU5Di4dNJN7RJ4tYbWUcOclfvbJGPdsX1GTep0lenc9zQtSNsBUmLGY5nH-ib7vc89TPyZVKjuX1u26tsn8EDnuAesFqPLo\",\"s\":\"6361afc17755a1759c780406\"}}",
+    "domain": "ads.adthrive.com",
+    "path": "/",
+    "expires": 1787239489,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "adt_rid",
+    "value": "{\"sha1Hash\":\"\",\"sha256Hash\":\"6652ada1aa5a03e18849e4281937750d436fbf15931b05a42a441051d917401d\",\"source\":\"l_i-sdklir_c\",\"sourceCollectedDate\":\"2025-07-16\"}",
+    "domain": "ads.adthrive.com",
+    "path": "/",
+    "expires": 1787374717,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "CLID",
+    "value": "1a2c5711b00246ee92a91f9d0fd2ae96.20250716.20260718",
+    "domain": "www.clarity.ms",
+    "path": "/",
+    "expires": 1784348673.323216,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "IDSYNC",
+    "value": "1969~2qdg",
+    "domain": ".analytics.yahoo.com",
+    "path": "/",
+    "expires": 1784348673.712877,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "KADUSERCOOKIE",
+    "value": "F8831DD1-CB04-4D48-AD61-34779FCA3E03",
+    "domain": ".pubmatic.com",
+    "path": "/",
+    "expires": 1784350722.324273,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "UID_EXT_46",
+    "value": "1ba976b0-f514-418b-96e6-5624234c4b75",
+    "domain": ".undertone.com",
+    "path": "/",
+    "expires": 1784369626.535555,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "AMZN-Token",
+    "value": "v2FweLxlRzBUWlArVTk2a0dmVE9NUW40L1N4TUdVRzdtY05sdENzaFpjQzNqWkwyc1dPalA3cjJPWW9oN1E0ZXVwM3J0a1Yvd1hiZzV4Q0VlLzU3a05jUkJOL0VRMEFXWWZSN2dReUcvUHdGRWh0ZDd6cGFNeThML0NPblZwTGx4aFRkMzVlQmM2NUppZmZzTFpmVEtaUHBsT1hwN052dGZ1Nk1OQ08zUjhpSjNhUzVJR2VWMVhXVnVUNEVTMFpBPWJrdgFiaXZ4IDc3KzlkbHhXNzcrOWVlKy92ZSsvdldqdnY3MGJOQT09/w==",
+    "domain": "mygolfspy.com",
+    "path": "/",
+    "expires": -1,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "khaos",
+    "value": "MD8BERW6-E-8TC7",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1784348679.256327,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "khaos_p",
+    "value": "MD8BERW6-E-8TC7",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1784348679.256341,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "receive-cookie-deprecation",
+    "value": "1",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1760588679.256363,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "_cc_cc",
+    "value": "\"ACZ4nGNQSEs1N04zMU82sjROsTBOMbA0SEuyMDJNS7RINTEySTVhAIKMyjPNDAgAAF8MCyI%3D\"",
+    "domain": ".crwdcntrl.net",
+    "path": "/",
+    "expires": 1776140674.912713,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_cc_aud",
+    "value": "\"ABR4nGNgYGDIqDzTzAAHABsYAjE%3D\"",
+    "domain": ".crwdcntrl.net",
+    "path": "/",
+    "expires": 1776140674.912739,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_scor_uid",
+    "value": "7701b78c3f3d496983ab8add066e0852",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1786510721,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ad-privacy",
+    "value": "0",
+    "domain": ".amazon-adsystem.com",
+    "path": "/",
+    "expires": 1787372678.332758,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ad-id",
+    "value": "A10rq1a2pUqclvdNAJVtFJc",
+    "domain": ".amazon-adsystem.com",
+    "path": "/",
+    "expires": 1775017478.487239,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_clck",
+    "value": "1ge102l%7C2%7Cfxp%7C0%7C2025",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1784348678,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "bito",
+    "value": "AAGfHU7Q85kAABxlQEEE3w",
+    "domain": ".bidr.io",
+    "path": "/",
+    "expires": 1786926279.01841,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "bitoIsSecure",
+    "value": "ok",
+    "domain": ".bidr.io",
+    "path": "/",
+    "expires": 1786926279.018444,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ccuid",
+    "value": "f8c8a2a6-264c-4991-a4bb-0dddcfd043a4",
+    "domain": "mygolfspy.com",
+    "path": "/",
+    "expires": 1760503276,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "vst",
+    "value": "u_041045ee-ab62-45a5-ab69-3362b5257ad5",
+    "domain": ".gumgum.com",
+    "path": "/",
+    "expires": 1784349676.871331,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "UID",
+    "value": "1606d084d88c8c6463ebb031752813677",
+    "domain": ".scorecardresearch.com",
+    "path": "/",
+    "expires": 1786509677.03761,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "XID",
+    "value": "1606d084d88c8c6463ebb031752813677",
+    "domain": ".scorecardresearch.com",
+    "path": "/",
+    "expires": 1786509677.037637,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "tuuid",
+    "value": "def98d1b-04fa-46e8-a700-9e28dfcf3a28",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1784349677.969303,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "c",
+    "value": "1752813677",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1784349677.763793,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "pid",
+    "value": "5790184745518217707",
+    "domain": ".smartadserver.com",
+    "path": "/",
+    "expires": 1760589678.872066,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "TDCPM",
+    "value": "CAESFgoHc3Z4OXQ1MBILCM6835quoaI-EAUSFgoHcnViaWNvbhILCJbNuZ-h76I-EAUYASABKAIyCwj8rKeTgvCiPhAFOAFaBmd1bWd1bWAC",
+    "domain": ".adsrvr.org",
+    "path": "/",
+    "expires": 1784350715.178784,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "CDIUSER",
+    "value": "di_0ddff8f538c74e61b7833",
+    "domain": ".deepintent.com",
+    "path": "/",
+    "expires": 1787373677.941421,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "CDIPARTNERS",
+    "value": "%7B%221%22%3A%2220250718%22%7D",
+    "domain": ".deepintent.com",
+    "path": "/",
+    "expires": 1787373677.941489,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "tuuid_lu",
+    "value": "1752813678",
+    "domain": ".bidswitch.net",
+    "path": "/",
+    "expires": 1784349677.969413,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "uids",
+    "value": "eyJ0ZW1wVUlEcyI6eyJndW1ndW0iOnsidWlkIjoidV8wNDEwNDVlZS1hYjYyLTQ1YTUtYWI2OS0zMzYyYjUyNTdhZDUiLCJleHBpcmVzIjoiMjAyNS0wOC0wMVQwNDo0MToxOC4yNTYyNzYyMzFaIn0sInRyaXBsZWxpZnQiOnsidWlkIjoiMzM2Mzk1NTUzOTY1NTk0NDAzNzc5OCIsImV4cGlyZXMiOiIyMDI1LTA3LTMwVDE1OjE0OjA4Ljk1MTUxNDg1MVoifX0sIm9wdG91dCI6ZmFsc2V9",
+    "domain": "prebid.production.adthrive.com",
+    "path": "/",
+    "expires": 1760589678.086375,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "XANDR_PANID",
+    "value": "-2dC0HwVoIzYkxyZxc_tutxVKNRYfTcXtsyM8AzjJ94VUq20HOsE4TvTYexwMJ0MCSx_--TYz5vY2R37RTrkUGsBcEz0nTZN8ECDhXot4G0.",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1760589678.321203,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "uuid2",
+    "value": "3755130408407562768",
+    "domain": ".adnxs.com",
+    "path": "/",
+    "expires": 1760589678.321297,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "SOC",
+    "value": "aHnQbsCo8JIAANewmswAAAAA",
+    "domain": ".socdm.com",
+    "path": "/",
+    "expires": 1787373678.146201,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "uid",
+    "value": "261417672632473566",
+    "domain": ".adform.net",
+    "path": "/",
+    "expires": 1757997678.215828,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "g",
+    "value": "ri4jl2SL7vac76GkOYvX_1752813678529",
+    "domain": ".creativecdn.com",
+    "path": "/",
+    "expires": 1784349678.434167,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "ts",
+    "value": "1752813678",
+    "domain": ".creativecdn.com",
+    "path": "/",
+    "expires": 1784349678.434238,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "cu",
+    "value": "22a251e3-5e52-4397-ae47-ac931f795d1e|1752813678672",
+    "domain": ".ipredictive.com",
+    "path": "/",
+    "expires": 1784349678.534912,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id",
+    "value": "s%3A0-ae4ec601-3c9c-5814-4e7a-04c351263d08.HYEYAwqKsbyGEHXIop0In4SvzVWDNzS2C%2BSaXQ87z8I",
+    "domain": "sync.srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.811768,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id",
+    "value": "s%3A0-ae4ec601-3c9c-5814-4e7a-04c351263d08.HYEYAwqKsbyGEHXIop0In4SvzVWDNzS2C%2BSaXQ87z8I",
+    "domain": ".srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.81182,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id-v2",
+    "value": "s%3Ark7GATycWBROegTDUSY9CF-uR60.93IuFZE9D6wRyRcyYHYUr4wDzp2m%2BFFIzhpsKK%2Fg7fg",
+    "domain": "sync.srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.811841,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id-v2",
+    "value": "s%3Ark7GATycWBROegTDUSY9CF-uR60.93IuFZE9D6wRyRcyYHYUr4wDzp2m%2BFFIzhpsKK%2Fg7fg",
+    "domain": ".srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.811858,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id-v3",
+    "value": "s%3AAQAKIJg6-JpfAttqe-tCV-kWrq27gWK6lKixvtqrFbkh4Pd2EMABGAQg7qDnwwYwAToEKOGXGEIEXVExaA.XRALoJecrHikffmQ%2B28Ipd22HS3wZd5cNFQ29D%2BGItY",
+    "domain": "sync.srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.811871,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "sa-user-id-v3",
+    "value": "s%3AAQAKIJg6-JpfAttqe-tCV-kWrq27gWK6lKixvtqrFbkh4Pd2EMABGAQg7qDnwwYwAToEKOGXGEIEXVExaA.XRALoJecrHikffmQ%2B28Ipd22HS3wZd5cNFQ29D%2BGItY",
+    "domain": ".srv.stackadapt.com",
+    "path": "/",
+    "expires": 1784349678.811888,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "GLOBALID",
+    "value": "2uKlc8-sIBd987FnJwa4mOD4B3cHXy3-cnA4nQ6xJ0MIQT1qcPO5rfzK5xiq5oguIGr2FZVA9pQC4TM1",
+    "domain": ".bttrack.com",
+    "path": "/",
+    "expires": 1760589678.953196,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "uid",
+    "value": "2765899354497819007",
+    "domain": ".turn.com",
+    "path": "/",
+    "expires": 1768365682.126978,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "cf_clearance",
+    "value": "oUloIUpJezk1TxJm9k6sSfUQ2vQ.HpwpHZLGziQutbQ-1752814716-1.2.1.1-Zj805Gezr1n6epy.11j_q_bXfAK5Rjvw0k40fwjJUrpHAZKkBT60t6sOpoABBX1q_w.Sx0tMEsLE.i_WXTpHjZkcnbjJVoyUycNhC1g80S956vR6Iyl_7YZBuGX9.QLkMO7LPnqUTwfl53kXLQUfCiSsDx43smYzTjLFi7Yv7v.aBVJPi5W68Gd.ZTAFi6EcZGPKLE1q6LmKLbSY4KsYKrF8zrmy7oLTU0kowO2ybRU",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1784350716.600971,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": false
+  },
+  {
+    "name": "connectId",
+    "value": "%7B%22vmuid%22%3A%22uaRVBLSLFSO17l2Ne9v3uX2sCPT-Tq-UqOoas5wsrYbFWyWl4VPEOBQx1albYU7Ndplm0OZL7yAg3In-SshMbg%22%2C%22connectid%22%3A%22uaRVBLSLFSO17l2Ne9v3uX2sCPT-Tq-UqOoas5wsrYbFWyWl4VPEOBQx1albYU7Ndplm0OZL7yAg3In-SshMbg%22%2C%22connectId%22%3A%22uaRVBLSLFSO17l2Ne9v3uX2sCPT-Tq-UqOoas5wsrYbFWyWl4VPEOBQx1albYU7Ndplm0OZL7yAg3In-SshMbg%22%2C%22ttl%22%3A86400000%2C%22he%22%3A%226652ada1aa5a03e18849e4281937750d436fbf15931b05a42a441051d917401d%22%2C%22lastSynced%22%3A1752812674107%2C%22lastUsed%22%3A1752814717102%7D",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1784350717,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "cto_bundle",
+    "value": "IqwV819wQjJPcWx1ZmF4Zmx6WU9uJTJGeTh2RVgzUE5raUVnS1AxMkVjZGNyVkZnM1ZRd3kzc09LN3djN21CMGNBWHhFZlQ5SUpwS3JvelZPeEtJWG1vb1N0N1hSSWlqdjJESEhxV3ZsZjRlQkV5UFM4JTNE",
+    "domain": ".criteo.com",
+    "path": "/",
+    "expires": 1786510720.317747,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "audit_p",
+    "value": "1|+mw/yOx++ZPt8dNLo2erKIuX/LS5V5+7S6AhDUcNRCrZC0+uEaYLzNpqqPmWr8e5usozqv1aFzBCqQ3+tQhlLHMDvubSxZCG2MOweBw0EYqx+lJQzvbc5TLPgIxnOLeOlGhCrCEMOXc=",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1784350720.467798,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None",
+    "partitionKey": "https://mygolfspy.com",
+    "_crHasCrossSiteAncestor": true
+  },
+  {
+    "name": "audit",
+    "value": "1|+mw/yOx++ZPt8dNLo2erKIuX/LS5V5+7S6AhDUcNRCrZC0+uEaYLzNpqqPmWr8e5usozqv1aFzBCqQ3+tQhlLHMDvubSxZCG2MOweBw0EYqx+lJQzvbc5TLPgIxnOLeOlGhCrCEMOXc=",
+    "domain": ".rubiconproject.com",
+    "path": "/",
+    "expires": 1784350720.467836,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "chkChromeAb67Sec",
+    "value": "3",
+    "domain": ".pubmatic.com",
+    "path": "/",
+    "expires": 1760590722.324365,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "DPSync4",
+    "value": "1753401600%3A164%7C1754006400%3A197_219_226_228_245%7C1752883200%3A248%7C1755388800%3A102",
+    "domain": ".pubmatic.com",
+    "path": "/",
+    "expires": 1760590722.324401,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "SyncRTB4",
+    "value": "1754006400%3A21_250_231_166_104_22_8_220_201_3_54_46_178_71_13_233_55%7C1753401600%3A15_2_223%7C1753660800%3A63",
+    "domain": ".pubmatic.com",
+    "path": "/",
+    "expires": 1760590722.324422,
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "None"
+  },
+  {
+    "name": "_ga_MZ4DFN06MN",
+    "value": "GS2.1.s1752814715$o4$g0$t1752814722$j53$l0$h0",
+    "domain": ".mygolfspy.com",
+    "path": "/",
+    "expires": 1787374722.917935,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]

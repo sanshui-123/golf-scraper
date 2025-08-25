@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Token Usage Report</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #0a0a0a;
+            color: #e0e0e0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #1a1a1a;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        th {
+            background: #2a2a2a;
+            color: #fff;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #444;
+        }
+        th:last-child,
+        td:last-child {
+            text-align: right;
+        }
+        td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #333;
+        }
+        tr:hover {
+            background: #252525;
+        }
+        .date-col {
+            font-weight: 500;
+            color: #fff;
+        }
+        .model-col {
+            color: #888;
+            font-size: 14px;
+        }
+        .number-col {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            text-align: right;
+        }
+        .cost-col {
+            font-weight: 600;
+            color: #4CAF50;
+            text-align: right;
+        }
+        .highlight-expensive {
+            background: rgba(255, 152, 0, 0.1);
+            border: 1px solid #ff9800;
+        }
+        .highlight-moderate {
+            background: rgba(255, 235, 59, 0.1);
+            border: 1px solid #ffeb3b;
+        }
+        .highlight-highest {
+            background: rgba(33, 150, 243, 0.1);
+            border: 1px solid #2196f3;
+        }
+        .total-row {
+            background: #2a2a2a;
+            font-weight: bold;
+            border-top: 2px solid #444;
+        }
+        .total-row td {
+            padding: 15px;
+            font-size: 16px;
+        }
+        .stats {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .stat-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        .stat-title {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Claude Token Usage Report - July 2025</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Models</th>
+                    <th class="number-col">Input</th>
+                    <th class="number-col">Output</th>
+                    <th class="number-col">Cache Create</th>
+                    <th class="number-col">Cache Read</th>
+                    <th class="number-col">Total Tokens</th>
+                    <th class="cost-col">Cost (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="date-col">2025<br>07-07</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">504</td>
+                    <td class="number-col">25,468</td>
+                    <td class="number-col">517,860</td>
+                    <td class="number-col">984,815</td>
+                    <td class="number-col">1,528,647</td>
+                    <td class="cost-col">$10.57</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-08</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">4,470</td>
+                    <td class="number-col">79,616</td>
+                    <td class="number-col">4,345,916</td>
+                    <td class="number-col">76,113,409</td>
+                    <td class="number-col">80,543,411</td>
+                    <td class="cost-col">$190.60</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-09</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">3,572</td>
+                    <td class="number-col">60,076</td>
+                    <td class="number-col">5,423,150</td>
+                    <td class="number-col">67,698,228</td>
+                    <td class="number-col">73,185,026</td>
+                    <td class="cost-col">$206.22</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-10</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">3,924</td>
+                    <td class="number-col">112,546</td>
+                    <td class="number-col">5,158,564</td>
+                    <td class="number-col">71,862,961</td>
+                    <td class="number-col">77,137,995</td>
+                    <td class="cost-col">$213.02</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-11</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">7,383</td>
+                    <td class="number-col">57,357</td>
+                    <td class="number-col">7,540,601</td>
+                    <td class="number-col">80,597,021</td>
+                    <td class="number-col">88,202,362</td>
+                    <td class="cost-col">$266.69</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-12</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">5,983</td>
+                    <td class="number-col">29,030</td>
+                    <td class="number-col">4,878,924</td>
+                    <td class="number-col">49,764,595</td>
+                    <td class="number-col">54,678,532</td>
+                    <td class="cost-col">$149.29</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-13</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">3,836</td>
+                    <td class="number-col">11,234</td>
+                    <td class="number-col">3,124,367</td>
+                    <td class="number-col">33,479,042</td>
+                    <td class="number-col">36,618,479</td>
+                    <td class="cost-col">$78.99</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-14</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">4,446</td>
+                    <td class="number-col">10,978</td>
+                    <td class="number-col">4,925,821</td>
+                    <td class="number-col">39,301,728</td>
+                    <td class="number-col">44,242,973</td>
+                    <td class="cost-col">$141.30</td>
+                </tr>
+                <tr class="highlight-moderate">
+                    <td class="date-col">2025<br>07-15</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">3,040</td>
+                    <td class="number-col">21,545</td>
+                    <td class="number-col">4,099,235</td>
+                    <td class="number-col">18,951,338</td>
+                    <td class="number-col">23,075,158</td>
+                    <td class="cost-col">$104.22</td>
+                </tr>
+                <tr class="highlight-moderate">
+                    <td class="date-col">2025<br>07-16</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">5,821</td>
+                    <td class="number-col">21,375</td>
+                    <td class="number-col">6,011,422</td>
+                    <td class="number-col">48,463,003</td>
+                    <td class="number-col">54,501,621</td>
+                    <td class="cost-col">$120.03</td>
+                </tr>
+                <tr class="highlight-expensive">
+                    <td class="date-col">2025<br>07-17</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">450</td>
+                    <td class="number-col">6,643</td>
+                    <td class="number-col">817,637</td>
+                    <td class="number-col">3,259,676</td>
+                    <td class="number-col">4,084,406</td>
+                    <td class="cost-col">$20.73</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-18</td>
+                    <td class="model-col">- opus-4<br>- sonnet-4</td>
+                    <td class="number-col">6,277</td>
+                    <td class="number-col">11,530</td>
+                    <td class="number-col">6,422,249</td>
+                    <td class="number-col">53,802,785</td>
+                    <td class="number-col">60,242,841</td>
+                    <td class="cost-col">$182.92</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-19</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">378</td>
+                    <td class="number-col">988</td>
+                    <td class="number-col">478,713</td>
+                    <td class="number-col">2,671,761</td>
+                    <td class="number-col">3,151,840</td>
+                    <td class="cost-col">$13.06</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-20</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">2,543</td>
+                    <td class="number-col">12,065</td>
+                    <td class="number-col">3,242,446</td>
+                    <td class="number-col">18,841,191</td>
+                    <td class="number-col">22,098,245</td>
+                    <td class="cost-col">$90.00</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-21</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">8,371</td>
+                    <td class="number-col">20,458</td>
+                    <td class="number-col">3,365,595</td>
+                    <td class="number-col">27,408,752</td>
+                    <td class="number-col">30,803,176</td>
+                    <td class="cost-col">$105.88</td>
+                </tr>
+                <tr class="highlight-highest">
+                    <td class="date-col">2025<br>07-22</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">4,179</td>
+                    <td class="number-col">11,268</td>
+                    <td class="number-col">6,046,664</td>
+                    <td class="number-col">31,831,105</td>
+                    <td class="number-col">37,893,216</td>
+                    <td class="cost-col">$162.03</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-23</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">2,928</td>
+                    <td class="number-col">7,926</td>
+                    <td class="number-col">5,075,760</td>
+                    <td class="number-col">22,433,611</td>
+                    <td class="number-col">27,520,225</td>
+                    <td class="cost-col">$129.46</td>
+                </tr>
+                <tr>
+                    <td class="date-col">2025<br>07-24</td>
+                    <td class="model-col">- opus-4</td>
+                    <td class="number-col">267</td>
+                    <td class="number-col">1,748</td>
+                    <td class="number-col">425,360</td>
+                    <td class="number-col">1,780,218</td>
+                    <td class="number-col">2,207,593</td>
+                    <td class="cost-col">$10.78</td>
+                </tr>
+                <tr class="total-row">
+                    <td colspan="2">Total</td>
+                    <td class="number-col">68,372</td>
+                    <td class="number-col">501,851</td>
+                    <td class="number-col">71,900,284</td>
+                    <td class="number-col">649,245,369</td>
+                    <td class="number-col">721,715,752</td>
+                    <td class="cost-col">$2,195.79</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-title">Average Daily Cost</div>
+                <div class="stat-value">$121.99</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Most Expensive Day</div>
+                <div class="stat-value">Jul 11 - $266.69</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Cheapest Day</div>
+                <div class="stat-value">Jul 24 - $10.78</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Total Days Tracked</div>
+                <div class="stat-value">18 Days</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

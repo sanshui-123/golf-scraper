@@ -1,0 +1,32 @@
+{
+  "golf.com": {
+    "total": 16,
+    "processed": 16,
+    "new": 0
+  },
+  "golfmonthly.com": {
+    "total": 28,
+    "processed": 28,
+    "new": 0
+  },
+  "mygolfspy.com": {
+    "total": 74,
+    "processed": 36,
+    "new": 38
+  },
+  "www.golfwrx.com": {
+    "total": 20,
+    "processed": 20,
+    "new": 0
+  },
+  "www.golfdigest.com": {
+    "total": 5,
+    "processed": 5,
+    "new": 0
+  },
+  "todays.golfer.com": {
+    "total": 21,
+    "processed": 21,
+    "new": 0
+  }
+}

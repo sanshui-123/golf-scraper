@@ -1,0 +1,131 @@
+{
+  "version": "2025-08-12",
+  "description": "高尔夫文章抓取系统 - 最优脚本注册表",
+  
+  "url_generation": {
+    "primary": {
+      "script": "auto_scrape_three_sites.js",
+      "usage": "node auto_scrape_three_sites.js --all-sites",
+      "description": "主流程脚本，自动处理所有6个网站",
+      "features": [
+        "并行处理6个网站",
+        "统一输出格式",
+        "错误隔离机制",
+        "备用URL支持"
+      ]
+    },
+    "alternative": {
+      "script": "intelligent_url_master.js",
+      "usage": "node intelligent_url_master.js",
+      "description": "智能主控制器，串行执行确保稳定",
+      "features": [
+        "100%成功率",
+        "自动重试机制",
+        "最小保证URL数",
+        "详细日志输出"
+      ]
+    },
+    "per_website": {
+      "golf_com": "discover_golf_com_24h.js --urls-only",
+      "golf_monthly": "discover_recent_articles.js https://www.golfmonthly.com 100 --ignore-time --urls-only",
+      "mygolfspy": "mygolfspy_url_generator.js --urls-only",
+      "golfwrx": "golfwrx_rss_url_generator.js 20 --urls-only",
+      "golf_digest": "golfdigest_smart_generator.js 20 --urls-only",
+      "todays_golfer": "discover_todays_golfer_articles.js 100 --urls-only"
+    }
+  },
+  
+  "batch_processing": {
+    "primary": {
+      "script": "intelligent_concurrent_controller.js",
+      "usage": "node intelligent_concurrent_controller.js",
+      "description": "智能并发控制器 - 必须使用",
+      "features": [
+        "自动调整并发数(1-2)",
+        "API压力监控",
+        "进程超时保护",
+        "详细进度日志"
+      ],
+      "rules": [
+        "最大并发数: 2",
+        "API压力大时降到1",
+        "严禁修改限制"
+      ]
+    },
+    "architecture": {
+      "description": "批处理采用分层架构",
+      "layers": {
+        "scheduler": "intelligent_concurrent_controller.js - 调度层，控制并发和监控",
+        "executor": "batch_process_articles.js - 执行层，实际处理文章"
+      },
+      "usage": "所有批处理应通过intelligent_concurrent_controller.js启动"
+    },
+    "deprecated": [
+      {
+        "script": "enhanced_batch_processor.js",
+        "reason": "被intelligent_concurrent_controller取代"
+      },
+      {
+        "script": "batch_process_articles.js",
+        "reason": "不应直接使用，请通过intelligent_concurrent_controller.js调用",
+        "note": "此脚本是核心处理器，但应通过控制器调度以获得并发控制和API压力监控"
+      },
+      {
+        "script": "resilient_batch_processor.js",
+        "reason": "并发控制不够智能"
+      },
+      {
+        "script": "universal_processor.js",
+        "reason": "过度复杂，维护困难"
+      },
+      {
+        "script": "ultra_batch_processor.js",
+        "reason": "实验性质，不稳定"
+      }
+    ]
+  },
+  
+  "utilities": {
+    "web_server": {
+      "script": "web_server.js",
+      "port": 8080,
+      "features": [
+        "文章查看",
+        "文章删除",
+        "重复检查API"
+      ]
+    },
+    "duplicate_check": {
+      "cross_date": "check_duplicates.js",
+      "same_date": "check_same_day_duplicates.js",
+      "usage": "node check_duplicates.js"
+    },
+    "url_management": {
+      "repair": "url_file_manager.js --repair",
+      "validate": "url_file_manager.js --validate"
+    },
+    "monitoring": {
+      "smart_restart": "./smart_restart.sh",
+      "check_status": "./check_status.sh"
+    }
+  },
+  
+  "workflows": {
+    "standard": [
+      "node auto_scrape_three_sites.js --all-sites",
+      "node intelligent_concurrent_controller.js",
+      "curl -s --noproxy localhost http://localhost:8080/articles/$(date +%Y-%m-%d)"
+    ],
+    "quick_check": [
+      "ls golf_content/$(date +%Y-%m-%d)/wechat_ready/ | wc -l",
+      "node check_duplicates.js"
+    ]
+  },
+  
+  "important_notes": [
+    "始终使用intelligent_concurrent_controller.js进行批处理",
+    "不要使用_archive_deleted目录中的任何脚本",
+    "遇到MCP问题使用curl替代",
+    "定期运行url_file_manager.js --repair"
+  ]
+}

@@ -1,0 +1,18 @@
+手动推送到GitHub的步骤：
+
+1. 打开终端，进入项目目录：
+   cd /Users/sanshui/Desktop/cursor
+
+2. 执行推送命令：
+   git push -u origin main
+
+3. 系统会提示输入用户名和密码：
+   - Username: sanshui-123
+   - Password: 请输入您的Personal Access Token（不是GitHub密码）
+
+注意：
+- 如果之前的Token过期了，请在GitHub上创建新的Personal Access Token
+- 创建Token时请确保勾选了"repo"权限
+- Token创建路径：GitHub Settings -> Developer settings -> Personal access tokens -> Generate new token
+
+代码已经提交完成，只需要推送即可。

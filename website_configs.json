@@ -1,0 +1,666 @@
+{
+  "golfmonthly.com": {
+    "name": "Golf Monthly",
+    "homepage": "https://www.golfmonthly.com/",
+    "articleListSelectors": {
+      "container": ".listing__item, .article-card, article[data-testid='card'], .card-container",
+      "link": "a[href]",
+      "title": "h3, h2, .headline",
+      "time": "time, .timestamp, .date-published, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/tips/",
+      "/features/",
+      "/buying-advice/"
+    ],
+    "selectors": {
+      "title": "h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1",
+      "article": "article, .article-content, .entry-content, main",
+      "content": ".entry-content, .article-content, .post-content, .content-area",
+      "paragraphs": ".entry-content p, .article-content p, .post-content p",
+      "images": ".entry-content img, .article-content img, .post-content img, .wp-block-image img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-posts",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".entry-content, .article-content",
+    "timeout": 30000
+  },
+  "golf.com": {
+    "name": "Golf.com",
+    "homepage": "https://www.golf.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": ".g-article-prev, .c-entry-box--compact, .c-entry-box, figure[class*='article-prev']",
+      "link": "a[href]",
+      "title": "h2, h3, .title, .c-entry-box--compact__title, .m-ellipses--text, .g-article-prev__title",
+      "time": "time, .date, .published-date, .c-timestamp, .g-article-prev__time",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/instruction/",
+      "/gear/",
+      "/travel/"
+    ],
+    "selectors": {
+      "title": "h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text",
+      "article": "article, .article-content, .story-body, .c-entry-content",
+      "content": ".article-body, .content-body, .story-body, .c-entry-content",
+      "paragraphs": ".article-body p, .content-body p, .c-entry-content p",
+      "images": ".c-entry-content img, .article-content img, figure.wp-block-image img, picture img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ad-container",
+      ".social-share",
+      ".newsletter",
+      ".related-articles"
+    ],
+    "waitForSelector": ".article-body, .content-body, .c-entry-content",
+    "timeout": 30000
+  },
+  "golfdigest.com": {
+    "name": "Golf Digest",
+    "homepage": "https://www.golfdigest.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": ".summary-item, .summary-list__item, .summary-collection__item, [data-testid='SummaryItemWrapper'], .river-item, .content-card, .story-card",
+      "link": "a[href*='/story/'], a[href*='/article/'], a[href*='/reviews/'], a[href*='/instruction/'], a[href*='/equipment/'], .summary-item__hed-link",
+      "title": "h1, h2, h3, .summary-item__hed, .hed",
+      "time": "time[datetime], time, .summary-item__publish-date, .publish-date, .date",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/story/",
+      "/article/",
+      "/reviews/",
+      "/instruction/",
+      "/equipment/",
+      "/news/",
+      "/golf-courses/",
+      "/lifestyle/"
+    ],
+    "selectors": {
+      "title": "h1[data-testid='ContentHeaderHed'], h1.content-header__hed, h1.headline, h1[class*='title'], h1",
+      "article": "[data-testid='BodyWrapper'], .article__body, .body__inner-container, .content-body, .story-body, [class*='article-body'], .paywall__content, main article",
+      "content": "[data-testid='BodyWrapper'], .article__body, .body__inner-container, .content-body, .story-body",
+      "paragraphs": "p:not(.caption)",
+      "images": "img[src*='golfdigest'], figure img, .responsive-asset img, picture img"
+    },
+    "removeSelectors": [
+      "script",
+      "style",
+      ".ad",
+      ".advertisement",
+      ".social-share",
+      ".related-articles",
+      ".newsletter-signup",
+      ".comments",
+      "aside",
+      ".sidebar",
+      "[class*='promo']",
+      "[class*='newsletter']",
+      ".ad-container",
+      ".social-icons",
+      ".related-stories",
+      ".byline-share",
+      ".content-header__rubric"
+    ],
+    "waitForSelector": "[data-testid='BodyWrapper'], .article__body, .body__inner-container",
+    "timeout": 30000
+  },
+  "mygolfspy.com": {
+    "name": "MyGolfSpy",
+    "homepage": "https://mygolfspy.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": ".post-item, .article-item, .card, .entry, .post",
+      "link": "a[href]",
+      "title": "h2, h3, .title, .entry-title",
+      "time": "time, .date, .published-date, .post-date",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/instruction/",
+      "/reviews/",
+      "/buyers-guides/",
+      "/most-wanted/",
+      "/ball-lab/",
+      "/golf-spy/"
+    ],
+    "selectors": {
+      "title": "h1.entry-title, h1.post-title, h1.article-title, .entry-header h1, .post-header h1, h1",
+      "article": ".entry-content, .post-content, .article-content, .content-area, .post-body, article",
+      "content": ".entry-content, .post-content, .article-content, .content-area, .post-body",
+      "paragraphs": ".entry-content p, .post-content p, .article-content p, .content-area p, .post-body p",
+      "images": ".entry-content img, .post-content img, .article-content img, .content-area img, .post-body img, article img, .wp-block-image img, figure img, picture img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-posts",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".widget",
+      ".wp-block-latest-posts",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".entry-content, .post-content, .article-content",
+    "timeout": 30000
+  },
+  "golfwrx.com": {
+    "name": "GolfWRX",
+    "homepage": "https://www.golfwrx.com/",
+    "articleListSelectors": {
+      "container": ".mvp-flex-story-wrap, .mvp-blog-story-wrap, .mvp-widget-home-wrap, .td_module_wrap, .td-block-span6, .td_module_10, .td_module_mx4, .td-module-thumb, article.td-post, .td-big-grid-post",
+      "link": "a[href]",
+      "title": "a[href*='/20'], .entry-title a, .td-module-title a, h3.entry-title a, h3 a, .item-details h3 a, h2 a, .mvp-blog-story-text h2 a",
+      "time": ".mvp-cd-date, .mvp-blog-story-info time, .td-post-date, .td-module-date, .entry-date, time, .td-post-date time",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/20",
+      "/news/",
+      "/instruction/",
+      "/equipment/",
+      "/forums/"
+    ],
+    "selectors": {
+      "title": "h1.mvp-post-title, h1.entry-title, h1.td-post-title, h1.post-title, .td-post-header h1, h1, .single-post-title h1",
+      "article": "#mvp-content-body, #mvp-content-main, .mvp-content-main, .mvp-post-content, .td-post-content, .td-post-container, .entry-content, article, .post-content, .single-post-content, .the-content",
+      "content": "#mvp-content-body, .mvp-content-body, .mvp-post-content, .td-post-content, .entry-content, .post-content, .content-area, .the-content-wrap",
+      "paragraphs": "#mvp-content-body p, .mvp-content-body p, .mvp-post-content p, .td-post-content p, .entry-content p, .post-content p, .the-content p, #mvp-content-main p",
+      "images": "#mvp-content-body img, .mvp-post-content img, .mvp-content-body img, .td-post-content img, .entry-content img, .post-content img, .td-post-featured-image img, figure img, .the-content img, #mvp-content-main img"
+    },
+    "removeSelectors": [
+      ".td-post-sharing",
+      ".td-post-author-name",
+      ".td-post-views",
+      ".td-post-comments",
+      ".td-post-source-tags",
+      ".td-post-next-prev",
+      ".td-related-posts",
+      ".td-a-rec",
+      ".td-adspot-title",
+      ".advertisement",
+      ".ads",
+      ".social-share",
+      ".newsletter-signup",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".yarpp-related",
+      ".wp-block-latest-posts",
+      ".mvp-related-posts",
+      ".related-articles",
+      ".trending-posts",
+      ".recommended-posts",
+      ".also-read",
+      ".read-more-articles",
+      ".mvp-post-add-box",
+      ".mvp-post-soc-wrap",
+      ".wp-block-group",
+      ".inline-related",
+      "iframe",
+      "script",
+      "style",
+      "noscript",
+      "a[href]"
+    ],
+    "waitForSelector": ".td-post-content, .entry-content",
+    "timeout": 45000
+  },
+  "todays-golfer.com": {
+    "name": "Today's Golfer",
+    "homepage": "https://www.todays-golfer.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": ".listing__item, .article-card, article[data-testid='card'], .card-container",
+      "link": "a[href]",
+      "title": "h3, h2, .headline",
+      "time": "time, .timestamp, .date-published, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/features/",
+      "/equipment/",
+      "/instruction/"
+    ],
+    "selectors": {
+      "title": "h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1",
+      "article": "article, .article-content, .entry-content, main",
+      "content": ".entry-content, .article-content, .post-content, .content-area",
+      "paragraphs": ".entry-content p, .article-content p, .post-content p",
+      "images": ".entry-content img, .article-content img, .post-content img, .wp-block-image img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-posts",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".entry-content, .article-content",
+    "timeout": 30000
+  },
+  "golfweek.usatoday.com": {
+    "name": "Golfweek (USA Today)",
+    "homepage": "https://golfweek.usatoday.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": ".gnt_m_flm, article[data-c-br], .story-link, .gnt_m",
+      "link": "a[href*='/story/'], a[href*='/news/'], a[href*='/article/'], a[href*='/video/'], .gnt_m_flm_a",
+      "title": "h2, h3, .gnt_m_flm_h, .headline",
+      "time": "time, [data-c-dt], .gnt_m_flm_sbt, .timestamp",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/story/sports/golf/",
+      "/news/",
+      "/article/",
+      "/video/"
+    ],
+    "selectors": {
+      "title": "h1.PageHeader-headline, h1.article-headline, h1.gnt_ar_hl, h1[itemprop='headline'], h1",
+      "article": ".ArticleBody-articleBody, .gnt_ar_b, article[itemprop='articleBody'], .story-body, main article",
+      "content": ".ArticleBody-articleBody, .gnt_ar_b, .story-body, .article-body",
+      "paragraphs": ".ArticleBody-articleBody p, .gnt_ar_b p, .story-body p, .article-body p",
+      "images": ".ArticleBody-articleBody img, .gnt_ar_b img, figure img, picture img, [data-c-is] img, .gnt_em img, .gnt_ar_i img, .inline-image img"
+    },
+    "removeSelectors": [
+      ".ad-container",
+      ".related-articles",
+      ".video-player",
+      ".gnt_ar_s",
+      ".gnt_ar_by",
+      ".gnt_ar_dt",
+      ".inline-share",
+      ".newsletter-signup",
+      ".recommended-articles",
+      ".trending-stories",
+      ".social-share-buttons",
+      ".comments-section",
+      ".advertisement",
+      ".promo-box",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      "iframe",
+      "script",
+      "style",
+      "noscript",
+      "a[href]"
+    ],
+    "waitForSelector": ".ArticleBody-articleBody, .gnt_ar_b",
+    "timeout": 30000
+  },
+  "nationalclubgolfer.com": {
+    "name": "National Club Golfer",
+    "homepage": "https://www.nationalclubgolfer.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .post, .article, .entry, .article-card",
+      "link": "a[href]",
+      "title": "h2, h3, .headline, .title, .entry-title",
+      "time": "time, .date, .published-date, .post-date, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/instruction/",
+      "/equipment/",
+      "/travel/",
+      "/lifestyle/"
+    ],
+    "selectors": {
+      "title": "h1.PageHeader-headline, h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1",
+      "article": ".ArticleBody-articleBody, article, .article-content, .entry-content, .post-content, main",
+      "content": ".ArticleBody-articleBody, .entry-content, .article-content, .post-content, .content-area",
+      "paragraphs": ".ArticleBody-articleBody p, .entry-content p, .article-content p, .post-content p",
+      "images": ".ArticleBody-articleBody img, .entry-content img, .article-content img, .post-content img, .wp-block-image img, figure img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-posts",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".video-container",
+      ".video-player",
+      ".related-articles",
+      ".trending-posts",
+      ".recommended-posts",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".ArticleBody-articleBody, .entry-content, .article-content",
+    "timeout": 30000
+  },
+  "www.pgatour.com": {
+    "name": "PGA Tour",
+    "homepage": "https://www.pgatour.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .article-item, .news-item, .video-item, .content-card, .card",
+      "link": "a[href*='/news/'], a[href*='/article/'], a[href*='/video/'], a[href*='/instruction/'], a[href*='/tournament/']",
+      "title": "h2, h3, h4, .headline, .story-link",
+      "time": "time, .date, .timestamp, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/article/",
+      "/video/",
+      "/instruction/",
+      "/tournament/"
+    ],
+    "selectors": {
+      "title": "h1.article-header, h1.headline, h1.content-header, h1.story-title, h1",
+      "article": ".article-content, .story-body, .content-body, article, main",
+      "content": ".article-content, .story-body, .content-body, .article-text",
+      "paragraphs": ".article-content p, .story-body p, .content-body p",
+      "images": ".article-content img, .story-body img, .content-image img, figure img, picture img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-articles",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".video-player",
+      ".promo-box",
+      ".trending-stories",
+      ".recommended-posts",
+      ".leaderboard",
+      ".scoring-widget",
+      ".player-stats",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".article-content, .story-body, .content-body",
+    "timeout": 30000
+  },
+  "skysports.com": {
+    "name": "Sky Sports Golf",
+    "homepage": "https://www.skysports.com/golf",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .news-list__item, .media-list__item, .sdc-site-tile, .news-list-secondary__item",
+      "link": "a[href*='/golf/news/'], a[href*='/golf/story/'], a[href*='/golf/report/'], a[href*='/golf/interview/'], a[href*='/golf/feature/']",
+      "title": "h3, h4, .news-list__headline, .sdc-site-tile__headline, .headline",
+      "time": "time, .label__timestamp, .sdc-site-tile__date-time, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/golf/news/",
+      "/golf/story/",
+      "/golf/report/",
+      "/golf/interview/",
+      "/golf/feature/",
+      "/golf/column/"
+    ],
+    "selectors": {
+      "title": "h1.sdc-article-header__headline, h1.article__title, h1.article-header__title, h1.long-article__title, h1",
+      "article": ".sdc-article-body, .article__body, .article-body, .story-body, article, main",
+      "content": ".sdc-article-body__body, .article__body, .article-body__content, .story-body__inner",
+      "paragraphs": ".sdc-article-body p, .article__body p, .article-body p",
+      "images": ".sdc-article-image img, .article__body img, figure img, picture img"
+    },
+    "removeSelectors": [
+      ".sdc-article-widget",
+      ".sdc-article-related-stories",
+      ".sdc-article-tags",
+      ".article__tags",
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-stories",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".author-bio",
+      ".video-player",
+      ".promo-box",
+      ".trending-now",
+      ".read-more",
+      ".also-see",
+      ".live-blog-entry",
+      ".poll",
+      ".quiz",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".sdc-article-body, .article__body, .article-body, .story-body",
+    "timeout": 30000
+  },
+  "golfmagic.com": {
+    "name": "Golf Magic",
+    "homepage": "https://www.golfmagic.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .article-item, .post-item, .content-card, .story-card",
+      "link": "a[href*='/news/'], a[href*='/equipment/'], a[href*='/features/'], a[href*='/reviews/'], a[href*='/tips/']",
+      "title": "h2, h3, .headline, .title, .story-title",
+      "time": "time, .date, .publish-date, .post-date, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/equipment/",
+      "/features/",
+      "/reviews/",
+      "/tips/"
+    ],
+    "selectors": {
+      "title": "h1.article-title, h1.story-title, h1.entry-title, .article-header h1, h1",
+      "article": ".article-content, .story-content, .entry-content, article, main",
+      "content": ".article-content, .story-content, .entry-content, .content-area",
+      "paragraphs": ".article-content p, .story-content p, .entry-content p",
+      "images": ".article-content img, .story-content img, figure img, picture img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-articles",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".video-player",
+      ".promo-box",
+      ".trending-stories",
+      ".recommended-posts",
+      ".also-read",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".article-content, .story-content, .entry-content",
+    "timeout": 30000
+  },
+  "lpga.com": {
+    "name": "LPGA",
+    "homepage": "https://www.lpga.com/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .news-item, .story-item, [class*=\"article\"]",
+      "link": "a[href*=\"/news/\"], a[href*=\"/stories/\"]",
+      "title": "h2, h3, .title, [class*=\"title\"]",
+      "time": "time, .date, [class*=\"date\"]",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/news/",
+      "/stories/",
+      "/tournaments/"
+    ],
+    "selectors": {
+      "title": "h2, h1.article-header__title, h1.story-header__title, h1.content-header__title, .article-title h1, .page-title, h1",
+      "article": "body, .article-content, .story-content, .content-body, [class*=\"article\"] [class*=\"content\"], main, article",
+      "content": "body, .article-content, .story-content, .content-body",
+      "paragraphs": "p",
+      "images": "img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-articles",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".video-player",
+      ".promo-box",
+      ".trending-stories",
+      ".recommended-posts",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": "h2",
+    "timeout": 30000
+  },
+  "cbssports.com": {
+    "name": "CBS Sports Golf",
+    "homepage": "https://www.cbssports.com/golf/",
+    "useSpecialImageHandler": true,
+    "articleListSelectors": {
+      "container": "article, .Article-container, .list-item-content, .article-list-item, .content-list-item, .media-item, .news-item, .story-link",
+      "link": "a[href*=\"/golf/news/\"], a[href*=\"/golf/\"]",
+      "title": "h2, h3, h4, .headline, .title",
+      "time": "time, .timestamp, .date, .article-date",
+      "timeAttribute": "datetime"
+    },
+    "articlePatterns": [
+      "/golf/news/",
+      "/golf/"
+    ],
+    "selectors": {
+      "title": "h1.article-headline, h1.story-headline, h1.content-headline, .article-header h1, h1",
+      "article": ".article-content, .story-content, .content-body, article, main",
+      "content": ".article-content, .story-content, .content-body, .article-text",
+      "paragraphs": ".article-content p, .story-content p, .content-body p",
+      "images": ".article-content img, .story-content img, figure img, picture img"
+    },
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-articles",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".tags",
+      ".author-bio",
+      ".video-player",
+      ".promo-box",
+      ".trending-stories",
+      ".recommended-posts",
+      ".expert-picks",
+      ".odds-widget",
+      ".fantasy-widget",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    "waitForSelector": ".article-content, .story-content, .content-body",
+    "timeout": 30000
+  }
+}

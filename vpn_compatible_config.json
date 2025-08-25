@@ -1,0 +1,29 @@
+{
+  "vpn_compatible_mode": true,
+  "browser_config": {
+    "max_concurrent_instances": 2,
+    "vpn_safe_args": [
+      "--disable-dev-shm-usage",
+      "--disable-gpu", 
+      "--no-first-run",
+      "--disable-blink-features=AutomationControlled"
+    ],
+    "removed_conflicting_args": [
+      "--disable-web-security",
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "network_settings": {
+      "respect_system_proxy": true,
+      "use_vpn_dns": true,
+      "timeout_ms": 45000
+    }
+  },
+  "web_server_config": {
+    "bind_to_localhost_only": true,
+    "port": 8080,
+    "vpn_safe_headers": {
+      "X-VPN-Safe": "true"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "01f07afb06cd4a16bafcb0ae5c5502b4": {
+    "name": "_1",
+    "usedToday": 0,
+    "totalUsed": 0,
+    "lastUsedTime": null,
+    "lastResetDate": "Sat Aug 16 2025",
+    "isHealthy": false,
+    "consecutiveFailures": 3
+  },
+  "068734c152d34bb58f8251e67e6f4a3d": {
+    "name": "",
+    "usedToday": 0,
+    "totalUsed": 0,
+    "lastUsedTime": null,
+    "lastResetDate": "Sat Aug 16 2025",
+    "isHealthy": false,
+    "consecutiveFailures": 3
+  },
+  "68ee86fd7b674e9a9f53c63f86a183c1": {
+    "name": "",
+    "usedToday": 2,
+    "totalUsed": 2,
+    "lastUsedTime": "2025-08-16T06:20:39.564Z",
+    "lastResetDate": "Sat Aug 16 2025",
+    "isHealthy": true,
+    "consecutiveFailures": 0
+  }
+}

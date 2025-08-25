@@ -1,0 +1,9 @@
+{
+  "proxies": [
+    {
+      "type": "direct",
+      "name": "直连模式（默认）",
+      "description": "不使用代理，直接连接"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "// 说明": "这是新增网站的配置模板，复制此模板并修改为你的网站信息",
+  "// 使用方法": "1. 复制整个配置块（不包括注释）2. 粘贴到website_configs.json 3. 修改为实际值",
+  
+  "example.com": {
+    "name": "网站显示名称",
+    "homepage": "https://www.example.com/",
+    
+    "// articleListSelectors说明": "首页文章列表的选择器",
+    "articleListSelectors": {
+      "container": ".article-item, .post-card, article",
+      "link": "a[href]",
+      "title": "h2, h3, .title, .headline",
+      "time": "time, .date, .publish-date, [datetime]",
+      "timeAttribute": "datetime"
+    },
+    
+    "// articlePatterns说明": "文章URL必须包含的路径模式",
+    "articlePatterns": [
+      "/news/",
+      "/article/",
+      "/post/",
+      "/story/"
+    ],
+    
+    "// selectors说明": "文章详情页的内容选择器",
+    "selectors": {
+      "title": "h1.article-title, h1.post-title, h1",
+      "article": "article, .article-content, .post-content, main",
+      "content": ".entry-content, .article-body, .post-body, .content-area",
+      "paragraphs": ".entry-content p, .article-body p, .content-area p",
+      "images": ".entry-content img, .article-body img, figure img, .content-area img"
+    },
+    
+    "// removeSelectors说明": "需要移除的元素（广告、推荐等）",
+    "removeSelectors": [
+      ".advertisement",
+      ".ads",
+      ".ad-container",
+      ".social-share",
+      ".newsletter-signup",
+      ".related-posts",
+      ".comments",
+      ".sidebar",
+      ".footer",
+      ".header",
+      ".navigation",
+      ".breadcrumb",
+      ".author-bio",
+      ".tags",
+      ".recommended",
+      "iframe",
+      "script",
+      "style",
+      "noscript"
+    ],
+    
+    "// waitForSelector说明": "等待此元素加载完成",
+    "waitForSelector": ".article-content, .entry-content",
+    
+    "// timeout说明": "页面加载超时时间（毫秒）",
+    "timeout": 30000,
+    
+    "// useSpecialImageHandler说明": "是否需要特殊图片处理（可选）",
+    "useSpecialImageHandler": false
+  },
+  
+  "// 完整示例": "以下是一个真实的配置示例",
+  "realexample.com": {
+    "name": "Real Example Golf",
+    "homepage": "https://www.realexample.com/",
+    "articleListSelectors": {
+      "container": ".news-item, .story-card",
+      "link": "a.story-link",
+      "title": "h3.story-title",
+      "time": "span.publish-time",
+      "timeAttribute": "data-time"
+    },
+    "articlePatterns": [
+      "/golf-news/",
+      "/equipment-reviews/"
+    ],
+    "selectors": {
+      "title": "h1#main-title",
+      "article": "div.main-article",
+      "content": "div.article-text",
+      "paragraphs": "div.article-text p",
+      "images": "div.article-text img.content-image"
+    },
+    "removeSelectors": [
+      ".google-ads",
+      ".social-buttons",
+      ".author-box",
+      ".related-stories"
+    ],
+    "waitForSelector": "div.article-text",
+    "timeout": 45000
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "checkInterval": 30000,
+  "maxRestarts": 5,
+  "autoStart": true,
+  "monitorFiles": [
+    "deep_urls_*.txt"
+  ],
+  "command": "node batch_process_articles.js"
+}

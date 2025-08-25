@@ -1,0 +1,26 @@
+{
+  "timestamp": 1754469499352,
+  "processStatus": {
+    "batch": true,
+    "recovery": true,
+    "web": true
+  },
+  "progress": {
+    "count": 28,
+    "newArticles": 0,
+    "isProgressing": false
+  },
+  "logActivity": {
+    "latestActivity": 1754469498320,
+    "timeSinceLastActivity": 971,
+    "isActive": true
+  },
+  "systemResources": {
+    "cpuInfo": "无Node进程",
+    "memInfo": "无内存使用",
+    "processes": []
+  },
+  "needsRestart": false,
+  "restartReason": "",
+  "stuckWarningCount": 0
+}

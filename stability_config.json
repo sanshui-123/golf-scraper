@@ -1,0 +1,45 @@
+{
+  "network": {
+    "pageLoadTimeout": {
+      "default": 30000,
+      "retry": 45000,
+      "golfcom": 60000,
+      "maxAttempts": 3,
+      "retryDelay": 3000
+    },
+    "resourceLoadTimeout": 15000,
+    "specialSites": {
+      "golf.com": {
+        "waitStrategy": "networkidle",
+        "extraWaitTime": 5000,
+        "scrollCount": 5,
+        "scrollDelay": 3000
+      }
+    }
+  },
+  "claude": {
+    "minCallInterval": 3000,
+    "maxRetries": 2,
+    "retryDelay": 20000,
+    "timeout": {
+      "fixed": 180000,
+      "enableDynamic": false
+    }
+  },
+  "browser": {
+    "headless": true,
+    "args": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--disable-web-security",
+      "--disable-features=IsolateOrigins",
+      "--disable-site-isolation-trials"
+    ]
+  },
+  "processing": {
+    "batchSize": 1,
+    "articleDelay": 3000
+  }
+}

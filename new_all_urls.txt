@@ -1,0 +1,170 @@
+🔍 发现新文章模式
+⚡ 已启用忽略时间模式（获取所有文章）
+
+🔍 开始扫描所有文章（忽略时间）...
+📍 主页: https://golf.com/
+📜 滚动页面以加载更多文章...
+
+🔍 调试信息:
+  选择器 ".listing__item等" 找到 0 个元素
+  选择器 "[class*="listing-item"]等" 找到 0 个元素
+  基于链接方法找到 91 个链接
+  时间识别率: 17/17 (100%)
+
+📊 发现 17 篇文章
+
+📅 所有文章: 17 篇（忽略时间过滤）
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Jon Rahm snapped at an Open fan. But the real surp... - July 17, 2025
+  📄 Jon Rahm snapped at an Open fan. But the real surp... - July 17, 2025
+  📄 Portrush’s 1st-tee surprise made for morning carna... - July 17, 2025
+  📄 ‘Are you kidding me?’ Phil Mickelson flips bad bre... - July 17, 2025
+  📄 Gnarly drop zones at 2025 Open are clever solution... - July 17, 2025
+  📄 Jon Rahm’s photobomb, Padraig’s unique Open resear... - July 16, 2025
+  📄 ‘Such a disappointment’: Caddie perk gets nixed at... - July 16, 2025
+  📄 Why the Open Championship’s happiest golfer says h... - July 16, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+⚠️  无法连接到服务器API，使用本地检查
+
+🆕 新文章: 17 篇
+
+📊 扫描结果汇总:
+  - 总文章数: 17
+  - 待检查文章: 17
+  - 新文章数: 17
+
+🆕 新文章列表:
+1. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+2. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+3. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+4. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+5. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+6. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+7. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+8. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+9. Jon Rahm snapped at an Open fan. But the real surprise came later
+   https://golf.com/news/
+10. Jon Rahm snapped at an Open fan. But the real surprise came later
+   https://golf.com/news/
+11. Portrush’s 1st-tee surprise made for morning carnage at the Open
+   https://golf.com/news/
+12. ‘Are you kidding me?’ Phil Mickelson flips bad break into epic bunker hole-out at Open
+   https://golf.com/news/
+13. Gnarly drop zones at 2025 Open are clever solution to ‘bail out’ strategy
+   https://golf.com/news/
+14. Jon Rahm’s photobomb, Padraig’s unique Open research | Rogers Report
+   https://golf.com/news/
+15. ‘Such a disappointment’: Caddie perk gets nixed at Open Championship
+   https://golf.com/news/
+16. Why the Open Championship’s happiest golfer says he can’t win
+   https://golf.com/news/
+17. Scottie, Phil, Rahm: 10 sights, sounds, stories from Open Championship Thursday
+   https://golf.com/news/sights-sounds-open-championship-thursday/
+
+是否处理这些新文章？(y/n): 🔍 发现新文章模式
+⚡ 已启用忽略时间模式（获取所有文章）
+
+🔍 开始扫描所有文章（忽略时间）...
+📍 主页: https://www.golfmonthly.com/
+📜 滚动页面以加载更多文章...
+
+🔍 调试信息:
+  选择器 ".listing__item等" 找到 70 个元素
+  时间识别率: 23/34 (68%)
+
+📊 发现 34 篇文章
+
+📅 所有文章: 34 篇（忽略时间过滤）
+  📄 The Open: Five-Way Tie As Scheffler And McIlroy Of... - 无时间信息
+  📄 The Open Championship Tee Times 2025: Round Two... - 无时间信息
+  📄 'It Wasn't A Great Rake Job' - Tommy Fleetwood Rea... - 无时间信息
+  📄 The Leader Of The Open Used This Drill On The Rang... - 无时间信息
+  📄 Where Every Open Venue Ranks In Our Top 100... - 无时间信息
+  📄 We Tried To Work Out Rory McIlroy’s Handicap In 20... - 无时间信息
+  📄 'Felt Like We Were On The Golf Course For About 12... - 无时间信息
+  📄 Best Beginner Golf Clubs For Ladies 2025 - Our top... - 2025-07-03T15:48:58Z
+  📄 Best Women's Golf Clubs 2025... - 2025-07-03T10:21:02Z
+  📄 How Fast Are The Greens At Royal Portrush On The S... - 无时间信息
+  📄 I Asked Google Gemini To Predict A Surprise Winner... - 2025-07-16T15:00:00Z
+  📄 The Astonishing Handicap Indexes Of The Top-10 In ... - 2025-07-16T12:00:00Z
+  📄 How To Win The Open Championship: Two-Time Champio... - 2025-07-15T15:10:19Z
+  📄 How To Think Like A Single Figure Golfer (No Matte... - 2025-07-15T12:53:25Z
+  📄 Royal Portrush Course Guide: Head Pro Gary McNeill... - 2025-07-15T11:41:44Z
+  📄 How To Watch The Open Championship 2025 Potentiall... - 无时间信息
+  📄 LIV Golf Leaderboard At The Open: Hatton And Westw... - 2025-07-17T21:09:53Z
+  📄 How To Get Get Tickets For The 2026 Open Champions... - 2025-07-17T05:00:00Z
+  📄 'Such A Disappointment' - Billy Horschel Questions... - 2025-07-16T20:16:01Z
+  📄 The 1st Hole At Royal Portrush Is Scary - But Is I... - 2025-07-16T19:45:46Z
+  📄 Scheffler vs McIlroy: The Fascinating Stats Compar... - 2025-07-16T19:41:02Z
+  📄 Why Did Grant Horvat Decide To Not Play In A PGA T... - 2025-07-16T15:20:21Z
+  📄 How To Hit Out Of A Deep Revetted Bunker – My Shor... - 无时间信息
+  📄 I Hit 60 Putts From 6ft Using Three Different Putt... - 2025-07-11T13:42:18Z
+  📄 'Tiger Does This All The Time'... 5 Tour Pro Tips ... - 2025-07-10T12:00:00Z
+  📄 'Stop Digging And Start Gliding' — My Chip Shot Ma... - 2025-07-09T14:58:03Z
+  📄 I'll Teach You The Greenside Bunker Shot Used By M... - 2025-07-01T13:00:00Z
+  📄 Left Hand Low Putting Grip Explained: Step-By-Step... - 2025-06-30T15:26:26Z
+  📄 The Value For Money To Be Had With This Discounted... - 无时间信息
+  📄 Don't Tell Amazon But These Prime Day Golf Deals A... - 2025-07-12T15:00:00Z
+  📄 I Can't Believe This New Putter Is Already Discoun... - 2025-07-12T02:00:00Z
+  📄 Amazon Prime Day Ends Tonight - This Is Your Last ... - 2025-07-11T23:30:00Z
+  📄 This Excellent GolfBuddy Rangefinder Is Only $120 ... - 2025-07-11T21:00:00Z
+  📄 Prime Day Alert - My Top Spiked Shoe Of 2024 Now H... - 2025-07-11T19:00:00Z
+⚠️  无法连接到服务器API，使用本地检查
+
+🆕 新文章: 16 篇
+
+📊 扫描结果汇总:
+  - 总文章数: 34
+  - 待检查文章: 34
+  - 新文章数: 16
+
+🆕 新文章列表:
+1. The Open: Five-Way Tie As Scheffler And McIlroy Off To Strong Start At Royal Portrush
+   https://www.golfmonthly.com/news/live/the-open-championship-2025-leaderboard-scores
+2. 'It Wasn't A Great Rake Job' - Tommy Fleetwood Reacts To 'Awful' Bunker Break At The Open
+   https://www.golfmonthly.com/news/it-wasnt-a-great-rake-job-tommy-fleetwood-reacts-to-awful-bunker-break-at-the-open
+3. The Leader Of The Open Used This Drill On The Range At Royal Portrush... It Could Transform Your Ball Striking
+   https://www.golfmonthly.com/tips/the-leader-of-the-open-used-this-drill-on-the-range-at-royal-portrush
+4. Where Every Open Venue Ranks In Our Top 100
+   https://www.golfmonthly.com/news/open-championship-venues-ranking
+5. We Tried To Work Out Rory McIlroy’s Handicap In 2025. Here’s What The Data Says…
+   https://www.golfmonthly.com/news/what-would-rory-mcilroys-handicap-be
+6. 'Felt Like We Were On The Golf Course For About 12 Hours' - What The Players Said About Near Six-Hour Rounds At The Open
+   https://www.golfmonthly.com/news/felt-like-we-were-on-the-golf-course-for-about-12-hours-what-the-players-said-about-near-six-hour-rounds
+7. How Fast Are The Greens At Royal Portrush On The Stimpmeter?
+   https://www.golfmonthly.com/features/how-fast-are-the-greens-at-royal-portrush-on-the-stimpmeter
+8. I Asked Google Gemini To Predict A Surprise Winner, First Round Leader And Top-10 Finisher At The 2025 Open Championship
+   https://www.golfmonthly.com/features/i-asked-google-gemini-to-predict-a-surprise-winner-first-round-leader-and-top-10-finisher-at-the-2025-open-championship
+9. The Astonishing Handicap Indexes Of The Top-10 In The 2019 Open Championship at Royal Portrush
+   https://www.golfmonthly.com/features/the-astonishing-handicap-indexes-of-the-top-10-in-the-2019-open-championship-at-royal-portrush
+10. LIV Golf Leaderboard At The Open: Hatton And Westwood Ahead As DeChambeau Struggles
+   https://www.golfmonthly.com/news/liv-golf-leaderboard-the-open-2025
+11. How To Get Get Tickets For The 2026 Open Championship
+   https://www.golfmonthly.com/news/tickets-2026-open-royal-birkdale
+12. 'Such A Disappointment' - Billy Horschel Questions 'Very Odd' Open Decision To Remove Bunker Rakers
+   https://www.golfmonthly.com/news/such-a-disappointment-billy-horschel-questions-very-odd-open-decision-to-remove-bunker-rakers
+13. The 1st Hole At Royal Portrush Is Scary - But Is It The Toughest Start In The Open Championship?
+   https://www.golfmonthly.com/news/the-1st-hole-at-royal-portrush-is-scary-but-is-it-the-toughest-start-in-the-open-championship
+14. Scheffler vs McIlroy: The Fascinating Stats Comparing The World's Best Two Players Ahead Of The 2025 Open
+   https://www.golfmonthly.com/news/scheffler-vs-mcilroy-the-fascinating-stats-comparing-the-worlds-best-two-players-ahead-of-the-2025-open
+15. Why Did Grant Horvat Decide To Not Play In A PGA Tour Event?
+   https://www.golfmonthly.com/news/why-did-grant-horvat-decide-to-not-play-in-a-pga-tour-event
+16. The Value For Money To Be Had With This Discounted $150 Driver Is 'Astounding'
+   https://www.golfmonthly.com/buying-advice/the-value-for-money-to-be-had-with-this-discounted-usd150-driver-is-astounding
+
+是否处理这些新文章？(y/n): 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章显示测试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 20px;
+            background: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .article-item {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .duplicate-article {
+            background: #fff8dc;
+            border: 2px solid #ffc107;
+        }
+        .duplicate-badge {
+            background: #ffc107;
+            color: #333;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            margin-left: 0.5rem;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>文章显示测试</h1>
+        
+        <h2>正常文章显示：</h2>
+        <div class="article-item">
+            <a href="#">2025年高尔夫球具新趋势分析</a>
+            <div class="article-meta">来源：Golf.com | 2025-08-12</div>
+        </div>
+        
+        <h2>重复文章显示（带标记）：</h2>
+        <div class="article-item duplicate-article">
+            <a href="#">老虎伍兹最新训练视频曝光<span class="duplicate-badge">🔁 重复</span></a>
+            <div class="article-meta">来源：Golf Monthly | 2025-08-12</div>
+            <div style="background: #fff3cd; color: #856404; padding: 0.5rem 1rem; border-radius: 8px; margin: 0.5rem 0;">
+                ⚠️ 此文章已在 <strong>2025-08-10</strong> 处理过
+                <span style="font-size: 0.85rem; color: #6c757d;">（wechat_article_1234.html）</span>
+            </div>
+        </div>
+        
+        <h2>iframe测试 - 查看实际页面：</h2>
+        <iframe src="http://localhost:8080/articles/2025-08-12" 
+                width="100%" 
+                height="600" 
+                style="border: 1px solid #ddd; border-radius: 8px;">
+        </iframe>
+        
+        <h2>直接访问测试：</h2>
+        <p>请访问：<a href="http://localhost:8080/articles/2025-08-12" target="_blank">http://localhost:8080/articles/2025-08-12</a></p>
+        
+        <h2>检查结果：</h2>
+        <ul>
+            <li>✅ 今日(2025-08-12)共23篇文章</li>
+            <li>✅ 无重复文章</li>
+            <li>✅ 重复检查逻辑正常工作</li>
+            <li>✅ 样式和标记显示正确</li>
+        </ul>
+    </div>
+</body>
+</html>

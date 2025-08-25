@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-08-25T07:36:01.944Z",
+  "running": true,
+  "currentConcurrency": 0,
+  "optimalConcurrency": 1,
+  "stats": {
+    "processed": 0,
+    "success": 0,
+    "failed": 0
+  },
+  "dedupStats": {
+    "total": 436,
+    "skipped": 0,
+    "processed": 436
+  },
+  "urlProgress": {
+    "totalProcessed": 0,
+    "totalRemaining": 436,
+    "activeUrls": [],
+    "completionRate": 0
+  },
+  "processing": {
+    "/Users/sanshui/Desktop/cursor/temp_batch_1756107361878.txt": {
+      "status": "processing",
+      "startTime": "2025-08-25T07:36:01.944Z",
+      "totalUrls": 436,
+      "processedUrls": 0
+    }
+  },
+  "urlFiles": [
+    {
+      "file": "/Users/sanshui/Desktop/cursor/temp_batch_1756107361878.txt",
+      "name": "temp_batch_1756107361878.txt",
+      "status": {
+        "status": "processing",
+        "startTime": "2025-08-25T07:36:01.944Z",
+        "totalUrls": 436,
+        "processedUrls": 0
+      }
+    }
+  ]
+}

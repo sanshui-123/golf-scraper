@@ -1,0 +1,295 @@
+{
+  "https://example.com/article1": {
+    "reason": "改写结果缺少标题（应以#开头）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-12T01:56:57.746Z",
+    "status": "pending_retry"
+  },
+  "https://example.com/article2": {
+    "reason": "改写结果缺少标题（应以#开头）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-12T01:57:08.810Z",
+    "status": "pending_retry"
+  },
+  "https://example.com/article3": {
+    "reason": "改写结果缺少标题（应以#开头）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-12T01:57:25.317Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/buying-advice/im-sick-of-seeing-plastic-tees-on-the-golf-course-so-im-snapping-up-these-usd8-bamboo-ones-at-amazon-theyre-durable-and-enviro-friendly": {
+    "reason": "Claude改写失败: Claude返回空内容",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-12T05:27:22.204Z",
+    "status": "success",
+    "completedAt": "2025-07-12T05:47:43.674Z"
+  },
+  "https://www.golfmonthly.com/news/somi-lee-rules-incident-amundi-evian-championship": {
+    "reason": "改写结果缺少标题（应以#开头）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-12T22:36:50.611Z",
+    "status": "success",
+    "completedAt": "2025-07-12T23:41:42.546Z"
+  },
+  "https://www.golfmonthly.com/news/keegan-bradley-playing-captain-plans-for-ryder-cup-team-usa": {
+    "reason": "改写结果缺少标题（应以#开头）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-13T03:01:34.630Z",
+    "status": "success",
+    "completedAt": "2025-07-13T03:04:59.609Z"
+  },
+  "https://www.golfmonthly.com/news/live/genesis-scottish-open-2025-leaderboard-live-updates": {
+    "reason": "实时赛事报道内容过长，已跳过",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:34:57.044Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/liv-golf-resubmits-owgr-bid": {
+    "reason": "Claude改写失败: Cannot read properties of undefined (reading 'rewriteArticle')",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T07:50:11.948Z",
+    "status": "success",
+    "completedAt": "2025-07-15T08:12:55.727Z"
+  },
+  "https://www.golfmonthly.com/news/scottish-open-players-missed-cut": {
+    "reason": "Claude改写失败: Cannot read properties of undefined (reading 'rewriteArticle')",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T07:50:34.144Z",
+    "status": "success",
+    "completedAt": "2025-07-14T07:55:51.422Z"
+  },
+  "https://www.golfmonthly.com/features/the-7-golf-products-wed-create-if-all-equipment-rules-were-removed": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/features/the-7-golf-products-wed-create-if-all-equipment-rules-were-removed\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/features/the-7-golf-products-wed-create-if-all-equipment-rules-were-removed\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:21.299Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.092Z"
+  },
+  "https://www.golfmonthly.com/news/12-big-names-missing-the-2025-open": {
+    "reason": "Claude改写失败: Claude改写失败: Claude返回空内容",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T15:22:24.095Z",
+    "status": "success",
+    "completedAt": "2025-07-14T15:27:44.324Z"
+  },
+  "https://www.golfmonthly.com/news/open-championship-2025-full-field-how-qualified": {
+    "reason": "Claude改写失败: Claude返回空内容",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T03:26:59.934Z",
+    "status": "success",
+    "completedAt": "2025-07-16T03:47:42.325Z"
+  },
+  "https://www.golfmonthly.com/news/royal-portrush-facts-open-championship-host-course": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/news/royal-portrush-facts-open-championship-host-course\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/news/royal-portrush-facts-open-championship-host-course\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:20.629Z",
+    "status": "success",
+    "completedAt": "2025-07-15T09:40:54.149Z"
+  },
+  "https://www.golfmonthly.com/news/why-havent-these-three-famous-open-venues-been-used-for-a-while-and-what-are-the-chances-of-a-return": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/news/why-havent-these-three-famous-open-venues-been-used-for-a-while-and-what-are-the-chances-of-a-return\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/news/why-havent-these-three-famous-open-venues-been-used-for-a-while-and-what-are-the-chances-of-a-return\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:20.752Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.092Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/best-beginner-golf-clubs-for-ladies": {
+    "reason": "Claude改写失败: 改写超时（140.3681640625秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T01:41:48.917Z",
+    "status": "success",
+    "completedAt": "2025-07-16T03:31:44.747Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/best-womens-golf-clubs-year": {
+    "reason": "Claude改写失败: 改写超时（141.798828125秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T01:47:28.962Z",
+    "status": "success",
+    "completedAt": "2025-07-16T03:52:00.873Z"
+  },
+  "https://www.golfmonthly.com/features/our-heated-office-debate-about-the-world-handicap-system-unearthed-a-worrying-divide-between-low-and-high-handicappers": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/features/our-heated-office-debate-about-the-world-handicap-system-unearthed-a-worrying-divide-between-low-and-high-handicappers\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/features/our-heated-office-debate-about-the-world-handicap-system-unearthed-a-worrying-divide-between-low-and-high-handicappers\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:21.150Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.092Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/dont-tell-amazon-but-these-prime-day-golf-deals-are-still-live": {
+    "reason": "Claude改写失败: 改写超时（134.2265625秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T01:52:59.620Z",
+    "status": "success",
+    "completedAt": "2025-07-16T03:55:22.323Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/i-cant-believe-this-new-putter-is-already-discounted-by-34-percent-on-amazons-final-prime-day": {
+    "reason": "Claude改写失败: 改写超时（180秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T04:31:10.001Z",
+    "status": "success",
+    "completedAt": "2025-07-16T01:54:24.118Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/amazon-prime-day-ends-tonight-this-is-your-last-chance-to-pick-up-these-golf-balls-training-aids-and-accessories-under-usd50": {
+    "reason": "Claude改写失败: Claude改写失败: Claude返回空内容",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T04:33:17.832Z",
+    "status": "success",
+    "completedAt": "2025-07-16T01:58:59.642Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/this-excellent-golfbuddy-rangefinder-is-only-usd120-on-amazon-prime-day-but-this-discount-will-expire-very-soon": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/buying-advice/this-excellent-golfbuddy-rangefinder-is-only-usd120-on-amazon-prime-day-but-this-discount-will-expire-very-soon\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/buying-advice/this-excellent-golfbuddy-rangefinder-is-only-usd120-on-amazon-prime-day-but-this-discount-will-expire-very-soon\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:22.013Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.093Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/act-fast-on-the-final-day-of-amazon-prime-my-favorite-spiked-shoe-of-2024-now-has-up-to-55-percent-off": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/buying-advice/act-fast-on-the-final-day-of-amazon-prime-my-favorite-spiked-shoe-of-2024-now-has-up-to-55-percent-off\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/buying-advice/act-fast-on-the-final-day-of-amazon-prime-my-favorite-spiked-shoe-of-2024-now-has-up-to-55-percent-off\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:22.328Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.093Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/amazon-prime-day-ends-tonight-here-are-25-deals-id-buy-before-its-too-late": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmonthly.com/buying-advice/amazon-prime-day-ends-tonight-here-are-25-deals-id-buy-before-its-too-late\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/buying-advice/amazon-prime-day-ends-tonight-here-are-25-deals-id-buy-before-its-too-late\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T10:01:22.594Z",
+    "status": "success",
+    "completedAt": "2025-07-15T04:38:25.093Z"
+  },
+  "https://www.golfmonthly.com/betting/open-championship-2025-odds-predictions-picks-win": {
+    "reason": "Claude改写失败: 改写超时（120秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-14T15:13:17.107Z",
+    "status": "success",
+    "completedAt": "2025-07-14T15:31:43.870Z"
+  },
+  "https://www.golfmonthly.com/news/open-championship-2025-form-guide-scheffler-mcilroy-schauffele-and-co": {
+    "reason": "Claude改写失败: 改写超时（132.564453125秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T02:04:58.320Z",
+    "status": "success",
+    "completedAt": "2025-07-16T03:58:51.474Z"
+  },
+  "https://www.golfmonthly.com/news/open-practice-tee-times": {
+    "reason": "文章抓取失败: page.goto: net::ERR_CONNECTION_RESET at https://www.golfmonthly.com/news/open-practice-tee-times\nCall log:\n\u001b[2m  - navigating to \"https://www.golfmonthly.com/news/open-practice-tee-times\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T03:58:15.606Z",
+    "status": "success",
+    "completedAt": "2025-07-15T05:30:43.610Z"
+  },
+  "url1": {
+    "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"url1\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T08:01:35.320Z",
+    "status": "pending_retry"
+  },
+  "url2": {
+    "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"url2\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T08:01:35.410Z",
+    "status": "pending_retry"
+  },
+  "url3": {
+    "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n\u001b[2m  - navigating to \"url3\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-15T08:01:35.519Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/ill-teach-you-the-greenside-bunker-shot-used-by-most-of-the-worlds-best-golfers": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:35:41.687Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/from-lack-of-sleep-to-the-surprise-of-2019-what-open-golf-courses-are-to-shane-lowry": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:36:24.061Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/hes-a-flusher-with-a-good-track-record-on-links-courses-shane-lowrys-caddie-on-why-hes-backing-the-irishman-this-week": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:37:00.826Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/how-to-watch-the-open-championship-2025-potentially-for-free": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:37:40.785Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/features/how-to-win-the-open-championship-two-time-champion-ernie-els-blueprint-for-major-success": {
+    "reason": "Claude改写失败: 改写超时（128.4951171875秒）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T02:06:45.037Z",
+    "status": "success",
+    "completedAt": "2025-07-16T04:03:46.434Z"
+  },
+  "https://www.golfmonthly.com/news/5-modern-links-courses-that-could-be-great-open-venues": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:38:20.714Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/ill-never-forget-the-experience-of-people-cheering-me-on-golf-influencer-grace-charis-talks-playing-with-john-daly": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:38:56.182Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/features/the-relative-safety-of-3-wood-off-the-tee-is-a-myth-and-the-data-proves-it": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:39:47.767Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/how-is-a-remote-electric-golf-trolley-actually-made-i-headed-behind-the-scenes-to-find-out": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:40:27.471Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/how-many-1-putts-does-the-average-pga-tour-player-make-per-round": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:41:09.011Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/the-historic-links-that-could-one-day-be-the-republic-of-irelands-first-open-venue": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:41:47.721Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/open-weather-forecast-2025": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:42:26.418Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/meet-the-9-amateurs-vying-for-the-silver-medal-at-royal-portrush": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:43:02.395Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/tiger-does-this-all-the-time-5-tour-pro-tips-to-help-you-hit-more-fairways": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:43:37.795Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/stop-digging-and-start-gliding-my-chip-shot-makeover-that-improved-my-consistency": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:44:26.911Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/tips/my-short-game-was-utterly-horrific-until-i-discovered-this-1-simple-technique": {
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1') to be visible\u001b[22m\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-07-16T05:45:11.012Z",
+    "status": "pending_retry"
+  }
+}

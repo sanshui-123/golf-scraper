@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-07-15T08:49:34.051Z",
+  "summary": {
+    "totalArticlesOnWebsite": 33,
+    "attemptedToProcess": 14,
+    "successfullyProcessed": 8,
+    "pendingRetry": 6,
+    "neverProcessed": 19,
+    "localArticlesCount": 141,
+    "failedArticlesJsonCount": 29
+  },
+  "unprocessedArticles": [
+    "https://www.golfmonthly.com/news/from-lack-of-sleep-to-the-surprise-of-2019-what-open-golf-courses-are-to-shane-lowry",
+    "https://www.golfmonthly.com/news/hes-a-flusher-with-a-good-track-record-on-links-courses-shane-lowrys-caddie-on-why-hes-backing-the-irishman-this-week",
+    "https://www.golfmonthly.com/news/how-to-watch-the-open-championship-2025-potentially-for-free",
+    "https://www.golfmonthly.com/news/5-modern-links-courses-that-could-be-great-open-venues",
+    "https://www.golfmonthly.com/news/ill-never-forget-the-experience-of-people-cheering-me-on-golf-influencer-grace-charis-talks-playing-with-john-daly",
+    "https://www.golfmonthly.com/features/the-relative-safety-of-3-wood-off-the-tee-is-a-myth-and-the-data-proves-it",
+    "https://www.golfmonthly.com/tips/how-is-a-remote-electric-golf-trolley-actually-made-i-headed-behind-the-scenes-to-find-out",
+    "https://www.golfmonthly.com/tips/how-many-1-putts-does-the-average-pga-tour-player-make-per-round",
+    "https://www.golfmonthly.com/news/the-historic-links-that-could-one-day-be-the-republic-of-irelands-first-open-venue",
+    "https://www.golfmonthly.com/news/paul-waring-becomes-second-withdrawal-from-2025-open",
+    "https://www.golfmonthly.com/news/which-past-open-champions-are-not-playing-at-royal-portrush",
+    "https://www.golfmonthly.com/news/open-weather-forecast-2025",
+    "https://www.golfmonthly.com/news/meet-the-9-amateurs-vying-for-the-silver-medal-at-royal-portrush",
+    "https://www.golfmonthly.com/tips/i-hit-60-putts-from-6ft-using-three-different-putting-grips-but-which-worked-best",
+    "https://www.golfmonthly.com/tips/tiger-does-this-all-the-time-5-tour-pro-tips-to-help-you-hit-more-fairways",
+    "https://www.golfmonthly.com/tips/stop-digging-and-start-gliding-my-chip-shot-makeover-that-improved-my-consistency",
+    "https://www.golfmonthly.com/tips/ill-teach-you-the-greenside-bunker-shot-used-by-most-of-the-worlds-best-golfers",
+    "https://www.golfmonthly.com/tips/left-hand-low-putting-grip-explained",
+    "https://www.golfmonthly.com/tips/my-short-game-was-utterly-horrific-until-i-discovered-this-1-simple-technique"
+  ],
+  "pendingRetryArticles": [
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/best-beginner-golf-clubs-for-ladies",
+      "reason": "准备重新处理",
+      "lastAttempt": "2025-07-15T07:31:28.385Z",
+      "attemptCount": 0
+    },
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/best-womens-golf-clubs-year",
+      "reason": "准备重新处理",
+      "lastAttempt": "2025-07-15T07:31:28.386Z",
+      "attemptCount": 0
+    },
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/dont-tell-amazon-but-these-prime-day-golf-deals-are-still-live",
+      "reason": "Claude改写失败: 改写超时（180秒）",
+      "lastAttempt": "2025-07-15T04:15:23.879Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/i-cant-believe-this-new-putter-is-already-discounted-by-34-percent-on-amazons-final-prime-day",
+      "reason": "Claude改写失败: 改写超时（180秒）",
+      "lastAttempt": "2025-07-15T04:31:10.001Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/amazon-prime-day-ends-tonight-this-is-your-last-chance-to-pick-up-these-golf-balls-training-aids-and-accessories-under-usd50",
+      "reason": "Claude改写失败: Claude改写失败: Claude返回空内容",
+      "lastAttempt": "2025-07-15T04:33:17.832Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/open-championship-2025-form-guide-scheffler-mcilroy-schauffele-and-co",
+      "reason": "Claude改写失败: 改写超时（180秒）",
+      "lastAttempt": "2025-07-15T05:29:18.005Z",
+      "attemptCount": 1
+    }
+  ]
+}

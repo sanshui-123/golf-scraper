@@ -1,0 +1,227 @@
+{
+  "url": "https://mygolfspy.com/mygolfspy-most-wanted-fairway-woods-2024/",
+  "title": "UH OH—WE LOST THIS ONE.",
+  "selectors": {
+    "title": [
+      {
+        "selector": "h1",
+        "text": "UH OH—WE LOST THIS ONE.",
+        "className": "page-title text-SteelfishEB text-uppercase fs120"
+      }
+    ],
+    "content": [
+      {
+        "selector": ".content-area",
+        "textLength": 178,
+        "className": "offset-md-2 col-md-8 content-area",
+        "hasImages": 0
+      }
+    ],
+    "images": []
+  },
+  "images": [
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/logo_mygolfspy_full.svg",
+      "alt": "MyGolfSpy logo",
+      "width": 264,
+      "height": 101,
+      "className": "mw-100 d-lg-inline-block d-none",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "a",
+      "parentClass": ""
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/logo_mgs_m.svg",
+      "alt": "MyGolfSpy logo",
+      "width": 202,
+      "height": 64,
+      "className": "mw-100 d-lg-none d-inline-block",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "a",
+      "parentClass": ""
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/search-white.svg",
+      "alt": "search",
+      "width": 26,
+      "height": 26,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "li",
+      "parentClass": "search-icon-desktop search_modal_trigger"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2023/01/Group-2106.jpg",
+      "alt": "featured",
+      "width": 1250,
+      "height": 512,
+      "className": "w-100 no-lazy",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-600x420.jpg",
+      "alt": "",
+      "width": 422,
+      "height": 295,
+      "className": "w-100 d-sm-block d-none",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/07/C-1.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-300x210.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 1075,
+      "className": "w-100 d-sm-none d-block",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/07/C-1-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/07/C-1.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-600x420.jpg",
+      "alt": "",
+      "width": 422,
+      "height": 295,
+      "className": "w-100 d-sm-block d-none",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-300x210.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 1075,
+      "className": "w-100 d-sm-none d-block",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-600x420.jpg",
+      "alt": "",
+      "width": 422,
+      "height": 295,
+      "className": "w-100 d-sm-block d-none",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-300x210.jpg",
+      "alt": "",
+      "width": 1536,
+      "height": 1075,
+      "className": "w-100 d-sm-none d-block",
+      "hasDataSrc": false,
+      "srcset": "https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-300x210.jpg 300w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-600x420.jpg 600w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-768x538.jpg 768w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1-1536x1075.jpg 1536w, https://uploads.mygolfspy.com/uploads/2025/06/callaway_apex_ai_150-1.jpg 2000w",
+      "parentTag": "a",
+      "parentClass": "d-block pro-img position-relative"
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/golf.svg",
+      "alt": "img",
+      "width": 24,
+      "height": 24,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "div",
+      "parentClass": "me-3"
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/store.svg",
+      "alt": "img",
+      "width": 24,
+      "height": 24,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "div",
+      "parentClass": "me-3"
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/email.svg",
+      "alt": "img",
+      "width": 24,
+      "height": 24,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "div",
+      "parentClass": "me-3"
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/fb.svg",
+      "alt": "facebook icon",
+      "width": 13,
+      "height": 24,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "div",
+      "parentClass": "bg-muted py-1 px-2"
+    },
+    {
+      "src": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/tw.svg",
+      "alt": "twitter icon",
+      "width": 24,
+      "height": 20,
+      "className": "",
+      "hasDataSrc": false,
+      "srcset": "",
+      "parentTag": "div",
+      "parentClass": "bg-muted py-1 px-2"
+    }
+  ],
+  "formatTest": [
+    {
+      "url": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/logo_mygolfspy_full.svg",
+      "contentType": "image/svg+xml",
+      "status": 200
+    },
+    {
+      "url": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/logo_mgs_m.svg",
+      "contentType": "image/svg+xml",
+      "status": 200
+    },
+    {
+      "url": "https://mygolfspy.com/wp-content/themes/mgs-theme/img/search-white.svg",
+      "contentType": "image/svg+xml",
+      "status": 200
+    },
+    {
+      "url": "https://uploads.mygolfspy.com/uploads/2023/01/Group-2106.jpg",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-600x420.jpg",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://uploads.mygolfspy.com/uploads/2025/07/C-1-300x210.jpg",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-600x420.jpg",
+      "error": "Failed to fetch"
+    },
+    {
+      "url": "https://uploads.mygolfspy.com/uploads/2025/07/mizuno_pro_s-1_irons-4-300x210.jpg",
+      "error": "Failed to fetch"
+    }
+  ],
+  "timestamp": "2025-07-16T09:42:13.234Z"
+}

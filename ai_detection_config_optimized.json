@@ -1,0 +1,53 @@
+{
+  "version": "2.0",
+  "last_updated": "2025-08-18",
+  "description": "优化版AI检测配置 - 大幅提升准确性",
+  
+  "detection": {
+    "primary_method": "optimized_local",
+    "fallback_method": "proxy",
+    "threshold": {
+      "auto_rewrite": 60,
+      "warning_level": 45,
+      "safe_level": 30,
+      "description": "提高阈值，减少不必要的重写"
+    },
+    
+    "optimization_features": {
+      "journalism_detection": true,
+      "human_signals_bonus": true,
+      "news_source_whitelist": true,
+      "false_positive_prevention": true,
+      "context_aware_scoring": true
+    }
+  },
+  
+  "content_improvement": {
+    "rewrite_template": "golf_rewrite_prompt_enhanced_v2.txt",
+    "max_rewrite_attempts": 2,
+    "quality_target": "below_45_percent",
+    "human_review_threshold": 70
+  },
+  
+  "system_reliability": {
+    "proxy_backup": true,
+    "local_detection_primary": true,
+    "cache_enabled": true,
+    "batch_processing": true,
+    "error_recovery": true
+  },
+  
+  "performance_metrics": {
+    "false_positive_rate": "target_under_5_percent",
+    "accuracy_target": "85_percent_plus",
+    "processing_time": "under_30_seconds",
+    "success_rate": "90_percent_plus"
+  },
+  
+  "logging": {
+    "level": "info",
+    "include_detection_details": true,
+    "performance_tracking": true,
+    "error_reporting": true
+  }
+}

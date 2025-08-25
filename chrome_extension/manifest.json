@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "MyGolfSpy URL Scraper",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["*://mygolfspy.com/*"],
+    "js": ["content.js"]
+  }]
+}

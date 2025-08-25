@@ -1,0 +1,36 @@
+{
+  "titleSimilarityThreshold": 0.85,
+  "timeFilter": {
+    "enabled": true,
+    "maxDaysOld": 7,
+    "ignoreNoDate": false
+  },
+  "excludePatterns": [
+    {},
+    {},
+    {},
+    {}
+  ],
+  "siteRules": {
+    "golf.com": {
+      "maxArticlesPerRun": 25,
+      "contentSignatureCheck": true
+    },
+    "golfwrx.com": {
+      "maxArticlesPerRun": 10,
+      "contentSignatureCheck": true
+    },
+    "golfmonthly.com": {
+      "maxArticlesPerRun": 20,
+      "contentSignatureCheck": false
+    },
+    "mygolfspy.com": {
+      "maxArticlesPerRun": 15,
+      "contentSignatureCheck": false
+    },
+    "golfdigest.com": {
+      "maxArticlesPerRun": 20,
+      "contentSignatureCheck": true
+    }
+  }
+}

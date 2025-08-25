@@ -1,0 +1,64 @@
+{
+  "proxies": [
+    {
+      "type": "socks5",
+      "host": "156.243.229.75",
+      "port": 45001,
+      "name": "主力SOCKS5代理",
+      "auth": {
+        "user": "kDE689f608bddea8",
+        "pass": "CnWKy70ZYI2EmvGq3Z"
+      }
+    },
+    {
+      "type": "direct",
+      "host": "direct",
+      "name": "直连（备用）"
+    }
+  ],
+  "rotationStrategy": "round-robin",
+  "dailyLimit": 18,
+  "retryWithNextProxy": true,
+  "proxyTestUrl": "https://www.baidu.com",
+  "smartConfig": {
+    "enableSmartManagement": true,
+    "healthCheckInterval": 300000,
+    "minSuccessRate": 0.3,
+    "maxConsecutiveFailures": 5,
+    "maxResponseTime": 10000,
+    "targetUrl": "https://matrix.tencent.com/ai-detect/",
+    "testText": "这是一个测试文本，用于检测AI概率。"
+  },
+  "notes": {
+    "说明": "请配置实际的代理服务器信息",
+    "免费代理": [
+      "https://www.proxy-list.download/SOCKS5",
+      "https://www.socks-proxy.net/",
+      "https://spys.one/en/socks-proxy-list/"
+    ],
+    "付费代理推荐": [
+      "Bright Data (原Luminati)",
+      "SmartProxy",
+      "ProxyMesh",
+      "Storm Proxies"
+    ],
+    "配置示例": {
+      "HTTP代理": {
+        "type": "http",
+        "host": "192.168.1.100",
+        "port": 8888,
+        "name": "本地HTTP代理"
+      },
+      "SOCKS5代理": {
+        "type": "socks5",
+        "host": "proxy.example.com",
+        "port": 1080,
+        "name": "SOCKS5代理",
+        "auth": {
+          "user": "myuser",
+          "pass": "mypass"
+        }
+      }
+    }
+  }
+}

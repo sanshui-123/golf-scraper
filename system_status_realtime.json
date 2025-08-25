@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-08-18T01:08:31.306Z",
+  "running": true,
+  "processCount": 3,
+  "todayArticles": 0,
+  "lastProcessTime": null,
+  "processingStatus": [
+    {
+      "name": "🔄 正在生成URL",
+      "total": 6,
+      "processed": 0,
+      "current": "准备开始URL生成..."
+    }
+  ],
+  "siteStats": {
+    "Golf.com": 0,
+    "Golf Monthly": 0,
+    "MyGolfSpy": 0,
+    "GolfWRX": 0,
+    "Golf Digest": 0,
+    "Today's Golfer": 0
+  },
+  "services": {
+    "webServer": true,
+    "controller": false,
+    "batchProcessor": true
+  },
+  "latestLogs": "=== URL生成进程 ===\nURL生成: \r                                                                                \r\nURL生成:      📥 开始接收响应 (17068秒)\nURL生成: 📊 优先队列已重建，可用代理数: 0\nURL生成: \r                                                                                \r\nURL生成:      📥 开始接收响应 (17100秒)\nURL生成: 📊 优先队列已重建，可用代理数: 0\nURL生成: \r                                                                                \r\nURL生成:      📥 开始接收响应 (15205秒)\nURL生成: 📊 优先队列已重建，可用代理数: 0\nURL生成: 🏥 开始代理健康检查...\nURL生成: 📊 优先队列已重建，可用代理数: 0\n\n=== 智能控制器 ===\n[2025-08-16T09:37:00.849Z] ✅ 完成处理: deep_urls_skysports_com.txt (退出码: 0)\n[2025-08-16T09:37:00.849Z] 🚀 启动处理: deep_urls_todays_golfer_com.txt -> batch_deep_urls_todays_golfer_com_1755337020849.log\n[2025-08-16T09:37:01.027Z] ✅ 完成处理: deep_urls_todays_golfer_com.txt (退出码: 0)\n[2025-08-16T09:37:01.028Z] 🚀 启动处理: deep_urls_www_golfdigest_com.txt -> batch_deep_urls_www_golfdigest_com_1755337021027.log\n[2025-08-16T09:37:01.285Z] ✅ 完成处理: deep_urls_www_golfdigest_com.txt (退出码: 0)\n[2025-08-16T09:37:01.285Z] 🚀 启动处理: deep_urls_www_golfwrx_com.txt -> batch_deep_urls_www_golfwrx_com_1755337021285.log\n[2025-08-16T09:37:01.570Z] ✅ 完成处理: deep_urls_www_golfwrx_com.txt (退出码: 0)\n[2025-08-16T09:37:01.570Z] 🚀 启动处理: deep_urls_www_pgatour_com.txt -> batch_deep_urls_www_pgatour_com_1755337021570.log\n[2025-08-16T09:37:01.711Z] ✅ 完成处理: deep_urls_www_pgatour_com.txt (退出码: 0)\n[2025-08-16T09:37:29.102Z] 🎉 所有处理完成！",
+  "urlStats": {
+    "golf.com": 0,
+    "golfmonthly.com": 0,
+    "mygolfspy.com": 38,
+    "www.golfwrx.com": 0,
+    "www.golfdigest.com": 0,
+    "todays.golfer.com": 0
+  },
+  "urlGenerationRunning": true
+}

@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.56.0",
+    "@extra/recaptcha": "^4.2.1-next.587",
+    "axios": "^1.10.0",
+    "cheerio": "^1.1.0",
+    "chokidar": "^4.0.3",
+    "chromedriver": "^138.0.3",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.54.1",
+    "playwright-extra": "^4.3.6",
+    "playwright-stealth": "^0.0.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "rss-parser": "^3.13.0",
+    "selenium-webdriver": "^4.34.0",
+    "xml2js": "^0.6.2"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "enabledSites": {
+    "golf.com": true,
+    "golfmonthly.com": true,
+    "mygolfspy.com": true
+  },
+  "siteSettings": {
+    "golf.com": {
+      "maxRetries": 3,
+      "timeout": 45000,
+      "skipOnError": true,
+      "comment": "如果Golf.com频繁失败，可以设置为false暂时禁用"
+    },
+    "golfmonthly.com": {
+      "maxRetries": 3,
+      "timeout": 30000
+    },
+    "mygolfspy.com": {
+      "maxRetries": 3,
+      "timeout": 30000
+    }
+  }
+}

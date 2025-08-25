@@ -1,0 +1,116 @@
+# 依赖
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 环境变量和配置文件
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 浏览器持久化数据（包含登录信息）
+.browser_data/
+*.cookies.json
+.feishu_cookies.json
+
+# 生成的内容文件夹
+golf_content/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器配置
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 日志文件
+*.log
+logs/
+web_server.log
+
+# 临时文件
+*.tmp
+*.temp
+temp_*.txt
+temp_*.md
+
+# 备份文件
+*.backup
+*.tar.gz
+*.zip
+system_backup_*
+golf_content_backups/
+_archive_deleted/
+
+# URL文件
+deep_urls_*.txt
+all_*.txt
+*_urls.txt
+*_url_generator.log
+
+# 大文件
+*.png
+*.jpg
+*.jpeg
+
+# Claude聊天图片
+.claude/
+
+# 批处理临时文件
+temp_batch_*.txt
+temp_rewrite_*.txt
+
+# 恢复状态文件
+resume_state_*.json
+
+# 进度文件
+*_progress.json
+system_state.json
+batch_progress.json
+batch_progress_*.json
+processing_status.json
+
+# 飞书API配置（如果包含敏感信息）
+feishu_config.json
+
+# API响应和分析文件
+api_response_*.json
+proxy_analytics.json
+proxy_status.json
+
+# 失败记录
+failed_articles.json
+download_failures.json
+
+# 调试和测试文件
+analyze_url_mismatch.js
+debug_batch_check_urls.js
+test_*.html
+test_*.js
+batch_check_debug_report.json
+url_check_report.json
+url_mismatch_analysis.json
+
+# 批处理日志
+batch_*.log
+intelligent_controller.log
+concurrent_controller_*.log
+
+# 去重文件
+*_deduped.txt
+
+# 中断点文件
+interruption_points.json
+
+# 备份文件
+*.backup_*
+*.with_rss
+
+# URL映射
+深度URL缓存/ 

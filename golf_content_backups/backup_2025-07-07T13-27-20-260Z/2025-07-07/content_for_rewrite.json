@@ -1,0 +1,102 @@
+{
+  "extractionDate": "2025-07-07",
+  "extractionTime": "2025-07-07T03:58:41.893Z",
+  "totalArticles": 6,
+  "source": "Golf Monthly",
+  "sourceUrl": "https://www.golfmonthly.com/",
+  "articles": [
+    {
+      "id": "article_001",
+      "originalTitle": "Scott Vincent Makes Big Strides Towards A LIV Golf Card After International Series Morocco Victory",
+      "suggestedTitle": "Scott Vincent Makes Big Strides Towards A LIV Golf Card After International Series Morocco Victory - 中文标题待定",
+      "publishTime": "11 hours ago",
+      "originalSummary": "Scott Vincent cruised to a four shot victory at the International Series Morocco event, with the former LIV Golfer vaulting up the Order Of Merit and International Series Rankings",
+      "link": "https://www.golfmonthly.com/news/scott-vincent-wins-international-series-morocco",
+      "localImagePath": "images/img_001.jpg",
+      "category": "综合资讯",
+      "keywords": [
+        "golf"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    },
+    {
+      "id": "article_002",
+      "originalTitle": "PGA Tour Pro Clarifies Position Following Controversial Rules Incident At John Deere Classic",
+      "suggestedTitle": "PGA巡回赛",
+      "publishTime": "14 hours ago",
+      "originalSummary": "Kevin Roy was involved in a controversial ruling during round three of the John Deere Classic after failing to exit a bunker at the first time of asking",
+      "link": "https://www.golfmonthly.com/news/kevin-roy-bunker-ruling-john-deere-classic",
+      "localImagePath": "images/img_002.jpg",
+      "category": "新闻资讯",
+      "keywords": [
+        "pga",
+        "tour"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    },
+    {
+      "id": "article_003",
+      "originalTitle": "BMW International Open 2025 Prize Money Payout",
+      "suggestedTitle": "BMW International Open 2025 Prize Money Payout - 中文标题待定",
+      "publishTime": "15 hours ago",
+      "originalSummary": "Ewen Ferguson is the defending champion at the BMW International Open, which has an increased prize purse in the final leg of the DP World Tour's European Swing",
+      "link": "https://www.golfmonthly.com/news/bmw-international-open-2025-prize-money-payout",
+      "localImagePath": "images/img_003.jpg",
+      "category": "综合资讯",
+      "keywords": [
+        "tour"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    },
+    {
+      "id": "article_004",
+      "originalTitle": "John Deere Classic Round Four Tee Times 2025",
+      "suggestedTitle": "John Deere Classic Round Four Tee Times 2025 - 中文标题待定",
+      "publishTime": "17 hours ago",
+      "originalSummary": "Davis Thompson has four players just a stroke behind him as the American begins a potential defence of his maiden PGA Tour title at TPC Deere Run",
+      "link": "https://www.golfmonthly.com/news/john-deere-classic-sunday-tee-times-2025",
+      "localImagePath": "images/img_004.jpg",
+      "category": "综合资讯",
+      "keywords": [
+        "pga",
+        "tour"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    },
+    {
+      "id": "article_005",
+      "originalTitle": "Most Recent PGA Tour Winner Pulls Out Of John Deere Classic Prior To Final Round",
+      "suggestedTitle": "PGA巡回赛",
+      "publishTime": "18 hours ago",
+      "originalSummary": "The most recent PGA Tour winner was in good shape through 36 holes before playing his third round and then calling it a day late on Saturday",
+      "link": "https://www.golfmonthly.com/news/aldrich-potgieter-withdraws-john-deere-classic-2025",
+      "localImagePath": "images/img_005.jpg",
+      "category": "新闻资讯",
+      "keywords": [
+        "pga",
+        "tour"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    },
+    {
+      "id": "article_006",
+      "originalTitle": "Having Not Won In Three Years, This Relegated LIV Golfer Leads International Series Morocco Going Into The Final Day",
+      "suggestedTitle": "Having Not Won In Three Years, This Relegated LIV Golfer Leads International Series Morocco Going Into The Final Day - 中文标题待定",
+      "publishTime": "yesterday",
+      "originalSummary": "Zimbabwe's Scott Vincent leads International Series Morocco by one shot with 18 holes remaining, as he searches for a first title since 2022",
+      "link": "https://www.golfmonthly.com/news/scott-vincent-international-series-morocco-third-round",
+      "localImagePath": "images/img_006.jpg",
+      "category": "综合资讯",
+      "keywords": [
+        "golf"
+      ],
+      "rewriteStatus": "pending",
+      "notes": ""
+    }
+  ]
+}

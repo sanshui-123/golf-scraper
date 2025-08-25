@@ -1,0 +1,51 @@
+
+🔍 开始扫描所有文章（忽略时间）...
+📍 主页: https://golf.com/
+📜 滚动页面以加载更多文章...
+
+🔍 调试信息:
+  选择器 ".listing__item等" 找到 0 个元素
+  选择器 "[class*="listing-item"]等" 找到 0 个元素
+  基于链接方法找到 91 个链接
+  时间识别率: 17/17 (100%)
+
+📊 发现 17 篇文章
+
+📅 所有文章: 17 篇（忽略时间过滤）
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+  📄 Jon Rahm snapped at an Open fan. But the real surp... - July 17, 2025
+  📄 Jon Rahm snapped at an Open fan. But the real surp... - July 17, 2025
+  📄 Portrush’s 1st-tee surprise made for morning carna... - July 17, 2025
+  📄 ‘Are you kidding me?’ Phil Mickelson flips bad bre... - July 17, 2025
+  📄 Gnarly drop zones at 2025 Open are clever solution... - July 17, 2025
+  📄 Jon Rahm’s photobomb, Padraig’s unique Open resear... - July 16, 2025
+  📄 ‘Such a disappointment’: Caddie perk gets nixed at... - July 16, 2025
+  📄 Why the Open Championship’s happiest golfer says h... - July 16, 2025
+  📄 Scottie, Phil, Rahm: 10 sights, sounds, stories fr... - July 17, 2025
+⚠️  无法连接到服务器API，使用本地检查
+
+🆕 新文章: 17 篇
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/sights-sounds-open-championship-thursday/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/
+https://golf.com/news/sights-sounds-open-championship-thursday/
