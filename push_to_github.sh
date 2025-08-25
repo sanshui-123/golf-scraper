@@ -1,16 +1,33 @@
-#!/bin/bash
-echo "准备推送到GitHub..."
+#\!/bin/bash
 
-# 设置远程仓库（使用您的Personal Access Token）
-echo "设置远程仓库..."
-git remote set-url origin https://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@github.com/sanshui-123/golf-scraper.git
+# 请将下面的 YOUR_TOKEN_HERE 替换为你的 GitHub Personal Access Token
+# 例如: ghp_xxxxxxxxxxxxxxxx
+GITHUB_TOKEN="YOUR_TOKEN_HERE"
 
-# 推送到GitHub
-echo "开始推送..."
-git push -u origin main
+# 检查是否已经替换了 token
+if [ "$GITHUB_TOKEN" = "YOUR_TOKEN_HERE" ]; then
+    echo "❌ 错误：请先将 YOUR_TOKEN_HERE 替换为你的实际 GitHub Token"
+    echo "   编辑这个文件，将第5行的 YOUR_TOKEN_HERE 替换为你的 token"
+    exit 1
+fi
 
-# 推送完成后，出于安全考虑，删除token
-echo "清理token..."
-git remote set-url origin https://github.com/sanshui-123/golf-scraper.git
+echo "🚀 开始推送到 GitHub..."
 
-echo "完成！"
+# 推送代码
+git push https://sanshui-123:${GITHUB_TOKEN}@github.com/sanshui-123/golf-scraper.git fresh-main:main --force
+
+if [ $? -eq 0 ]; then
+    echo "✅ 推送成功！"
+    echo "📍 仓库地址: https://github.com/sanshui-123/golf-scraper"
+    
+    # 切换分支
+    echo "🔄 切换到主分支..."
+    git checkout fresh-main
+    git branch -D main 2>/dev/null || true
+    git branch -m main
+    
+    echo "✅ 完成！现在你的主分支就是推送的版本了"
+else
+    echo "❌ 推送失败，请检查你的 token 是否正确"
+fi
+EOF < /dev/null

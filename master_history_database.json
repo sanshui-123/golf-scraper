@@ -10965,6 +10965,65 @@
       "rewriteCount": 1,
       "mdFile": "wechat_article_11869.md",
       "htmlFile": "wechat_article_11869.html"
+    },
+    "17c0a99d24a0226dc044407c71a8e65f": {
+      "originalUrl": "https://www.skysports.com/golf/news/12176/13418034/tommy-fleetwoods-pga-tour-perseverance-pays-off-with-fedexcup-success-at-the-tour-championship-and-begins-new-chapter-in-englishmans-career",
+      "normalizedUrl": "https://www.skysports.com/golf/news/12176/13418034/tommy-fleetwoods-pga-tour-perseverance-pays-off-with-fedexcup-success-at-the-tour-championship-and-begins-new-chapter-in-englishmans-career",
+      "status": "completed",
+      "date": "2025-08-25",
+      "articleNum": "11870",
+      "processedAt": "2025-08-25T07:43:38.805Z",
+      "source": "batch_processor",
+      "siteName": "Sky Sports",
+      "title": "Tommy Fleetwood's PGA Tour perseverance pays off with FedExCup success at the Tour Championship and begins new chapter in Englishman's career",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11870.md",
+      "htmlFile": "wechat_article_11870.html"
+    },
+    "b0fe962e6251e85cd96bc69642f37cf7": {
+      "originalUrl": "https://www.yardbarker.com/golf/articles/how_many_starts_did_tommy_fleetwood_make_before_first_pga_tour_win/s1_17118_42634717",
+      "normalizedUrl": "https://www.yardbarker.com/golf/articles/how_many_starts_did_tommy_fleetwood_make_before_first_pga_tour_win/s1_17118_42634717",
+      "status": "completed",
+      "date": "2025-08-25",
+      "articleNum": "11872",
+      "processedAt": "2025-08-25T07:53:36.525Z",
+      "source": "batch_processor",
+      "siteName": "yardbarker.com",
+      "title": "How many starts did Tommy Fleetwood make before first PGA Tour win",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11872.md",
+      "htmlFile": "wechat_article_11872.html"
+    },
+    "b951160e484ff6d38d972319a08d1b3d": {
+      "originalUrl": "https://sports.yahoo.com/article/pga-tour-veteran-justin-rose-062755568.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/pga-tour-veteran-justin-rose-062755568.html",
+      "status": "completed",
+      "date": "2025-08-25",
+      "articleNum": "11874",
+      "processedAt": "2025-08-25T08:38:14.512Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "PGA Tour veteran Justin Rose’s heartfelt reaction to Tommy Fleetwood’s East Lake win",
+      "aiProbability": 20,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11874.md",
+      "htmlFile": "wechat_article_11874.html"
+    },
+    "74b8de8453ef03487d4864cb00ff82e2": {
+      "originalUrl": "https://www.yardbarker.com/golf/articles/no_more_deserving_champ_justin_rose_lauds_tommy_fleetwood_after_1st_pga_tour_title_win/s1_17325_42634964",
+      "normalizedUrl": "https://www.yardbarker.com/golf/articles/no_more_deserving_champ_justin_rose_lauds_tommy_fleetwood_after_1st_pga_tour_title_win/s1_17325_42634964",
+      "status": "skipped",
+      "date": "2025-08-25",
+      "articleNum": "11875",
+      "processedAt": "2025-08-25T08:38:48.571Z",
+      "source": "batch_processor",
+      "siteName": "yardbarker.com",
+      "title": "'No More Deserving Champ,' Justin Rose LAUDS Tommy Fleetwood After 1st PGA Tour Title Win",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 19552,
+      "lineCount": 197
     }
   },
   "contents": {
@@ -11300,8 +11359,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-08-25T07:40:53.436Z",
-    "totalRecords": 1076,
+    "lastUpdate": "2025-08-25T08:38:48.571Z",
+    "totalRecords": 1080,
     "version": "2.0"
   },
   "failedUrls": {
@@ -11901,8 +11960,8 @@
     "663773b4fb43f010d4244fcd420cef29": {
       "url": "03407e89526002a9e6244858262fcee9",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"03407e89526002a9e6244858262fcee9\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:08.684Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:29.796Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -11922,14 +11981,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:29.797Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"03407e89526002a9e6244858262fcee9\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "19f298bda27190e50b0b31bb4422e709": {
       "url": "3372461ed2134fb92723b3ba8c54df6b",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"3372461ed2134fb92723b3ba8c54df6b\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:09.829Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:30.938Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -11949,14 +12015,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:30.938Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"3372461ed2134fb92723b3ba8c54df6b\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8ead956857c33f43cdbdd620846e072f": {
       "url": "153e080eb0ba7dbc1c0ff096ff1baac1",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"153e080eb0ba7dbc1c0ff096ff1baac1\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:10.966Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:32.075Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -11976,14 +12049,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:32.075Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"153e080eb0ba7dbc1c0ff096ff1baac1\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "1e4fe392aab4064b5a49818d0aac183e": {
       "url": "bbcfbcd09abaaea4178e2d5989187b7c",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"bbcfbcd09abaaea4178e2d5989187b7c\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:12.100Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:33.199Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12003,14 +12083,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:33.199Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"bbcfbcd09abaaea4178e2d5989187b7c\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "dcb1c5c989f89abe579d3ebaceeb5b8b": {
       "url": "aa0b4d8931c1a7ef811e4995c0904631",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"aa0b4d8931c1a7ef811e4995c0904631\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:13.243Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:34.352Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12030,14 +12117,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:34.352Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"aa0b4d8931c1a7ef811e4995c0904631\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8643bd432d602a01dfae9adc5767254b": {
       "url": "a628bb09a17d1b4bdcc5c01c393e4731",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a628bb09a17d1b4bdcc5c01c393e4731\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:14.365Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:35.476Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12057,14 +12151,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:35.476Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a628bb09a17d1b4bdcc5c01c393e4731\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "ed84f01e10f6af3e873374c0b8e773cc": {
       "url": "2802956d0f8630a5300520f5f31a8176",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"2802956d0f8630a5300520f5f31a8176\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:15.494Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:36.606Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12084,14 +12185,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:36.606Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"2802956d0f8630a5300520f5f31a8176\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "2106c17e62f7bf0e5dda58df47653103": {
       "url": "e35087156d284b501a57e805ef4e91d8",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e35087156d284b501a57e805ef4e91d8\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:16.610Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:37.731Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12111,14 +12219,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:37.731Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e35087156d284b501a57e805ef4e91d8\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "dd94db6730f7496a52b606d72699fcdb": {
       "url": "84e9a21251e92455ef9ffb569d863602",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"84e9a21251e92455ef9ffb569d863602\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:17.741Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:38.934Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12138,14 +12253,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:38.934Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"84e9a21251e92455ef9ffb569d863602\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "d2e01f705d9c95384535a545b3b9b2f7": {
       "url": "e0d18f438597601b0594c56cc6d74362",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e0d18f438597601b0594c56cc6d74362\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:18.873Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:40.081Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12165,14 +12287,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:40.081Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e0d18f438597601b0594c56cc6d74362\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "3b86e08ae5c485dd4d04caa4dbf87de3": {
       "url": "bd0afcef57f9dc1d391ecd8dc2dc2cf3",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"bd0afcef57f9dc1d391ecd8dc2dc2cf3\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:19.982Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:41.203Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12192,14 +12321,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:41.203Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"bd0afcef57f9dc1d391ecd8dc2dc2cf3\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f4434b0ba1cd17e8a86a052b6e149972": {
       "url": "13f300009fdcb76b7047940112c7bb31",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"13f300009fdcb76b7047940112c7bb31\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:21.094Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:42.317Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12219,14 +12355,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:42.317Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"13f300009fdcb76b7047940112c7bb31\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8c58d9e3032122cbbd6f7d1eed839264": {
       "url": "a18779f311da038cc13ab8ec2bc786f4",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a18779f311da038cc13ab8ec2bc786f4\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:22.222Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:43.449Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12246,14 +12389,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:43.449Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a18779f311da038cc13ab8ec2bc786f4\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "0cb40f9815cfd4319471ab56a96a4430": {
       "url": "ff3aa0e383e426a3c3941476fe4c9f94",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ff3aa0e383e426a3c3941476fe4c9f94\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:23.348Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:44.586Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12273,14 +12423,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:44.586Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ff3aa0e383e426a3c3941476fe4c9f94\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "707981598b7c4f0c9170cd2a372cc501": {
       "url": "6ad17486e31d81bb2e7ce09c51c0a62e",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6ad17486e31d81bb2e7ce09c51c0a62e\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:24.462Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:45.724Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12300,14 +12457,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:45.724Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6ad17486e31d81bb2e7ce09c51c0a62e\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "c45cf993f6feaf7f7bce428a4c516ba9": {
       "url": "d1ec3edc004a56511ff5117cb2ee584b",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"d1ec3edc004a56511ff5117cb2ee584b\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:25.584Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:46.859Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12327,14 +12491,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:46.859Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"d1ec3edc004a56511ff5117cb2ee584b\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "fd276c9256162c1bb1c393f787c0463d": {
       "url": "f19e5c40307b94b518fa86133db6bffc",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"f19e5c40307b94b518fa86133db6bffc\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:26.707Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:47.986Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12354,14 +12525,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:47.986Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"f19e5c40307b94b518fa86133db6bffc\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "9dfb0f76efcbe7290544f0bb78eaa3e8": {
       "url": "215f5839ff4653b6ab7a2577cee1b9e6",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"215f5839ff4653b6ab7a2577cee1b9e6\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:27.828Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:49.120Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12381,14 +12559,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:49.120Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"215f5839ff4653b6ab7a2577cee1b9e6\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "ec37c1eed96647d34ecd39b793bb62fe": {
       "url": "ec7333a7f55b87a378ef07d0f98d8faf",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ec7333a7f55b87a378ef07d0f98d8faf\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:28.963Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:50.258Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12408,14 +12593,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:50.258Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ec7333a7f55b87a378ef07d0f98d8faf\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "513e70b01545d3ed835e54a70964b7e6": {
       "url": "9eca7cb3cda728a5ed00468697912314",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"9eca7cb3cda728a5ed00468697912314\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:30.096Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:51.395Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12435,14 +12627,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:51.395Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"9eca7cb3cda728a5ed00468697912314\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "38af600235a2488f4dea456a3eaec44b": {
       "url": "cd24c6096599045d2d234309ed9a1711",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"cd24c6096599045d2d234309ed9a1711\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:31.241Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:52.534Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12462,14 +12661,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:52.534Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"cd24c6096599045d2d234309ed9a1711\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "788042eb3bb310e24c248ac06313dbdf": {
       "url": "5e9f711a9c409f3d00b97a757ab1d54c",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"5e9f711a9c409f3d00b97a757ab1d54c\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:32.352Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:53.644Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12489,14 +12695,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:53.644Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"5e9f711a9c409f3d00b97a757ab1d54c\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "184e89173bea271e33e775f279e99d5a": {
       "url": "69da002d20838ce84bdc69c3ff7b600e",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"69da002d20838ce84bdc69c3ff7b600e\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:33.486Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:54.770Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12516,14 +12729,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:54.770Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"69da002d20838ce84bdc69c3ff7b600e\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "cd7171fe1dc01e1ee39675a4dbc6bd01": {
       "url": "32eb7587fb1a8ea9e1aebc27babfb2b9",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"32eb7587fb1a8ea9e1aebc27babfb2b9\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:34.596Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:55.912Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12543,14 +12763,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:55.912Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"32eb7587fb1a8ea9e1aebc27babfb2b9\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "29417734695ce03d5b549e3d3ca617d6": {
       "url": "37e229bd01cf5032b038159b924e9cec",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"37e229bd01cf5032b038159b924e9cec\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:35.740Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:57.037Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12570,14 +12797,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:57.037Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"37e229bd01cf5032b038159b924e9cec\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "dbf5fb937a376b20916b806e80ca46d6": {
       "url": "0dcfe544bfef61dadf2c6bc76afd9838",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"0dcfe544bfef61dadf2c6bc76afd9838\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:36.890Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:58.176Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12597,14 +12831,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:58.176Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"0dcfe544bfef61dadf2c6bc76afd9838\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "60ecababeb89f4444a2bd4932431b31b": {
       "url": "2b8b0e81d37e0a567ea9f6469d33808a",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"2b8b0e81d37e0a567ea9f6469d33808a\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:38.029Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:02:59.314Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12624,14 +12865,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:02:59.314Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"2b8b0e81d37e0a567ea9f6469d33808a\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "661d2e79ea4d2352cd7e7634938c692e": {
       "url": "4f000b7101417cc0dc48a7752df5ba16",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"4f000b7101417cc0dc48a7752df5ba16\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:39.146Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:00.434Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12651,14 +12899,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:00.434Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"4f000b7101417cc0dc48a7752df5ba16\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "96548b65fc3b4729cabeec9e52c7500e": {
       "url": "06a156515159f824dbd6914b788d0a4f",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"06a156515159f824dbd6914b788d0a4f\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:40.277Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:01.569Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12678,14 +12933,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:01.569Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"06a156515159f824dbd6914b788d0a4f\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "6446f12363bdcca424d9268e2176a655": {
       "url": "b6cd4d3f3bfabf4b2cf7ac66d626995b",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b6cd4d3f3bfabf4b2cf7ac66d626995b\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:41.405Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:02.701Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12705,14 +12967,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:02.701Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b6cd4d3f3bfabf4b2cf7ac66d626995b\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "a3bcc32af2fe45eaf6a7df6da76dd322": {
       "url": "ace11b68f24a5585ba883d8731531b01",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ace11b68f24a5585ba883d8731531b01\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:42.536Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:03.820Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12732,14 +13001,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:03.820Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ace11b68f24a5585ba883d8731531b01\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "1121639685d1b7af20212e5ee78869f9": {
       "url": "b32d6428e671ef672ac1cb72cee1cc14",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b32d6428e671ef672ac1cb72cee1cc14\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:43.689Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:05.035Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12759,14 +13035,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:05.035Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b32d6428e671ef672ac1cb72cee1cc14\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "48178d88ca94a8cf39bea61213b609aa": {
       "url": "b3b742bd15041aa4252982d368552c42",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b3b742bd15041aa4252982d368552c42\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:44.813Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:06.154Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12786,14 +13069,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:06.154Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b3b742bd15041aa4252982d368552c42\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "7c3514d9524e640edaf14f765e204206": {
       "url": "b25a627df45ae169ce1952b140fd27a8",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b25a627df45ae169ce1952b140fd27a8\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:45.955Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:07.296Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12813,14 +13103,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:07.296Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"b25a627df45ae169ce1952b140fd27a8\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "931e62c005aebdef35ddc3895a8601a5": {
       "url": "45c08eb1324cfe4ad0aaf6e713e4561d",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"45c08eb1324cfe4ad0aaf6e713e4561d\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:47.078Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:08.468Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12840,14 +13137,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:08.468Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"45c08eb1324cfe4ad0aaf6e713e4561d\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f1451ef524ef8baa436ac0dcd9d39c1c": {
       "url": "869bf5d0a268b2f917baff18dd9b9f3a",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"869bf5d0a268b2f917baff18dd9b9f3a\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:48.203Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:09.628Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12867,14 +13171,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:09.628Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"869bf5d0a268b2f917baff18dd9b9f3a\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f126bc18c9c30e17489ebdcd50dbd97c": {
       "url": "96cece98a15f1bf31c91f7297311b1a2",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"96cece98a15f1bf31c91f7297311b1a2\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:49.339Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:10.771Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12894,14 +13205,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:10.771Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"96cece98a15f1bf31c91f7297311b1a2\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "581a51158a3d6ad033ea27c53efb3c5a": {
       "url": "fe418346f3f4e3e1856a2ee8b7ff8b69",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"fe418346f3f4e3e1856a2ee8b7ff8b69\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:50.473Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:11.911Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12921,14 +13239,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:11.911Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"fe418346f3f4e3e1856a2ee8b7ff8b69\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "191a493c7a40d6ca452ed7c75b3158bd": {
       "url": "a34f4971d577cc0eae01d0417e417c2a",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a34f4971d577cc0eae01d0417e417c2a\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:51.602Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:13.076Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12948,14 +13273,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:13.076Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a34f4971d577cc0eae01d0417e417c2a\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8513d629ba9fa28268adcc6544f2af8f": {
       "url": "92e326e7a4871856ecd7eefe457a33bf",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"92e326e7a4871856ecd7eefe457a33bf\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:52.742Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:14.226Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -12975,14 +13307,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:14.226Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"92e326e7a4871856ecd7eefe457a33bf\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f386d1710091588c80997cd3ac8ec455": {
       "url": "af6d10dcf22f40d51173958e3b2b82b8",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"af6d10dcf22f40d51173958e3b2b82b8\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:53.875Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:15.382Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13002,14 +13341,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:15.382Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"af6d10dcf22f40d51173958e3b2b82b8\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f17b507c72249b723503cdcc4a680ce6": {
       "url": "6452c9fd123de1a71634ff9bbe1d0532",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6452c9fd123de1a71634ff9bbe1d0532\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:55.005Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:16.513Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13029,14 +13375,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:16.515Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6452c9fd123de1a71634ff9bbe1d0532\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "1cd59e89dae4c99512722f7003d6682d": {
       "url": "898a154785bd65192a53c5dfe5fc8d01",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"898a154785bd65192a53c5dfe5fc8d01\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:56.128Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:17.657Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13056,14 +13409,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:17.657Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"898a154785bd65192a53c5dfe5fc8d01\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "868e7df55e3f226771665e2fd41e1ee7": {
       "url": "455dd307e9b3d626f27c9e6075be4f9e",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"455dd307e9b3d626f27c9e6075be4f9e\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:57.265Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:18.804Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13083,14 +13443,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:18.804Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"455dd307e9b3d626f27c9e6075be4f9e\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8f2254c1dddb1dc73761fb0a3e08addf": {
       "url": "ece60ad03d96ea0a881d46baf08b5023",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ece60ad03d96ea0a881d46baf08b5023\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:58.391Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:19.939Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13110,14 +13477,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:19.939Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ece60ad03d96ea0a881d46baf08b5023\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "3e1a9720c2953576635328d07ce476aa": {
       "url": "c1b64d2c321285ceea44ac0a117358c2",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"c1b64d2c321285ceea44ac0a117358c2\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:36:59.510Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:21.080Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13137,14 +13511,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:21.080Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"c1b64d2c321285ceea44ac0a117358c2\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "294528f5417c380eca492e34460ca3a9": {
       "url": "645adf738580d6890e420588ddbe79f4",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"645adf738580d6890e420588ddbe79f4\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:00.642Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:22.220Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13164,14 +13545,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:22.220Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"645adf738580d6890e420588ddbe79f4\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "cf7fb54dc26159a5c99a7df4ebac7bbd": {
       "url": "e89e7021e2c39379a2f5212e56db7cee",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e89e7021e2c39379a2f5212e56db7cee\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:01.772Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:23.370Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13191,14 +13579,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:23.370Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e89e7021e2c39379a2f5212e56db7cee\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "dc65d587b3f50f72fa6bd0d3c3554672": {
       "url": "cd827bfd362c547ba50f136aef377545",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"cd827bfd362c547ba50f136aef377545\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:02.910Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:24.496Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13218,14 +13613,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:24.496Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"cd827bfd362c547ba50f136aef377545\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "3bd9fd92af4ef61a8c135b5be94c21d8": {
       "url": "e2cd8bca0751497ed52c349fa7b94104",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e2cd8bca0751497ed52c349fa7b94104\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:04.041Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:25.628Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13245,14 +13647,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:25.628Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e2cd8bca0751497ed52c349fa7b94104\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "6e32e58d13220976596eb9dc5288f68f": {
       "url": "344f53cb75dcd6b030c3a5a5598977c9",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"344f53cb75dcd6b030c3a5a5598977c9\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:05.166Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:26.768Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13272,14 +13681,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:26.768Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"344f53cb75dcd6b030c3a5a5598977c9\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "32932a01aab89d2c4bd5e2c463b0ffc9": {
       "url": "7ee741c9ccf96e9e35236422dcf9a6f1",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"7ee741c9ccf96e9e35236422dcf9a6f1\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:06.284Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:27.907Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13299,14 +13715,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:27.907Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"7ee741c9ccf96e9e35236422dcf9a6f1\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "3dc30d0f154b4d6f1d3257dcc463a242": {
       "url": "a90b85177965869af91c168e66543427",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a90b85177965869af91c168e66543427\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:07.417Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:29.025Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13326,14 +13749,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:29.025Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a90b85177965869af91c168e66543427\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "c44c34661a7f40e11e66aa067560559a": {
       "url": "652db3b26f11dc59b1f78c1a9c45df60",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"652db3b26f11dc59b1f78c1a9c45df60\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:08.548Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:30.180Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13353,14 +13783,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:30.180Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"652db3b26f11dc59b1f78c1a9c45df60\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f9ec085db5e0a90f26cf4fa78f072196": {
       "url": "04ad9a169f9b4d286bada252ce28df91",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"04ad9a169f9b4d286bada252ce28df91\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:09.662Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:31.316Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13380,14 +13817,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:31.316Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"04ad9a169f9b4d286bada252ce28df91\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "0c52602d39effb5fe1dc0796f3b08a9a": {
       "url": "4e8d76664b9cd4a602d727472aca1efe",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"4e8d76664b9cd4a602d727472aca1efe\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:10.793Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:32.428Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13407,14 +13851,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:32.429Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"4e8d76664b9cd4a602d727472aca1efe\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "46372e879e5933075032a27583d66ea1": {
       "url": "55c7f16b854e91c4a6a9febf7832dc6d",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"55c7f16b854e91c4a6a9febf7832dc6d\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:11.922Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:33.558Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13434,14 +13885,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:33.558Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"55c7f16b854e91c4a6a9febf7832dc6d\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "1fb7cc3dc0755aaff29609fb6cfabcd5": {
       "url": "37dcbc2272e61162022bd9c11ddb0bff",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"37dcbc2272e61162022bd9c11ddb0bff\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:13.031Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:34.683Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13461,14 +13919,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:34.683Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"37dcbc2272e61162022bd9c11ddb0bff\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "a9ceb3196fd5a7a5b184050026de536a": {
       "url": "01abfc750a0c942167651c40d088531d",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"01abfc750a0c942167651c40d088531d\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:14.160Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:35.844Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13488,14 +13953,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:35.844Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"01abfc750a0c942167651c40d088531d\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "c8d447743766a9feaf565df5ab365542": {
       "url": "ddad55e35b11cdbbeb3db5caa32b20b5",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ddad55e35b11cdbbeb3db5caa32b20b5\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:15.292Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:36.980Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13515,14 +13987,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:36.980Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"ddad55e35b11cdbbeb3db5caa32b20b5\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "9e8b82f6346c5e68933c53da862f64bc": {
       "url": "e4006bf7af83a4b5ceb61a637013409b",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e4006bf7af83a4b5ceb61a637013409b\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:16.425Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:38.095Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13542,14 +14021,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:38.095Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"e4006bf7af83a4b5ceb61a637013409b\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "0e8afbbda7fa5c8411e8eb2ae639d864": {
       "url": "89b1e86b5dfaf906f32c000a5d258e0f",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"89b1e86b5dfaf906f32c000a5d258e0f\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:17.559Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:39.214Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13569,14 +14055,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:39.214Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"89b1e86b5dfaf906f32c000a5d258e0f\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "4cdc98c8df7a998097b4a2dcd0486642": {
       "url": "59ad2023ba09289fee4876a8796ba5cc",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"59ad2023ba09289fee4876a8796ba5cc\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:18.674Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:40.337Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13596,14 +14089,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:40.337Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"59ad2023ba09289fee4876a8796ba5cc\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "84a14ce55cdf598984f722cb8c5e71c8": {
       "url": "6e80b468c35b35100aa4578443485b2b",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6e80b468c35b35100aa4578443485b2b\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:19.792Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:41.447Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13623,14 +14123,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:41.447Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6e80b468c35b35100aa4578443485b2b\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "693bf6a54fd8b31f3d8231c48984447c": {
       "url": "1444193280da628cda12f63d68d80e69",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"1444193280da628cda12f63d68d80e69\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:20.918Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:42.570Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13650,14 +14157,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:42.570Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"1444193280da628cda12f63d68d80e69\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "6ce8f0de3b6d3ba5c3398a1033a082d0": {
       "url": "05a1f29580f4b5033f64b556bf6aa161",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"05a1f29580f4b5033f64b556bf6aa161\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:22.052Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:43.719Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13677,14 +14191,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:43.719Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"05a1f29580f4b5033f64b556bf6aa161\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "52393671a012773350270df0f677db11": {
       "url": "000209a4fb06181cc3b9f03460cdaf89",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"000209a4fb06181cc3b9f03460cdaf89\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:23.180Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:44.872Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13704,14 +14225,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:44.872Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"000209a4fb06181cc3b9f03460cdaf89\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "8859b2059895f27e1e50058c5185992e": {
       "url": "526d58fe4a73fe187335f9e83c07eab8",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"526d58fe4a73fe187335f9e83c07eab8\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:24.317Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:46.019Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13731,14 +14259,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:46.019Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"526d58fe4a73fe187335f9e83c07eab8\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "352307484963d0e81442e5368f119b8c": {
       "url": "6aae07cc0055e9f6ac4db58f5371b213",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6aae07cc0055e9f6ac4db58f5371b213\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:25.461Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:47.160Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13758,14 +14293,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:47.160Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"6aae07cc0055e9f6ac4db58f5371b213\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "262f4758f0dabe2e74ec262d2f6b487d": {
       "url": "12bb498250fe40e2042a82f989475f0d",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"12bb498250fe40e2042a82f989475f0d\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:26.588Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:48.284Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13785,14 +14327,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:48.284Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"12bb498250fe40e2042a82f989475f0d\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "0dc645438e0207b2d8fa4d5453c0e43b": {
       "url": "a8bf9330ee8889045e2b58ee19bd5972",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a8bf9330ee8889045e2b58ee19bd5972\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:27.714Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:49.422Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13812,14 +14361,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:49.422Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"a8bf9330ee8889045e2b58ee19bd5972\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "d717517ffba3222b0c2390f9b96a5dcf": {
       "url": "477f6ddaa119c34b8ebe03e679b5abd2",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"477f6ddaa119c34b8ebe03e679b5abd2\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:28.839Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:50.570Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13839,14 +14395,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:50.570Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"477f6ddaa119c34b8ebe03e679b5abd2\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "232c26c10b2c2a11f8be230b8edb7d83": {
       "url": "5b9c060f850fa9a7eb0e4a89a67facc4",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"5b9c060f850fa9a7eb0e4a89a67facc4\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:29.965Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:51.704Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13866,14 +14429,21 @@
           "metadata": {
             "source": "batch_processor"
           }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:51.704Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"5b9c060f850fa9a7eb0e4a89a67facc4\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
         }
       ]
     },
     "f50f85d458ac9a8851ee5c4b12d922f8": {
       "url": "88f02159afdb5d3c23663288097387f9",
       "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"88f02159afdb5d3c23663288097387f9\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-08-25T03:37:31.074Z",
-      "attempts": 2,
+      "failedAt": "2025-08-25T08:03:52.842Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
         "errorType": "scraping_error",
@@ -13889,6 +14459,13 @@
         },
         {
           "timestamp": "2025-08-25T03:37:31.074Z",
+          "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"88f02159afdb5d3c23663288097387f9\", waiting until \"domcontentloaded\"\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        },
+        {
+          "timestamp": "2025-08-25T08:03:52.842Z",
           "reason": "文章抓取失败: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL\nCall log:\n  - navigating to \"88f02159afdb5d3c23663288097387f9\", waiting until \"domcontentloaded\"\n",
           "metadata": {
             "source": "batch_processor"
@@ -14687,6 +15264,64 @@
         {
           "timestamp": "2025-08-25T05:19:46.457Z",
           "reason": "文章抓取失败: page.waitForSelector: Target page, context or browser has been closed",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "85f591ab60efc7328b969caadaf3ad51": {
+      "url": "https://www.skysports.com/golf/news/12176/13415204/pga-tour-2026-schedule-dates-venues-events-for-the-new-fedexcup-season-signature-events-and-golf-majors",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-25T07:52:10.233Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-25T07:52:10.219Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 81秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "PGA Tour 2026 schedule: Dates, venues, events for the new FedExCup season, Signature Events and golf majors",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 81秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-25T07:52:10.233Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "ebb8a734587f3f616529464c57784884": {
+      "url": "https://www.skysports.com/golf/news/12176/13417663/ryder-cup-2025-keegan-bradley-leaves-fedexcup-finale-with-decision-needed-on-playing-captain-role-and-his-team-usa-picks-for-bethpage-black",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-25T08:35:28.756Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-25T08:35:28.741Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 67秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Ryder Cup 2025: Keegan Bradley leaves FedExCup finale with decision needed on playing captain role and his Team USA picks for Bethpage Black",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 67秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-25T08:35:28.756Z",
+          "reason": "文章抓取失败: contentSize is not defined",
           "metadata": {
             "source": "batch_processor"
           }
