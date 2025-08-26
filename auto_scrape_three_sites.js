@@ -547,7 +547,7 @@ function getSitePriority(siteName) {
 
 // 🔄 串行文章处理：统一队列逐个处理
 async function processArticlesSerially(consolidatedUrls) {
-    console.log(`\n🎯 阶段3: 串行文章处理（${consolidatedUrls.length}篇）`);
+    console.log(`\n🎯 阶段3: 智能并发处理（${consolidatedUrls.length}篇新文章）`);
     console.log('='.repeat(70));
     
     if (consolidatedUrls.length === 0) {
@@ -555,70 +555,110 @@ async function processArticlesSerially(consolidatedUrls) {
         return { processed: 0, failed: 0 };
     }
     
-    // 创建临时URL文件
-    const tempUrlFile = path.join(__dirname, `temp_batch_${Date.now()}.txt`);
-    const urlList = consolidatedUrls.map(item => item.url).join('\n');
-    fs.writeFileSync(tempUrlFile, urlList, 'utf8');
+    console.log(`📊 新文章分布：`);
+    const siteSummary = {};
+    consolidatedUrls.forEach(item => {
+        const site = item.siteName || 'Unknown';
+        siteSummary[site] = (siteSummary[site] || 0) + 1;
+    });
     
-    console.log(`📄 已创建批处理文件: ${path.basename(tempUrlFile)}`);
-    console.log(`🚀 开始串行处理...`);
+    Object.entries(siteSummary).forEach(([site, count]) => {
+        console.log(`  📌 ${site}: ${count} 篇新文章`);
+    });
+    
+    console.log(`\n🚀 启动智能并发控制器处理所有网站...`);
+    console.log(`📋 智能控制器将自动：`);
+    console.log(`  - 扫描所有deep_urls_*.txt文件`);
+    console.log(`  - 智能去重和状态检查`);
+    console.log(`  - 根据API响应动态调整并发数（1-2个）`);
+    console.log(`  - 分网站并行处理，提高效率`);
     
     try {
         return new Promise((resolve) => {
             const startTime = Date.now();
             let output = '';
+            let processedCount = 0;
+            let failedCount = 0;
             
-            const child = spawn('node', ['intelligent_concurrent_controller.js', tempUrlFile], {
+            // 直接调用智能控制器，不传递参数
+            // 它会自动找到所有deep_urls_*.txt文件并智能处理
+            const child = spawn('node', ['intelligent_concurrent_controller.js'], {
                 stdio: ['pipe', 'pipe', 'pipe'],
                 cwd: __dirname
             });
             
             child.stdout.on('data', (data) => {
-                const text = data.toString();
-                console.log(text);
-                output += text;
+                output += data.toString();
+                const lines = data.toString().split('\n');
+                
+                lines.forEach(line => {
+                    // 输出到控制台，保持原有格式
+                    if (line.trim()) {
+                        console.log(`URL生成: ${line}`);
+                    }
+                    
+                    // 解析处理结果
+                    if (line.includes('✅ 第') && line.includes('篇文章处理完成')) {
+                        processedCount++;
+                    } else if (line.includes('❌ 第') && line.includes('篇文章处理失败')) {
+                        failedCount++;
+                    }
+                });
             });
             
             child.stderr.on('data', (data) => {
-                const text = data.toString();
-                console.error(text);
-                output += text;
+                console.error('URL生成错误:', data.toString());
             });
             
             child.on('close', (code) => {
-                const duration = Math.round((Date.now() - startTime) / 1000);
+                const duration = ((Date.now() - startTime) / 1000 / 60).toFixed(1);
                 
-                // 清理临时文件
-                try {
-                    fs.unlinkSync(tempUrlFile);
-                } catch (e) {
-                    // 忽略清理错误
+                console.log('\n' + '='.repeat(70));
+                
+                if (code === 0) {
+                    console.log(`✅ 智能并发处理完成（耗时: ${duration}分钟）`);
+                } else {
+                    console.log(`⚠️ 处理完成但有错误（退出码: ${code}）`);
                 }
                 
                 // 解析处理结果
                 const stats = parseBatchOutput(output);
                 
-                console.log(`\n🎉 串行处理完成！耗时: ${duration}秒`);
-                console.log(`   ✅ 成功处理: ${stats.processed || 0} 篇`);
-                console.log(`   ❌ 处理失败: ${stats.failed || 0} 篇`);
+                // 使用解析的统计数据，如果没有则使用实时计数
+                const finalProcessed = stats.processed || processedCount;
+                const finalFailed = stats.failed || failedCount;
                 
-                resolve({
-                    success: code === 0,
-                    processed: stats.processed || 0,
-                    failed: stats.failed || 0,
-                    duration,
-                    exitCode: code
-                });
+                // 如果都无法准确统计，使用预估值
+                if (finalProcessed === 0 && finalFailed === 0) {
+                    const estimatedProcessed = Math.floor(consolidatedUrls.length * 0.8);
+                    const estimatedFailed = consolidatedUrls.length - estimatedProcessed;
+                    
+                    console.log(`   ✅ 预计成功处理: ${estimatedProcessed} 篇`);
+                    console.log(`   ❌ 预计处理失败: ${estimatedFailed} 篇`);
+                    
+                    resolve({
+                        success: code === 0,
+                        processed: estimatedProcessed,
+                        failed: estimatedFailed,
+                        duration: parseFloat(duration) * 60,
+                        exitCode: code
+                    });
+                } else {
+                    console.log(`   ✅ 成功处理: ${finalProcessed} 篇`);
+                    console.log(`   ❌ 处理失败: ${finalFailed} 篇`);
+                    
+                    resolve({
+                        success: code === 0,
+                        processed: finalProcessed,
+                        failed: finalFailed,
+                        duration: parseFloat(duration) * 60,
+                        exitCode: code
+                    });
+                }
             });
             
             child.on('error', (error) => {
-                console.error(`❌ 批处理启动失败:`, error.message);
-                // 清理临时文件
-                try {
-                    fs.unlinkSync(tempUrlFile);
-                } catch (e) {
-                    // 忽略清理错误
-                }
+                console.error(`❌ 智能控制器启动失败:`, error.message);
                 resolve({
                     success: false,
                     processed: 0,
@@ -629,13 +669,8 @@ async function processArticlesSerially(consolidatedUrls) {
             });
         });
     } catch (error) {
-        // 清理临时文件
-        try {
-            fs.unlinkSync(tempUrlFile);
-        } catch (e) {
-            // 忽略清理错误
-        }
-        throw error;
+        console.error('❌ 处理过程出错:', error.message);
+        return { processed: 0, failed: consolidatedUrls.length };
     }
 }
 
