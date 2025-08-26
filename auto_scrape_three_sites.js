@@ -470,33 +470,77 @@ function consolidateUrls(discoveryResults) {
     const historyDB = new UnifiedHistoryDatabase();
     console.log('📚 加载历史数据库进行去重检查...');
     
+    // 🔧 同时使用本地文件系统检查（与batch_process_articles.js保持一致）
+    const localUrlCache = new Map();
+    const baseDir = 'golf_content';
+    
+    // 预加载所有已处理的URL到内存（与batch_process_articles.js相同逻辑）
+    if (fs.existsSync(baseDir)) {
+        const dateDirs = fs.readdirSync(baseDir)
+            .filter(dir => /^\d{4}-\d{2}-\d{2}$/.test(dir));
+        
+        for (const dateDir of dateDirs) {
+            const urlsJsonPath = path.join(baseDir, dateDir, 'article_urls.json');
+            if (fs.existsSync(urlsJsonPath)) {
+                try {
+                    const urlMapping = JSON.parse(fs.readFileSync(urlsJsonPath, 'utf8'));
+                    for (const [articleNum, recordedUrl] of Object.entries(urlMapping)) {
+                        const normalizedUrl = (typeof recordedUrl === 'string' ? recordedUrl : recordedUrl.url)
+                            .replace(/\/$/, '')
+                            .replace(/\?.*$/, '')
+                            .replace(/#.*$/, '');
+                        localUrlCache.set(normalizedUrl, { dateDir, articleNum });
+                    }
+                } catch (e) {
+                    // 忽略解析错误
+                }
+            }
+        }
+    }
+    console.log(`📁 本地文件系统已处理URL数量: ${localUrlCache.size}`);
+    
     const allUrls = [];
     const urlMap = new Map(); // 用于去重
     let duplicateCount = 0;
     let newUrlCount = 0;
+    let localDuplicateCount = 0;
     
     discoveryResults.forEach(result => {
         if (result.success && result.urls.length > 0) {
             result.urls.forEach(url => {
                 if (!urlMap.has(url)) {
-                    // 检查历史数据库
-                    const processedRecord = historyDB.isUrlProcessed(url);
-                    if (processedRecord) {
+                    // 🔧 先检查本地文件系统（优先级更高，更准确）
+                    const normalizedUrl = url
+                        .replace(/\/$/, '')
+                        .replace(/\?.*$/, '')
+                        .replace(/#.*$/, '');
+                    const localProcessed = localUrlCache.has(normalizedUrl);
+                    
+                    if (localProcessed) {
+                        localDuplicateCount++;
                         duplicateCount++;
-                        // 减少日志输出，只在DEBUG模式下显示
                         if (process.env.DEBUG_DEDUP) {
-                            console.log(`  ⏭️  跳过已处理: ${url.substring(0, 80)}...`);
+                            console.log(`  ⏭️  跳过本地已处理: ${url.substring(0, 80)}...`);
                         }
                     } else {
-                        // 新URL，添加到处理队列
-                        urlMap.set(url, {
-                            url,
-                            source: result.siteName,
-                            priority: getSitePriority(result.siteName),
-                            discoveredAt: new Date().toISOString()
-                        });
-                        allUrls.push(urlMap.get(url));
-                        newUrlCount++;
+                        // 再检查历史数据库（作为补充）
+                        const processedRecord = historyDB.isUrlProcessed(url);
+                        if (processedRecord) {
+                            duplicateCount++;
+                            if (process.env.DEBUG_DEDUP) {
+                                console.log(`  ⏭️  跳过历史已处理: ${url.substring(0, 80)}...`);
+                            }
+                        } else {
+                            // 新URL，添加到处理队列
+                            urlMap.set(url, {
+                                url,
+                                source: result.siteName,
+                                priority: getSitePriority(result.siteName),
+                                discoveredAt: new Date().toISOString()
+                            });
+                            allUrls.push(urlMap.get(url));
+                            newUrlCount++;
+                        }
                     }
                 }
             });
@@ -514,8 +558,10 @@ function consolidateUrls(discoveryResults) {
     });
     
     console.log(`\n📊 URL整合结果:`);
-    console.log(`  🔍 发现重复URL: ${duplicateCount} 篇（已自动过滤）`);
-    console.log(`  ✨ 新发现URL: ${newUrlCount} 篇`);
+    console.log(`  📁 本地已处理: ${localDuplicateCount} 篇`);
+    console.log(`  📚 历史库已处理: ${duplicateCount - localDuplicateCount} 篇`);
+    console.log(`  🔍 总重复URL: ${duplicateCount} 篇（已自动过滤）`);
+    console.log(`  ✨ 真正的新URL: ${newUrlCount} 篇（需要处理）`);
     
     const siteStats = {};
     allUrls.forEach(item => {
