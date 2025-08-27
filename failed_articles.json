@@ -7033,5 +7033,29 @@
     "attemptCount": 1,
     "lastAttempt": "2025-08-27T07:22:19.203Z",
     "status": "pending_retry"
+  },
+  "https://www.pgatour.com/article/news/the-first-look/2025/08/04/preview-storylines-field-fedexcup-playoffs-bubble-top-70-fedex-st-jude-championship": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-27T08:33:38.790Z",
+    "status": "pending_retry"
+  },
+  "https://www.pgatour.com/article/news/latest/2025/08/03/cameron-young-captures-career-first-tour-title-at-wyndham-championship-scoring-record-sedgefield": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-27T09:05:56.662Z",
+    "status": "pending_retry"
+  },
+  "https://www.pgatour.com/article/news/latest/2025/08/03/fedexcup-update-see-who-makes-it-inside-top-70-bubble-playoffs-fedex-st-jude-championship-wyndham-championship": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-27T09:17:38.471Z",
+    "status": "pending_retry"
+  },
+  "https://www.pgatour.com/article/news/winners-bag/2025/08/03/winners-bag-cameron-young-see-club-used-to-win-wyndham-championship-sedgefield": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-27T09:33:57.546Z",
+    "status": "pending_retry"
   }
 }

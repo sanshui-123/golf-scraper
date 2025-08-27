@@ -1,113 +1,134 @@
 {
-  "timestamp": "2025-08-27T07:38:13.416Z",
+  "timestamp": "2025-08-27T08:48:32.750Z",
   "running": true,
-  "currentConcurrency": 0,
+  "currentConcurrency": 2,
   "optimalConcurrency": 2,
   "stats": {
-    "processed": 18,
-    "success": 18,
+    "processed": 16,
+    "success": 16,
     "failed": 0
   },
   "dedupStats": {
     "total": 802,
-    "skipped": 146,
-    "processed": 656
+    "skipped": 165,
+    "processed": 637
   },
   "urlProgress": {
     "totalProcessed": 0,
-    "totalRemaining": 0,
-    "activeUrls": [],
+    "totalRemaining": 21,
+    "activeUrls": [
+      {
+        "file": "deep_urls_www_pgatour_com.txt",
+        "url": "https://www.pgatour.com/article/news/wire-to-wire/2025/08/04/wire-to-wire-cameron-young-becomes-1000th-unique-winner-on-tour-with-wyndham-championship-win",
+        "index": 1,
+        "total": 21
+      }
+    ],
     "completionRate": 0
   },
   "processing": {
     "deep_urls_cbssports_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:35:32.886Z",
+      "endTime": "2025-08-27T08:45:49.088Z",
       "exitCode": 0
     },
     "deep_urls_espn_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:35:42.928Z",
+      "endTime": "2025-08-27T08:45:59.005Z",
       "exitCode": 0
     },
     "deep_urls_golf_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:35:52.936Z",
+      "endTime": "2025-08-27T08:46:09.036Z",
       "exitCode": 0
     },
     "deep_urls_golf_net_cn.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:02.921Z",
+      "endTime": "2025-08-27T08:46:19.032Z",
       "exitCode": 0
     },
     "deep_urls_golfmagic_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:12.930Z",
+      "endTime": "2025-08-27T08:46:29.035Z",
       "exitCode": 0
     },
     "deep_urls_golfmonthly_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:22.920Z",
+      "endTime": "2025-08-27T08:46:39.026Z",
       "exitCode": 0
     },
     "deep_urls_golfweek_usatoday_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:32.922Z",
+      "endTime": "2025-08-27T08:46:49.031Z",
       "exitCode": 0
     },
     "deep_urls_lpga_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:42.910Z",
+      "endTime": "2025-08-27T08:46:59.026Z",
       "exitCode": 0
     },
     "deep_urls_mygolfspy_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:36:52.929Z",
+      "endTime": "2025-08-27T08:47:09.024Z",
       "exitCode": 0
     },
     "deep_urls_nationalclubgolfer_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:02.927Z",
+      "endTime": "2025-08-27T08:47:19.140Z",
       "exitCode": 0
     },
     "deep_urls_si_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:12.938Z",
+      "endTime": "2025-08-27T08:47:29.039Z",
       "exitCode": 0
     },
     "deep_urls_skysports_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:22.930Z",
+      "endTime": "2025-08-27T08:47:39.033Z",
       "exitCode": 0
     },
     "deep_urls_todays_golfer_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:32.936Z",
+      "endTime": "2025-08-27T08:47:49.076Z",
       "exitCode": 0
     },
     "deep_urls_www_golfdigest_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:42.966Z",
+      "endTime": "2025-08-27T08:47:59.112Z",
       "exitCode": 0
     },
     "deep_urls_www_golfwrx_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:37:52.936Z",
+      "endTime": "2025-08-27T08:48:09.215Z",
       "exitCode": 0
     },
     "deep_urls_www_pgatour_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-27T07:38:03.467Z",
-      "exitCode": 0
+      "status": "processing",
+      "startTime": 1756284499277,
+      "totalUrls": 21,
+      "processedUrls": 0,
+      "urlFile": "deep_urls_www_pgatour_com_deduped.txt",
+      "websiteName": "www pgatour com deduped",
+      "currentIndex": 1,
+      "currentUrl": "https://www.pgatour.com/article/news/wire-to-wire/2025/08/04/wire-to-wire-cameron-young-becomes-1000th-unique-winner-on-tour-with-wyndham-championship-win",
+      "stage": "rewriting",
+      "stageText": "改写中",
+      "currentTime": 1756284509887,
+      "estimatedTimePerArticle": 45000,
+      "processedArticles": 0,
+      "successCount": 0,
+      "failedCount": 0,
+      "elapsedTime": 10610,
+      "estimatedRemaining": 945000
     },
     "deep_urls_yahoo_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:38:12.982Z",
+      "endTime": "2025-08-27T08:48:29.529Z",
       "exitCode": 0
     },
     "deep_urls_yardbarker_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-27T05:38:16.370Z",
+      "endTime": "2025-08-27T08:48:32.750Z",
       "exitCode": 0
     }
   },
@@ -117,7 +138,7 @@
       "name": "CBS Sports Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:35:32.886Z",
+        "endTime": "2025-08-27T08:45:49.088Z",
         "exitCode": 0
       }
     },
@@ -126,7 +147,7 @@
       "name": "ESPN Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:35:42.928Z",
+        "endTime": "2025-08-27T08:45:59.005Z",
         "exitCode": 0
       }
     },
@@ -135,7 +156,7 @@
       "name": "Golf.com",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:35:52.936Z",
+        "endTime": "2025-08-27T08:46:09.036Z",
         "exitCode": 0
       }
     },
@@ -144,7 +165,7 @@
       "name": "中国高尔夫网",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:02.921Z",
+        "endTime": "2025-08-27T08:46:19.032Z",
         "exitCode": 0
       }
     },
@@ -153,7 +174,7 @@
       "name": "Golf Magic",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:12.930Z",
+        "endTime": "2025-08-27T08:46:29.035Z",
         "exitCode": 0
       }
     },
@@ -162,7 +183,7 @@
       "name": "Golf Monthly",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:22.920Z",
+        "endTime": "2025-08-27T08:46:39.026Z",
         "exitCode": 0
       }
     },
@@ -171,7 +192,7 @@
       "name": "Golfweek",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:32.922Z",
+        "endTime": "2025-08-27T08:46:49.031Z",
         "exitCode": 0
       }
     },
@@ -180,7 +201,7 @@
       "name": "LPGA",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:42.910Z",
+        "endTime": "2025-08-27T08:46:59.026Z",
         "exitCode": 0
       }
     },
@@ -189,7 +210,7 @@
       "name": "MyGolfSpy (RSS模式)",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:36:52.929Z",
+        "endTime": "2025-08-27T08:47:09.024Z",
         "exitCode": 0
       }
     },
@@ -198,7 +219,7 @@
       "name": "National Club Golfer",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:02.927Z",
+        "endTime": "2025-08-27T08:47:19.140Z",
         "exitCode": 0
       }
     },
@@ -207,7 +228,7 @@
       "name": "SI Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:12.938Z",
+        "endTime": "2025-08-27T08:47:29.039Z",
         "exitCode": 0
       }
     },
@@ -216,7 +237,7 @@
       "name": "Sky Sports Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:22.930Z",
+        "endTime": "2025-08-27T08:47:39.033Z",
         "exitCode": 0
       }
     },
@@ -225,7 +246,7 @@
       "name": "Today's Golfer",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:32.936Z",
+        "endTime": "2025-08-27T08:47:49.076Z",
         "exitCode": 0
       }
     },
@@ -234,7 +255,7 @@
       "name": "Golf Digest",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:42.966Z",
+        "endTime": "2025-08-27T08:47:59.112Z",
         "exitCode": 0
       }
     },
@@ -243,7 +264,7 @@
       "name": "GolfWRX",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:37:52.936Z",
+        "endTime": "2025-08-27T08:48:09.215Z",
         "exitCode": 0
       }
     },
@@ -251,9 +272,23 @@
       "file": "deep_urls_www_pgatour_com.txt",
       "name": "PGA Tour",
       "status": {
-        "status": "completed",
-        "endTime": "2025-08-27T07:38:03.467Z",
-        "exitCode": 0
+        "status": "processing",
+        "startTime": 1756284499277,
+        "totalUrls": 21,
+        "processedUrls": 0,
+        "urlFile": "deep_urls_www_pgatour_com_deduped.txt",
+        "websiteName": "www pgatour com deduped",
+        "currentIndex": 1,
+        "currentUrl": "https://www.pgatour.com/article/news/wire-to-wire/2025/08/04/wire-to-wire-cameron-young-becomes-1000th-unique-winner-on-tour-with-wyndham-championship-win",
+        "stage": "rewriting",
+        "stageText": "改写中",
+        "currentTime": 1756284509887,
+        "estimatedTimePerArticle": 45000,
+        "processedArticles": 0,
+        "successCount": 0,
+        "failedCount": 0,
+        "elapsedTime": 10610,
+        "estimatedRemaining": 945000
       }
     },
     {
@@ -261,7 +296,7 @@
       "name": "Yahoo Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:38:12.982Z",
+        "endTime": "2025-08-27T08:48:29.529Z",
         "exitCode": 0
       }
     },
@@ -270,7 +305,7 @@
       "name": "Yardbarker",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-27T05:38:16.370Z",
+        "endTime": "2025-08-27T08:48:32.750Z",
         "exitCode": 0
       }
     }

@@ -12429,6 +12429,216 @@
       "rewriteCount": 0,
       "mdFile": "wechat_article_12145.md",
       "htmlFile": "wechat_article_12145.html"
+    },
+    "7b7dac3ce6a11c66f05eccca6b3f5c32": {
+      "originalUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/04/golfbet-launches-bet-suite-content-creator-activation-at-fedex-st-jude-championship",
+      "normalizedUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/04/golfbet-launches-bet-suite-content-creator-activation-at-fedex-st-jude-championship",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12149",
+      "processedAt": "2025-08-27T08:25:14.703Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Golfbet launches 'Bet Suite' content creator activation at FedEx St. Jude Championship",
+      "aiProbability": 21,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12149.md",
+      "htmlFile": "wechat_article_12149.html"
+    },
+    "332d03ec079763fb40881fe730da177d": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/70-one-liners-for-fedexcup-playoffs-st-jude-championship-get-to-know-field-memphis-baltimore-atlanta-east-lake",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/70-one-liners-for-fedexcup-playoffs-st-jude-championship-get-to-know-field-memphis-baltimore-atlanta-east-lake",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12151",
+      "processedAt": "2025-08-27T08:34:44.519Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "One-liners: Get to know all 70 players who made 2025 FedExCup Playoffs",
+      "aiProbability": 38,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12151.md",
+      "htmlFile": "wechat_article_12151.html"
+    },
+    "5f08698465f376801a4b22ade58d356a": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/purse-breakdown-prize-money-see-payouts-players-earn-dollar-fedex-st-jude-championship-memphis-tennessee-tpc-southwind",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/purse-breakdown-prize-money-see-payouts-players-earn-dollar-fedex-st-jude-championship-memphis-tennessee-tpc-southwind",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12152",
+      "processedAt": "2025-08-27T08:37:23.116Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Purse breakdown: What are the payouts for FedEx St. Jude Championship?",
+      "aiProbability": 36,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12152.md",
+      "htmlFile": "wechat_article_12152.html"
+    },
+    "ab5a7bf54e693e631da9efac7e6b8a3c": {
+      "originalUrl": "https://www.pgatour.com/article/news/wire-to-wire/2025/08/04/wire-to-wire-cameron-young-becomes-1000th-unique-winner-on-tour-with-wyndham-championship-win",
+      "normalizedUrl": "https://www.pgatour.com/article/news/wire-to-wire/2025/08/04/wire-to-wire-cameron-young-becomes-1000th-unique-winner-on-tour-with-wyndham-championship-win",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12154",
+      "processedAt": "2025-08-27T08:51:08.336Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "WiretoWire: Cameron Young becomes 1,000th TOUR winner with Wyndham Championship victory",
+      "aiProbability": 35,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12154.md",
+      "htmlFile": "wechat_article_12154.html"
+    },
+    "c5acdff70cca1b188b7c1c7a83cc70fb": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/what-to-watch-and-play-during-the-upcoming-fedexcup-playoffs-elevated-coverage-events",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/04/what-to-watch-and-play-during-the-upcoming-fedexcup-playoffs-elevated-coverage-events",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12155",
+      "processedAt": "2025-08-27T08:52:40.196Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "What to watch – and play – during upcoming FedExCup Playoffs",
+      "aiProbability": 26,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12155.md",
+      "htmlFile": "wechat_article_12155.html"
+    },
+    "b9f8f600938d512ff715346999775ffd": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/03/who-missed-fedexcup-playoffs-wyndham-championship-standings-points-max-homa-keith-mitchell-gary-woodland-sahith-theegala-tom-kim",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/03/who-missed-fedexcup-playoffs-wyndham-championship-standings-points-max-homa-keith-mitchell-gary-woodland-sahith-theegala-tom-kim",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12159",
+      "processedAt": "2025-08-27T09:18:50.952Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Keith Mitchell, Gary Woodland among notables to miss out on FedExCup Playoffs",
+      "aiProbability": 35,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12159.md",
+      "htmlFile": "wechat_article_12159.html"
+    },
+    "c1fd8da4aac01d53d913a11c03bc7e33": {
+      "originalUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/03/points-and-payouts-cameron-young-earns-500-fedexcup-points-with-wyndham-championship-win-money-prize-see-what-players-earned",
+      "normalizedUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/03/points-and-payouts-cameron-young-earns-500-fedexcup-points-with-wyndham-championship-win-money-prize-see-what-players-earned",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12160",
+      "processedAt": "2025-08-27T09:19:49.599Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Points and payouts: See what each player earned at Wyndham Championship",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12160.md",
+      "htmlFile": "wechat_article_12160.html"
+    },
+    "2000c6df01d2a11ec84668def27ed00f": {
+      "originalUrl": "https://www.pgatour.com/article/news/inside-the-field/2025/08/03/see-whos-playing-fedex-st-jude-championship-memphis-fedexcup-playoffs-tpc-southwind-scottie-scheffler",
+      "normalizedUrl": "https://www.pgatour.com/article/news/inside-the-field/2025/08/03/see-whos-playing-fedex-st-jude-championship-memphis-fedexcup-playoffs-tpc-southwind-scottie-scheffler",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12161",
+      "processedAt": "2025-08-27T09:23:50.070Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Inside the field: See who's inside FedExCup top 70 heading to FedEx St. Jude Championship",
+      "aiProbability": 41,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12161.md",
+      "htmlFile": "wechat_article_12161.html"
+    },
+    "79b79469172d25f22b295e650537b8e3": {
+      "originalUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/03/cameron-young-matches-tournament-scoring-record-en-route-to-first-career-tour-victory-at-wyndham-championship-sedgefield",
+      "normalizedUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/03/cameron-young-matches-tournament-scoring-record-en-route-to-first-career-tour-victory-at-wyndham-championship-sedgefield",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12162",
+      "processedAt": "2025-08-27T09:27:12.913Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Cameron Young wins first PGA TOUR title by demolishing field at Wyndham Championship",
+      "aiProbability": 32,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12162.md",
+      "htmlFile": "wechat_article_12162.html"
+    },
+    "1c68d1c4b7f3f0d4376eea5e45405803": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/03/whats-next-for-ian-baker-finch-cbs-broadcaster-retirement-golf-course-design",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/03/whats-next-for-ian-baker-finch-cbs-broadcaster-retirement-golf-course-design",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12164",
+      "processedAt": "2025-08-27T09:35:00.056Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Ian Baker-Finch isn’t saying goodbye to golf – he’s redesigning it",
+      "aiProbability": 11,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12164.md",
+      "htmlFile": "wechat_article_12164.html"
+    },
+    "83ef4d73a27990850f1cd0ae8c954700": {
+      "originalUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/02/who-still-holds-value-with-cameron-young-in-cruise-control-at-wyndham-championship-matt-fitzpatrick-chris-kirk-nico-echavarria-odds-sedgefield-wagers-lines-bets",
+      "normalizedUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/02/who-still-holds-value-with-cameron-young-in-cruise-control-at-wyndham-championship-matt-fitzpatrick-chris-kirk-nico-echavarria-odds-sedgefield-wagers-lines-bets",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12167",
+      "processedAt": "2025-08-27T09:47:17.144Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Draws and Fades: Who still holds value with Cameron Young in cruise control at Wyndham Championship?",
+      "aiProbability": 32,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12167.md",
+      "htmlFile": "wechat_article_12167.html"
+    },
+    "03ffcb4dd2711416fa89053f9308b979": {
+      "originalUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/02/cameron-young-leads-wyndham-championships-sedgefield-greensboro-round-3-aaron-rai-fedexcup-standings-playoffs",
+      "normalizedUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/02/cameron-young-leads-wyndham-championships-sedgefield-greensboro-round-3-aaron-rai-fedexcup-standings-playoffs",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12168",
+      "processedAt": "2025-08-27T09:53:24.510Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Cameron Young builds five-shot lead at Wyndham Championship in search of first win",
+      "aiProbability": 23,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12168.md",
+      "htmlFile": "wechat_article_12168.html"
+    },
+    "9799757a24c3b0f09b3b4810287e8c30": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/02/how-to-watch-round-4-coverage-details-live-scores-tee-time-featured-groups-times-wyndham-championship-golf-channel-espn-keegan-bradley-greensboro-north-carolina",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/02/how-to-watch-round-4-coverage-details-live-scores-tee-time-featured-groups-times-wyndham-championship-golf-channel-espn-keegan-bradley-greensboro-north-carolina",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12169",
+      "processedAt": "2025-08-27T09:55:57.358Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Wyndham Championship: How to watch, live scores, tee times, TV times for Round 4",
+      "aiProbability": 41,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12169.md",
+      "htmlFile": "wechat_article_12169.html"
+    },
+    "c2a5b7fc79287a43aa1752291f213798": {
+      "originalUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/01/cameron-young-in-lead-when-wyndham-championship-halted-by-storms-sedgefield-greensboro-round-2-aaron-rai-fedexcup-standings-playoffs",
+      "normalizedUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/01/cameron-young-in-lead-when-wyndham-championship-halted-by-storms-sedgefield-greensboro-round-2-aaron-rai-fedexcup-standings-playoffs",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12170",
+      "processedAt": "2025-08-27T09:56:59.367Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Cameron Young extends lead to three at Wyndham Championship",
+      "aiProbability": 35,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12170.md",
+      "htmlFile": "wechat_article_12170.html"
     }
   },
   "contents": {
@@ -12764,8 +12974,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-08-27T07:28:52.072Z",
-    "totalRecords": 1174,
+    "lastUpdate": "2025-08-27T09:56:59.367Z",
+    "totalRecords": 1188,
     "version": "2.0"
   },
   "failedUrls": {
@@ -17826,6 +18036,122 @@
         },
         {
           "timestamp": "2025-08-27T07:22:19.204Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "47b02a1ef76f81d4a443cf6119d5ce29": {
+      "url": "https://www.pgatour.com/article/news/the-first-look/2025/08/04/preview-storylines-field-fedexcup-playoffs-bubble-top-70-fedex-st-jude-championship",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T08:33:38.791Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T08:33:38.780Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 89秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "The First Look: FedExCup Playoffs kick off at FedEx St. Jude Championship",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 89秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T08:33:38.791Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "becdcc1da06beb4827532a700c6a313e": {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/03/cameron-young-captures-career-first-tour-title-at-wyndham-championship-scoring-record-sedgefield",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T09:05:56.663Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T09:05:56.650Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 94秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Cameron Young stages runaway victory for first TOUR title at Wyndham Championship",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 94秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T09:05:56.664Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8905c090336e3f49b7b90bbf07c0eb73": {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/03/fedexcup-update-see-who-makes-it-inside-top-70-bubble-playoffs-fedex-st-jude-championship-wyndham-championship",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T09:17:38.473Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T09:17:38.454Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 142秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "FedExCup update: Chris Kirk vaults into top 70 as Playoffs bubble drama unfolds",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 142秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T09:17:38.473Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8b734361c870bc415e89a5ab6e74c87d": {
+      "url": "https://www.pgatour.com/article/news/winners-bag/2025/08/03/winners-bag-cameron-young-see-club-used-to-win-wyndham-championship-sedgefield",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T09:33:57.547Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T09:33:57.526Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 62秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Winner's bag: Cameron Young switches to prototype Titleist golf ball to win Wyndham Championship",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 62秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T09:33:57.547Z",
           "reason": "文章抓取失败: contentSize is not defined",
           "metadata": {
             "source": "batch_processor"
