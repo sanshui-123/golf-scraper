@@ -1,4 +1,10 @@
 {
+  "name": "golf-scraper",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "start": "node api/index.js"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.56.0",
     "@extra/recaptcha": "^4.2.1-next.587",
