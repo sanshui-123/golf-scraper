@@ -305,5 +305,5 @@ app.use((err, req, res, next) => {
     ));
 });
 
-// 导出应用
+// Vercel serverless function handler
 module.exports = app;
