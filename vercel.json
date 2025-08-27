@@ -5,11 +5,7 @@
   ],
   "functions": {
     "api/index.js": {
-      "maxDuration": 30,
-      "includeFiles": [
-        "golf_content/**",
-        "*.json"
-      ]
+      "maxDuration": 30
     }
   }
 }
