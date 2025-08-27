@@ -1,41 +1,277 @@
 {
-  "timestamp": "2025-08-25T08:28:06.720Z",
+  "timestamp": "2025-08-27T07:38:13.416Z",
   "running": true,
   "currentConcurrency": 0,
-  "optimalConcurrency": 1,
+  "optimalConcurrency": 2,
   "stats": {
-    "processed": 0,
-    "success": 0,
+    "processed": 18,
+    "success": 18,
     "failed": 0
   },
   "dedupStats": {
-    "total": 417,
-    "skipped": 0,
-    "processed": 417
+    "total": 802,
+    "skipped": 146,
+    "processed": 656
   },
   "urlProgress": {
     "totalProcessed": 0,
-    "totalRemaining": 417,
+    "totalRemaining": 0,
     "activeUrls": [],
     "completionRate": 0
   },
   "processing": {
-    "/Users/sanshui/Desktop/cursor/temp_batch_1756110486647.txt": {
-      "status": "processing",
-      "startTime": "2025-08-25T08:28:06.720Z",
-      "totalUrls": 417,
-      "processedUrls": 0
+    "deep_urls_cbssports_golf.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:35:32.886Z",
+      "exitCode": 0
+    },
+    "deep_urls_espn_golf.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:35:42.928Z",
+      "exitCode": 0
+    },
+    "deep_urls_golf_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:35:52.936Z",
+      "exitCode": 0
+    },
+    "deep_urls_golf_net_cn.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:02.921Z",
+      "exitCode": 0
+    },
+    "deep_urls_golfmagic_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:12.930Z",
+      "exitCode": 0
+    },
+    "deep_urls_golfmonthly_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:22.920Z",
+      "exitCode": 0
+    },
+    "deep_urls_golfweek_usatoday_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:32.922Z",
+      "exitCode": 0
+    },
+    "deep_urls_lpga_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:42.910Z",
+      "exitCode": 0
+    },
+    "deep_urls_mygolfspy_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:36:52.929Z",
+      "exitCode": 0
+    },
+    "deep_urls_nationalclubgolfer_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:02.927Z",
+      "exitCode": 0
+    },
+    "deep_urls_si_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:12.938Z",
+      "exitCode": 0
+    },
+    "deep_urls_skysports_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:22.930Z",
+      "exitCode": 0
+    },
+    "deep_urls_todays_golfer_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:32.936Z",
+      "exitCode": 0
+    },
+    "deep_urls_www_golfdigest_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:42.966Z",
+      "exitCode": 0
+    },
+    "deep_urls_www_golfwrx_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:37:52.936Z",
+      "exitCode": 0
+    },
+    "deep_urls_www_pgatour_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T07:38:03.467Z",
+      "exitCode": 0
+    },
+    "deep_urls_yahoo_golf.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:38:12.982Z",
+      "exitCode": 0
+    },
+    "deep_urls_yardbarker_com.txt": {
+      "status": "completed",
+      "endTime": "2025-08-27T05:38:16.370Z",
+      "exitCode": 0
     }
   },
   "urlFiles": [
     {
-      "file": "/Users/sanshui/Desktop/cursor/temp_batch_1756110486647.txt",
-      "name": "temp_batch_1756110486647.txt",
+      "file": "deep_urls_cbssports_golf.txt",
+      "name": "CBS Sports Golf",
       "status": {
-        "status": "processing",
-        "startTime": "2025-08-25T08:28:06.720Z",
-        "totalUrls": 417,
-        "processedUrls": 0
+        "status": "completed",
+        "endTime": "2025-08-27T05:35:32.886Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_espn_golf.txt",
+      "name": "ESPN Golf",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:35:42.928Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_golf_com.txt",
+      "name": "Golf.com",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:35:52.936Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_golf_net_cn.txt",
+      "name": "中国高尔夫网",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:02.921Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_golfmagic_com.txt",
+      "name": "Golf Magic",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:12.930Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_golfmonthly_com.txt",
+      "name": "Golf Monthly",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:22.920Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_golfweek_usatoday_com.txt",
+      "name": "Golfweek",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:32.922Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_lpga_com.txt",
+      "name": "LPGA",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:42.910Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_mygolfspy_com.txt",
+      "name": "MyGolfSpy (RSS模式)",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:36:52.929Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_nationalclubgolfer_com.txt",
+      "name": "National Club Golfer",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:02.927Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_si_com.txt",
+      "name": "SI Golf",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:12.938Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_skysports_com.txt",
+      "name": "Sky Sports Golf",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:22.930Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_todays_golfer_com.txt",
+      "name": "Today's Golfer",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:32.936Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_www_golfdigest_com.txt",
+      "name": "Golf Digest",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:42.966Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_www_golfwrx_com.txt",
+      "name": "GolfWRX",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:37:52.936Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_www_pgatour_com.txt",
+      "name": "PGA Tour",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T07:38:03.467Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_yahoo_golf.txt",
+      "name": "Yahoo Golf",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:38:12.982Z",
+        "exitCode": 0
+      }
+    },
+    {
+      "file": "deep_urls_yardbarker_com.txt",
+      "name": "Yardbarker",
+      "status": {
+        "status": "completed",
+        "endTime": "2025-08-27T05:38:16.370Z",
+        "exitCode": 0
       }
     }
   ]

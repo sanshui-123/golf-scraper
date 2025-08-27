@@ -1,70 +1,357 @@
 {
-  "generatedAt": "2025-08-25T08:27:10.188Z",
-  "generatedDate": "2025年8月25日星期一",
-  "totalArticles": 9,
+  "generatedAt": "2025-08-27T03:31:29.557Z",
+  "generatedDate": "2025年8月27日星期三",
+  "totalArticles": 50,
   "articles": [
     {
-      "url": "https://sports.yahoo.com/golf/article/tour-championship-tommy-fleetwood-finally-has-his-moment--and-a-10-million-check-to-boot-214637206.html",
-      "title": "Tommy Fleetwood finally gets his first PGA Tour victory, and it's the Tour ChampionshipFleetwood's first PGA Tour win in 164 starts came with a $10 million check.Jay Busbee",
+      "url": "https://sports.yahoo.com/golf/article/why-keegan-bradley-should-select-himself-for-the-us-ryder-cup-team-162121819.html",
+      "title": "Why Keegan Bradley should select himself for the U.S. Ryder Cup teamSports in general, and golf in particular, have become so risk-averse that there's a deep resistance to doing anything just because it's cool. Bradley can change that.Jay Busbee",
       "time": "",
       "source": "Golf主页",
-      "discoveredAt": "2025-08-25T08:26:28.408Z"
+      "discoveredAt": "2025-08-27T03:31:29.554Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/breaking-news/article/2025-tour-championship-purse-payouts-how-much-did-tommy-fleetwood-earn-for-his-fedexcup-win-192511686.html",
-      "title": "2025 Tour Championship purse, payouts",
+      "url": "https://sports.yahoo.com/golf/article/tour-championship-tommy-fleetwood-finally-has-his-moment--and-a-10-million-check-to-boot-214637206.html",
+      "title": "Tommy Fleetwood finally gets his first PGA Tour victory, and it's the Tour ChampionshipJay Busbee",
       "time": "",
       "source": "Golf主页",
-      "discoveredAt": "2025-08-25T08:26:28.408Z"
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/every-day-golf-course-dying-002536722.html",
+      "title": "'Every day the golf course is dying': Kapalua closes courses for 2 months amid water dispute",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/trouble-paradise-kapalua-close-dying-000241246.html",
+      "title": "Trouble in paradise: Kapalua to close 'dying' PGA Tour course for 2 months amid Maui water dispute",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/video/dubois-lindgren-more-current-former-222317425.html",
+      "title": "Dubois, Lindgren, More Current & Former Capitals Set To Tee Off In Swing For A Cure Golf Tournament",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/video/hear-brighton-hartland-girls-golfers-215615960.html",
+      "title": "Hear from Brighton, Hartland girls golfers at KLAA preseason tournament",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/la-quinta-golfer-falls-second-202740556.html",
+      "title": "La Quinta golfer falls in second round of US Senior Amateur Championship",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/video/former-world-no-1-puts-185123090.html",
+      "title": "Former World No. 1 puts a shine on lakeside golf courses at famed Minnesota resort",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/augusta-national-golf-club-strips-171443557.html",
+      "title": "Augusta National Golf Club strips Masters invitations from PGA Tour Fall Series winners",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/hillcrest-womens-golf-association-hosts-164700916.html",
+      "title": "Hillcrest Women's Golf Association hosts Week 14 action",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/lpgas-founders-cup-signs-multiyear-160242615.html",
+      "title": "LPGA's Founders Cup signs multiyear deal with Fortinet as title sponsor",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/lpgas-boss-craig-kessler-lands-160124753.html",
+      "title": "LPGA's new boss Craig Kessler lands big win with new Founders Cup title sponsor",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/high-school-girls-golf-palm-153115823.html",
+      "title": "High school girls' golf: Palm Desert favored, La Quinta's Bushnell Crist eyes league title",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/lpga-tour-boston-europe-heads-151429833.html",
+      "title": "LPGA Tour in Boston and Europe heads for the hills in Switzerland",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/section-v-boys-golf-results-143032189.html",
+      "title": "Section V boys golf results for fall 2025 season",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/liv-golfers-play-ryder-cup-142122514.html",
+      "title": "Can LIV golfers play in the Ryder Cup?",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/qualification-updated-2026-masters-national-134039334.html",
+      "title": "Qualification updated for 2026 Masters: National-open winners in, PGA Tour fall winners out",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/masters-winners-six-national-opens-130734286.html",
+      "title": "Masters will take winners of six national opens and eliminate invitations to PGA Tour fall winners",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/masters-winners-six-national-opens-130147125.html",
+      "title": "Masters to take winners of six national opens and eliminate invitations to PGA Tour fall winners",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/six-golfers-keegan-bradley-pick-122513094.html",
+      "title": "US Ryder cup roster: Here are six golfers Keegan Bradley should add to team",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/high-school-golf-preview-tyler-090112288.html",
+      "title": "High school golf preview: Tyler Mawhinney is back as Fleming Island goes for three titles",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-winning-fedexcup-perfect-014550125.html",
+      "title": "Tommy Fleetwood winning the FedExCup was the perfect end to the PGA Tour season",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/golfers-shocked-left-off-ryder-194647611.html",
+      "title": "Some golfers will be shocked when left off the Ryder Cup team",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/former-pga-tour-pro-mike-193031262.html",
+      "title": "Former PGA Tour pro Mike Sposa advances to Round of 32 at 2025 U.S. Senior Amateur",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/scottie-scheffler-rory-mcilroy-headline-183017016.html",
+      "title": "Scottie Scheffler, Rory McIlroy to headline an all-star golf event, according to a report",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-finally-wins-pga-173806612.html",
+      "title": "Tommy Fleetwood finally wins a PGA Tour title — and gets $10 million",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/seven-pga-tour-events-2025-173018248.html",
+      "title": "These seven PGA Tour events make up the 2025 FedEx Fall schedule",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/video/hottest-golf-bradley-pick-himself-171455381.html",
+      "title": "Hottest golf question: Will Bradley pick himself?",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/sports-illustrated-swimsuit-model-had-165356165.html",
+      "title": "Sports Illustrated Swimsuit Model Had Everyone's Attention At LIV Golf Event",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/anthony-davis-wife-marlen-davis-161523496.html",
+      "title": "Anthony Davis' wife Marlen Davis shares hilarious golf expectation from Mavericks star",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/numbers-prove-brooke-henderson-lpgas-160137549.html",
+      "title": "The numbers prove Brooke Henderson is the LPGA's best closer since 2015",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/scottie-scheffler-tops-pga-tour-152925675.html",
+      "title": "Scottie Scheffler tops PGA Tour money list for a fourth straight season with $26.5 million",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tiger-woods-type-1-photo-150016061.html",
+      "title": "Tiger Woods 'Type 1' photo from 2000 PGA sells for record price, crazy return on investment",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/meet-25-golfers-2026-annika-140111076.html",
+      "title": "Meet the 25 golfers on the 2026 Annika Award preseason watch list",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/meet-25-golfers-2026-haskins-140106436.html",
+      "title": "Meet the 25 golfers on the 2026 Haskins Award preseason watch list",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/still-remember-tiger-woods-battle-140033831.html",
+      "title": "'They still remember': Tiger Woods' Battle at Bighorn still iconic golf moment 25 years later",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/rory-mcilroy-spotted-us-open-133308591.html",
+      "title": "Rory McIlroy spotted at US Open hours after disappointing end to PGA season",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/won-fedexcup-full-list-champions-195739638.html",
+      "title": "Who has won the PGA Tour's FedExCup? Full list of champions since 2007",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/did-tour-championship-format-impact-131100714.html",
+      "title": "How did new Tour Championship format impact PGA Tour finale?",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/now-30th-course-remote-arizona-110100775.html",
+      "title": "Now in its 30th year, Lake Powell National in Page, Arizona offers fun golf, amazing views",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/video/lake-powell-national-golf-course-110055582.html",
+      "title": "Lake Powell National Golf Course in Page, Arizona",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/oxbridge-academy-boys-golf-ready-090427920.html",
+      "title": "Oxbridge Academy boys golf is ready to defend its historic state title: 'We like our team'",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
       "url": "https://sports.yahoo.com/article/pga-tour-veteran-justin-rose-062755568.html",
       "title": "PGA Tour veteran Justin Rose’s heartfelt reaction to Tommy Fleetwood’s East Lake win",
       "time": "",
       "source": "Golf主页",
-      "discoveredAt": "2025-08-25T08:26:28.408Z"
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
       "url": "https://sports.yahoo.com/article/tommy-fleetwood-wins-tour-championship-220007710.html",
       "title": "Tommy Fleetwood wins Tour Championship for maiden PGA Tour victory",
       "time": "",
       "source": "Golf主页",
-      "discoveredAt": "2025-08-25T08:26:28.408Z"
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/article/masters-2025-the-10-best-pictures-of-rory-mcilroy-finally-winning-the-green-jacket-171503049.html",
-      "title": "Masters 2025: The 10 best pictures of Rory McIlroy finally winning the green jacketRory McIlroy let all his emotions show after finally winning the Masters.Yahoo Sports Staff",
+      "url": "https://sports.yahoo.com/video/were-best-mens-golf-moments-015517946.html",
+      "title": "What were the best men's golf moments of 2025?",
       "time": "",
-      "source": "大师赛",
-      "discoveredAt": "2025-08-25T08:27:08.186Z"
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/article/sundays-masters-final-round-draws-biggest-rating-for-cbs-since-2018-as-rory-mcilroy-wins-in-playoff-213910257.html",
-      "title": "Sunday's dramatic Masters final round draws biggest rating for CBS since 2018Ian Casselberry",
+      "url": "https://sports.yahoo.com/article/many-starts-did-tommy-fleetwood-014815185.html",
+      "title": "How many starts did Tommy Fleetwood make before first PGA Tour win",
       "time": "",
-      "source": "大师赛",
-      "discoveredAt": "2025-08-25T08:27:08.186Z"
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/article/bryson-dechambeau-said-rory-mcllroy-wouldnt-talk-to-him-during-masters-final-round-didnt-speak-to-me-once-171442710.html",
-      "title": "DeChambeau said Rory wouldn't talk to him during Masters final roundIan Casselberry",
+      "url": "https://sports.yahoo.com/article/fleetwood-wins-tour-championship-first-222725120.html",
+      "title": "Fleetwood wins Tour Championship for first PGA Tour title",
       "time": "",
-      "source": "大师赛",
-      "discoveredAt": "2025-08-25T08:27:08.186Z"
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/article/masters-2025-rory-mcilroy-goes-from-triumph-to-tragedy-back-to-triumph-to-finally-end-his-yearslong-major-drought-004603132.html",
-      "title": "McIlroy goes from triumph to tragedy back to triumph at AugustaJay Hart",
+      "url": "https://sports.yahoo.com/video/tommy-fleetwood-finally-call-himself-005041791.html",
+      "title": "Tommy Fleetwood can finally call himself a PGA Tour winner",
       "time": "",
-      "source": "大师赛",
-      "discoveredAt": "2025-08-25T08:27:08.186Z"
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     },
     {
-      "url": "https://sports.yahoo.com/golf/article/masters-2025-rory-mcilroy-at-last-claims-green-jacket-career-grand-slam-231725337.html",
-      "title": "Rory McIlroy at last claims green jacket, career grand slamJay Busbee",
+      "url": "https://sports.yahoo.com/article/tiger-woods-sends-message-tommy-000613800.html",
+      "title": "Tiger Woods Sends Message to Tommy Fleetwood Following First PGA Tour Win",
       "time": "",
-      "source": "大师赛",
-      "discoveredAt": "2025-08-25T08:27:08.186Z"
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-brooke-henderson-john-234610019.html",
+      "title": "Tommy Fleetwood, Brooke Henderson and Jon Rahm and his LIV team big winners on busy day in golf",
+      "time": "",
+      "source": "Golf主页",
+      "discoveredAt": "2025-08-27T03:31:29.555Z"
     }
   ]
 }

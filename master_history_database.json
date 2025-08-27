@@ -11024,6 +11024,1411 @@
       "reason": "实时赛事报道内容过长",
       "contentLength": 19552,
       "lineCount": 197
+    },
+    "950a70b04589c9299274ed394de76a69": {
+      "originalUrl": "https://golf.com/news/golfs-best-bromance-fleetwoodmania-erupts/",
+      "normalizedUrl": "https://golf.com/news/golfs-best-bromance-fleetwoodmania-erupts/",
+      "status": "skipped",
+      "date": "2025-08-26",
+      "articleNum": "11876",
+      "processedAt": "2025-08-26T01:07:37.349Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Golf’s best bromance, Fleetwoodmania erupts on social media | Rogers Report",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 8593,
+      "lineCount": 156
+    },
+    "ca9efe11f82e0b26e785508e70a7cd64": {
+      "originalUrl": "https://golf.com/instruction/putting/putting-warm-up-adapt-green-speeds/",
+      "normalizedUrl": "https://golf.com/instruction/putting/putting-warm-up-adapt-green-speeds/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11878",
+      "processedAt": "2025-08-26T01:26:17.688Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "This putting warm-up will prep you for any putt you’ll face on the course",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11878.md",
+      "htmlFile": "wechat_article_11878.html"
+    },
+    "87d5e462d891053450e49f6b5fea14c6": {
+      "originalUrl": "https://golf.com/gear/fairway-woods/tommy-fleetwood-9-wood-tour-championship/",
+      "normalizedUrl": "https://golf.com/gear/fairway-woods/tommy-fleetwood-9-wood-tour-championship/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11880",
+      "processedAt": "2025-08-26T01:28:18.495Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "The most unique club in Tommy Fleetwood’s bag will help you too",
+      "aiProbability": 21,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11880.md",
+      "htmlFile": "wechat_article_11880.html"
+    },
+    "37ff9da632bdd443104850f95add090b": {
+      "originalUrl": "https://golf.com/news/defiant-rory-mcilroy-flees-east-lake-us-open/",
+      "normalizedUrl": "https://golf.com/news/defiant-rory-mcilroy-flees-east-lake-us-open/",
+      "status": "skipped",
+      "date": "2025-08-26",
+      "articleNum": "11881",
+      "processedAt": "2025-08-26T01:28:45.738Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "‘Season is not over:’ Defiant Rory McIlroy flees East Lake for U.S. Open visit",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 7059,
+      "lineCount": 112
+    },
+    "68b08420aa5ff6aa55a8eeef2818696e": {
+      "originalUrl": "https://golf.com/news/7-revealing-stats-2025-pga-tour-season/",
+      "normalizedUrl": "https://golf.com/news/7-revealing-stats-2025-pga-tour-season/",
+      "status": "skipped",
+      "date": "2025-08-26",
+      "articleNum": "11883",
+      "processedAt": "2025-08-26T01:37:55.458Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "7 revealing stats from the 2025 PGA Tour season",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 9134,
+      "lineCount": 138
+    },
+    "43f2ef69f6a1113ecf47e7dd81fa4329": {
+      "originalUrl": "https://golf.com/news/tour-championship-sex-toy-disruption/",
+      "normalizedUrl": "https://golf.com/news/tour-championship-sex-toy-disruption/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11884",
+      "processedAt": "2025-08-26T01:39:15.125Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Awkward interruption disrupts Tour Championship’s decisive moments",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11884.md",
+      "htmlFile": "wechat_article_11884.html"
+    },
+    "fccf1ff18916330407e3aa5fb050f53f": {
+      "originalUrl": "https://golf.com/news/becky-morgan-makes-usga-history/",
+      "normalizedUrl": "https://golf.com/news/becky-morgan-makes-usga-history/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11886",
+      "processedAt": "2025-08-26T01:48:12.215Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "‘Would not have dreamt this’: At 50, Becky Morgan just made USGA history",
+      "aiProbability": 36,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11886.md",
+      "htmlFile": "wechat_article_11886.html"
+    },
+    "d6d919895f93062a8e0c08c0762cb743": {
+      "originalUrl": "https://golf.com/news/jon-rahm-liv-team-win-removes-asterisk/",
+      "normalizedUrl": "https://golf.com/news/jon-rahm-liv-team-win-removes-asterisk/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11887",
+      "processedAt": "2025-08-26T01:49:48.124Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Jon Rahm says LIV team victory removes ‘asterisk’ from winless season",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11887.md",
+      "htmlFile": "wechat_article_11887.html"
+    },
+    "065b52ecc3be5cb5b147c4c3a083cd74": {
+      "originalUrl": "https://www.golfdigest.com/story/keegan-bradley-2025-ryder-cup-captains-picks-quotes-soundbites-bethpage-black-golf",
+      "normalizedUrl": "https://www.golfdigest.com/story/keegan-bradley-2025-ryder-cup-captains-picks-quotes-soundbites-bethpage-black-golf",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11890",
+      "processedAt": "2025-08-26T02:12:54.029Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "Keegan Bradley teases Ryder Cup chaos, says there’s ‘a few guys’ who think they’ll be on the team who won’t be",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11890.md",
+      "htmlFile": "wechat_article_11890.html"
+    },
+    "15ddd6d9ceafd8d854339d6591f7d7be": {
+      "originalUrl": "https://www.golfdigest.com/story/brooke-henderson-canada-bright-star-breaks-victory-drought-by-capturing-her-national-championship",
+      "normalizedUrl": "https://www.golfdigest.com/story/brooke-henderson-canada-bright-star-breaks-victory-drought-by-capturing-her-national-championship",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11892",
+      "processedAt": "2025-08-26T02:32:43.154Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "Brooke Henderson, Canada’s bright star, breaks victory drought by capturing her national championship",
+      "aiProbability": 24,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_11892.md",
+      "htmlFile": "wechat_article_11892.html"
+    },
+    "457c16051f36e35e5a17f90835c0a0cc": {
+      "originalUrl": "https://www.golfdigest.com/story/us-senior-womens-open-becky-morgan-wins-san-diego-country-club-mickey-wright-beth-allen",
+      "normalizedUrl": "https://www.golfdigest.com/story/us-senior-womens-open-becky-morgan-wins-san-diego-country-club-mickey-wright-beth-allen",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11893",
+      "processedAt": "2025-08-26T02:37:35.642Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "First-time USGA champ and her caddie have different reasons to shed tears after Senior Women's Open triumph",
+      "aiProbability": 20,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11893.md",
+      "htmlFile": "wechat_article_11893.html"
+    },
+    "435671146e6fa7ccc4b1ea9b4976029a": {
+      "originalUrl": "https://www.golfdigest.com/story/broing-ways-tour-players-get-better-golf-digest-tips",
+      "normalizedUrl": "https://www.golfdigest.com/story/broing-ways-tour-players-get-better-golf-digest-tips",
+      "status": "skipped",
+      "date": "2025-08-26",
+      "articleNum": "11894",
+      "processedAt": "2025-08-26T02:40:08.678Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "10 boring things tour pros do to get better at golf 📈",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 7709,
+      "lineCount": 125
+    },
+    "e411984d03c2fcc132b449262ab5de97": {
+      "originalUrl": "https://www.golfdigest.com/story/2025-ryder-cup-breakfast-at-bethpage-morning-show-colin-jost-eli-manning-golf-manningcast",
+      "normalizedUrl": "https://www.golfdigest.com/story/2025-ryder-cup-breakfast-at-bethpage-morning-show-colin-jost-eli-manning-golf-manningcast",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11895",
+      "processedAt": "2025-08-26T02:43:34.618Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "Live from New York it’s … Saturday morning? Ryder Cup morning show to be hosted by SNL’s Colin Jost at Bethpage Black",
+      "aiProbability": 8,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11895.md",
+      "htmlFile": "wechat_article_11895.html"
+    },
+    "9bf8438dcbf717955af1b3586d9df38b": {
+      "originalUrl": "https://www.golfdigest.com/story/phil-mickelson-pokes-fun-at-this-particular-part-of-patrick-cantlay-slow-pre-shot-routine",
+      "normalizedUrl": "https://www.golfdigest.com/story/phil-mickelson-pokes-fun-at-this-particular-part-of-patrick-cantlay-slow-pre-shot-routine",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11896",
+      "processedAt": "2025-08-26T02:46:08.740Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "Phil Mickelson pokes fun at this particular part of Patrick Cantlay's slow pre-shot routine",
+      "aiProbability": 14,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11896.md",
+      "htmlFile": "wechat_article_11896.html"
+    },
+    "3b1cc0090c26f8c6fc3bff5741708cba": {
+      "originalUrl": "https://www.golfdigest.com/story/tour-winner-uses-tommy-fleetwood-win-opportunity-tee-off-hang-out-lebron-james-genesis-invitational",
+      "normalizedUrl": "https://www.golfdigest.com/story/tour-winner-uses-tommy-fleetwood-win-opportunity-tee-off-hang-out-lebron-james-genesis-invitational",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11897",
+      "processedAt": "2025-08-26T02:49:29.576Z",
+      "source": "batch_processor",
+      "siteName": "Golf Digest",
+      "title": "Tour winner invites LeBron James to play Genesis pro-am after the King was wowed by Fleetwood's big win",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11897.md",
+      "htmlFile": "wechat_article_11897.html"
+    },
+    "1be8668bc6a702beae3e81d3c9f7fae5": {
+      "originalUrl": "https://www.golfmonthly.com/news/tiger-woods-big-names-tommy-fleetwood",
+      "normalizedUrl": "https://www.golfmonthly.com/news/tiger-woods-big-names-tommy-fleetwood",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11899",
+      "processedAt": "2025-08-26T02:58:43.761Z",
+      "source": "batch_processor",
+      "siteName": "Golf Monthly",
+      "title": "Tiger Woods Among Big Names To Congratulate Tommy Fleetwood On Maiden PGA Tour Win",
+      "aiProbability": 24,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11899.md",
+      "htmlFile": "wechat_article_11899.html"
+    },
+    "a7fddfcdc0aa81d6d59173959822085a": {
+      "originalUrl": "https://www.golfmonthly.com/news/rory-mcilroy-us-open-tennis-tour-championship",
+      "normalizedUrl": "https://www.golfmonthly.com/news/rory-mcilroy-us-open-tennis-tour-championship",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11900",
+      "processedAt": "2025-08-26T02:59:55.717Z",
+      "source": "batch_processor",
+      "siteName": "Golf Monthly",
+      "title": "Rory McIlroy Spotted Watching US Open Tennis In New York Less Than Three Hours After Tour Championship Final Round",
+      "aiProbability": 26,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11900.md",
+      "htmlFile": "wechat_article_11900.html"
+    },
+    "bd2715605b7cb6a41448940730c6fb26": {
+      "originalUrl": "https://www.golfwrx.com/765384/bks-breakdowns-tommy-fleetwoods-winning-witb-2025-tour-championship/",
+      "normalizedUrl": "https://www.golfwrx.com/765384/bks-breakdowns-tommy-fleetwoods-winning-witb-2025-tour-championship/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11901",
+      "processedAt": "2025-08-26T03:01:11.003Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "BK’s Breakdowns: Tommy Fleetwood’s winning WITB, 2025 Tour Championship",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11901.md",
+      "htmlFile": "wechat_article_11901.html"
+    },
+    "1dddfe9a7f09d8ad9f2005335371d734": {
+      "originalUrl": "https://www.golfwrx.com/765261/patrick-cantlay-witb-2025-august/",
+      "normalizedUrl": "https://www.golfwrx.com/765261/patrick-cantlay-witb-2025-august/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11902",
+      "processedAt": "2025-08-26T03:02:15.653Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "Patrick Cantlay WITB 2025 (August)",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11902.md",
+      "htmlFile": "wechat_article_11902.html"
+    },
+    "387554126f2c0a3f171c98ea37b18812": {
+      "originalUrl": "https://www.golfwrx.com/765256/tour-rundown-fleetwood-breaks-through/",
+      "normalizedUrl": "https://www.golfwrx.com/765256/tour-rundown-fleetwood-breaks-through/",
+      "status": "skipped",
+      "date": "2025-08-26",
+      "articleNum": "11903",
+      "processedAt": "2025-08-26T03:02:27.967Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "Tour Rundown: Fleetwood breaks through",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 8875,
+      "lineCount": 78
+    },
+    "fa20df0788278360fe2e08b35e4a9a9f": {
+      "originalUrl": "https://www.golfwrx.com/765334/rory-mcilroy-watches-novak-djokovic-in-new-york-just-3-hours-after-his-tour-championship-round/",
+      "normalizedUrl": "https://www.golfwrx.com/765334/rory-mcilroy-watches-novak-djokovic-in-new-york-just-3-hours-after-his-tour-championship-round/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11904",
+      "processedAt": "2025-08-26T03:03:18.216Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "Rory McIlroy watches Novak Djokovic in New York just 3 hours after his Tour Championship round",
+      "aiProbability": 20,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11904.md",
+      "htmlFile": "wechat_article_11904.html"
+    },
+    "ebffc030c9886d8c066f653bf6e1fb58": {
+      "originalUrl": "https://www.golfwrx.com/765329/general-advice-on-upgrading-irons-golfwrxers-discuss/",
+      "normalizedUrl": "https://www.golfwrx.com/765329/general-advice-on-upgrading-irons-golfwrxers-discuss/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11905",
+      "processedAt": "2025-08-26T03:04:12.756Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "General advice on upgrading irons – GolfWRXers discuss",
+      "aiProbability": 26,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11905.md",
+      "htmlFile": "wechat_article_11905.html"
+    },
+    "77e5b7b4a68e5b8d06d04b96f3d79e82": {
+      "originalUrl": "https://www.golfwrx.com/765313/ill-play-him-for-any-amount-he-wants-tour-journeyman-in-wild-challenge-to-jordan-spieth-following-addition-of-signature-event/",
+      "normalizedUrl": "https://www.golfwrx.com/765313/ill-play-him-for-any-amount-he-wants-tour-journeyman-in-wild-challenge-to-jordan-spieth-following-addition-of-signature-event/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11906",
+      "processedAt": "2025-08-26T03:04:58.296Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "‘I’ll play him for any amount he wants’ – Tour journeyman in wild challenge to Jordan Spieth following addition of signature event",
+      "aiProbability": 8,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11906.md",
+      "htmlFile": "wechat_article_11906.html"
+    },
+    "0949ac86bd2cdd6dc38e77697edfc1fe": {
+      "originalUrl": "https://www.golfwrx.com/765295/tiger-woods-and-lebron-james-lead-tributes-to-tommy-fleetwood-following-tour-championship-win/",
+      "normalizedUrl": "https://www.golfwrx.com/765295/tiger-woods-and-lebron-james-lead-tributes-to-tommy-fleetwood-following-tour-championship-win/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11907",
+      "processedAt": "2025-08-26T03:06:44.455Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "Tiger Woods and LeBron James lead tributes to Tommy Fleetwood following Tour Championship win",
+      "aiProbability": 17,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_11907.md",
+      "htmlFile": "wechat_article_11907.html"
+    },
+    "03073037835a10940a3fc97ec1ea58d6": {
+      "originalUrl": "https://www.golfwrx.com/765309/coolest-thing-for-sale-in-the-golfwrx-classifieds-today-weston-maughan-putters-highland-gss/",
+      "normalizedUrl": "https://www.golfwrx.com/765309/coolest-thing-for-sale-in-the-golfwrx-classifieds-today-weston-maughan-putters-highland-gss/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11908",
+      "processedAt": "2025-08-26T03:07:41.021Z",
+      "source": "batch_processor",
+      "siteName": "GolfWRX",
+      "title": "Coolest thing for sale in the GolfWRX Classifieds Today: Weston Maughan Putters – Highland (GSS)",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11908.md",
+      "htmlFile": "wechat_article_11908.html"
+    },
+    "67d94f92a913f4e6a85554ad3cf20fc9": {
+      "originalUrl": "https://www.golf.net.cn/zhishi/5428.html",
+      "normalizedUrl": "https://www.golf.net.cn/zhishi/5428.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11910",
+      "processedAt": "2025-08-26T03:08:57.577Z",
+      "source": "batch_processor",
+      "siteName": "golf.net.cn",
+      "title": "如何消除开球时紧张心理",
+      "aiProbability": 9,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11910.md",
+      "htmlFile": "wechat_article_11910.html"
+    },
+    "3a77225a6cbc7a1676011abe275c03c9": {
+      "originalUrl": "https://www.golfmagic.com/tour/pga-tour/rory-mcilroy-and-scottie-scheffler-lead-new-golf-event-donald-trump-course",
+      "normalizedUrl": "https://www.golfmagic.com/tour/pga-tour/rory-mcilroy-and-scottie-scheffler-lead-new-golf-event-donald-trump-course",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11913",
+      "processedAt": "2025-08-26T03:22:32.307Z",
+      "source": "batch_processor",
+      "siteName": "golfmagic.com",
+      "title": "Rory McIlroy and Scottie Scheffler to lead new golf event on Donald Trump course",
+      "aiProbability": 12,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11913.md",
+      "htmlFile": "wechat_article_11913.html"
+    },
+    "3881cb67153ec78e884e52bfc00c0af7": {
+      "originalUrl": "https://www.golfmagic.com/tour/pga-tour/golf-legend-tiger-woods-takes-social-media-congratulate-tommy-fleetwood",
+      "normalizedUrl": "https://www.golfmagic.com/tour/pga-tour/golf-legend-tiger-woods-takes-social-media-congratulate-tommy-fleetwood",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11914",
+      "processedAt": "2025-08-26T03:24:08.926Z",
+      "source": "batch_processor",
+      "siteName": "golfmagic.com",
+      "title": "Tiger Woods takes to social media to congratulate Tommy Fleetwood",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11914.md",
+      "htmlFile": "wechat_article_11914.html"
+    },
+    "69fcd5bf1a0461d7c79e1059316203b5": {
+      "originalUrl": "https://sports.yahoo.com/article/golfers-shocked-left-off-ryder-194647611.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/golfers-shocked-left-off-ryder-194647611.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11923",
+      "processedAt": "2025-08-26T03:29:44.284Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Some golfers will be shocked when left off the Ryder Cup team",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11923.md",
+      "htmlFile": "wechat_article_11923.html"
+    },
+    "b62e1fa1f015c7c2813fc18dabb17332": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/25/2025-u-s-senior-amateur-former-pro-mike-sposa-advances-to-round-of-32/85820509007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/25/2025-u-s-senior-amateur-former-pro-mike-sposa-advances-to-round-of-32/85820509007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11943",
+      "processedAt": "2025-08-26T03:52:17.577Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "Former PGA Tour pro Mike Sposa advances to Round of 32 at 2025 U.S. Senior Amateur",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11943.md",
+      "htmlFile": "wechat_article_11943.html"
+    },
+    "f6de045305e76b892f117080a3a1e5d0": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/tiger-woods-type-1-photo-2000-pga-championship-record-price-auction/85815054007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/tiger-woods-type-1-photo-2000-pga-championship-record-price-auction/85815054007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11945",
+      "processedAt": "2025-08-26T03:55:08.671Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "Tiger Woods 'Type 1' photo from 2000 PGA sells for record price, crazy return on investment",
+      "aiProbability": 39,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11945.md",
+      "htmlFile": "wechat_article_11945.html"
+    },
+    "97b8d12daef90d9bcd45b3997d1f2ae4": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/courses/2025/08/25/lake-powell-national-golf-course-scenic-golf-in-page-arizona/84543254007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/courses/2025/08/25/lake-powell-national-golf-course-scenic-golf-in-page-arizona/84543254007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11946",
+      "processedAt": "2025-08-26T03:56:17.698Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "Now in its 30th year, Lake Powell National in Page, Arizona offers fun golf, amazing views",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11946.md",
+      "htmlFile": "wechat_article_11946.html"
+    },
+    "eb77df2df5b4c2f4fe71b8962cf4d86b": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/scottie-scheffler-rory-mcilroy-headline-all-star-event-sports-business-journal-report/85819424007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/scottie-scheffler-rory-mcilroy-headline-all-star-event-sports-business-journal-report/85819424007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11947",
+      "processedAt": "2025-08-26T03:58:08.620Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "Scottie Scheffler, Rory McIlroy to headline an all-star golf event, according to a report",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11947.md",
+      "htmlFile": "wechat_article_11947.html"
+    },
+    "5e1ec87072b02c7d808ff75149c7fc96": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/pga-tour-fedex-fall-tournament-schedule-2025/85818268007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/pga-tour-fedex-fall-tournament-schedule-2025/85818268007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11948",
+      "processedAt": "2025-08-26T03:59:18.516Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "These seven PGA Tour events make up the 2025 FedEx Fall schedule",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11948.md",
+      "htmlFile": "wechat_article_11948.html"
+    },
+    "52ec64f0f33dc68b4c6a236a0c6ff32a": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/25/ryder-cup-2025-schedule-tv-channels-players-history/85817380007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/25/ryder-cup-2025-schedule-tv-channels-players-history/85817380007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11949",
+      "processedAt": "2025-08-26T04:00:24.417Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "When is 2025 Ryder Cup? Dates, schedule, history of U.S.-Europe golf tournament",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11949.md",
+      "htmlFile": "wechat_article_11949.html"
+    },
+    "262c25549c66a0c4a9287b3010db2175": {
+      "originalUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/pga-tour-money-list-2025-scottie-scheffler-26-5-million/85816664007/",
+      "normalizedUrl": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/25/pga-tour-money-list-2025-scottie-scheffler-26-5-million/85816664007/",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11951",
+      "processedAt": "2025-08-26T04:37:45.739Z",
+      "source": "batch_processor",
+      "siteName": "Golfweek",
+      "title": "Scottie Scheffler tops PGA Tour money list for a fourth straight season with $26.5 million",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11951.md",
+      "htmlFile": "wechat_article_11951.html"
+    },
+    "fd0085080c861f7b6593a3dca0777a6b": {
+      "originalUrl": "https://sports.yahoo.com/article/scottie-scheffler-rory-mcilroy-headline-183017016.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/scottie-scheffler-rory-mcilroy-headline-183017016.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11959",
+      "processedAt": "2025-08-26T07:51:14.051Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Scottie Scheffler, Rory McIlroy to headline an all-star golf event, according to a report",
+      "aiProbability": 14,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11959.md",
+      "htmlFile": "wechat_article_11959.html"
+    },
+    "5b79c2caef2278a35549dd8c7a325eb9": {
+      "originalUrl": "https://sports.yahoo.com/article/seven-pga-tour-events-2025-173018248.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/seven-pga-tour-events-2025-173018248.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11961",
+      "processedAt": "2025-08-26T08:04:56.098Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "These seven PGA Tour events make up the 2025 FedEx Fall schedule",
+      "aiProbability": 32,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11961.md",
+      "htmlFile": "wechat_article_11961.html"
+    },
+    "28e6d8e15285788bbc9dcec3d7cdd8ba": {
+      "originalUrl": "https://sports.yahoo.com/article/sports-illustrated-swimsuit-model-had-165356165.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/sports-illustrated-swimsuit-model-had-165356165.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11963",
+      "processedAt": "2025-08-26T08:05:59.496Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Sports Illustrated Swimsuit Model Had Everyone's Attention At LIV Golf Event",
+      "aiProbability": 21,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11963.md",
+      "htmlFile": "wechat_article_11963.html"
+    },
+    "95bb903567d4106108a094a1db745552": {
+      "originalUrl": "https://sports.yahoo.com/article/anthony-davis-wife-marlen-davis-161523496.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/anthony-davis-wife-marlen-davis-161523496.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11964",
+      "processedAt": "2025-08-26T08:06:54.216Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Anthony Davis' wife Marlen Davis shares hilarious golf expectation from Mavericks star",
+      "aiProbability": 14,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11964.md",
+      "htmlFile": "wechat_article_11964.html"
+    },
+    "fe6730f73311ea40531b6f5952533284": {
+      "originalUrl": "https://sports.yahoo.com/article/numbers-prove-brooke-henderson-lpgas-160137549.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/numbers-prove-brooke-henderson-lpgas-160137549.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11965",
+      "processedAt": "2025-08-26T08:11:32.874Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "The numbers prove Brooke Henderson is the LPGA's best closer since 2015",
+      "aiProbability": 54,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_11965.md",
+      "htmlFile": "wechat_article_11965.html"
+    },
+    "97a6c94a3fd2280b9f242b7bb4684699": {
+      "originalUrl": "https://sports.yahoo.com/article/scottie-scheffler-tops-pga-tour-152925675.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/scottie-scheffler-tops-pga-tour-152925675.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11966",
+      "processedAt": "2025-08-26T08:12:22.938Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Scottie Scheffler tops PGA Tour money list for a fourth straight season with $26.5 million",
+      "aiProbability": 6,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11966.md",
+      "htmlFile": "wechat_article_11966.html"
+    },
+    "ac628bc3f304c2c6a5bf24f353a7f1ee": {
+      "originalUrl": "https://sports.yahoo.com/article/meet-25-golfers-2026-haskins-140106436.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/meet-25-golfers-2026-haskins-140106436.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11969",
+      "processedAt": "2025-08-26T08:25:03.770Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Meet the 25 golfers on the 2026 Haskins Award preseason watch list",
+      "aiProbability": 38,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11969.md",
+      "htmlFile": "wechat_article_11969.html"
+    },
+    "adfaddd369cd298f9c0d1547f18ac35d": {
+      "originalUrl": "https://sports.yahoo.com/article/still-remember-tiger-woods-battle-140033831.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/still-remember-tiger-woods-battle-140033831.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11970",
+      "processedAt": "2025-08-26T08:30:36.822Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "'They still remember': Tiger Woods' Battle at Bighorn still iconic golf moment 25 years later",
+      "aiProbability": 48,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11970.md",
+      "htmlFile": "wechat_article_11970.html"
+    },
+    "8583adb2215d8b595f736733dadc8ec7": {
+      "originalUrl": "https://sports.yahoo.com/article/rory-mcilroy-spotted-us-open-133308591.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/rory-mcilroy-spotted-us-open-133308591.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11971",
+      "processedAt": "2025-08-26T08:33:20.094Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Rory McIlroy spotted at US Open hours after disappointing end to PGA season",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11971.md",
+      "htmlFile": "wechat_article_11971.html"
+    },
+    "b6a8ebc0cf1312badaf8c5baf52cdc80": {
+      "originalUrl": "https://sports.yahoo.com/article/won-fedexcup-full-list-champions-195739638.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/won-fedexcup-full-list-champions-195739638.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11972",
+      "processedAt": "2025-08-26T08:37:08.997Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Who has won the PGA Tour's FedExCup? Full list of champions since 2007",
+      "aiProbability": 29,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_11972.md",
+      "htmlFile": "wechat_article_11972.html"
+    },
+    "ad651e07f1f07d8b4133e77e84f0fb2e": {
+      "originalUrl": "https://sports.yahoo.com/article/did-tour-championship-format-impact-131100714.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/did-tour-championship-format-impact-131100714.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11973",
+      "processedAt": "2025-08-26T08:38:00.983Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "How did new Tour Championship format impact PGA Tour finale?",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11973.md",
+      "htmlFile": "wechat_article_11973.html"
+    },
+    "fa55feebff5958c96dbd8736890099a8": {
+      "originalUrl": "https://sports.yahoo.com/article/now-30th-course-remote-arizona-110100775.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/now-30th-course-remote-arizona-110100775.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11974",
+      "processedAt": "2025-08-26T08:38:55.581Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Now in its 30th year, Lake Powell National in Page, Arizona offers fun golf, amazing views",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11974.md",
+      "htmlFile": "wechat_article_11974.html"
+    },
+    "40ce5eae569ebe72072b6add92ef89d7": {
+      "originalUrl": "https://sports.yahoo.com/article/oxbridge-academy-boys-golf-ready-090427920.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/oxbridge-academy-boys-golf-ready-090427920.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11976",
+      "processedAt": "2025-08-26T08:39:50.739Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Oxbridge Academy boys golf is ready to defend its historic state title: 'We like our team'",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11976.md",
+      "htmlFile": "wechat_article_11976.html"
+    },
+    "8b32f872ca892c882a30812275a63943": {
+      "originalUrl": "https://sports.yahoo.com/article/many-starts-did-tommy-fleetwood-014815185.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/many-starts-did-tommy-fleetwood-014815185.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11977",
+      "processedAt": "2025-08-26T08:40:53.747Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "How many starts did Tommy Fleetwood make before first PGA Tour win",
+      "aiProbability": 21,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11977.md",
+      "htmlFile": "wechat_article_11977.html"
+    },
+    "ca571018ec5b90195d6303d051f49032": {
+      "originalUrl": "https://sports.yahoo.com/article/fleetwood-wins-tour-championship-first-222725120.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/fleetwood-wins-tour-championship-first-222725120.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11978",
+      "processedAt": "2025-08-26T08:42:39.452Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Fleetwood wins Tour Championship for first PGA Tour title",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11978.md",
+      "htmlFile": "wechat_article_11978.html"
+    },
+    "9e47c17961dd44a168c2e2b951c0a957": {
+      "originalUrl": "https://sports.yahoo.com/article/2025-liv-golf-team-championship-230134764.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/2025-liv-golf-team-championship-230134764.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11982",
+      "processedAt": "2025-08-26T08:55:55.938Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "2025 LIV Golf Michigan Team Championship prize money payouts for each LIV Golf team",
+      "aiProbability": 33,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11982.md",
+      "htmlFile": "wechat_article_11982.html"
+    },
+    "47c6abb2d310af6364de879261d623ea": {
+      "originalUrl": "https://sports.yahoo.com/article/brooke-henderson-breaks-lpga-drought-225219317.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/brooke-henderson-breaks-lpga-drought-225219317.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11983",
+      "processedAt": "2025-08-26T08:56:43.895Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Brooke Henderson breaks LPGA drought, wins CPKC Women's Open on home soil in Canada",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11983.md",
+      "htmlFile": "wechat_article_11983.html"
+    },
+    "401fc68df71b4c0f4657918a70e048f9": {
+      "originalUrl": "https://sports.yahoo.com/article/emotional-tommy-fleetwood-reacts-first-222538982.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/emotional-tommy-fleetwood-reacts-first-222538982.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11985",
+      "processedAt": "2025-08-26T09:05:06.466Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Emotional Tommy Fleetwood reacts to first PGA Tour win at Tour Championship",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11985.md",
+      "htmlFile": "wechat_article_11985.html"
+    },
+    "d6204ad7b2edea8e6653e6a4b5381ff1": {
+      "originalUrl": "https://sports.yahoo.com/article/tommy-fleetwood-wins-tour-championship-221937413.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/tommy-fleetwood-wins-tour-championship-221937413.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11986",
+      "processedAt": "2025-08-26T09:06:00.868Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Tommy Fleetwood wins Tour Championship for first PGA Tour title and FedEx Cup",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11986.md",
+      "htmlFile": "wechat_article_11986.html"
+    },
+    "75ff09b0650fbe94145af156c3174e66": {
+      "originalUrl": "https://sports.yahoo.com/article/tommy-fleetwood-fired-first-pga-221456450.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/tommy-fleetwood-fired-first-pga-221456450.html",
+      "status": "completed",
+      "date": "2025-08-26",
+      "articleNum": "11987",
+      "processedAt": "2025-08-26T09:06:43.482Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Tommy Fleetwood was so fired up after his first PGA Tour win in 164 tries",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_11987.md",
+      "htmlFile": "wechat_article_11987.html"
+    },
+    "462d2e4fd5a0bd731d85d9f1b751e74c": {
+      "originalUrl": "https://golf.com/news/monday-finish-tommy-frankie-fleetwood/",
+      "normalizedUrl": "https://golf.com/news/monday-finish-tommy-frankie-fleetwood/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12003",
+      "processedAt": "2025-08-27T01:19:07.092Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "What Frankie Fleetwood showed us about Tommy | Monday Finish",
+      "aiProbability": 78,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12003.md",
+      "htmlFile": "wechat_article_12003.html"
+    },
+    "bc3e507d8ba2f3427581b9dbc5431d02": {
+      "originalUrl": "https://golf.com/instruction/tell-correct-distance-stance-golf-ball/",
+      "normalizedUrl": "https://golf.com/instruction/tell-correct-distance-stance-golf-ball/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12056",
+      "processedAt": "2025-08-27T01:37:39.363Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "How to tell if you’re standing the correct distance from the golf ball",
+      "aiProbability": 29,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12056.md",
+      "htmlFile": "wechat_article_12056.html"
+    },
+    "603339a8cf03ac7ea2b4208bd92a3e0c": {
+      "originalUrl": "https://golf.com/news/augusta-national-significant-invite-change-for-2026-masters/",
+      "normalizedUrl": "https://golf.com/news/augusta-national-significant-invite-change-for-2026-masters/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12065",
+      "processedAt": "2025-08-27T01:44:58.110Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Augusta National makes significant Masters invite changes for 2026",
+      "aiProbability": 11,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12065.md",
+      "htmlFile": "wechat_article_12065.html"
+    },
+    "153ec47afab617143824683621f74406": {
+      "originalUrl": "https://golf.com/news/phil-mickelson-pans-us-ryder-cup-hopeful-slow-play/",
+      "normalizedUrl": "https://golf.com/news/phil-mickelson-pans-us-ryder-cup-hopeful-slow-play/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12070",
+      "processedAt": "2025-08-27T01:53:18.915Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Phil Mickelson pans U.S. Ryder Cup hopeful over slow play",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12070.md",
+      "htmlFile": "wechat_article_12070.html"
+    },
+    "63fc3e69bc452bf6e4f4fbc110981c76": {
+      "originalUrl": "https://golf.com/news/11-insane-money-stats-2025-pga-tour-season/",
+      "normalizedUrl": "https://golf.com/news/11-insane-money-stats-2025-pga-tour-season/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12079",
+      "processedAt": "2025-08-27T02:05:55.205Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "11 insane money stats from the 2025 PGA Tour season",
+      "aiProbability": 35,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12079.md",
+      "htmlFile": "wechat_article_12079.html"
+    },
+    "79124ffc5407b7b9e556298d311b6b98": {
+      "originalUrl": "https://golf.com/news/pga-tour-missing-something-bold-move/",
+      "normalizedUrl": "https://golf.com/news/pga-tour-missing-something-bold-move/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12081",
+      "processedAt": "2025-08-27T02:11:31.179Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "The PGA Tour has an obvious void. This bold move would fill it",
+      "aiProbability": 36,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12081.md",
+      "htmlFile": "wechat_article_12081.html"
+    },
+    "e258b6746437a30fa12e29ca47ff3b2b": {
+      "originalUrl": "https://golf.com/news/skechers-named-title-sponsor-world-champions-cup/",
+      "normalizedUrl": "https://golf.com/news/skechers-named-title-sponsor-world-champions-cup/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12082",
+      "processedAt": "2025-08-27T02:12:57.654Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Skechers named title sponsor of PGA Tour Champions’ World Champions Cup",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12082.md",
+      "htmlFile": "wechat_article_12082.html"
+    },
+    "101b30a2f182d19ac41dd1b288b54455": {
+      "originalUrl": "https://golf.com/news/2025-fm-championship-tv-schedule-watch-tee-times/",
+      "normalizedUrl": "https://golf.com/news/2025-fm-championship-tv-schedule-watch-tee-times/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12084",
+      "processedAt": "2025-08-27T02:25:39.571Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "2025 FM Championship: TV schedule, streaming, how to watch, tee times",
+      "aiProbability": 51,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12084.md",
+      "htmlFile": "wechat_article_12084.html"
+    },
+    "d4ff08dbbebeccac0db319a018be9951": {
+      "originalUrl": "https://golf.com/instruction/short-game/lee-trevino-crucial-solid-contact-pitch-shots/",
+      "normalizedUrl": "https://golf.com/instruction/short-game/lee-trevino-crucial-solid-contact-pitch-shots/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12086",
+      "processedAt": "2025-08-27T02:28:54.376Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Lee Trevino says this is crucial for solid contact on pitch shots",
+      "aiProbability": 18,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12086.md",
+      "htmlFile": "wechat_article_12086.html"
+    },
+    "b675ab739af15a057f4c733b60f0e82f": {
+      "originalUrl": "https://golf.com/gear/wedges/cleveland-cbz-wedges-launch/",
+      "normalizedUrl": "https://golf.com/gear/wedges/cleveland-cbz-wedges-launch/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12087",
+      "processedAt": "2025-08-27T02:30:14.842Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Cleveland CBZ wedges bring Tour-level feel to cavity-back design",
+      "aiProbability": 20,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12087.md",
+      "htmlFile": "wechat_article_12087.html"
+    },
+    "00d09de59011e81dcd8febec5552fbb8": {
+      "originalUrl": "https://golf.com/gear/fujikura-ventus-domination-in-2025/",
+      "normalizedUrl": "https://golf.com/gear/fujikura-ventus-domination-in-2025/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12089",
+      "processedAt": "2025-08-27T02:31:40.608Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "This golf shaft dominated 2025, but why? Exploring Fujikura Ventus’ domination",
+      "aiProbability": 39,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12089.md",
+      "htmlFile": "wechat_article_12089.html"
+    },
+    "6be677f56306dd3687bc71117423d927": {
+      "originalUrl": "https://www.nationalclubgolfer.com/tour/ryder-cup/sam-torrance-keegan-bradley-ryder-cup-captain/",
+      "normalizedUrl": "https://www.nationalclubgolfer.com/tour/ryder-cup/sam-torrance-keegan-bradley-ryder-cup-captain/",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12090",
+      "processedAt": "2025-08-27T03:05:35.810Z",
+      "source": "batch_processor",
+      "siteName": "National Club Golfer",
+      "title": "Sam Torrance: It isn’t possible to be a playing captain at the Ryder Cup",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12090.md",
+      "htmlFile": "wechat_article_12090.html"
+    },
+    "87d2d5dfc423f4e64d293e71120a763d": {
+      "originalUrl": "https://sports.yahoo.com/article/la-quinta-golfer-falls-second-202740556.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/la-quinta-golfer-falls-second-202740556.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12094",
+      "processedAt": "2025-08-27T03:36:54.504Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "La Quinta golfer falls in second round of US Senior Amateur Championship",
+      "aiProbability": 8,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12094.md",
+      "htmlFile": "wechat_article_12094.html"
+    },
+    "da03bfe1694a9fd22cb216e3ed927e1a": {
+      "originalUrl": "https://sports.yahoo.com/article/augusta-national-golf-club-strips-171443557.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/augusta-national-golf-club-strips-171443557.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12096",
+      "processedAt": "2025-08-27T03:37:52.703Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Augusta National Golf Club strips Masters invitations from PGA Tour Fall Series winners",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12096.md",
+      "htmlFile": "wechat_article_12096.html"
+    },
+    "fbf5b9fd5c8c1e894e5ed7eae985c53f": {
+      "originalUrl": "https://sports.yahoo.com/article/hillcrest-womens-golf-association-hosts-164700916.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/hillcrest-womens-golf-association-hosts-164700916.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12097",
+      "processedAt": "2025-08-27T03:38:39.183Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Hillcrest Women's Golf Association hosts Week 14 action",
+      "aiProbability": 3,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12097.md",
+      "htmlFile": "wechat_article_12097.html"
+    },
+    "b1e3f1614fd297025b5115d9b66d5009": {
+      "originalUrl": "https://sports.yahoo.com/article/lpgas-founders-cup-signs-multiyear-160242615.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/lpgas-founders-cup-signs-multiyear-160242615.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12098",
+      "processedAt": "2025-08-27T03:39:21.798Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "LPGA's Founders Cup signs multiyear deal with Fortinet as title sponsor",
+      "aiProbability": 29,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12098.md",
+      "htmlFile": "wechat_article_12098.html"
+    },
+    "869d44c6789a7e311b7821a28d874648": {
+      "originalUrl": "https://sports.yahoo.com/article/section-v-boys-golf-results-143032189.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/section-v-boys-golf-results-143032189.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12107",
+      "processedAt": "2025-08-27T03:58:20.889Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Section V boys golf results for fall 2025 season",
+      "aiProbability": 26,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12107.md",
+      "htmlFile": "wechat_article_12107.html"
+    },
+    "7e3365b69feb254661a32a2318b4e25a": {
+      "originalUrl": "https://sports.yahoo.com/article/liv-golfers-play-ryder-cup-142122514.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/liv-golfers-play-ryder-cup-142122514.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12108",
+      "processedAt": "2025-08-27T03:59:25.411Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Can LIV golfers play in the Ryder Cup?",
+      "aiProbability": 39,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12108.md",
+      "htmlFile": "wechat_article_12108.html"
+    },
+    "e75aab4d4bc09df7cf5c41e57d58ac5c": {
+      "originalUrl": "https://sports.yahoo.com/article/masters-winners-six-national-opens-130734286.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/masters-winners-six-national-opens-130734286.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12111",
+      "processedAt": "2025-08-27T05:20:09.533Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Masters will take winners of six national opens and eliminate invitations to PGA Tour fall winners",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12111.md",
+      "htmlFile": "wechat_article_12111.html"
+    },
+    "7b295b96e2c5ae6f7d5300fc4bc9c9bc": {
+      "originalUrl": "https://sports.yahoo.com/article/six-golfers-keegan-bradley-pick-122513094.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/six-golfers-keegan-bradley-pick-122513094.html",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12113",
+      "processedAt": "2025-08-27T05:26:06.155Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "US Ryder cup roster: Here are six golfers Keegan Bradley should add to team",
+      "aiProbability": 53,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12113.md",
+      "htmlFile": "wechat_article_12113.html"
+    },
+    "6d46dc82d55fbc9fb09aa261ca6aa2a9": {
+      "originalUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/08/betting-options-behind-tommy-fleetwood-fedex-st-jude-championship-tpc-southwind-round-2-weather-leaderboard-justin-rose-scottie-scheffler-collin-morikawa-akshay-bhatia-odds-wagers-line",
+      "normalizedUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/08/betting-options-behind-tommy-fleetwood-fedex-st-jude-championship-tpc-southwind-round-2-weather-leaderboard-justin-rose-scottie-scheffler-collin-morikawa-akshay-bhatia-odds-wagers-line",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12117",
+      "processedAt": "2025-08-27T05:29:55.908Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Draws and Fades: Assessing contenders hoping to chase down Tommy Fleetwood at FedEx St. Jude Championship",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12117.md",
+      "htmlFile": "wechat_article_12117.html"
+    },
+    "05b83400e63852c04a4aeccfed775c41": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/08/how-to-watch-round-3-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/08/how-to-watch-round-3-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12119",
+      "processedAt": "2025-08-27T05:33:11.694Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "FedEx St. Jude Championship: How to watch, live scores, tee times, TV times for Satuday",
+      "aiProbability": 38,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12119.md",
+      "htmlFile": "wechat_article_12119.html"
+    },
+    "2cc9047327e23742ab9a31fe6ffb094e": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/08/fedex-st-jude-championship-suspended-for-weather-round-2-thunder-lightning-rain-delay-leaderboard-tpc-southwind-memphis-resume-tommy-fleetwood",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/08/fedex-st-jude-championship-suspended-for-weather-round-2-thunder-lightning-rain-delay-leaderboard-tpc-southwind-memphis-resume-tommy-fleetwood",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12121",
+      "processedAt": "2025-08-27T05:40:30.985Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Round 2 resumes Saturday morning after weather delay at FedEx St. Jude Championship",
+      "aiProbability": 26,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12121.md",
+      "htmlFile": "wechat_article_12121.html"
+    },
+    "6a2c82f029976308798706220a063b98": {
+      "originalUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/08/tommy-fleetwood-64-round-2-fedexcup-playoffs-st-jude-championship-leads-collin-morikawa-scottie-scheffler-in-memphis-leaderboard-scores",
+      "normalizedUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/08/tommy-fleetwood-64-round-2-fedexcup-playoffs-st-jude-championship-leads-collin-morikawa-scottie-scheffler-in-memphis-leaderboard-scores",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12122",
+      "processedAt": "2025-08-27T05:47:21.949Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Tommy Fleetwood finds his groove, builds big lead at FedExCup Playoffs opener",
+      "aiProbability": 53,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12122.md",
+      "htmlFile": "wechat_article_12122.html"
+    },
+    "980e2a73c69414990848c0c0144e3157": {
+      "originalUrl": "https://www.pgatour.com/article/news/betting-dfs/2024/08/14/guide-to-betting-on-fedexcup-playoffs-responsibly-birches-health",
+      "normalizedUrl": "https://www.pgatour.com/article/news/betting-dfs/2024/08/14/guide-to-betting-on-fedexcup-playoffs-responsibly-birches-health",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12124",
+      "processedAt": "2025-08-27T05:54:59.419Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Guide to betting on FedExCup Playoffs responsibly",
+      "aiProbability": 32,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12124.md",
+      "htmlFile": "wechat_article_12124.html"
+    },
+    "e6e48a8975dc219040de2d2c2409d110": {
+      "originalUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/07/akshay-bhatia-shoots-career-best-62-to-lead-in-memphis-scottie-scheffler-fedex-st-jude-championship-tpc-southwind-leaderboard-round-1-thursday",
+      "normalizedUrl": "https://www.pgatour.com/article/news/daily-wrapup/2025/08/07/akshay-bhatia-shoots-career-best-62-to-lead-in-memphis-scottie-scheffler-fedex-st-jude-championship-tpc-southwind-leaderboard-round-1-thursday",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12125",
+      "processedAt": "2025-08-27T05:59:31.331Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Scottie Scheffler sits five back as Akshay Bhatia shoots career-best 62 to lead FedEx St. Jude Championship",
+      "aiProbability": 41,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12125.md",
+      "htmlFile": "wechat_article_12125.html"
+    },
+    "eba638879eb11cbdb05a3557b44d5f51": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/how-to-watch-round-2-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/how-to-watch-round-2-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12126",
+      "processedAt": "2025-08-27T06:06:20.374Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "FedEx St. Jude Championship: How to watch, live scores, tee times, TV times for Round 2",
+      "aiProbability": 50,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12126.md",
+      "htmlFile": "wechat_article_12126.html"
+    },
+    "af41eb216c7f1af46af12afe5dd59d75": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/scottie-scheffler-uses-50-dollar-divot-repair-tool-ebay-fedex-cup-playoffs-st-jude-championship-memphis-round-1",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/scottie-scheffler-uses-50-dollar-divot-repair-tool-ebay-fedex-cup-playoffs-st-jude-championship-memphis-round-1",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12127",
+      "processedAt": "2025-08-27T06:07:25.945Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Why Scottie Scheffler spent $50 on eBay for a divot repair tool",
+      "aiProbability": 33,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12127.md",
+      "htmlFile": "wechat_article_12127.html"
+    },
+    "96fa90dd6aa5591cbc4b461c68ab9111": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/akshay-bhatia-among-players-trying-to-salvage-season-at-fedex-st--jude-championship-memphis-leaderboard-round-1-thursday-tpc-southwind",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/akshay-bhatia-among-players-trying-to-salvage-season-at-fedex-st--jude-championship-memphis-leaderboard-round-1-thursday-tpc-southwind",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12128",
+      "processedAt": "2025-08-27T06:08:41.426Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Akshay Bhatia among players trying to salvage season at FedEx St. Jude Championship",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12128.md",
+      "htmlFile": "wechat_article_12128.html"
+    },
+    "19b5a05723288037b53980208826e7fe": {
+      "originalUrl": "https://www.pgatour.com/article/news/equipment-report/2025/08/07/tony-finau-makes-big-gear-changes-for-start-of-fedexcup-playoffs-fedex-st-jude-championship-memphis-tpc-southwind",
+      "normalizedUrl": "https://www.pgatour.com/article/news/equipment-report/2025/08/07/tony-finau-makes-big-gear-changes-for-start-of-fedexcup-playoffs-fedex-st-jude-championship-memphis-tpc-southwind",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12129",
+      "processedAt": "2025-08-27T06:09:51.209Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Tony Finau makes big gear changes for start of FedExCup Playoffs",
+      "aiProbability": 21,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12129.md",
+      "htmlFile": "wechat_article_12129.html"
+    },
+    "f3d9bac496bde4eeb0d637bb9b44d90a": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/business-man-philanthropist-golf-advisory-board-member-jim-mcglothlin-dies-age-85",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/07/business-man-philanthropist-golf-advisory-board-member-jim-mcglothlin-dies-age-85",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12130",
+      "processedAt": "2025-08-27T06:12:42.391Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Fundraiser, philanthropist, PGA TOUR Golf Course Advisory Board member Jim McGlothlin dies at age 85",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12130.md",
+      "htmlFile": "wechat_article_12130.html"
+    },
+    "4082df26fb153f8b2ae225d4dfbbb010": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/06/prioritizing-rest-over-practice-scottie-scheffler-arrives-in-memphis-ready-to-defend-fedexcup-title-fedex-st-jude-championship",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/06/prioritizing-rest-over-practice-scottie-scheffler-arrives-in-memphis-ready-to-defend-fedexcup-title-fedex-st-jude-championship",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12132",
+      "processedAt": "2025-08-27T06:23:05.396Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Prioritizing rest over practice, Scottie Scheffler arrives in Memphis ready to defend FedExCup title",
+      "aiProbability": 47,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12132.md",
+      "htmlFile": "wechat_article_12132.html"
+    },
+    "fd972fb6114b62b69ab0d5795ef78ff4": {
+      "originalUrl": "https://www.pgatour.com/article/news/horses-for-courses/2025/08/06/fedex-st-jude-championship-memphis-tennessee-odds-best-bets-scheffler-matsuyama-tpc-southwind",
+      "normalizedUrl": "https://www.pgatour.com/article/news/horses-for-courses/2025/08/06/fedex-st-jude-championship-memphis-tennessee-odds-best-bets-scheffler-matsuyama-tpc-southwind",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12133",
+      "processedAt": "2025-08-27T06:24:23.683Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Horses for Courses: Familiar test awaits at FedEx St. Jude Championship",
+      "aiProbability": 27,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12133.md",
+      "htmlFile": "wechat_article_12133.html"
+    },
+    "2b2ae2c4bd3e6ad3c1caa61ee435fda4": {
+      "originalUrl": "https://www.pgatour.com/article/news/sleeper-picks/2025/08/06/fedex-st-jude-championship-memphis-tpc-southwind-wyndham-clark-chris-kirk-daniel-berger",
+      "normalizedUrl": "https://www.pgatour.com/article/news/sleeper-picks/2025/08/06/fedex-st-jude-championship-memphis-tpc-southwind-wyndham-clark-chris-kirk-daniel-berger",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12135",
+      "processedAt": "2025-08-27T06:32:34.341Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Sleeper Picks: FedEx St. Jude Championship",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12135.md",
+      "htmlFile": "wechat_article_12135.html"
+    },
+    "bd9993e2c99625489905fd7967ce27fa": {
+      "originalUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/05/espn-bet-feed-offers-expanded-coverage-of-first-fedexcup-playoffs-event-fedex-st-jude-championship-memphis-tennessee-tpc-southwind",
+      "normalizedUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/08/05/espn-bet-feed-offers-expanded-coverage-of-first-fedexcup-playoffs-event-fedex-st-jude-championship-memphis-tennessee-tpc-southwind",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12137",
+      "processedAt": "2025-08-27T06:43:34.708Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "ESPN BET feed offers expanded coverage of first FedExCup Playoffs event",
+      "aiProbability": 24,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12137.md",
+      "htmlFile": "wechat_article_12137.html"
+    },
+    "61cbe0a1bbfefdcad239a91447d2be22": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/05/how-to-watch-round-1-2-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/05/how-to-watch-round-1-2-coverage-details-live-scores-tee-time-featured-groups-times-fedex-st-jude-championship-golf-channel-espn-scottie-scheffler-memphis-tennessee",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12138",
+      "processedAt": "2025-08-27T06:49:18.502Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "FedEx St. Jude Championship: How to watch, live scores, tee times, TV times for Rounds 1-2",
+      "aiProbability": 44,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12138.md",
+      "htmlFile": "wechat_article_12138.html"
+    },
+    "16354f7c9a48d07258a65b65f99c78a0": {
+      "originalUrl": "https://www.pgatour.com/article/news/latest/2025/08/05/three-time-tour-winner-mike-hill-dies-at-age-88",
+      "normalizedUrl": "https://www.pgatour.com/article/news/latest/2025/08/05/three-time-tour-winner-mike-hill-dies-at-age-88",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12139",
+      "processedAt": "2025-08-27T06:50:36.292Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Three-time TOUR winner, PGA TOUR Champions star Mike Hill dies",
+      "aiProbability": 24,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12139.md",
+      "htmlFile": "wechat_article_12139.html"
+    },
+    "3b4c6d848ccd3aef649243f92f215f56": {
+      "originalUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/betting-profile/pga-tour-betting-odds-stats-fedex-st-jude-championship-2025",
+      "normalizedUrl": "https://www.pgatour.com/article/news/betting-dfs/2025/betting-profile/pga-tour-betting-odds-stats-fedex-st-jude-championship-2025",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12145",
+      "processedAt": "2025-08-27T07:28:52.072Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "2025 FedEx St. Jude Championship preview: Betting odds and stats",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12145.md",
+      "htmlFile": "wechat_article_12145.html"
     }
   },
   "contents": {
@@ -11359,8 +12764,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-08-25T08:38:48.571Z",
-    "totalRecords": 1080,
+    "lastUpdate": "2025-08-27T07:28:52.072Z",
+    "totalRecords": 1174,
     "version": "2.0"
   },
   "failedUrls": {
@@ -15321,6 +16726,1106 @@
         },
         {
           "timestamp": "2025-08-25T08:35:28.756Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "e757e19972b558e00cbae2ed57e51c83": {
+      "url": "https://golf.com/instruction/putting/",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-26T01:26:32.083Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T01:26:32.083Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "52b8d0c7160b815a58ca44dd0534c036": {
+      "url": "https://golf.com/news/tommy-fleetwood-sick-way-enjoyed-winless-streak/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T01:37:32.997Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T01:37:32.987Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Tommy Fleetwood reveals ‘sick way’ he enjoyed his PGA Tour winless streak",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T01:37:32.997Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8997748e77748a227a6285c942e8ecda": {
+      "url": "https://www.golfdigest.com/story/tommy-fleetwood-tour-championship-fedex-cup-key-moment-first-pga-tour-win",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T02:01:19.067Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T02:01:19.054Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "The critical moment that led Tommy Fleetwood to his first PGA Tour victory",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T02:01:19.067Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "b81b435e6254c2e967018c5dc2007b5c": {
+      "url": "https://www.golfdigest.com/story/10-biggest-takeaways-from-liv-golf-2025-season",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T02:28:07.227Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T02:28:07.215Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 135秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "10 biggest takeaways from LIV Golf’s season as its fourth year comes to an end",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 135秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T02:28:07.227Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "1a2fbd1733a37dec30f7ae22cced3879": {
+      "url": "https://www.golfmonthly.com/news/players-contention-us-ryder-cup-wildcard-picks",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T02:57:48.057Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T02:57:48.044Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 114秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Ryder Cup 2025: Which Players Are In Contention For Keegan Bradley's Six Wildcard Picks?",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 114秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T02:57:48.057Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "1583403c88ecafe1ec03ef23b32b37ac": {
+      "url": "https://www.espn.com/golf/story/_/id/40467766/who-won-most-pga-tour-tournaments-season",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（58字符）",
+      "failedAt": "2025-08-26T03:07:47.283Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T03:07:47.283Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（58字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "1f87e8f78770e0749c5696804474732f": {
+      "url": "https://www.golf.net.cn/zhishi/5427.html",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T03:16:13.805Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T03:16:13.790Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 57秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "中国果岭速度最快的球场在哪？",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 57秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T03:16:13.805Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "a182ffd3b23048fda3d4660298550f18": {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/2025/08/25/battle-at-bighorn-brought-tiger-woods-night-golf-to-palm-springs-area/85817619007/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T03:51:19.086Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T03:51:19.076Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 84秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "'They still remember': Tiger Woods' Battle at Bighorn still iconic golf moment 25 years later",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 84秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T03:51:19.086Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "fc9a4d421ae0bbdbdd5c05e098fb0371": {
+      "url": "https://golfweek.usatoday.com/videos/sports/golf/equipment/2025/08/25/inside-a-fujikura-ventus-fitting/85811029007/",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "failedAt": "2025-08-26T04:38:35.528Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T04:38:35.529Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "fa4ba8e23825caecae3df6e1909bc424": {
+      "url": "https://www.todays-golfer.com/equipment/golf-club-reviews/",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-26T05:36:51.732Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T05:36:51.732Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "f997f5a5b4f63cd1022beb545e99ba86": {
+      "url": "https://www.si.com/golf/bryson-dechambeau-lock-us-ryder-cup-team",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T06:38:09.194Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T06:38:09.181Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 50秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "How We Learned That Bryson DeChambeau Is a Lock for U.S. Ryder Cup Team",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 50秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T06:38:09.194Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "252751e4ffc709626f71ad57741aef02": {
+      "url": "https://www.si.com/golf/news/tiger-woods-and-charlie-woods-golf-swings-arent-as-similar-as-you-think",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T06:44:32.677Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T06:44:32.665Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 54秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "A Closer Look at How Tiger Woods and Charlie Woods' Golf Swings Are Different",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 54秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T06:44:32.677Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8fc9cdf6101e4a8aa66b25aea5c9fd9e": {
+      "url": "https://sports.yahoo.com/video/hottest-golf-bradley-pick-himself-171455381.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-26T08:05:03.988Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T08:05:03.988Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "cc04d7d081740d8b8afb579496ce57e2": {
+      "url": "https://sports.yahoo.com/video/lake-powell-national-golf-course-110055582.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-26T08:39:03.565Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T08:39:03.565Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "5c0fd7a6fff7ecb3602ec6199399814e": {
+      "url": "https://sports.yahoo.com/video/tommy-fleetwood-finally-call-himself-005041791.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-26T08:42:47.455Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T08:42:47.455Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "d33cf2cc9b122b58d608bd0c06831e95": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-brooke-henderson-john-234610019.html",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T08:50:26.293Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T08:50:26.280Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 74秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Tommy Fleetwood, Brooke Henderson and Jon Rahm and his LIV team big winners on busy day in golf",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 74秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T08:50:26.293Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "9967b48c30d59b5b46a491f81e2f622c": {
+      "url": "https://sports.yahoo.com/article/fleetwood-triumphs-tour-championship-elusive-222548690.html",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-26T09:04:19.043Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:04:19.027Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 91秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Fleetwood triumphs at Tour Championship for elusive first PGA Tour title",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 91秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-26T09:04:19.043Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8d9c04f4d70256cbe9e74d21fc46660b": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-wins-tour-championship-221219461.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:47.718Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:47.718Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8b7b3877141b92cf361df7595925ab57": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-exorcises-demons-finally-221054935.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:49.075Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:49.075Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "94dfb4b43a81f911a120d745b13978fa": {
+      "url": "https://sports.yahoo.com/article/finally-tommy-fleetwood-breaks-pga-220110697.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:50.361Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:50.361Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "5d948a32bfd53ea8e9e942ab2aae69e6": {
+      "url": "https://sports.yahoo.com/article/caitlin-clark-premonition-pga-tour-215950714.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:51.441Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:51.441Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "1cb60f9d8ff4873cdeb360b0b27d5e58": {
+      "url": "https://sports.yahoo.com/article/tour-championship-tommy-fleetwood-breaks-215731572.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:52.384Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:52.384Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "55784fbcc67a09dfc4240259b1d78355": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-won-pga-tour-105502052.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:53.375Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:53.375Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "dfa5973346c2f090d0e1dd08f19279a8": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-finally-call-himself-215130121.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:54.428Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:54.428Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "49821e378a547143c66abec875d6f6c6": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwod-slays-pga-tour-214704861.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:55.421Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:55.421Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "359712c610ad7d2952337fd1d592435f": {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-england-wins-fedex-214616324.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:56.221Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:56.221Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "0587c4baaa0fd6b2d0ddc3cff6e8f8b8": {
+      "url": "https://sports.yahoo.com/article/alex-noren-wins-dp-world-170038608.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:57.138Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:57.138Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "e29af04e1aae3e8fd6a0c937ea790af3": {
+      "url": "https://sports.yahoo.com/article/theres-growing-worry-president-trumps-170000275.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "failedAt": "2025-08-26T09:06:58.034Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-26T09:06:58.034Z",
+          "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "a00e58a42e31a72c8cc50cc0b3b3a2b5": {
+      "url": "https://www.espn.com/golf/story/_/id/46071819/ryder-cup-us-captain-pick-keegan-bradley-justin-thomas-patrick-cantlay",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（85字符）",
+      "failedAt": "2025-08-27T01:09:31.806Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:09:31.806Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（85字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "78fce8b983d762d2ba11787a82546c8c": {
+      "url": "https://www.espn.com/golf/story/_/id/46083499/kapalua-close-pga-tour-course-2-months-amid-water-dispute",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（68字符）",
+      "failedAt": "2025-08-27T01:09:39.301Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:09:39.301Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（68字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "f7930291ece49862ce754ea4bced872f": {
+      "url": "https://www.espn.com/golf/story/_/id/46078771/masters-open-championship-change-qualifying-criteria",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+      "failedAt": "2025-08-27T01:09:42.738Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:09:42.738Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "605942958437a3077f7c20c4e62fb11a": {
+      "url": "https://www.espn.com/golf/story/_/id/46072682/what-ryder-cup-2025-format-teams-all-winners",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "failedAt": "2025-08-27T01:09:46.390Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:09:46.390Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "9d2a9842985e5f0f814f423e79e44d3b": {
+      "url": "https://golf.com/instruction/rules/rules-guy-provisional-ball-gimme-length-ignore-original-shot/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T01:26:49.605Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:26:49.578Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 69秒) | 尝试次数: 2 | 错误统计: 空响应3次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Rules Guy: I hit my provisional ball to gimme-length. Can I choose to ignore my original wayward shot?",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 69秒) | 尝试次数: 2 | 错误统计: 空响应3次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T01:26:49.605Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "5e302adb509e1ac6c720ab6dbf280323": {
+      "url": "https://golf.com/gear/putters/lab-golf-oz1i-hs-launch/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T01:34:54.837Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T01:34:54.827Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "L.A.B. Golf’s latest putter removes the biggest barrier for skeptics",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T01:34:54.837Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "26586e416f22dd5fd5c8966f1f7089b0": {
+      "url": "https://golf.com/news/scottie-scheffler-dominant-season-more-pga-tour-history/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T02:04:22.507Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T02:04:22.483Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 99秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Scottie Scheffler’s dominant season ended with even more PGA Tour history",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 99秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1751:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T02:04:22.507Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "4263f100f8970f6dfa5981d3a3003408": {
+      "url": "https://sports.yahoo.com/video/dubois-lindgren-more-current-former-222317425.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-27T03:36:04.841Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T03:36:04.841Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "819b24aa640712bcead86add7932c686": {
+      "url": "https://sports.yahoo.com/video/hear-brighton-hartland-girls-golfers-215615960.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-27T03:36:09.728Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T03:36:09.728Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "a1983501fc1963a574afed688c7cc1b9": {
+      "url": "https://sports.yahoo.com/video/former-world-no-1-puts-185123090.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-27T03:37:02.275Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T03:37:02.275Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "8cdf92b9d27fea0d9a5871425df1f571": {
+      "url": "https://sports.yahoo.com/article/lpga-tour-boston-europe-heads-151429833.html",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T03:56:09.699Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T03:56:09.686Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 56秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "LPGA Tour in Boston and Europe heads for the hills in Switzerland",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 56秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T03:56:09.699Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "d8cb7dcd557b3ca8345dc32afd3462d8": {
+      "url": "https://sports.yahoo.com/article/masters-winners-six-national-opens-130147125.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "failedAt": "2025-08-27T05:20:15.471Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T05:20:15.471Z",
+          "reason": "文章内容无效（可能是抓取失败）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "c9802012e102456bf4dd89d74880fa45": {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/06/jacob-bridgeman-an-example-that-having-a-pga-tour-card-is-enough-to-earn-the-way-fedexcup-playoffs-fedex-st-jude-championship",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T06:31:23.567Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T06:31:23.553Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 60秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Jacob Bridgeman is example that having PGA TOUR card is enough to earn the way",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 60秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T06:31:23.567Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "2524cee08c0655285869c378dc80d16a": {
+      "url": "https://www.pgatour.com/article/news/betting-dfs/2025/08/05/fantasy-insider-golfbet-rob-bolton-fedex-st-jude-memphis-southwind-scheffler-hovland-schauffele-matsuyama",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T06:40:47.948Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T06:40:47.937Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Bolton: Ride hot hand with quadruple FedExCup points up for grabs at FedEx St. Jude Championship",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T06:40:47.948Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "66aa33f24bcc493e41e68031a6f629da": {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/05/fedex-st-jude-championship-scenarios-for-top-50-signature-events-fedexcup-playoffs-bmw-championship",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T06:57:21.912Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T06:57:21.897Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 68秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "FedExCup Playoffs scenarios: See how each player needs to finish at FedEx St. Jude to make BMW Championship",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 68秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T06:57:21.912Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "15c0c9f9c06be6a25adbe1e23fcf5a7f": {
+      "url": "https://www.pgatour.com/article/news/expert-picks/2025/08/05/fantasy-golf-advice-tips-best-bets-longshots-props-fedex-st-jude-championship-playoffs",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T07:06:17.670Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T07:06:17.657Z",
+          "reason": "Claude改写失败: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应3次, 超时1次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Expert Picks: FedEx St. Jude Championship",
+            "errorDetails": "Error: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应3次, 超时1次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T07:06:17.670Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "6cde73d6394bd9843e14f594298898a8": {
+      "url": "https://www.pgatour.com/article/news/needtoknow/2025/08/05/the-five-who-are-top-players-risk-missing-bmw-championship-signature-events-fedexcup-playoffs-fowler-finau-poston-clark-spieth",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T07:14:08.741Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T07:14:08.729Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 70秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "The Five: Which top players are at risk of missing the BMW Championship?",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 70秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T07:14:08.741Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "592f26101051ffe06bc97c592be9e396": {
+      "url": "https://www.pgatour.com/article/news/betting-dfs/2025/08/05/fantasy-golf-advice-tips-picks-perfect-30-primer-fedexcup-playoffs-scheffler-mcilroy",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-27T07:22:19.204Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-27T07:22:19.191Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Preview our Golfbet Insider's 'Perfect 30' lineup for FedExCup Playoffs",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1767:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-27T07:22:19.204Z",
           "reason": "文章抓取失败: contentSize is not defined",
           "metadata": {
             "source": "batch_processor"
