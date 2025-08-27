@@ -157,6 +157,9 @@ class BatchArticleProcessor {
             urls: []
         };
         
+        // 改写进度计时器管理
+        this.currentRewriteInterval = null;
+        
         this.ensureDirectories();
         
         // 加载网站配置
@@ -260,6 +263,16 @@ class BatchArticleProcessor {
                 fs.mkdirSync(fullPath, { recursive: true });
             }
         });
+    }
+
+    /**
+     * 清理改写进度计时器
+     */
+    clearRewriteProgressInterval() {
+        if (this.currentRewriteInterval) {
+            clearInterval(this.currentRewriteInterval);
+            this.currentRewriteInterval = null;
+        }
     }
 
     /**
@@ -1623,8 +1636,11 @@ class BatchArticleProcessor {
                 // 更新进度 - 开始改写
                 await this.updateProcessingProgress(i + 1, reorderedUrls.length, url, 'rewriting');
                 
+                // 在创建新计时器前，先清理旧的
+                this.clearRewriteProgressInterval();
+                
                 // 设置改写进度提示
-                let rewriteProgressInterval = setInterval(() => {
+                this.currentRewriteInterval = setInterval(() => {
                     const elapsed = Math.round((Date.now() - articleStartTime) / 1000);
                     const progressTimestamp = new Date().toISOString().split('T')[1].split('.')[0];
                     console.log(`[${progressTimestamp}]    ├─ ⏳ 改写中... | 已用时: ${elapsed}秒`);
@@ -1755,7 +1771,7 @@ class BatchArticleProcessor {
                     );
                     
                     // 清除改写进度提示
-                    clearInterval(rewriteProgressInterval);
+                    this.clearRewriteProgressInterval();
                     
                     const rewriteTime = Date.now() - articleStartTime - fetchTime;
                     const rewriteEndTimestamp = new Date().toISOString().split('T')[1].split('.')[0];
@@ -1807,7 +1823,7 @@ class BatchArticleProcessor {
                     
                 } catch (error) {
                     // 清除改写进度提示
-                    clearInterval(rewriteProgressInterval);
+                    this.clearRewriteProgressInterval();
                     
                     const errorTimestamp = new Date().toISOString().split('T')[1].split('.')[0];
                     console.error(`[${errorTimestamp}]    ├─ ❌ 改写失败:`, error.message);
@@ -1823,6 +1839,9 @@ class BatchArticleProcessor {
                     // 尝试错误恢复
                     if (this.rewriteErrorRecovery.enabled && 
                         this.shouldAttemptRecovery(error)) {
+                        
+                        // 清理可能存在的进度计时器
+                        this.clearRewriteProgressInterval();
                         
                         console.log(`  🔄 尝试错误恢复机制...`);
                         
@@ -2089,6 +2108,9 @@ class BatchArticleProcessor {
                     console.error('❌ 关闭AI检测器时出错:', e.message);
                 }
             }
+            
+            // 清理改写进度计时器
+            this.clearRewriteProgressInterval();
         }
     }
 
@@ -2710,6 +2732,22 @@ if (require.main === module) {
         console.log(`📋 从 ${filename} 读取到 ${urls.length} 个URL`);
         
         const processor = new BatchArticleProcessor();
+        
+        // 进程退出时清理计时器
+        process.on('exit', () => {
+            processor.clearRewriteProgressInterval();
+        });
+        
+        process.on('SIGINT', () => {
+            processor.clearRewriteProgressInterval();
+            process.exit();
+        });
+        
+        process.on('SIGTERM', () => {
+            processor.clearRewriteProgressInterval();
+            process.exit();
+        });
+        
         // 传递文件名作为urlFile参数
         processor.processArticles(urls, { urlFile: path.basename(filename) }).catch(console.error);
     } catch (error) {
