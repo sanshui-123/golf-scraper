@@ -1,0 +1,17 @@
+# Vercel部署时忽略的文件
+node_modules
+.git
+.gitignore
+*.log
+.DS_Store
+.env
+.env.*
+web_server.js
+batch_*.log
+temp_*.txt
+deep_urls_*.txt
+*.backup
+test_*.html
+test_*.js
+intelligent_controller.log
+concurrent_controller_*.log
