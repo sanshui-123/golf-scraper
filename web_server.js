@@ -2252,7 +2252,24 @@ async function collectSystemStatus(skipCache = false) {
             } else {
                 // 批量检查URL是否已处理
                 const checkResult = historyDB.batchCheckUrls(urls);
-                websiteData.processedUrls = checkResult.statistics.duplicate;
+                
+                // 优先从状态文件读取处理状态
+                try {
+                    const statusData = JSON.parse(await fs.promises.readFile('processing_status.json', 'utf8'));
+                    
+                    if (statusData.urlStatus && statusData.urlStatus[file]) {
+                        const urlStatuses = statusData.urlStatus[file];
+                        websiteData.processedUrls = Object.keys(urlStatuses).filter(url => 
+                            urlStatuses[url].status === 'processed'
+                        ).length;
+                    } else {
+                        // 回退到原来的方式
+                        websiteData.processedUrls = checkResult.statistics.duplicate;
+                    }
+                } catch (e) {
+                    // 如果读取失败，使用原来的方式
+                    websiteData.processedUrls = checkResult.statistics.duplicate;
+                }
                 websiteData.pendingUrls = checkResult.statistics.new;
                 totalPendingUrls += websiteData.pendingUrls;
                 

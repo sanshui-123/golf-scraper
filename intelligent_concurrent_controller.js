@@ -690,6 +690,25 @@ class IntelligentConcurrentController {
                     endTime: new Date().toISOString(),
                     exitCode: code
                 };
+                
+                // 汇总该文件的URL处理结果
+                try {
+                    const statusFile = path.join(__dirname, 'processing_status.json');
+                    const status = JSON.parse(fs.readFileSync(statusFile, 'utf8'));
+                    if (status.urlStatus && status.urlStatus[urlFile]) {
+                        const urlStatuses = status.urlStatus[urlFile];
+                        const processedCount = Object.keys(urlStatuses).filter(url => 
+                            urlStatuses[url].status === 'processed'
+                        ).length;
+                        
+                        // 更新文件级别的统计
+                        this.processingStatus[urlFile].processedUrls = processedCount;
+                        this.processingStatus[urlFile].totalUrls = Object.keys(urlStatuses).length;
+                    }
+                } catch (e) {
+                    // 忽略错误
+                }
+                
                 this.updateStatusFile();
                 
                 // 清理去重临时文件

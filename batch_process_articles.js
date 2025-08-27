@@ -705,6 +705,23 @@ class BatchArticleProcessor {
                         localDuplicates.push(url);
                         console.log(`  ⏭️  本地已存在: ${url}`);
                         console.log(`      位置: ${cached.dateDir}/文章${cached.articleNum}`);
+                        
+                        // 更新URL处理状态到processing_status.json
+                        const statusFile = path.join(__dirname, 'processing_status.json');
+                        try {
+                            const status = JSON.parse(fs.readFileSync(statusFile, 'utf8'));
+                            if (!status.urlStatus) status.urlStatus = {};
+                            if (!status.urlStatus[this.currentUrlFile]) status.urlStatus[this.currentUrlFile] = {};
+                            status.urlStatus[this.currentUrlFile][url] = {
+                                status: 'processed',
+                                reason: 'local_exists',
+                                articleNum: cached.articleNum,
+                                processedAt: new Date().toISOString()
+                            };
+                            fs.writeFileSync(statusFile, JSON.stringify(status, null, 2));
+                        } catch (e) {
+                            // 忽略错误，不影响主流程
+                        }
                     }
                 } else {
                     localNewUrls.push(url);
