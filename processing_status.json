@@ -1,17 +1,17 @@
 {
-  "timestamp": "2025-08-28T05:25:46.349Z",
+  "timestamp": "2025-08-28T06:23:37.757Z",
   "running": true,
-  "currentConcurrency": 0,
+  "currentConcurrency": 1,
   "optimalConcurrency": 1,
   "stats": {
-    "processed": 18,
-    "success": 18,
+    "processed": 2,
+    "success": 2,
     "failed": 0
   },
   "dedupStats": {
-    "total": 596,
-    "skipped": 89,
-    "processed": 507
+    "total": 598,
+    "skipped": 87,
+    "processed": 511
   },
   "urlProgress": {
     "totalProcessed": 0,
@@ -22,92 +22,17 @@
   "processing": {
     "deep_urls_cbssports_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T05:22:46.501Z",
+      "endTime": "2025-08-28T06:23:17.797Z",
       "exitCode": 0
     },
     "deep_urls_espn_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T05:22:56.509Z",
+      "endTime": "2025-08-28T06:23:27.788Z",
       "exitCode": 0
     },
     "deep_urls_golf_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T05:23:06.546Z",
-      "exitCode": 0
-    },
-    "deep_urls_golf_net_cn.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:23:16.543Z",
-      "exitCode": 0
-    },
-    "deep_urls_golfmagic_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:23:26.567Z",
-      "exitCode": 0
-    },
-    "deep_urls_golfmonthly_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:23:36.585Z",
-      "exitCode": 0
-    },
-    "deep_urls_golfweek_usatoday_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:23:46.574Z",
-      "exitCode": 0
-    },
-    "deep_urls_lpga_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:23:56.552Z",
-      "exitCode": 0
-    },
-    "deep_urls_mygolfspy_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:06.562Z",
-      "exitCode": 0
-    },
-    "deep_urls_nationalclubgolfer_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:16.561Z",
-      "exitCode": 0
-    },
-    "deep_urls_si_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:26.573Z",
-      "exitCode": 0
-    },
-    "deep_urls_skysports_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:36.561Z",
-      "exitCode": 0
-    },
-    "deep_urls_todays_golfer_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:46.560Z",
-      "exitCode": 0
-    },
-    "deep_urls_www_golfdigest_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:24:56.558Z",
-      "exitCode": 0
-    },
-    "deep_urls_www_golfwrx_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:25:06.553Z",
-      "exitCode": 0
-    },
-    "deep_urls_www_pgatour_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:25:16.554Z",
-      "exitCode": 0
-    },
-    "deep_urls_yahoo_golf.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:25:26.543Z",
-      "exitCode": 0
-    },
-    "deep_urls_yardbarker_com.txt": {
-      "status": "completed",
-      "endTime": "2025-08-28T05:25:36.541Z",
+      "endTime": "2025-08-28T06:23:37.757Z",
       "exitCode": 0
     }
   },
@@ -117,7 +42,7 @@
       "name": "CBS Sports Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T05:22:46.501Z",
+        "endTime": "2025-08-28T06:23:17.797Z",
         "exitCode": 0
       }
     },
@@ -126,7 +51,7 @@
       "name": "ESPN Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T05:22:56.509Z",
+        "endTime": "2025-08-28T06:23:27.788Z",
         "exitCode": 0
       }
     },
@@ -135,166 +60,84 @@
       "name": "Golf.com",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T05:23:06.546Z",
+        "endTime": "2025-08-28T06:23:37.757Z",
         "exitCode": 0
       }
     },
     {
       "file": "deep_urls_golf_net_cn.txt",
       "name": "中国高尔夫网",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:23:16.543Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_golfmagic_com.txt",
       "name": "Golf Magic",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:23:26.567Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_golfmonthly_com.txt",
       "name": "Golf Monthly",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:23:36.585Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_golfweek_usatoday_com.txt",
       "name": "Golfweek",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:23:46.574Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_lpga_com.txt",
       "name": "LPGA",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:23:56.552Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_mygolfspy_com.txt",
       "name": "MyGolfSpy (RSS模式)",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:06.562Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_nationalclubgolfer_com.txt",
       "name": "National Club Golfer",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:16.561Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_si_com.txt",
       "name": "SI Golf",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:26.573Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_skysports_com.txt",
       "name": "Sky Sports Golf",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:36.561Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_todays_golfer_com.txt",
       "name": "Today's Golfer",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:46.560Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_www_golfdigest_com.txt",
       "name": "Golf Digest",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:24:56.558Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_www_golfwrx_com.txt",
       "name": "GolfWRX",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:25:06.553Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_www_pgatour_com.txt",
       "name": "PGA Tour",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:25:16.554Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_yahoo_golf.txt",
       "name": "Yahoo Golf",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:25:26.543Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     },
     {
       "file": "deep_urls_yardbarker_com.txt",
       "name": "Yardbarker",
-      "status": {
-        "status": "completed",
-        "endTime": "2025-08-28T05:25:36.541Z",
-        "exitCode": 0
-      }
+      "status": "pending"
     }
-  ],
-  "urlStatus": {
-    "failed_urls_1756358863460.txt": {
-      "https://golf.com/news/6-pro-golf-observations-3-weeks-abroad/": {
-        "status": "processed",
-        "reason": "local_exists",
-        "articleNum": "1355",
-        "processedAt": "2025-08-28T05:27:43.749Z"
-      },
-      "https://www.golfwrx.com/763958/photos-from-the-2025-wyndham-championship/?utm_source=Front&utm_medium=Featured_Center_Top&utm_campaign=GolfWRX_OnSite&utm_content=main": {
-        "status": "processed",
-        "reason": "local_exists",
-        "articleNum": "472",
-        "processedAt": "2025-08-28T05:27:43.750Z"
-      },
-      "https://www.golfdigest.com/story/2025-pga-tour-fedex-cup-points-list-standings": {
-        "status": "processed",
-        "reason": "local_exists",
-        "articleNum": "10865",
-        "processedAt": "2025-08-28T05:27:43.752Z"
-      }
-    }
-  }
+  ]
 }

@@ -8,14 +8,6 @@
     "section": "首页"
   },
   {
-    "url": "https://golf.com/news/2025-us-ryder-cup-captains-picks-announced/",
-    "title": "U.S. Ryder Cup team finalized with 6 captain’s picks (and 1 major surprise)",
-    "publishTime": "2025-08-27T11:30:52-04:00",
-    "hasTime": true,
-    "isRecent": true,
-    "section": "新闻"
-  },
-  {
     "url": "https://golf.com/gear/putters/lab-golf-heel-shafted-putter-what-you-misssed/",
     "title": "L.A.B. Golf’s new OZ.1i HS putter — What you missed",
     "publishTime": "2025-08-27T08:55:11-04:00",
@@ -96,6 +88,14 @@
     "section": "首页"
   },
   {
+    "url": "https://golf.com/news/2025-us-ryder-cup-captains-picks-announced/",
+    "title": "U.S. Ryder Cup team finalized with 6 captain’s picks (and 1 major surprise)",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
     "url": "https://golf.com/news/keegan-bradley-us-ryder-cup-picks-watch-wednesday/",
     "title": "Keegan Bradley’s U.S. Ryder Cup picks: How to watch announcement on Wednesday",
     "publishTime": null,
@@ -106,54 +106,6 @@
   {
     "url": "https://golf.com/news/tom-watson-keegan-bradley-big-ryder-cup-mistake/",
     "title": "‘You can’t do it’: Tom Watson warns Keegan Bradley of big Ryder Cup mistake",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/skechers-named-title-sponsor-world-champions-cup/",
-    "title": "Skechers named title sponsor of PGA Tour Champions’ World Champions Cup",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/ryder-cup-captains-picks-how-they-work-2025/",
-    "title": "Ryder Cup captain’s picks: What you need to know, how they work",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/keegan-bradley-must-pick-himself-ryder-cup/",
-    "title": "Why Keegan Bradley *must* pick himself for this U.S. Ryder Cup team",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/augusta-national-significant-invite-change-for-2026-masters/",
-    "title": "Augusta National makes significant Masters invite changes for 2026",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/11-insane-money-stats-2025-pga-tour-season/",
-    "title": "11 insane money stats from the 2025 PGA Tour season",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/phil-mickelson-pans-us-ryder-cup-hopeful-slow-play/",
-    "title": "Phil Mickelson pans U.S. Ryder Cup hopeful over slow play",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
