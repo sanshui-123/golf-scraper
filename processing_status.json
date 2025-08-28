@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-28T03:45:16.244Z",
+  "timestamp": "2025-08-28T05:25:46.349Z",
   "running": true,
   "currentConcurrency": 0,
   "optimalConcurrency": 1,
@@ -22,92 +22,92 @@
   "processing": {
     "deep_urls_cbssports_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:42:16.458Z",
+      "endTime": "2025-08-28T05:22:46.501Z",
       "exitCode": 0
     },
     "deep_urls_espn_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:42:26.691Z",
+      "endTime": "2025-08-28T05:22:56.509Z",
       "exitCode": 0
     },
     "deep_urls_golf_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:42:36.449Z",
+      "endTime": "2025-08-28T05:23:06.546Z",
       "exitCode": 0
     },
     "deep_urls_golf_net_cn.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:42:46.453Z",
+      "endTime": "2025-08-28T05:23:16.543Z",
       "exitCode": 0
     },
     "deep_urls_golfmagic_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:42:56.518Z",
+      "endTime": "2025-08-28T05:23:26.567Z",
       "exitCode": 0
     },
     "deep_urls_golfmonthly_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:06.500Z",
+      "endTime": "2025-08-28T05:23:36.585Z",
       "exitCode": 0
     },
     "deep_urls_golfweek_usatoday_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:16.543Z",
+      "endTime": "2025-08-28T05:23:46.574Z",
       "exitCode": 0
     },
     "deep_urls_lpga_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:26.448Z",
+      "endTime": "2025-08-28T05:23:56.552Z",
       "exitCode": 0
     },
     "deep_urls_mygolfspy_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:36.419Z",
+      "endTime": "2025-08-28T05:24:06.562Z",
       "exitCode": 0
     },
     "deep_urls_nationalclubgolfer_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:46.447Z",
+      "endTime": "2025-08-28T05:24:16.561Z",
       "exitCode": 0
     },
     "deep_urls_si_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:43:56.453Z",
+      "endTime": "2025-08-28T05:24:26.573Z",
       "exitCode": 0
     },
     "deep_urls_skysports_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:06.453Z",
+      "endTime": "2025-08-28T05:24:36.561Z",
       "exitCode": 0
     },
     "deep_urls_todays_golfer_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:16.461Z",
+      "endTime": "2025-08-28T05:24:46.560Z",
       "exitCode": 0
     },
     "deep_urls_www_golfdigest_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:26.448Z",
+      "endTime": "2025-08-28T05:24:56.558Z",
       "exitCode": 0
     },
     "deep_urls_www_golfwrx_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:36.465Z",
+      "endTime": "2025-08-28T05:25:06.553Z",
       "exitCode": 0
     },
     "deep_urls_www_pgatour_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:46.472Z",
+      "endTime": "2025-08-28T05:25:16.554Z",
       "exitCode": 0
     },
     "deep_urls_yahoo_golf.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:44:56.452Z",
+      "endTime": "2025-08-28T05:25:26.543Z",
       "exitCode": 0
     },
     "deep_urls_yardbarker_com.txt": {
       "status": "completed",
-      "endTime": "2025-08-28T03:45:06.507Z",
+      "endTime": "2025-08-28T05:25:36.541Z",
       "exitCode": 0
     }
   },
@@ -117,7 +117,7 @@
       "name": "CBS Sports Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:42:16.458Z",
+        "endTime": "2025-08-28T05:22:46.501Z",
         "exitCode": 0
       }
     },
@@ -126,7 +126,7 @@
       "name": "ESPN Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:42:26.691Z",
+        "endTime": "2025-08-28T05:22:56.509Z",
         "exitCode": 0
       }
     },
@@ -135,7 +135,7 @@
       "name": "Golf.com",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:42:36.449Z",
+        "endTime": "2025-08-28T05:23:06.546Z",
         "exitCode": 0
       }
     },
@@ -144,7 +144,7 @@
       "name": "中国高尔夫网",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:42:46.453Z",
+        "endTime": "2025-08-28T05:23:16.543Z",
         "exitCode": 0
       }
     },
@@ -153,7 +153,7 @@
       "name": "Golf Magic",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:42:56.518Z",
+        "endTime": "2025-08-28T05:23:26.567Z",
         "exitCode": 0
       }
     },
@@ -162,7 +162,7 @@
       "name": "Golf Monthly",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:06.500Z",
+        "endTime": "2025-08-28T05:23:36.585Z",
         "exitCode": 0
       }
     },
@@ -171,7 +171,7 @@
       "name": "Golfweek",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:16.543Z",
+        "endTime": "2025-08-28T05:23:46.574Z",
         "exitCode": 0
       }
     },
@@ -180,7 +180,7 @@
       "name": "LPGA",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:26.448Z",
+        "endTime": "2025-08-28T05:23:56.552Z",
         "exitCode": 0
       }
     },
@@ -189,7 +189,7 @@
       "name": "MyGolfSpy (RSS模式)",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:36.419Z",
+        "endTime": "2025-08-28T05:24:06.562Z",
         "exitCode": 0
       }
     },
@@ -198,7 +198,7 @@
       "name": "National Club Golfer",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:46.447Z",
+        "endTime": "2025-08-28T05:24:16.561Z",
         "exitCode": 0
       }
     },
@@ -207,7 +207,7 @@
       "name": "SI Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:43:56.453Z",
+        "endTime": "2025-08-28T05:24:26.573Z",
         "exitCode": 0
       }
     },
@@ -216,7 +216,7 @@
       "name": "Sky Sports Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:06.453Z",
+        "endTime": "2025-08-28T05:24:36.561Z",
         "exitCode": 0
       }
     },
@@ -225,7 +225,7 @@
       "name": "Today's Golfer",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:16.461Z",
+        "endTime": "2025-08-28T05:24:46.560Z",
         "exitCode": 0
       }
     },
@@ -234,7 +234,7 @@
       "name": "Golf Digest",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:26.448Z",
+        "endTime": "2025-08-28T05:24:56.558Z",
         "exitCode": 0
       }
     },
@@ -243,7 +243,7 @@
       "name": "GolfWRX",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:36.465Z",
+        "endTime": "2025-08-28T05:25:06.553Z",
         "exitCode": 0
       }
     },
@@ -252,7 +252,7 @@
       "name": "PGA Tour",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:46.472Z",
+        "endTime": "2025-08-28T05:25:16.554Z",
         "exitCode": 0
       }
     },
@@ -261,7 +261,7 @@
       "name": "Yahoo Golf",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:44:56.452Z",
+        "endTime": "2025-08-28T05:25:26.543Z",
         "exitCode": 0
       }
     },
@@ -270,9 +270,31 @@
       "name": "Yardbarker",
       "status": {
         "status": "completed",
-        "endTime": "2025-08-28T03:45:06.507Z",
+        "endTime": "2025-08-28T05:25:36.541Z",
         "exitCode": 0
       }
     }
-  ]
+  ],
+  "urlStatus": {
+    "failed_urls_1756358863460.txt": {
+      "https://golf.com/news/6-pro-golf-observations-3-weeks-abroad/": {
+        "status": "processed",
+        "reason": "local_exists",
+        "articleNum": "1355",
+        "processedAt": "2025-08-28T05:27:43.749Z"
+      },
+      "https://www.golfwrx.com/763958/photos-from-the-2025-wyndham-championship/?utm_source=Front&utm_medium=Featured_Center_Top&utm_campaign=GolfWRX_OnSite&utm_content=main": {
+        "status": "processed",
+        "reason": "local_exists",
+        "articleNum": "472",
+        "processedAt": "2025-08-28T05:27:43.750Z"
+      },
+      "https://www.golfdigest.com/story/2025-pga-tour-fedex-cup-points-list-standings": {
+        "status": "processed",
+        "reason": "local_exists",
+        "articleNum": "10865",
+        "processedAt": "2025-08-28T05:27:43.752Z"
+      }
+    }
+  }
 }

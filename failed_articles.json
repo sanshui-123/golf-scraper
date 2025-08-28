@@ -1052,7 +1052,7 @@
   "https://www.golfdigest.com/story/british-open-2025-scottie-scheffler-claret-jug-notice": {
     "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
     "attemptCount": 1,
-    "lastAttempt": "2025-07-29T07:35:30.997Z",
+    "lastAttempt": "2025-08-28T05:28:00.670Z",
     "status": "pending_retry"
   },
   "https://www.golfdigest.com/story/affordable-summer-destinations-golf-trips": {
@@ -1120,9 +1120,9 @@
     "status": "pending_retry"
   },
   "https://golf.com/gear/": {
-    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text') to be visible\u001b[22m\n",
+    "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text') to be visible\n",
     "attemptCount": 1,
-    "lastAttempt": "2025-07-26T09:13:59.967Z",
+    "lastAttempt": "2025-08-28T05:35:58.975Z",
     "status": "pending_retry"
   },
   "https://www.golfmonthly.com/news/live/liv-golf-uk-2025-leaderboard-live-updates": {

@@ -18448,6 +18448,46 @@
           }
         }
       ]
+    },
+    "3372461ed2134fb92723b3ba8c54df6b": {
+      "url": "https://www.golfdigest.com/story/british-open-2025-scottie-scheffler-claret-jug-notice",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "failedAt": "2025-08-28T05:28:00.671Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": false
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T05:28:00.671Z",
+          "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "a628bb09a17d1b4bdcc5c01c393e4731": {
+      "url": "https://golf.com/gear/",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text') to be visible\n",
+      "failedAt": "2025-08-28T05:35:58.976Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T05:35:58.976Z",
+          "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text') to be visible\n",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
     }
   }
 }
