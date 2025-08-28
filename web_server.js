@@ -103,7 +103,7 @@ const htmlTemplate = {
     // 文章项模板
     articleItem: (article, date) => `
         <div class="article-item ${article.isDuplicate ? 'duplicate-article' : ''}" data-filename="${article.filename}">
-            <a href="${article.articleUrl}" class="article-title" target="_blank">
+            <a href="${article.articleUrl}" class="article-title" onclick="viewArticle(event, '${article.articleUrl}', '${article.chineseTitle.replace(/'/g, "\\'")}'); return false;">
                 ${article.chineseTitle}
                 ${article.isDuplicate ? '<span class="duplicate-badge">🔁 重复</span>' : ''}
             </a>
@@ -1423,12 +1423,114 @@ app.get('/articles/:date', async (req, res) => {
             from { transform: translateX(100%); }
             to { transform: translateX(0); }
         }
+        
+        /* 仅在本地可用模态框样式 */
+        .local-only-modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .local-only-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+        .local-only-content h2 {
+            color: #6c757d;
+            margin-bottom: 1rem;
+        }
+        .local-only-content p {
+            color: #868e96;
+            margin-bottom: 1.5rem;
+        }
+        .local-only-content .article-info {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        .local-only-content button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .local-only-content button:hover {
+            background: #0056b3;
+            transform: translateY(-1px);
+        }
         `;
         
         // 文章页面的JavaScript
         const articlePageScript = `
     <script>
         let deleteFilename = '';
+        
+        // 查看文章（处理内容不可用的情况）
+        function viewArticle(event, articleUrl, title) {
+            event.preventDefault();
+            
+            // 检查文件是否存在
+            fetch(articleUrl, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        // 文件存在，在新窗口打开
+                        window.open(articleUrl, '_blank');
+                    } else {
+                        // 文件不存在，显示友好提示
+                        showLocalOnlyMessage(title, articleUrl);
+                    }
+                })
+                .catch(error => {
+                    // 网络错误或文件不存在
+                    showLocalOnlyMessage(title, articleUrl);
+                });
+        }
+        
+        // 显示"仅在本地可用"的提示
+        function showLocalOnlyMessage(title, articleUrl) {
+            const modal = document.createElement('div');
+            modal.className = 'local-only-modal';
+            modal.innerHTML = \`
+                <div class="local-only-content">
+                    <h2>📄 文章内容仅在本地可用</h2>
+                    <p>此文章的完整内容仅在本地系统中可用。</p>
+                    <div class="article-info">
+                        <strong>文章信息：</strong><br>
+                        标题: \${title}<br>
+                        路径: \${articleUrl}
+                    </div>
+                    <button onclick="this.closest('.local-only-modal').remove()">关闭</button>
+                </div>
+            \`;
+            document.body.appendChild(modal);
+            
+            // 点击模态框外部关闭
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
         
         // 显示确认删除对话框
         function confirmDelete(filename, title) {

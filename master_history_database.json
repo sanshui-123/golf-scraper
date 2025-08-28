@@ -12802,6 +12802,51 @@
       "rewriteCount": 0,
       "mdFile": "wechat_article_12259.md",
       "htmlFile": "wechat_article_12259.html"
+    },
+    "4b6abcab2f977010f35a698bf39836c3": {
+      "originalUrl": "https://sports.yahoo.com/article/berks-high-school-golf-roundup-034900189.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/berks-high-school-golf-roundup-034900189.html",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12264",
+      "processedAt": "2025-08-28T06:27:02.413Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Berks high school golf roundup: Schuylkill Valley, Berks Catholic score victories",
+      "aiProbability": 11,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12264.md",
+      "htmlFile": "wechat_article_12264.html"
+    },
+    "b6eb2434fea18c5fc7a406127b741a13": {
+      "originalUrl": "https://sports.yahoo.com/article/meadow-greens-ramsey-ladies-golf-022100836.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/meadow-greens-ramsey-ladies-golf-022100836.html",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12266",
+      "processedAt": "2025-08-28T06:27:46.221Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Meadow Greens-Ramsey Ladies Golf Club plays \"Best Shot\"",
+      "aiProbability": 11,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12266.md",
+      "htmlFile": "wechat_article_12266.html"
+    },
+    "97c9adecb0e52a78fadb5636c29a5a56": {
+      "originalUrl": "https://sports.yahoo.com/article/boys-golf-ottumwa-wins-iowa-015100018.html",
+      "normalizedUrl": "https://sports.yahoo.com/article/boys-golf-ottumwa-wins-iowa-015100018.html",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12267",
+      "processedAt": "2025-08-28T06:28:41.837Z",
+      "source": "batch_processor",
+      "siteName": "sports.yahoo.com",
+      "title": "Boys golf: Ottumwa wins Iowa Alliance triangular opener",
+      "aiProbability": 30,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12267.md",
+      "htmlFile": "wechat_article_12267.html"
     }
   },
   "contents": {
@@ -13137,8 +13182,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-08-28T02:46:07.777Z",
-    "totalRecords": 1199,
+    "lastUpdate": "2025-08-28T06:28:41.837Z",
+    "totalRecords": 1202,
     "version": "2.0"
   },
   "failedUrls": {
