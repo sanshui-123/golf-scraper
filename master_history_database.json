@@ -12639,6 +12639,169 @@
       "rewriteCount": 0,
       "mdFile": "wechat_article_12170.md",
       "htmlFile": "wechat_article_12170.html"
+    },
+    "13785ce668f07aaa96c84456995025c7": {
+      "originalUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/aaron-rai-best-betting-options-round-2-weather-delay-wyndham-championship-odds-lines-wagers-fedexcup-playoffs-sedgefield-greensboro",
+      "normalizedUrl": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/aaron-rai-best-betting-options-round-2-weather-delay-wyndham-championship-odds-lines-wagers-fedexcup-playoffs-sedgefield-greensboro",
+      "status": "completed",
+      "date": "2025-08-27",
+      "articleNum": "12171",
+      "processedAt": "2025-08-27T09:58:22.285Z",
+      "source": "batch_processor",
+      "siteName": "PGA Tour",
+      "title": "Draws & Fades: With Ryder Cup aspirations in air, lean on Aaron Rai at Wyndham Championship",
+      "aiProbability": 23,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12171.md",
+      "htmlFile": "wechat_article_12171.html"
+    },
+    "93903c8c34ee300c46ecde7c8cc28e54": {
+      "originalUrl": "https://golf.com/news/keegan-bradley-robbed-ryder-cup-dream/",
+      "normalizedUrl": "https://golf.com/news/keegan-bradley-robbed-ryder-cup-dream/",
+      "status": "skipped",
+      "date": "2025-08-28",
+      "articleNum": "12175",
+      "processedAt": "2025-08-28T01:23:08.033Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Keegan Bradley got robbed of his Ryder Cup dream. He’s built a new one",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 9248,
+      "lineCount": 115
+    },
+    "f267f8ce2dd864d2aefb01f48fc51fea": {
+      "originalUrl": "https://golf.com/news/2025-us-ryder-cup-captains-picks-announced/",
+      "normalizedUrl": "https://golf.com/news/2025-us-ryder-cup-captains-picks-announced/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12179",
+      "processedAt": "2025-08-28T01:30:02.675Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "U.S. Ryder Cup team finalized with 6 captain’s picks (and 1 major surprise)",
+      "aiProbability": 41,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12179.md",
+      "htmlFile": "wechat_article_12179.html"
+    },
+    "10ed0e0a9989fd3c867f7a6326355ea1": {
+      "originalUrl": "https://golf.com/news/the-u-s-ryder-cup-snub-keegan-bradley-advice/",
+      "normalizedUrl": "https://golf.com/news/the-u-s-ryder-cup-snub-keegan-bradley-advice/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12231",
+      "processedAt": "2025-08-28T01:57:29.155Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "The top-ranked U.S. Ryder Cup snub? Keegan Bradley gave him advice",
+      "aiProbability": 38,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12231.md",
+      "htmlFile": "wechat_article_12231.html"
+    },
+    "149b1e920423714f3cdeb3709e620027": {
+      "originalUrl": "https://golf.com/news/ryder-cup-snubs-2025-u-s-ryder-cup/",
+      "normalizedUrl": "https://golf.com/news/ryder-cup-snubs-2025-u-s-ryder-cup/",
+      "status": "skipped",
+      "date": "2025-08-28",
+      "articleNum": "12233",
+      "processedAt": "2025-08-28T01:58:00.217Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Ryder Cup snubs: 9 bubble players left off 2025 U.S. Ryder Cup team",
+      "reason": "实时赛事报道内容过长",
+      "contentLength": 7803,
+      "lineCount": 128
+    },
+    "0cea22b621a2a7052aa72af996c83e5d": {
+      "originalUrl": "https://golf.com/travel/maui-kapalua-water-drought-plantation-course-sentry-closure/",
+      "normalizedUrl": "https://golf.com/travel/maui-kapalua-water-drought-plantation-course-sentry-closure/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12248",
+      "processedAt": "2025-08-28T02:22:04.483Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Popular PGA Tour site closes temporarily, raising questions about season opener",
+      "aiProbability": 14,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12248.md",
+      "htmlFile": "wechat_article_12248.html"
+    },
+    "0a0c79928ba23bb26deb689d30d17f7f": {
+      "originalUrl": "https://golf.com/gear/fairway-wood-hybrid-driving-iron-fitting/",
+      "normalizedUrl": "https://golf.com/gear/fairway-wood-hybrid-driving-iron-fitting/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12249",
+      "processedAt": "2025-08-28T02:27:20.877Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Is a fairway wood, hybrid or driving iron right for you? Here’s how to know",
+      "aiProbability": 44,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_12249.md",
+      "htmlFile": "wechat_article_12249.html"
+    },
+    "3fa2740492b870634bbcf3675e0b8282": {
+      "originalUrl": "https://golf.com/news/keegan-bradley-us-ryder-cup-picks-watch-wednesday/",
+      "normalizedUrl": "https://golf.com/news/keegan-bradley-us-ryder-cup-picks-watch-wednesday/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12252",
+      "processedAt": "2025-08-28T02:32:44.413Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Keegan Bradley’s U.S. Ryder Cup picks: How to watch announcement on Wednesday",
+      "aiProbability": 3,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12252.md",
+      "htmlFile": "wechat_article_12252.html"
+    },
+    "5d2ef2a7eaafb0bece813a352dedf808": {
+      "originalUrl": "https://golf.com/news/tom-watson-keegan-bradley-big-ryder-cup-mistake/",
+      "normalizedUrl": "https://golf.com/news/tom-watson-keegan-bradley-big-ryder-cup-mistake/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12254",
+      "processedAt": "2025-08-28T02:37:19.331Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "‘You can’t do it’: Tom Watson warns Keegan Bradley of big Ryder Cup mistake",
+      "aiProbability": 33,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_12254.md",
+      "htmlFile": "wechat_article_12254.html"
+    },
+    "5e5f403654ad418e8b3b3763b4bfddb5": {
+      "originalUrl": "https://golf.com/instruction/putting/lottie-woad-credits-putting-success-gear-change/",
+      "normalizedUrl": "https://golf.com/instruction/putting/lottie-woad-credits-putting-success-gear-change/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12258",
+      "processedAt": "2025-08-28T02:43:47.057Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Lottie Woad’s putting success? She credits a $2 gear change",
+      "aiProbability": 45,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12258.md",
+      "htmlFile": "wechat_article_12258.html"
+    },
+    "3deb62517c235b685ed68f7ec05df98c": {
+      "originalUrl": "https://golf.com/instruction/approach-shots/why-you-chunk-how-to-fix-golftec/",
+      "normalizedUrl": "https://golf.com/instruction/approach-shots/why-you-chunk-how-to-fix-golftec/",
+      "status": "completed",
+      "date": "2025-08-28",
+      "articleNum": "12259",
+      "processedAt": "2025-08-28T02:46:07.777Z",
+      "source": "batch_processor",
+      "siteName": "Golf.com",
+      "title": "Why you can’t stop chunking the golf ball — and how to fix it",
+      "aiProbability": 15,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_12259.md",
+      "htmlFile": "wechat_article_12259.html"
     }
   },
   "contents": {
@@ -12974,8 +13137,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-08-27T09:56:59.367Z",
-    "totalRecords": 1188,
+    "lastUpdate": "2025-08-28T02:46:07.777Z",
+    "totalRecords": 1199,
     "version": "2.0"
   },
   "failedUrls": {
@@ -18152,6 +18315,133 @@
         },
         {
           "timestamp": "2025-08-27T09:33:57.547Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "14af0af5cab40de9f24d0eea5202e1df": {
+      "url": "https://www.espn.com/golf/story/_/id/46087419/keegan-bradley-pick-us-ryder-cup-squad",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+      "failedAt": "2025-08-28T01:22:27.123Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T01:22:27.123Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "9d742493159bd2a1995b1f17b2a9dad2": {
+      "url": "https://www.espn.com/golf/story/_/id/46089404/liv-golf-adds-summer-2026-event-new-orleans",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "failedAt": "2025-08-28T01:22:30.844Z",
+      "attempts": 1,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T01:22:30.844Z",
+          "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "430d6c63a4c3b96cc313d75f403e41ff": {
+      "url": "https://golf.com/gear/putters/lab-golf-heel-shafted-putter-what-you-misssed/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-28T01:42:07.873Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T01:42:07.861Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 136秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "L.A.B. Golf’s new OZ.1i HS putter — What you missed",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 136秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-28T01:42:07.873Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "546b6004b3e4f477a613fa7f6531b052": {
+      "url": "https://golf.com/news/brandel-chamblee-keegan-bradley-bold-claim/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-28T02:12:40.066Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T02:12:40.041Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 92秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Brandel Chamblee makes bold claim after Keegan Bradley’s surprise decision",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 92秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-28T02:12:40.066Z",
+          "reason": "文章抓取失败: contentSize is not defined",
+          "metadata": {
+            "source": "batch_processor"
+          }
+        }
+      ]
+    },
+    "ab1fc6ea9826456f722055175a62bdb0": {
+      "url": "https://golf.com/instruction/setup-checklist-jeff-smith-play-smart/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "failedAt": "2025-08-28T02:20:37.155Z",
+      "attempts": 2,
+      "metadata": {
+        "source": "batch_processor",
+        "errorType": "scraping_error",
+        "canRetry": true
+      },
+      "history": [
+        {
+          "timestamp": "2025-08-28T02:20:37.144Z",
+          "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 66秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Go through this setup checklist before every shot for guaranteed solid contact",
+            "errorDetails": "Error: 改写失败 - Claude返回空内容 (响应时间: 66秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:346:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1784:48)"
+          }
+        },
+        {
+          "timestamp": "2025-08-28T02:20:37.155Z",
           "reason": "文章抓取失败: contentSize is not defined",
           "metadata": {
             "source": "batch_processor"

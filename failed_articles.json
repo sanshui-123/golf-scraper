@@ -7057,5 +7057,143 @@
     "attemptCount": 1,
     "lastAttempt": "2025-08-27T09:33:57.546Z",
     "status": "pending_retry"
+  },
+  "https://www.espn.com/golf/story/_/id/46087419/keegan-bradley-pick-us-ryder-cup-squad": {
+    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:22:27.122Z",
+    "status": "pending_retry"
+  },
+  "https://www.espn.com/golf/story/_/id/46089404/liv-golf-adds-summer-2026-event-new-orleans": {
+    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:22:30.843Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/keegan-bradley-robbed-ryder-cup-dream/": {
+    "reason": "实时赛事报道内容过长，已跳过",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:23:08.031Z",
+    "status": "pending_retry"
+  },
+  "https://www.lpga.com/news/2025/espn-presents-first--and-second-round-featured-groups-coverage-of-fm-championship": {
+    "reason": "文章内容无效（可能是抓取失败）",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:23:40.053Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/27/us-ryder-cup-captain-keegan-bradley-makes-right-call-not-picking-himself/85853929007/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:31:14.817Z",
+    "status": "pending_retry"
+  },
+  "https://sports.yahoo.com/golf/article/ryder-cup-captain-keegan-bradley-selects-picks-but-not-himself-to-round-out-us-team-151150614.html": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:31:38.781Z",
+    "status": "pending_retry"
+  },
+  "https://mygolfspy.com/buyers-guides/mini-drivers/best-mini-drivers-of-2025/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:38:27.503Z",
+    "status": "pending_retry"
+  },
+  "https://www.pgatour.com/article/news/latest/2025/08/27/keegan-bradley-ryder-cup-us-team-captains-picks-decision-bethpage-black-2025-playing-captain": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:40:13.435Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/gear/putters/lab-golf-heel-shafted-putter-what-you-misssed/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:42:07.872Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/ryder-cup/ryder-cup-keegan-bradley-captains-picks/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:45:36.997Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13419205/ryder-cup-2025-team-europe-hopefuls-in-action-at-omega-european-masters-and-pushing-for-captains-pick-from-luke-donald": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:48:11.604Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/alex-noren-witb/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:53:50.269Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/27/check-out-keegan-bradleys-flag-and-anthem-apparel-ryder-cup-collections/85833840007/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:56:34.323Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/ryder-cup/ryder-cup-2025-sepp-straka-locked-european-pick": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:57:36.736Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/ryder-cup-snubs-2025-u-s-ryder-cup/": {
+    "reason": "实时赛事报道内容过长，已跳过",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T01:58:00.215Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/27/ryder-cup-2025-us-team-12-players-bethpage-black/85847750007/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:05:15.418Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/ryder-cup/2025/08/27/keegan-bradley-did-not-make-himself-playing-captain-ryder-cup/85846782007/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:12:02.536Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/brandel-chamblee-keegan-bradley-bold-claim/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:12:40.062Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-golf-mid-layers": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:15:58.508Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/instruction/setup-checklist-jeff-smith-play-smart/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:20:37.154Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/best-golf-courses-dublin": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:31:54.735Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/27/2025-junior-players-championship-miles-russell-charlie-woods/85853502007/": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:35:36.797Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/royal-dublin-golf-course-review-your-chance-walk-footsteps-legends": {
+    "reason": "文章抓取失败: contentSize is not defined",
+    "attemptCount": 1,
+    "lastAttempt": "2025-08-28T02:41:59.681Z",
+    "status": "pending_retry"
   }
 }
