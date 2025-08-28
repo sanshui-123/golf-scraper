@@ -11,6 +11,8 @@ batch_*.log
 temp_*.txt
 deep_urls_*.txt
 *.backup
+# 忽略所有HTML文件（防止显示测试页面）
+*.html
 test_*.html
 test_*.js
 intelligent_controller.log
