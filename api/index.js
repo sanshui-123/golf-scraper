@@ -1574,8 +1574,6 @@ app.use((err, req, res, next) => {
 });
 
 // 启动服务器 - 增强版本，添加更好的错误处理和调试信息
-// 注释掉startServer函数，Vercel不需要
-/*
 async function startServer() {
     try {
         console.log(`🔍 正在检查端口 ${PORT} 的可用性...`);
@@ -4648,14 +4646,16 @@ app.post('/api/process-failed-urls', async (req, res) => {
     }
 });
 
-}
-*/
-
 // 优雅关闭
 process.on('SIGINT', () => {
     console.log('\n👋 服务器正在关闭...');
     process.exit(0);
 });
 
-// 为Vercel导出Express应用
-module.exports = app;
+// Vercel部署时导出app而不是启动服务器
+if (process.env.VERCEL) {
+    module.exports = app;
+} else {
+    // 本地开发时启动服务器
+    startServer();
+}
