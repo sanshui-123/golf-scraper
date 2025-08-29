@@ -635,7 +635,15 @@ class IntelligentConcurrentController {
             };
             this.updateStatusFile();
             
-            const process = spawn('node', ['batch_process_articles.js', dedupedFile], {
+            // 构建命令参数
+            const args = ['batch_process_articles.js', dedupedFile];
+            
+            // 如果有 --retry-failed 参数，传递给批处理器
+            if (process.argv.includes('--retry-failed')) {
+                args.push('--retry-failed');
+            }
+            
+            const process = spawn('node', args, {
                 detached: false,
                 stdio: ['ignore', 'pipe', 'pipe']
             });
@@ -1347,6 +1355,24 @@ process.on('uncaughtException', (error) => {
 
 // 主程序
 async function main() {
+    // 检查是否使用 --process-all-failed 参数
+    if (process.argv.includes('--process-all-failed')) {
+        console.log('🔄 使用 --process-all-failed 模式处理所有历史失败文章');
+        console.log('⚠️  注意：此模式将直接调用批处理器，不使用并发控制\n');
+        
+        // 直接调用批处理器的 --process-all-failed 功能
+        const { spawn } = require('child_process');
+        const batchProcess = spawn('node', ['batch_process_articles.js', '--process-all-failed'], {
+            stdio: 'inherit'
+        });
+        
+        batchProcess.on('exit', (code) => {
+            process.exit(code || 0);
+        });
+        
+        return;
+    }
+    
     console.log('🤖 智能并发控制器启动 - 无限制版本');
     console.log('📊 特性：');
     console.log('  - 🚀 无并发上限限制');
@@ -1369,6 +1395,15 @@ async function main() {
         
         if (allUrlFiles.length === 0) {
             console.log('❌ 未找到任何URL文件');
+            console.log('\n用法:');
+            console.log('  处理特定文件: node intelligent_concurrent_controller.js deep_urls_golf_com.txt');
+            console.log('  处理所有文件: node intelligent_concurrent_controller.js');
+            console.log('  处理所有失败: node intelligent_concurrent_controller.js --process-all-failed');
+            console.log('\n可选参数:');
+            console.log('  --force              强制重新处理所有URL');
+            console.log('  --continue           智能继续处理（自动检测并处理未完成的URL）');
+            console.log('  --retry-failed       只处理失败的URL');
+            console.log('  --process-all-failed 自动扫描并处理所有历史失败的文章');
             process.exit(1);
         }
         

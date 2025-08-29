@@ -149,6 +149,7 @@ class BatchArticleProcessor {
         this.failedCount = 0; // 失败计数
         this.currentUrlFile = ''; // 当前处理的URL文件
         this.isRetryingFailed = process.argv.includes('--retry-failed'); // 是否在重试失败文章模式
+        this.isProcessAllFailed = process.argv.includes('--process-all-failed'); // 是否处理所有失败文章
         
         // 超时统计
         this.timeoutStats = {
@@ -806,6 +807,67 @@ class BatchArticleProcessor {
                 duplicateUrls: urls,
                 skippedCount: urls.length
             };
+        }
+    }
+
+    /**
+     * 扫描所有历史失败的URL
+     * @returns {Array} 失败的URL列表
+     */
+    async scanAllFailedUrls() {
+        console.log('🔍 扫描所有历史失败的文章...');
+        const failedUrls = new Set();
+        
+        try {
+            // 获取golf_content目录下的所有日期目录
+            const golfContentDir = path.join(process.cwd(), 'golf_content');
+            const dateDirs = fs.readdirSync(golfContentDir).filter(dir => {
+                // 匹配YYYY-MM-DD格式的目录
+                return /^\d{4}-\d{2}-\d{2}$/.test(dir);
+            });
+            
+            // 扫描每个日期目录的article_urls.json
+            for (const dateDir of dateDirs) {
+                const urlsFile = path.join(golfContentDir, dateDir, 'article_urls.json');
+                if (fs.existsSync(urlsFile)) {
+                    try {
+                        const urlsData = JSON.parse(fs.readFileSync(urlsFile, 'utf8'));
+                        
+                        // 收集失败状态的URL
+                        for (const [url, status] of Object.entries(urlsData)) {
+                            if (status === 'failed') {
+                                failedUrls.add(url);
+                            }
+                        }
+                    } catch (e) {
+                        console.log(`  ⚠️ 读取 ${dateDir} 的URL文件失败: ${e.message}`);
+                    }
+                }
+            }
+            
+            const failedArray = Array.from(failedUrls);
+            console.log(`  ✅ 找到 ${failedArray.length} 个历史失败的URL`);
+            
+            // 按网站分组显示统计
+            const websiteStats = {};
+            failedArray.forEach(url => {
+                const domain = new URL(url).hostname.replace('www.', '');
+                websiteStats[domain] = (websiteStats[domain] || 0) + 1;
+            });
+            
+            console.log('\n📊 按网站统计:');
+            Object.entries(websiteStats)
+                .sort((a, b) => b[1] - a[1])
+                .forEach(([site, count]) => {
+                    console.log(`  • ${site}: ${count} 篇`);
+                });
+            console.log('');
+            
+            return failedArray;
+            
+        } catch (error) {
+            console.error(`❌ 扫描失败URL时出错: ${error.message}`);
+            return [];
         }
     }
 
@@ -2727,12 +2789,55 @@ class BatchArticleProcessor {
 
 // 命令行执行
 if (require.main === module) {
-    // 从命令行参数获取文件名
+    const processor = new BatchArticleProcessor();
+    
+    // 检查是否使用 --process-all-failed 参数
+    if (process.argv.includes('--process-all-failed')) {
+        console.log('🔄 处理所有历史失败的文章模式\n');
+        
+        // 进程退出时清理计时器
+        process.on('exit', () => {
+            processor.clearRewriteProgressInterval();
+        });
+        
+        process.on('SIGINT', () => {
+            processor.clearRewriteProgressInterval();
+            process.exit();
+        });
+        
+        process.on('SIGTERM', () => {
+            processor.clearRewriteProgressInterval();
+            process.exit();
+        });
+        
+        // 扫描并处理所有失败的URL
+        processor.scanAllFailedUrls().then(failedUrls => {
+            if (failedUrls.length === 0) {
+                console.log('✅ 没有找到需要处理的失败文章');
+                process.exit(0);
+            }
+            
+            // 使用特殊的urlFile标识
+            return processor.processArticles(failedUrls, { 
+                urlFile: 'all_failed_articles',
+                skipDuplicateCheck: false  // 不跳过重复检查，让系统正常处理
+            });
+        }).catch(console.error);
+        
+        return;
+    }
+    
+    // 原有逻辑：从文件读取URL
     const filename = process.argv[2];
     
     if (!filename) {
         console.error('❌ 请提供文章URL列表文件');
-        console.error('用法: node batch_process_articles.js <文件名>');
+        console.error('\n用法:');
+        console.error('  处理URL文件: node batch_process_articles.js <文件名> [--retry-failed]');
+        console.error('  处理所有失败: node batch_process_articles.js --process-all-failed');
+        console.error('\n选项:');
+        console.error('  --retry-failed      只处理文件中失败的URL');
+        console.error('  --process-all-failed 自动扫描并处理所有历史失败的文章');
         process.exit(1);
     }
     
@@ -2747,8 +2852,6 @@ if (require.main === module) {
         }
         
         console.log(`📋 从 ${filename} 读取到 ${urls.length} 个URL`);
-        
-        const processor = new BatchArticleProcessor();
         
         // 进程退出时清理计时器
         process.on('exit', () => {
