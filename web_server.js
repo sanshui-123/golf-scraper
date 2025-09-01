@@ -4183,6 +4183,9 @@ app.get('/monitor', (req, res) => {
 
         // 继续处理现有URL
         async function continueProcessing() {
+            // 先询问是否要重新生成URL
+            const regenerateUrls = confirm('是否需要重新生成最新URL？\n\n选择"确定"：重新抓取最新文章URL后处理（推荐）\n选择"取消"：直接处理现有URL文件');
+            
             const btn = document.getElementById('continue-btn');
             const statusDiv = document.getElementById('restart-status');
             const messagesDiv = document.getElementById('status-messages');
@@ -4202,16 +4205,24 @@ app.get('/monitor', (req, res) => {
             }
             
             try {
-                addStatusMessage('▶️ 开始处理现有URL...');
+                if (regenerateUrls) {
+                    addStatusMessage('🔄 正在重新生成最新URL...');
+                } else {
+                    addStatusMessage('▶️ 开始处理现有URL...');
+                }
                 
                 const response = await fetch('/api/continue-processing', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' }
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ regenerateUrls })
                 });
                 
                 const data = await response.json();
                 
                 if (data.success) {
+                    if (data.regenerated) {
+                        addStatusMessage('✅ URL重新生成完成', 'success');
+                    }
                     addStatusMessage('📊 发现 ' + data.totalUrls + ' 个待处理URL');
                     addStatusMessage('🚀 正在启动智能处理器...');
                     
@@ -4257,36 +4268,34 @@ app.get('/monitor', (req, res) => {
             statusDiv.classList.add('active');
             messagesDiv.innerHTML = '';
             
-            // 状态消息函数
-            function addStatusMessage(msg, type = 'info') {
-                const msgDiv = document.createElement('div');
-                msgDiv.className = \`status-message \${type}\`;
-                msgDiv.textContent = msg;
-                messagesDiv.appendChild(msgDiv);
-                messagesDiv.scrollTop = messagesDiv.scrollHeight;
-            }
-            
             try {
-                addStatusMessage('🔍 正在收集失败的文章...', 'info');
                 const response = await fetch('/api/process-failed-urls', { method: 'POST' });
                 const data = await response.json();
                 
                 if (data.success) {
-                    addStatusMessage(\`✅ 已开始处理 \${data.count} 个失败的文章\`, 'success');
+                    const msgDiv = document.createElement('div');
+                    msgDiv.className = 'status-message success';
+                    msgDiv.textContent = '✅ ' + data.message;
+                    messagesDiv.appendChild(msgDiv);
                     
-                    // 等待一会儿后恢复按钮
                     setTimeout(() => {
                         statusDiv.classList.remove('active');
                         btn.disabled = false;
                         btn.textContent = '🔄 处理失败的文章';
                     }, 3000);
                 } else {
-                    addStatusMessage('❌ ' + data.error, 'error');
+                    const msgDiv = document.createElement('div');
+                    msgDiv.className = 'status-message error';
+                    msgDiv.textContent = '❌ ' + data.error;
+                    messagesDiv.appendChild(msgDiv);
                     btn.disabled = false;
                     btn.textContent = '🔄 处理失败的文章';
                 }
             } catch (error) {
-                addStatusMessage('❌ 请求失败: ' + error.message, 'error');
+                const msgDiv = document.createElement('div');
+                msgDiv.className = 'status-message error';
+                msgDiv.textContent = '❌ 请求失败: ' + error.message;
+                messagesDiv.appendChild(msgDiv);
                 btn.disabled = false;
                 btn.textContent = '🔄 处理失败的文章';
             }
@@ -4603,6 +4612,8 @@ app.post('/api/restart-system', async (req, res) => {
 // 继续处理现有URL的API
 app.post('/api/continue-processing', async (req, res) => {
     try {
+        const { regenerateUrls = false } = req.body || {};
+        
         // 先清理可能存在的去重文件
         const dedupedFiles = fs.readdirSync(__dirname)
             .filter(f => f.endsWith('_deduped.txt'));
@@ -4617,6 +4628,36 @@ app.post('/api/continue-processing', async (req, res) => {
                     console.error(`  无法删除 ${file}: ${e.message}`);
                 }
             });
+        }
+        
+        // 如果需要重新生成URL
+        if (regenerateUrls) {
+            console.log('🔄 重新生成最新URL...');
+            
+            // 执行URL生成
+            const urlGenProcess = spawn('node', ['auto_scrape_three_sites.js', '--all-sites'], {
+                stdio: ['ignore', 'pipe', 'pipe']
+            });
+            
+            let urlGenOutput = '';
+            urlGenProcess.stdout.on('data', (data) => {
+                urlGenOutput += data.toString();
+                console.log('[URL生成]', data.toString().trim());
+            });
+            
+            urlGenProcess.stderr.on('data', (data) => {
+                console.error('[URL生成错误]', data.toString());
+            });
+            
+            await new Promise((resolve) => {
+                urlGenProcess.on('close', (code) => {
+                    console.log(`URL生成完成，退出码: ${code}`);
+                    resolve();
+                });
+            });
+            
+            // 等待文件写入完成
+            await new Promise(resolve => setTimeout(resolve, 2000));
         }
         
         // 检查是否有待处理的URL文件
@@ -4642,26 +4683,34 @@ app.post('/api/continue-processing', async (req, res) => {
         ];
         
         let totalUrls = 0;
+        let actualUrlCount = 0;
         for (const file of urlFiles) {
             try {
                 const content = fs.readFileSync(path.join(__dirname, file), 'utf-8');
                 const urls = content.trim().split('\n').filter(line => line.startsWith('http'));
                 totalUrls += urls.length;
+                if (urls.length > 0) {
+                    actualUrlCount++;
+                    console.log(`  ${file}: ${urls.length} URLs`);
+                }
             } catch (e) {}
         }
         
         if (totalUrls === 0) {
             return res.json({ 
                 success: false, 
-                message: '没有找到待处理的URL' 
+                message: '没有找到待处理的URL，请先运行URL生成' 
             });
         }
+        
+        console.log(`📋 找到 ${actualUrlCount} 个URL文件，共 ${totalUrls} 个URL`);
         
         // 立即返回响应
         res.json({ 
             success: true, 
             totalUrls: totalUrls,
-            message: `准备处理 ${totalUrls} 个URL` 
+            message: regenerateUrls ? `已重新生成URL，准备处理 ${totalUrls} 个URL` : `准备处理 ${totalUrls} 个URL`,
+            regenerated: regenerateUrls 
         });
         
         // 异步启动处理器
@@ -4677,6 +4726,9 @@ app.post('/api/continue-processing', async (req, res) => {
             // 将输出追加到日志文件
             const logStream = fs.createWriteStream('intelligent_controller.log', { flags: 'a' });
             logStream.write(`\n\n========== 继续处理 ${new Date().toISOString()} ==========\n`);
+            if (regenerateUrls) {
+                logStream.write(`[已重新生成URL]\n`);
+            }
             controller.stdout.pipe(logStream);
             controller.stderr.pipe(logStream);
             
@@ -4697,46 +4749,17 @@ app.post('/api/process-failed-urls', async (req, res) => {
     const { spawn } = require('child_process');
     
     try {
-        // 收集所有失败的URL
-        const failedUrls = [];
-        const historyDBPath = path.join(__dirname, 'master_history_database.json');
-        
-        if (fs.existsSync(historyDBPath)) {
-            const historyDB = JSON.parse(fs.readFileSync(historyDBPath, 'utf8'));
-            
-            for (const [hash, data] of Object.entries(historyDB.urls || {})) {
-                if (data.status === 'failed' && data.originalUrl) {
-                    failedUrls.push(data.originalUrl);
-                }
-            }
-        }
-        
-        if (failedUrls.length === 0) {
-            return res.json({ 
-                success: false, 
-                error: '没有失败的文章需要处理' 
-            });
-        }
-        
-        console.log(`\n🔄 找到 ${failedUrls.length} 个失败的文章需要处理`);
-        
-        // 创建临时文件
-        const tempFile = path.join(__dirname, `failed_urls_${Date.now()}.txt`);
-        fs.writeFileSync(tempFile, failedUrls.join('\n'));
-        
-        // 启动处理进程
-        const processor = spawn('node', ['process_failed_urls.js', tempFile], {
+        // 启动处理失败URL的进程
+        const processor = spawn('node', ['process_failed_urls.js'], {
             detached: true,
             stdio: 'ignore'
         });
         
         processor.unref();
         
-        console.log('✅ 已启动失败文章处理进程');
-        
         res.json({ 
             success: true, 
-            count: failedUrls.length 
+            message: '失败文章处理已启动'
         });
         
     } catch (error) {

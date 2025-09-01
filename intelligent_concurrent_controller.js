@@ -82,6 +82,23 @@ class IntelligentConcurrentController {
     }
 
     /**
+     * 检查内容是否是确认消息
+     */
+    isConfirmationMessage(content) {
+        const confirmationPatterns = [
+            /已完成.*文章.*改写/,
+            /改写完成/,
+            /文章已.*改写/,
+            /已.*处理.*文章/,
+            /完成.*改写/,
+            /成功.*改写/,
+            /已经.*改写/
+        ];
+        
+        return confirmationPatterns.some(pattern => pattern.test(content));
+    }
+
+    /**
      * 更新处理状态文件
      */
     updateStatusFile() {
@@ -633,6 +650,11 @@ class IntelligentConcurrentController {
         const verifiedFailedUrls = [];
         const verifiedProcessingUrls = [];
         let missingCount = 0;
+        let shortArticleCount = 0;
+        let confirmationMessageCount = 0;
+        
+        // 获取今天日期
+        const today = new Date().toISOString().split('T')[0];
         
         for (const url of urls) {
             const urlData = this.historyDB.checkUrl(url);
@@ -650,11 +672,26 @@ class IntelligentConcurrentController {
                         missingCount++;
                         this.log(`⚠️ 发现丢失的文章: ${urlData.date}/文章${urlData.articleNum} (${url})`);
                     } else if (continueMode) {
-                        // 在继续模式下，检查是否是今天的文章
-                        const today = new Date().toISOString().split('T')[0];
-                        if (urlData.date === today) {
-                            // 今天的文章，可能需要重新处理（比如URL是今天生成的但已经处理过）
-                            this.log(`ℹ️ 今天的文章已存在: ${urlData.date}/文章${urlData.articleNum}`);
+                        // 在继续模式下，检查文章质量
+                        try {
+                            const content = fs.readFileSync(articlePath, 'utf8');
+                            const cleanContent = content.replace(/<!--[\s\S]*?-->/g, '').trim();
+                            
+                            // 检查是否是短文章或确认消息
+                            if (cleanContent.length < 1000) {
+                                verifiedNewUrls.push(url);
+                                shortArticleCount++;
+                                this.log(`📏 发现短文章需要重写: ${urlData.date}/文章${urlData.articleNum} (${cleanContent.length}字符)`);
+                            } else if (url.includes('golf.com') && this.isConfirmationMessage(cleanContent)) {
+                                // Golf.com特殊处理：检查是否是确认消息
+                                verifiedNewUrls.push(url);
+                                confirmationMessageCount++;
+                                this.log(`🔧 Golf.com文章需要重写: ${urlData.date}/文章${urlData.articleNum} (确认消息)`);
+                            }
+                        } catch (e) {
+                            // 读取失败，标记为需要重新处理
+                            verifiedNewUrls.push(url);
+                            this.log(`❌ 无法读取文章: ${articlePath}`);
                         }
                     }
                 } else {
@@ -662,12 +699,10 @@ class IntelligentConcurrentController {
                     verifiedNewUrls.push(url);
                 }
             } else if (urlData.status === 'failed') {
-                // 失败的URL，如果不是--retry-failed模式，跳过
-                if (process.argv.includes('--retry-failed')) {
-                    verifiedFailedUrls.push(url);
-                }
-            } else if (urlData.status === 'processing') {
-                // 处理中的URL
+                // 失败的URL，总是需要重试
+                verifiedFailedUrls.push(url);
+            } else if (urlData.status === 'processing' || urlData.status === 'incomplete_processing') {
+                // 处理中或未完成的URL
                 verifiedProcessingUrls.push(url);
             }
         }
@@ -705,6 +740,14 @@ class IntelligentConcurrentController {
         
         if (missingCount > 0) {
             this.log(`📊 发现 ${missingCount} 个声称已完成但文件丢失的文章`);
+        }
+        
+        if (shortArticleCount > 0) {
+            this.log(`📏 发现 ${shortArticleCount} 个短文章需要重写`);
+        }
+        
+        if (confirmationMessageCount > 0) {
+            this.log(`🔧 发现 ${confirmationMessageCount} 个Golf.com确认消息需要重写`);
         }
         
         if (urlsToProcess.length === 0) {
