@@ -120,7 +120,7 @@ class ArticleRewriterEnhanced {
     /**
      * 单次改写尝试（固定3分钟超时）
      */
-    async attemptRewrite(title, content, tempFile, attemptNum) {
+    async attemptRewrite(title, content, tempFile, attemptNum, url = null) {
         const timeout = this.fixedTimeout; // 固定3分钟
         // Claude调用限流保护
         const now = Date.now();
@@ -133,8 +133,46 @@ class ArticleRewriterEnhanced {
         this.lastClaudeCall = Date.now();
         
         return new Promise((resolve, reject) => {
-            const cmd = `cat "${this.promptFile}" "${tempFile}" | claude --dangerously-skip-permissions --print`;
-            console.log(`  🔄 第${attemptNum}次尝试Claude改写... (限时3分钟)`);
+            // 在重试时添加额外提示
+            let cmd = `cat "${this.promptFile}" "${tempFile}" | claude --dangerously-skip-permissions --print`;
+            let retryHintFile = null;
+            
+            // 检测是否为golf.com文章
+            const isGolfCom = url && url.includes('golf.com');
+            
+            // 如果是第二次或以上尝试，或者是golf.com文章，添加更强的提示
+            if (attemptNum > 1 || isGolfCom) {
+                retryHintFile = path.join(__dirname, `temp_retry_hint_${Date.now()}.txt`);
+                let retryHint = '';
+                
+                if (isGolfCom && attemptNum === 1) {
+                    // golf.com首次尝试就加强提示
+                    retryHint = `【Golf.com文章特别指令】
+必须立即开始改写，直接输出完整文章内容。
+第一行必须是"# 文章标题"格式。
+绝对禁止输出任何确认、总结或元信息。
+以下是要改写的内容：
+
+`;
+                    console.log(`  🏌️ 检测到Golf.com文章，使用增强改写模式...`);
+                } else if (attemptNum > 1) {
+                    // 重试时的超强提示
+                    retryHint = `【紧急指令-第${attemptNum}次尝试】
+你必须立即输出改写后的文章，不要任何其他内容！
+第一个字符必须是#号（标题开始）。
+如果你输出任何确认消息，改写将失败！
+现在立即开始改写：
+
+`;
+                }
+                
+                fs.writeFileSync(retryHintFile, retryHint, 'utf8');
+                cmd = `cat "${retryHintFile}" "${this.promptFile}" "${tempFile}" | claude --dangerously-skip-permissions --print`;
+                
+                console.log(`  🔄 第${attemptNum}次尝试Claude改写（${isGolfCom ? 'Golf.com增强' : '增强'}提示）... (限时3分钟)`);
+            } else {
+                console.log(`  🔄 第${attemptNum}次尝试Claude改写... (限时3分钟)`);
+            }
             
             const startTime = Date.now();
             let progressInterval;
@@ -206,6 +244,8 @@ class ArticleRewriterEnhanced {
                 // 记录超时错误并reject
                 const timeoutError = new Error(`改写超时（3分钟）`);
                 this.recordApiResponse(Date.now() - startTime, false, stdout.length, timeoutError);
+                // 清理临时文件
+                if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
                 reject(timeoutError);
             }, timeout);
             
@@ -228,6 +268,8 @@ class ArticleRewriterEnhanced {
                         error = new Error(`Claude执行失败 (代码${code}): ${stderr || '未知错误'}`);
                     }
                     this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                    // 清理临时文件
+                    if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
                     reject(error);
                     return;
                 }
@@ -238,6 +280,8 @@ class ArticleRewriterEnhanced {
                     error.isEmptyResponse = true;
                     error.responseTime = responseTime;
                     this.recordApiResponse(responseTime, false, 0, error);
+                    // 清理临时文件
+                    if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
                     reject(error);
                     return;
                 }
@@ -247,6 +291,72 @@ class ArticleRewriterEnhanced {
                 if (!hasChineseChars) {
                     const error = new Error('改写结果不包含中文内容');
                     this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                    // 清理临时文件
+                    if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
+                    reject(error);
+                    return;
+                }
+                
+                // 检测是否为确认消息而非实际改写内容
+                const confirmationPatterns = [
+                    /^已完成.*改写/,
+                    /^改写完成/,
+                    /^文章已.*改写/,
+                    /深度人性化处理/,
+                    /按照.*习惯.*处理/,
+                    /保存为.*\.md/,
+                    /已经?按照.*改写/,
+                    /^这篇.*改写/,
+                    /^我来.*改写/,
+                    /^好的.*改写/,
+                    /^我已经?.*改写/,
+                    /改写要点/,
+                    /^根据.*改写/
+                ];
+                
+                const isConfirmationMessage = confirmationPatterns.some(pattern => pattern.test(stdout.trim()));
+                // 更严格的检测：长度小于500字符或包含确认消息
+                if ((isConfirmationMessage && stdout.length < 500) || 
+                    (stdout.length < 300 && !stdout.includes('#'))) {
+                    const error = new Error(`Claude返回确认消息而非改写内容 (长度: ${stdout.length}字符)`);
+                    error.isConfirmationMessage = true;
+                    error.responseLength = stdout.length;
+                    error.failedContent = stdout.substring(0, 200); // 保存前200字符用于日志
+                    console.log(`     ⚠️ 检测到确认消息: "${stdout.substring(0, 100)}..."`); // 显示前100字符
+                    this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                    // 清理临时文件
+                    if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
+                    reject(error);
+                    return;
+                }
+                
+                // 强化检查：确保文章以标题开头（#开头）
+                const trimmedContent = stdout.trim();
+                if (!trimmedContent.startsWith('#')) {
+                    // 检查前50个字符中是否有#
+                    const first50Chars = trimmedContent.substring(0, 50);
+                    if (!first50Chars.includes('#')) {
+                        const error = new Error(`改写结果格式错误：未以标题开头 (应以#开头)`);
+                        error.invalidFormat = true;
+                        error.responseLength = stdout.length;
+                        error.failedContent = stdout.substring(0, 200);
+                        console.log(`     ⚠️ 格式错误: 文章未以标题(#)开头`);
+                        console.log(`     📝 开头内容: "${first50Chars}..."`);
+                        this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                        // 清理临时文件
+                        if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
+                        reject(error);
+                        return;
+                    }
+                }
+                
+                // 验证内容长度是否合理（改写后应该有一定长度）
+                if (stdout.trim().length < 500) {
+                    const error = new Error(`改写内容过短，可能不完整 (长度: ${stdout.length}字符)`);
+                    error.isTooShort = true;
+                    this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                    // 清理临时文件
+                    if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
                     reject(error);
                     return;
                 }
@@ -257,6 +367,11 @@ class ArticleRewriterEnhanced {
                 
                 // 记录成功的API响应
                 this.recordApiResponse(responseTimeMs, true, stdout.length);
+                
+                // 清理临时重试提示文件
+                if (retryHintFile) {
+                    try { fs.unlinkSync(retryHintFile); } catch (e) {}
+                }
                 
                 resolve(stdout.trim());
             });
@@ -271,6 +386,8 @@ class ArticleRewriterEnhanced {
                 
                 const error = new Error(`执行命令失败: ${err.message}`);
                 this.recordApiResponse(Date.now() - startTime, false, stdout.length, error);
+                // 清理临时文件
+                if (retryHintFile) { try { fs.unlinkSync(retryHintFile); } catch (e) {} }
                 reject(error);
             });
         });
@@ -308,7 +425,7 @@ class ArticleRewriterEnhanced {
                         await this.sleep(30000); // 额外等待30秒
                     }
                     
-                    const result = await this.attemptRewrite(title, content, tempFile, attempt);
+                    const result = await this.attemptRewrite(title, content, tempFile, attempt, url);
                     
                     // 成功后重置错误计数
                     this.errorStats.emptyResponses = 0;
@@ -398,6 +515,13 @@ class ArticleRewriterEnhanced {
             baseWait = 60000; // 超时等待60秒
         } else if (error.message.includes('rate limit')) {
             baseWait = 120000; // 速率限制等待2分钟
+        } else if (error.message.includes('确认消息') || error.isConfirmationMessage) {
+            // 确认消息错误需要更长的等待时间，让Claude重置状态
+            baseWait = 30000; // 等待30秒
+            console.log('  💡 检测到确认消息错误，增加等待时间以重置Claude状态');
+        } else if (error.message.includes('格式错误') || error.invalidFormat) {
+            // 格式错误也需要适当等待
+            baseWait = 25000; // 等待25秒
         }
         
         // 指数退避：连续失败次数越多，等待越久

@@ -151,6 +151,9 @@ class BatchArticleProcessor {
         this.isRetryingFailed = process.argv.includes('--retry-failed'); // 是否在重试失败文章模式
         this.isProcessAllFailed = process.argv.includes('--process-all-failed'); // 是否处理所有失败文章
         
+        // 加载输出配置
+        this.outputConfig = this.loadOutputConfig();
+        
         // 超时统计
         this.timeoutStats = {
             total: 0,
@@ -2175,7 +2178,10 @@ class BatchArticleProcessor {
             });
         }
         
-        console.log('\n📱 访问 http://localhost:8080 查看内容');
+        // 根据配置决定是否显示localhost URL
+        if (this.outputConfig.showLocalhostUrls !== false) {
+            console.log('\n📱 访问 http://localhost:8080 查看内容');
+        }
         
         } catch (error) {
             console.error('\n❌ 处理过程中出现严重错误:', error);
@@ -2372,6 +2378,119 @@ class BatchArticleProcessor {
         };
     }
 
+    /**
+     * 验证文章内容的有效性
+     * @param {string} content - 文章内容
+     * @param {Object} article - 文章对象
+     * @returns {Object} - {isValid: boolean, error: string}
+     */
+    validateArticleContent(content, article) {
+        // 基础验证结果
+        const validation = {
+            isValid: true,
+            error: null,
+            details: {}
+        };
+
+        // 1. 内容长度验证
+        const minContentLength = 1000; // 最小1000字符
+        const cleanContent = content.replace(/<!--[\s\S]*?-->/g, ''); // 移除注释
+        const actualLength = cleanContent.trim().length;
+        
+        validation.details.contentLength = actualLength;
+        
+        if (actualLength < minContentLength) {
+            validation.isValid = false;
+            validation.error = `内容过短 (${actualLength}字符，最小要求${minContentLength}字符)`;
+            return validation;
+        }
+
+        // 2. 检查是否为空内容或占位符
+        const invalidPatterns = [
+            /^测试文章$/,
+            /^这是一篇测试文章/,
+            /^placeholder/i,
+            /^test article/i,
+            /^empty content/i,
+            /^无内容/,
+            /^待填充/
+        ];
+        
+        if (invalidPatterns.some(pattern => pattern.test(cleanContent))) {
+            validation.isValid = false;
+            validation.error = '检测到占位符或测试内容';
+            return validation;
+        }
+
+        // 3. 检查必要的文章结构
+        const hasTitle = cleanContent.includes('#') || (article.title && article.title.length > 0);
+        const hasParagraphs = cleanContent.split('\n\n').filter(p => p.trim().length > 50).length >= 2;
+        
+        validation.details.hasTitle = hasTitle;
+        validation.details.hasParagraphs = hasParagraphs;
+        
+        if (!hasTitle) {
+            validation.isValid = false;
+            validation.error = '文章缺少标题';
+            return validation;
+        }
+        
+        if (!hasParagraphs) {
+            validation.isValid = false;
+            validation.error = '文章缺少有效段落（至少需要2个段落，每段50字符以上）';
+            return validation;
+        }
+
+        // 4. 检查是否包含实质内容
+        const words = cleanContent.split(/\s+/).filter(w => w.length > 1);
+        const uniqueWords = new Set(words.map(w => w.toLowerCase()));
+        const uniqueRatio = uniqueWords.size / Math.max(1, words.length);
+        
+        validation.details.wordCount = words.length;
+        validation.details.uniqueWords = uniqueWords.size;
+        validation.details.uniqueRatio = uniqueRatio;
+        
+        // 如果独特词汇比例太低，说明可能是重复内容
+        if (uniqueRatio < 0.2 && words.length > 50) {
+            validation.isValid = false;
+            validation.error = '文章内容重复度过高，缺乏实质内容';
+            return validation;
+        }
+
+        // 5. 检查是否为纯英文内容（应该是中文改写）
+        const chineseCharCount = (cleanContent.match(/[\u4e00-\u9fa5]/g) || []).length;
+        const chineseRatio = chineseCharCount / cleanContent.length;
+        
+        validation.details.chineseCharCount = chineseCharCount;
+        validation.details.chineseRatio = chineseRatio;
+        
+        if (chineseRatio < 0.1 && cleanContent.length > 500) {
+            validation.isValid = false;
+            validation.error = '文章缺少中文内容（中文比例低于10%）';
+            return validation;
+        }
+
+        // 6. 检查关键组件
+        const hasContent = cleanContent.length > minContentLength;
+        const hasViewOriginal = content.includes('查看原文') || content.includes(article.url);
+        
+        validation.details.hasViewOriginal = hasViewOriginal;
+        
+        if (!hasViewOriginal && article.url && article.url.startsWith('http')) {
+            // 不强制要求，但记录警告
+            validation.warning = '文章可能缺少原文链接';
+        }
+
+        // 7. 最终判断
+        if (!hasContent) {
+            validation.isValid = false;
+            validation.error = '文章内容不完整';
+            return validation;
+        }
+
+        return validation;
+    }
+
     // 保存单篇文章（实时更新）
     async saveSingleArticle(article) {
         try {
@@ -2483,6 +2602,30 @@ class BatchArticleProcessor {
             if (metadataComments) {
                 content = metadataComments + content;
             }
+            
+            // 🛡️ 内容验证 - 防止保存无效文章
+            const contentValidation = this.validateArticleContent(content, article);
+            if (!contentValidation.isValid) {
+                const validationError = new Error(`文章内容验证失败: ${contentValidation.error}`);
+                validationError.validationDetails = contentValidation;
+                console.error(`  ❌ 文章验证失败:`);
+                console.error(`     - 错误: ${contentValidation.error}`);
+                console.error(`     - 内容长度: ${content.length} 字符`);
+                console.error(`     - 最小要求: 1000 字符`);
+                console.error(`     - 建议: 确保文章通过正常流程处理`);
+                
+                // 记录失败并抛出错误，防止标记为成功
+                this.apiFailureHandler.logFailedArticle(article.url, `内容验证失败: ${contentValidation.error}`);
+                this.historyDB.addFailedUrl(article.url, `内容验证失败: ${contentValidation.error}`, {
+                    source: 'content_validation',
+                    articleNum: num,
+                    contentLength: content.length
+                });
+                
+                throw validationError;
+            }
+            
+            console.log(`  ✅ 内容验证通过 (${content.length} 字符)`);
             
             try {
                 fs.writeFileSync(mdFile, content, 'utf8');
@@ -3034,6 +3177,27 @@ class BatchArticleProcessor {
      */
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+    
+    /**
+     * 加载输出配置
+     */
+    loadOutputConfig() {
+        try {
+            const configFile = path.join(__dirname, 'output_config.json');
+            if (fs.existsSync(configFile)) {
+                return JSON.parse(fs.readFileSync(configFile, 'utf8'));
+            }
+        } catch (error) {
+            console.log('⚠️ 无法加载输出配置，使用默认设置');
+        }
+        // 默认配置
+        return {
+            showLocalhostUrls: true,
+            showWebInterface: true,
+            quietMode: false,
+            logLevel: 'info'
+        };
     }
     
 }
