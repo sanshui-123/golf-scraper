@@ -199,6 +199,24 @@ class BatchArticleProcessor {
             recoveryDelay: 60000, // 1分钟
             errorHistory: []
         };
+        
+        // 文章质量评分系统配置
+        this.qualityScoring = {
+            enabled: true,
+            thresholds: {
+                excellent: 85,    // 优秀文章
+                good: 70,         // 良好文章
+                acceptable: 50,   // 可接受文章
+                poor: 30          // 低质量文章
+            },
+            weights: {
+                length: 0.25,     // 文章长度权重
+                images: 0.20,     // 图片数量权重
+                structure: 0.20,  // 文章结构权重
+                readability: 0.20,// 可读性权重
+                keywords: 0.15    // 关键词密度权重
+            }
+        };
     }
 
     /**
@@ -676,53 +694,25 @@ class BatchArticleProcessor {
                 const cached = urlCache.get(normalizedUrl);
                 
                 if (cached) {
-                    // 检查是否为失败状态，失败的可以重试
-                    const urlsJsonPath = path.join(baseDir, cached.dateDir, 'article_urls.json');
-                    let shouldRetry = false;
+                    localDuplicates.push(url);
+                    console.log(`  ✅ 本地已存在: ${url}`);
+                    console.log(`      位置: ${cached.dateDir}/文章${cached.articleNum}`);
                     
-                    if (fs.existsSync(urlsJsonPath)) {
-                        try {
-                            const urlMapping = JSON.parse(fs.readFileSync(urlsJsonPath, 'utf8'));
-                            const record = urlMapping[cached.articleNum];
-                            if (typeof record === 'object' && record.status === 'failed') {
-                                if (this.isRetryingFailed) {
-                                    // 重试失败模式，处理失败的文章
-                                    shouldRetry = true;
-                                    console.log(`  🔄 失败文章，将重试: ${url}`);
-                                    console.log(`      位置: ${cached.dateDir}/文章${cached.articleNum}`);
-                                    console.log(`      失败原因: ${record.error || '未知'}`);
-                                } else {
-                                    // 正常模式，跳过失败的文章
-                                    console.log(`  ⏭️  跳过失败文章: ${url}`);
-                                    console.log(`      失败原因: ${record.error || '未知'}`);
-                                }
-                            }
-                        } catch (e) {}
-                    }
-                    
-                    if (shouldRetry) {
-                        localNewUrls.push(url);
-                    } else {
-                        localDuplicates.push(url);
-                        console.log(`  ⏭️  本地已存在: ${url}`);
-                        console.log(`      位置: ${cached.dateDir}/文章${cached.articleNum}`);
-                        
-                        // 更新URL处理状态到processing_status.json
-                        const statusFile = path.join(__dirname, 'processing_status.json');
-                        try {
-                            const status = JSON.parse(fs.readFileSync(statusFile, 'utf8'));
-                            if (!status.urlStatus) status.urlStatus = {};
-                            if (!status.urlStatus[this.currentUrlFile]) status.urlStatus[this.currentUrlFile] = {};
-                            status.urlStatus[this.currentUrlFile][url] = {
-                                status: 'processed',
-                                reason: 'local_exists',
-                                articleNum: cached.articleNum,
-                                processedAt: new Date().toISOString()
-                            };
-                            fs.writeFileSync(statusFile, JSON.stringify(status, null, 2));
-                        } catch (e) {
-                            // 忽略错误，不影响主流程
-                        }
+                    // 更新URL处理状态到processing_status.json
+                    const statusFile = path.join(__dirname, 'processing_status.json');
+                    try {
+                        const status = JSON.parse(fs.readFileSync(statusFile, 'utf8'));
+                        if (!status.urlStatus) status.urlStatus = {};
+                        if (!status.urlStatus[this.currentUrlFile]) status.urlStatus[this.currentUrlFile] = {};
+                        status.urlStatus[this.currentUrlFile][url] = {
+                            status: 'processed',
+                            reason: 'local_exists',
+                            articleNum: cached.articleNum,
+                            processedAt: new Date().toISOString()
+                        };
+                        fs.writeFileSync(statusFile, JSON.stringify(status, null, 2));
+                    } catch (e) {
+                        // 忽略错误，不影响主流程
                     }
                 } else {
                     localNewUrls.push(url);
@@ -730,8 +720,8 @@ class BatchArticleProcessor {
             }
             
             console.log(`\n📊 本地检查结果:`);
-            console.log(`  ✅ 本地新URL: ${localNewUrls.length}`);
-            console.log(`  ⏭️  本地重复: ${localDuplicates.length}`);
+            console.log(`  🆕 新URL: ${localNewUrls.length}`);
+            console.log(`  ✅ 已完成的文章: ${localDuplicates.length}`);
             
             // 如果没有新URL，直接返回
             if (localNewUrls.length === 0) {
@@ -834,10 +824,22 @@ class BatchArticleProcessor {
                         const urlsData = JSON.parse(fs.readFileSync(urlsFile, 'utf8'));
                         
                         // 收集失败状态的URL
-                        for (const [url, status] of Object.entries(urlsData)) {
-                            if (status === 'failed') {
-                                failedUrls.add(url);
+                        let scannedCount = 0;
+                        let skippedCount = 0;
+                        let dateFailedCount = 0;
+                        
+                        for (const [key, data] of Object.entries(urlsData)) {
+                            scannedCount++;
+                            
+                            // 检查状态
+                            if (data === 'failed') {
+                                failedUrls.add(key);  // key是URL
+                                dateFailedCount++;
                             }
+                        }
+                        
+                        if (dateFailedCount > 0 || skippedCount > 0) {
+                            console.log(`  📁 ${dateDir}: 扫描${scannedCount}条，发现${dateFailedCount}个失败，跳过${skippedCount}个（重试超限或已成功）`);
                         }
                     } catch (e) {
                         console.log(`  ⚠️ 读取 ${dateDir} 的URL文件失败: ${e.message}`);
@@ -850,10 +852,21 @@ class BatchArticleProcessor {
             
             // 按网站分组显示统计
             const websiteStats = {};
+            let invalidUrlCount = 0;
+            
             failedArray.forEach(url => {
-                const domain = new URL(url).hostname.replace('www.', '');
-                websiteStats[domain] = (websiteStats[domain] || 0) + 1;
+                try {
+                    const domain = new URL(url).hostname.replace('www.', '');
+                    websiteStats[domain] = (websiteStats[domain] || 0) + 1;
+                } catch (e) {
+                    invalidUrlCount++;
+                    console.log(`  ⚠️ 无效URL格式: ${url}`);
+                }
             });
+            
+            if (invalidUrlCount > 0) {
+                console.log(`  ⚠️ 跳过 ${invalidUrlCount} 个无效URL`);
+            }
             
             console.log('\n📊 按网站统计:');
             Object.entries(websiteStats)
@@ -2193,11 +2206,189 @@ class BatchArticleProcessor {
         }
     }
 
+    /**
+     * 计算文章质量评分
+     * @param {Object} article - 文章对象
+     * @returns {Object} - 包含评分和评分详情的对象
+     */
+    calculateArticleQuality(article) {
+        if (!this.qualityScoring.enabled) {
+            return null;
+        }
+
+        const scores = {
+            length: 0,
+            images: 0,
+            structure: 0,
+            readability: 0,
+            keywords: 0
+        };
+        
+        const details = {
+            characterCount: 0,
+            wordCount: 0,
+            paragraphCount: 0,
+            imageCount: 0,
+            headingCount: 0,
+            sentenceCount: 0,
+            keywordDensity: 0
+        };
+
+        // 使用改写后的内容进行评分
+        const content = article.rewrittenContent || article.content || '';
+        
+        // 1. 文章长度评分 (0-100)
+        details.characterCount = content.length;
+        details.wordCount = content.split(/\s+/).filter(word => word.length > 0).length;
+        
+        // 理想长度：1500-3000字（中文字符）或 500-1000词（英文）
+        if (details.characterCount >= 1500 && details.characterCount <= 3000) {
+            scores.length = 100;
+        } else if (details.characterCount >= 1000 && details.characterCount <= 4000) {
+            scores.length = 80;
+        } else if (details.characterCount >= 500 && details.characterCount <= 5000) {
+            scores.length = 60;
+        } else if (details.characterCount < 500) {
+            scores.length = Math.max(20, (details.characterCount / 500) * 40);
+        } else {
+            scores.length = Math.max(40, 100 - ((details.characterCount - 5000) / 100));
+        }
+
+        // 2. 图片数量评分 (0-100)
+        details.imageCount = (article.images || []).length;
+        // 理想：3-6张图片
+        if (details.imageCount >= 3 && details.imageCount <= 6) {
+            scores.images = 100;
+        } else if (details.imageCount >= 2 && details.imageCount <= 8) {
+            scores.images = 80;
+        } else if (details.imageCount === 1) {
+            scores.images = 60;
+        } else if (details.imageCount === 0) {
+            scores.images = 30;
+        } else if (details.imageCount > 8) {
+            scores.images = Math.max(50, 100 - ((details.imageCount - 8) * 5));
+        }
+
+        // 3. 文章结构评分 (0-100)
+        const lines = content.split('\n').filter(line => line.trim());
+        details.paragraphCount = lines.filter(line => line.length > 20 && !line.startsWith('#')).length;
+        details.headingCount = lines.filter(line => line.startsWith('#')).length;
+        
+        // 理想结构：有标题，5-15个段落，2-5个子标题
+        const hasTitle = lines.some(line => line.startsWith('# '));
+        const structureScore = (
+            (hasTitle ? 20 : 0) +
+            (details.headingCount >= 2 && details.headingCount <= 5 ? 30 : 15) +
+            (details.paragraphCount >= 5 && details.paragraphCount <= 15 ? 50 : 25)
+        );
+        scores.structure = structureScore;
+
+        // 4. 可读性评分 (0-100)
+        // 简单评估：平均句长、段落长度等
+        details.sentenceCount = content.split(/[。！？.!?]/).filter(s => s.trim()).length;
+        const avgSentenceLength = details.wordCount / Math.max(1, details.sentenceCount);
+        const avgParagraphLength = details.characterCount / Math.max(1, details.paragraphCount);
+        
+        // 理想：句子15-25词，段落100-200字
+        let readabilityScore = 50;
+        if (avgSentenceLength >= 15 && avgSentenceLength <= 25) {
+            readabilityScore += 25;
+        }
+        if (avgParagraphLength >= 100 && avgParagraphLength <= 200) {
+            readabilityScore += 25;
+        }
+        scores.readability = readabilityScore;
+
+        // 5. 关键词密度评分 (0-100)
+        // 检查高尔夫相关关键词
+        const golfKeywords = [
+            '高尔夫', 'golf', '球手', '球员', '比赛', '锦标赛', '球场', '挥杆', 
+            '推杆', '果岭', '标准杆', '小鸟球', '老鹰球', 'PGA', 'LPGA',
+            '大师赛', '公开赛', '巡回赛', '职业', '业余', '球杆', '开球'
+        ];
+        
+        let keywordCount = 0;
+        const lowerContent = content.toLowerCase();
+        golfKeywords.forEach(keyword => {
+            const regex = new RegExp(keyword.toLowerCase(), 'gi');
+            const matches = lowerContent.match(regex);
+            if (matches) {
+                keywordCount += matches.length;
+            }
+        });
+        
+        details.keywordDensity = (keywordCount / Math.max(1, details.wordCount)) * 100;
+        
+        // 理想密度：2-5%
+        if (details.keywordDensity >= 2 && details.keywordDensity <= 5) {
+            scores.keywords = 100;
+        } else if (details.keywordDensity >= 1 && details.keywordDensity <= 7) {
+            scores.keywords = 80;
+        } else if (details.keywordDensity < 1) {
+            scores.keywords = details.keywordDensity * 60;
+        } else {
+            scores.keywords = Math.max(40, 100 - ((details.keywordDensity - 7) * 10));
+        }
+
+        // 计算总分
+        const weights = this.qualityScoring.weights;
+        const totalScore = Math.round(
+            scores.length * weights.length +
+            scores.images * weights.images +
+            scores.structure * weights.structure +
+            scores.readability * weights.readability +
+            scores.keywords * weights.keywords
+        );
+
+        // 确定质量等级
+        let grade = 'poor';
+        let gradeEmoji = '❌';
+        const thresholds = this.qualityScoring.thresholds;
+        
+        if (totalScore >= thresholds.excellent) {
+            grade = 'excellent';
+            gradeEmoji = '🌟';
+        } else if (totalScore >= thresholds.good) {
+            grade = 'good';
+            gradeEmoji = '✨';
+        } else if (totalScore >= thresholds.acceptable) {
+            grade = 'acceptable';
+            gradeEmoji = '✅';
+        } else if (totalScore >= thresholds.poor) {
+            grade = 'poor';
+            gradeEmoji = '⚠️';
+        } else {
+            grade = 'very_poor';
+            gradeEmoji = '❌';
+        }
+
+        return {
+            totalScore,
+            grade,
+            gradeEmoji,
+            scores,
+            details,
+            timestamp: new Date().toISOString()
+        };
+    }
+
     // 保存单篇文章（实时更新）
     async saveSingleArticle(article) {
         try {
             if (!article.rewrittenContent) {
                 return; // 跳过失败的文章
+            }
+
+            // 计算文章质量评分
+            const qualityResult = this.calculateArticleQuality(article);
+            if (qualityResult) {
+                article.qualityScore = qualityResult;
+                console.log(`  ${qualityResult.gradeEmoji} 文章质量评分: ${qualityResult.totalScore}/100 (${qualityResult.grade})`);
+                console.log(`     ├─ 长度: ${qualityResult.scores.length}/100 (${qualityResult.details.characterCount}字符)`);
+                console.log(`     ├─ 图片: ${qualityResult.scores.images}/100 (${qualityResult.details.imageCount}张)`);
+                console.log(`     ├─ 结构: ${qualityResult.scores.structure}/100 (${qualityResult.details.headingCount}个标题)`);
+                console.log(`     ├─ 可读性: ${qualityResult.scores.readability}/100`);
+                console.log(`     └─ 关键词: ${qualityResult.scores.keywords}/100 (密度${qualityResult.details.keywordDensity.toFixed(1)}%)`);
             }
 
             const num = article.articleNum;
@@ -2273,11 +2464,24 @@ class BatchArticleProcessor {
             console.log(`     - HTML文件: ${htmlFile}`);
             console.log(`     - 基础目录: ${this.baseDir}`);
             
-            // 如果有AI检测结果，在文件开头添加注释
+            // 在文件开头添加元数据注释
+            let metadataComments = '';
+            
+            // 添加AI检测结果
             if (article.aiProbability !== null && article.aiProbability !== undefined) {
-                const aiComment = `<!-- AI检测: ${article.aiProbability}% | 检测时间: ${new Date().toISOString().replace('T', ' ').split('.')[0]} -->\n`;
-                content = aiComment + content;
+                metadataComments += `<!-- AI检测: ${article.aiProbability}% | 检测时间: ${new Date().toISOString().replace('T', ' ').split('.')[0]} -->\n`;
                 console.log(`  🤖 AI检测结果已添加到内容: ${article.aiProbability}%`);
+            }
+            
+            // 添加质量评分结果
+            if (article.qualityScore) {
+                const qs = article.qualityScore;
+                metadataComments += `<!-- 质量评分: ${qs.totalScore}/100 (${qs.grade}) | ${qs.gradeEmoji} | 评分时间: ${new Date().toISOString().replace('T', ' ').split('.')[0]} -->\n`;
+                metadataComments += `<!-- 评分详情: 长度${qs.scores.length} 图片${qs.scores.images} 结构${qs.scores.structure} 可读性${qs.scores.readability} 关键词${qs.scores.keywords} -->\n`;
+            }
+            
+            if (metadataComments) {
+                content = metadataComments + content;
             }
             
             try {
@@ -2468,6 +2672,53 @@ class BatchArticleProcessor {
         });
         
         htmlContent = processedSegments.filter(s => s).join('\n\n');
+        
+        // 添加质量评分卡片
+        if (article.qualityScore) {
+            const qs = article.qualityScore;
+            const scoreColor = qs.totalScore >= 85 ? '#4caf50' : 
+                             qs.totalScore >= 70 ? '#2196f3' : 
+                             qs.totalScore >= 50 ? '#ff9800' : '#f44336';
+            
+            const qualityCard = `
+            <div style="margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 8px; border-left: 4px solid ${scoreColor};">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <span style="font-size: 24px; margin-right: 10px;">${qs.gradeEmoji}</span>
+                    <h3 style="margin: 0; color: #333;">文章质量评分：${qs.totalScore}/100</h3>
+                    <span style="margin-left: 10px; padding: 2px 8px; background: ${scoreColor}; color: white; border-radius: 4px; font-size: 12px;">${qs.grade.toUpperCase()}</span>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; font-size: 13px;">
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: #666;">文章长度</div>
+                        <div style="font-size: 18px; color: ${scoreColor};">${qs.scores.length}</div>
+                        <div style="color: #999; font-size: 11px;">${qs.details.characterCount}字符</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: #666;">图片数量</div>
+                        <div style="font-size: 18px; color: ${scoreColor};">${qs.scores.images}</div>
+                        <div style="color: #999; font-size: 11px;">${qs.details.imageCount}张图片</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: #666;">文章结构</div>
+                        <div style="font-size: 18px; color: ${scoreColor};">${qs.scores.structure}</div>
+                        <div style="color: #999; font-size: 11px;">${qs.details.headingCount}个标题</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: #666;">可读性</div>
+                        <div style="font-size: 18px; color: ${scoreColor};">${qs.scores.readability}</div>
+                        <div style="color: #999; font-size: 11px;">${qs.details.paragraphCount}个段落</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-weight: bold; color: #666;">关键词密度</div>
+                        <div style="font-size: 18px; color: ${scoreColor};">${qs.scores.keywords}</div>
+                        <div style="color: #999; font-size: 11px;">${qs.details.keywordDensity.toFixed(1)}%</div>
+                    </div>
+                </div>
+            </div>`;
+            
+            // 在内容开头插入质量评分卡片
+            htmlContent = qualityCard + '\n' + htmlContent;
+        }
         
         // 添加原文链接和来源信息到HTML末尾
         if (sourceUrl) {
@@ -2844,7 +3095,12 @@ if (require.main === module) {
     try {
         // 读取文件内容
         const content = fs.readFileSync(filename, 'utf8');
-        const urls = content.split('\n').filter(url => url.trim());
+        const urls = content.split('\n')
+            .filter(url => {
+                const trimmed = url.trim();
+                // 过滤掉空行和注释行（以#开头的行）
+                return trimmed && !trimmed.startsWith('#') && trimmed.startsWith('http');
+            });
         
         if (urls.length === 0) {
             console.error('❌ 文件为空或没有有效的URL');

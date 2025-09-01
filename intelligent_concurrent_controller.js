@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * 智能并发控制器 - 无限制版本
- * 根据API响应时间动态调整并发数
- * 无并发上限：完全由API响应速度决定
- * 自动优化：响应快时增加并发，响应慢时减少并发
+ * 智能并发控制器 - 优化版
+ * 根据API响应时间和网站特性动态调整并发策略
+ * 最大并发数：2（遵守永久规则）
+ * 智能特性：
+ * - 网站优先级排序
+ * - 性能历史学习
+ * - 自适应负载均衡
+ * - 处理时间预测
  */
 
 const { spawn } = require('child_process');
@@ -14,13 +18,38 @@ const UnifiedHistoryDatabase = require('./unified_history_database');
 
 class IntelligentConcurrentController {
     constructor() {
-        this.maxConcurrency = null;       // 无并发限制
+        this.maxConcurrency = 2;          // 改回最大并发数为2（遵守永久规则）
         this.optimalConcurrency = 1;      // 当前最优并发数
         this.currentProcesses = [];       // 当前运行的进程
         this.urlFiles = [];              // 待处理的URL文件
         this.apiResponseTimes = [];      // 最近的API响应时间
         this.responseTimeWindow = [];     // 响应时间滑动窗口（最近20个样本）
         this.checkInterval = 10000;       // 检查间隔（10秒，更快响应）
+        
+        // 网站特定的性能数据
+        this.websitePerformance = {
+            'golf.com': { avgTime: 30, successRate: 0.9, priority: 1 },
+            'golfmonthly.com': { avgTime: 25, successRate: 0.95, priority: 1 },
+            'mygolfspy.com': { avgTime: 45, successRate: 0.7, priority: 2 },
+            'golfwrx.com': { avgTime: 40, successRate: 0.8, priority: 2 },
+            'golfdigest.com': { avgTime: 35, successRate: 0.85, priority: 1 },
+            'todays-golfer.com': { avgTime: 50, successRate: 0.75, priority: 3 },
+            'golfweek.usatoday.com': { avgTime: 35, successRate: 0.85, priority: 2 },
+            'nationalclubgolfer.com': { avgTime: 40, successRate: 0.8, priority: 2 },
+            'pgatour.com': { avgTime: 30, successRate: 0.9, priority: 1 },
+            'skysports.com': { avgTime: 35, successRate: 0.85, priority: 2 },
+            'golfmagic.com': { avgTime: 40, successRate: 0.8, priority: 2 },
+            'yardbarker.com': { avgTime: 45, successRate: 0.75, priority: 3 },
+            'golf.net.cn': { avgTime: 55, successRate: 0.7, priority: 3 },
+            'si.com': { avgTime: 35, successRate: 0.85, priority: 2 },
+            'sports.yahoo.com': { avgTime: 35, successRate: 0.85, priority: 2 },
+            'espn.com': { avgTime: 30, successRate: 0.9, priority: 1 },
+            'lpga.com': { avgTime: 40, successRate: 0.8, priority: 2 },
+            'cbssports.com': { avgTime: 35, successRate: 0.85, priority: 2 }
+        };
+        
+        // 网站处理历史（动态更新）
+        this.websiteHistory = {};
         this.logFile = `concurrent_controller_${new Date().toISOString().split('T')[0]}.log`;
         this.consecutiveIdleCycles = 0;      // 连续空闲周期计数
         this.IDLE_EXIT_THRESHOLD = 10;       // 空闲退出阈值（5分钟）
@@ -419,7 +448,55 @@ class IntelligentConcurrentController {
     }
 
     /**
-     * 获取当前并发数建议 - 无限制版本
+     * 获取域名从URL文件名
+     */
+    getDomainFromFile(urlFile) {
+        const filename = path.basename(urlFile);
+        const match = filename.match(/deep_urls_(.+?)\.txt/);
+        if (match) {
+            return match[1].replace(/_/g, '.');
+        }
+        return null;
+    }
+
+    /**
+     * 更新网站处理历史
+     */
+    updateWebsiteHistory(domain, startTime, endTime, success) {
+        if (!this.websiteHistory[domain]) {
+            this.websiteHistory[domain] = {
+                totalTime: 0,
+                totalCount: 0,
+                successCount: 0,
+                recentTimes: []
+            };
+        }
+        
+        const history = this.websiteHistory[domain];
+        const processingTime = (endTime - startTime) / 1000; // 转换为秒
+        
+        history.totalTime += processingTime;
+        history.totalCount++;
+        if (success) history.successCount++;
+        
+        // 保持最近10次的处理时间
+        history.recentTimes.push(processingTime);
+        if (history.recentTimes.length > 10) {
+            history.recentTimes.shift();
+        }
+        
+        // 更新网站性能数据
+        const avgTime = history.recentTimes.reduce((a, b) => a + b, 0) / history.recentTimes.length;
+        const successRate = history.successCount / history.totalCount;
+        
+        if (this.websitePerformance[domain]) {
+            this.websitePerformance[domain].avgTime = avgTime;
+            this.websitePerformance[domain].successRate = successRate;
+        }
+    }
+
+    /**
+     * 获取当前并发数建议 - 智能优化版本
      */
     async getRecommendedConcurrency() {
         const avgResponseTime = await this.checkAPIPressure();
@@ -436,39 +513,80 @@ class IntelligentConcurrentController {
         
         const currentConcurrency = this.currentProcesses.length;
         
-        // 动态调整策略
+        // 分析当前正在处理的网站
+        const currentSites = this.currentProcesses.map(p => {
+            const domain = this.getDomainFromFile(p.urlFile);
+            return this.websitePerformance[domain] || { avgTime: 40, priority: 2 };
+        });
+        
+        // 计算当前负载评分（考虑网站特性）
+        const currentLoad = currentSites.reduce((sum, site) => sum + (site.avgTime / 30), 0);
+        
+        // 查看待处理队列中的网站优先级
+        const pendingSites = this.urlFiles.slice(0, 5).map(file => {
+            const domain = this.getDomainFromFile(file);
+            return this.websitePerformance[domain] || { avgTime: 40, priority: 2 };
+        });
+        
+        const avgPendingPriority = pendingSites.length > 0
+            ? pendingSites.reduce((sum, site) => sum + site.priority, 0) / pendingSites.length
+            : 2;
+        
+        // 智能并发决策
+        let recommendedConcurrency = currentConcurrency;
+        
         if (windowAvg === 0 || this.responseTimeWindow.length < 3) {
-            // 初始阶段或无数据，保守启动
-            this.optimalConcurrency = Math.max(1, currentConcurrency);
-            this.log(`🔄 初始阶段，当前并发: ${this.optimalConcurrency}`);
-        } else if (windowAvg < 30) {
-            // 响应非常快，大幅增加并发
-            this.optimalConcurrency = currentConcurrency + 2;
-            this.log(`🚀 API响应极快（${windowAvg.toFixed(1)}秒），增加到 ${this.optimalConcurrency} 个并发`);
-        } else if (windowAvg < 45) {
-            // 响应快，增加并发
-            this.optimalConcurrency = currentConcurrency + 1;
-            this.log(`⚡ API响应快速（${windowAvg.toFixed(1)}秒），增加到 ${this.optimalConcurrency} 个并发`);
-        } else if (windowAvg < 60) {
-            // 响应正常，维持当前并发
-            this.optimalConcurrency = Math.max(1, currentConcurrency);
-            this.log(`✅ API响应正常（${windowAvg.toFixed(1)}秒），维持 ${this.optimalConcurrency} 个并发`);
-        } else if (windowAvg < 90) {
-            // 响应变慢，减少并发
-            this.optimalConcurrency = Math.max(1, currentConcurrency - 1);
-            this.log(`⚠️ API响应变慢（${windowAvg.toFixed(1)}秒），降低到 ${this.optimalConcurrency} 个并发`);
+            // 初始阶段，保守启动
+            recommendedConcurrency = 1;
+            this.log(`🔄 初始阶段，保守启动: 1个并发`);
+        } else if (windowAvg < 30 && currentLoad < 2.5) {
+            // API响应快且当前负载低
+            if (avgPendingPriority <= 1.5) {
+                // 待处理的是高优先级网站
+                recommendedConcurrency = Math.min(2, currentConcurrency + 1);
+                this.log(`🚀 API响应快，高优先级网站待处理，建议: ${recommendedConcurrency}个并发`);
+            } else {
+                // 保持当前并发
+                recommendedConcurrency = currentConcurrency || 1;
+                this.log(`⚡ API响应快，但待处理网站优先级较低，维持: ${recommendedConcurrency}个并发`);
+            }
+        } else if (windowAvg < 50) {
+            // API响应正常
+            if (currentConcurrency === 0) {
+                recommendedConcurrency = 1;
+            } else if (currentConcurrency === 1 && avgPendingPriority === 1) {
+                // 可以增加到2个并发，如果待处理的是最高优先级
+                recommendedConcurrency = 2;
+                this.log(`✅ API响应正常，高优先级网站待处理，增加到: 2个并发`);
+            } else {
+                recommendedConcurrency = currentConcurrency;
+                this.log(`✅ API响应正常，维持: ${recommendedConcurrency}个并发`);
+            }
+        } else if (windowAvg < 70) {
+            // API响应变慢，考虑降低并发
+            if (currentConcurrency > 1) {
+                recommendedConcurrency = 1;
+                this.log(`⚠️ API响应变慢（${windowAvg.toFixed(1)}秒），降低到: 1个并发`);
+            } else {
+                recommendedConcurrency = 1;
+                this.log(`⚠️ API响应慢，保持最低并发: 1`);
+            }
         } else {
-            // 响应很慢，快速降到最低
-            this.optimalConcurrency = 1;
-            this.log(`🚨 API响应过慢（${windowAvg.toFixed(1)}秒），降低到 ${this.optimalConcurrency} 个并发`);
+            // API响应很慢，使用最低并发
+            recommendedConcurrency = 1;
+            this.log(`🚨 API响应过慢（${windowAvg.toFixed(1)}秒），使用最低并发: 1`);
         }
         
-        // 记录详细统计
+        // 严格遵守最大并发限制
+        this.optimalConcurrency = Math.min(recommendedConcurrency, this.maxConcurrency);
+        
+        // 记录详细决策信息
         if (this.responseTimeWindow.length >= 5) {
             const recent5 = this.responseTimeWindow.slice(-5);
-            const trend = recent5[4] - recent5[0]; // 最近趋势
+            const trend = recent5[4] - recent5[0];
             const trendStr = trend > 5 ? '↗️上升' : trend < -5 ? '↘️下降' : '➡️稳定';
             this.log(`📊 响应时间趋势: ${trendStr} | 最近5次: ${recent5.map(t => t.toFixed(0)).join(', ')}秒`);
+            this.log(`📊 当前负载评分: ${currentLoad.toFixed(1)} | 待处理优先级: ${avgPendingPriority.toFixed(1)}`);
         }
         
         return this.optimalConcurrency;
@@ -643,15 +761,18 @@ class IntelligentConcurrentController {
                 args.push('--retry-failed');
             }
             
-            const process = spawn('node', args, {
+            const childProcess = spawn('node', args, {
                 detached: false,
                 stdio: ['ignore', 'pipe', 'pipe']
             });
             
+            // 记录开始时间
+            const startTime = Date.now();
+            
             // 增强日志转发机制
             const processIndex = this.currentProcesses.length + 1;
             
-            process.stdout.on('data', (data) => {
+            childProcess.stdout.on('data', (data) => {
                 const lines = data.toString().split('\n').filter(line => line.trim());
                 lines.forEach(line => {
                     // 识别改写相关日志并标记
@@ -681,7 +802,7 @@ class IntelligentConcurrentController {
                 });
             });
             
-            process.stderr.on('data', (data) => {
+            childProcess.stderr.on('data', (data) => {
                 const lines = data.toString().split('\n').filter(line => line.trim());
                 lines.forEach(line => {
                     console.error(`[处理器${processIndex}] ❌ ${line}`);
@@ -689,14 +810,22 @@ class IntelligentConcurrentController {
                 });
             });
             
-            process.on('exit', (code) => {
+            childProcess.on('exit', (code) => {
+                const endTime = Date.now();
+                const domain = this.getDomainFromFile(urlFile);
                 this.log(`✅ 完成处理: ${urlFile} (退出码: ${code})`);
+                
+                // 更新网站处理历史
+                if (domain) {
+                    this.updateWebsiteHistory(domain, startTime, endTime, code === 0);
+                }
                 
                 // 更新处理状态
                 this.processingStatus[urlFile] = {
                     status: 'completed',
                     endTime: new Date().toISOString(),
-                    exitCode: code
+                    exitCode: code,
+                    processingTime: Math.round((endTime - startTime) / 1000) // 秒
                 };
                 
                 // 汇总该文件的URL处理结果
@@ -746,11 +875,11 @@ class IntelligentConcurrentController {
                     this.stats.failed++;
                 }
                 // 从运行列表中移除
-                this.currentProcesses = this.currentProcesses.filter(p => p.pid !== process.pid);
+                this.currentProcesses = this.currentProcesses.filter(p => p.pid !== childProcess.pid);
                 resolve(code);
             });
             
-            process.on('error', (err) => {
+            childProcess.on('error', (err) => {
                 this.log(`❌ 处理出错: ${urlFile} - ${err.message}`);
                 reject(err);
             });
@@ -759,9 +888,9 @@ class IntelligentConcurrentController {
             const dynamicTimeout = this.getTimeoutForFile(urlFile);
             
             this.currentProcesses.push({
-                pid: process.pid,
+                pid: childProcess.pid,
                 urlFile: urlFile,
-                process: process,
+                process: childProcess,
                 startTime: Date.now(),
                 timeout: dynamicTimeout
             });
@@ -1128,12 +1257,89 @@ class IntelligentConcurrentController {
     }
 
     /**
+     * 智能排序URL文件
+     * 根据网站优先级、平均处理时间、成功率进行综合排序
+     */
+    smartSortUrlFiles(urlFiles) {
+        return urlFiles.sort((a, b) => {
+            const domainA = this.getDomainFromFile(a);
+            const domainB = this.getDomainFromFile(b);
+            
+            const perfA = this.websitePerformance[domainA] || { priority: 3, avgTime: 50, successRate: 0.7 };
+            const perfB = this.websitePerformance[domainB] || { priority: 3, avgTime: 50, successRate: 0.7 };
+            
+            // 综合评分算法
+            // 优先级权重最高（越小越好），时间和成功率次之
+            const scoreA = perfA.priority * 10 - perfA.successRate * 5 + perfA.avgTime / 10;
+            const scoreB = perfB.priority * 10 - perfB.successRate * 5 + perfB.avgTime / 10;
+            
+            return scoreA - scoreB; // 分数越低越优先
+        });
+    }
+
+    /**
+     * 获取最佳处理组合
+     * 根据网站特性选择可以并行处理的最佳组合
+     */
+    getBestProcessingCombination(availableFiles, maxConcurrency) {
+        if (availableFiles.length === 0) return [];
+        if (maxConcurrency === 1) return [availableFiles[0]];
+        
+        // 尝试找到处理时间互补的组合
+        const combinations = [];
+        const firstFile = availableFiles[0];
+        const firstDomain = this.getDomainFromFile(firstFile);
+        const firstPerf = this.websitePerformance[firstDomain] || { avgTime: 40 };
+        
+        combinations.push(firstFile);
+        
+        // 如果第一个网站处理快，可以搭配一个稍慢的
+        if (firstPerf.avgTime < 35 && availableFiles.length > 1) {
+            // 寻找一个中等速度的网站
+            for (let i = 1; i < availableFiles.length && combinations.length < maxConcurrency; i++) {
+                const domain = this.getDomainFromFile(availableFiles[i]);
+                const perf = this.websitePerformance[domain] || { avgTime: 40 };
+                
+                // 选择处理时间在35-50秒之间的网站
+                if (perf.avgTime >= 35 && perf.avgTime <= 50) {
+                    combinations.push(availableFiles[i]);
+                    break;
+                }
+            }
+        }
+        
+        // 如果还没达到最大并发，补充剩余的
+        for (let i = 1; i < availableFiles.length && combinations.length < maxConcurrency; i++) {
+            if (!combinations.includes(availableFiles[i])) {
+                combinations.push(availableFiles[i]);
+            }
+        }
+        
+        return combinations;
+    }
+
+    /**
      * 主处理循环
      */
     async processAll(urlFiles) {
-        this.urlFiles = urlFiles;
+        // 智能排序URL文件（根据网站优先级和性能）
+        const sortedUrlFiles = this.smartSortUrlFiles(urlFiles);
+        this.urlFiles = sortedUrlFiles;
+        
         this.processingStartTime = Date.now(); // 记录开始时间
         this.log(`📋 开始智能并发处理，共${urlFiles.length}个网站`);
+        
+        // 显示处理顺序
+        console.log('\n📊 网站处理顺序（根据优先级和性能优化）:');
+        sortedUrlFiles.forEach((file, index) => {
+            const domain = this.getDomainFromFile(file);
+            const perf = this.websitePerformance[domain];
+            if (perf) {
+                console.log(`  ${index + 1}. ${this.getWebsiteName(file)} - 优先级:${perf.priority} 平均时间:${perf.avgTime}s 成功率:${(perf.successRate * 100).toFixed(0)}%`);
+            } else {
+                console.log(`  ${index + 1}. ${this.getWebsiteName(file)}`);
+            }
+        });
         
         // 检查并恢复中断的任务
         const hasInterruptions = this.checkAndResumeInterruptions();
@@ -1373,12 +1579,12 @@ async function main() {
         return;
     }
     
-    console.log('🤖 智能并发控制器启动 - 无限制版本');
+    console.log('🤖 智能并发控制器启动 - 优化版');
     console.log('📊 特性：');
-    console.log('  - 🚀 无并发上限限制');
-    console.log('  - 📈 根据API响应速度动态调整');
-    console.log('  - ⚡ 响应快时自动增加并发');
-    console.log('  - 🛡️ 响应慢时自动降低并发');
+    console.log('  - 🎯 智能网站优先级排序');
+    console.log('  - 📈 根据网站特性和API响应动态调整');
+    console.log('  - ⚡ 最大并发数：2（永久规则）');
+    console.log('  - 🛡️ 自适应负载均衡');
     console.log('  - 📊 实时性能监控和优化\n');
     
     // 收集所有URL文件（过滤掉参数）
