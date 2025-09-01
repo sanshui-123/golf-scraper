@@ -2,7 +2,7 @@
 
 /**
  * 专门处理失败URL的脚本
- * 只处理状态为"failed"的文章
+ * 处理状态为"failed"和"pending_retry"的文章
  */
 
 const fs = require('fs');
@@ -51,9 +51,10 @@ class FailedUrlsProcessor {
                 fs.writeFileSync(tempUrlFile, failedUrls.join('\n'));
             }
             
-            // 使用批处理器处理，带上 --retry-failed 参数
-            this.log('🚀 启动批处理器处理失败的URL...');
-            const proc = spawn('node', ['batch_process_articles.js', tempUrlFile, '--retry-failed'], {
+            // 使用智能并发控制器处理，遵守最大2个并发的限制
+            this.log('🚀 启动智能并发控制器处理失败的URL...');
+            this.log('⚠️ 最大并发数：2个进程（核心规则）');
+            const proc = spawn('node', ['intelligent_concurrent_controller.js', tempUrlFile], {
                 stdio: 'inherit'
             });
             
@@ -88,7 +89,7 @@ class FailedUrlsProcessor {
             if (fs.existsSync(historyDBPath)) {
                 const historyDB = JSON.parse(fs.readFileSync(historyDBPath, 'utf8'));
                 for (const [hash, data] of Object.entries(historyDB.urls || {})) {
-                    if (data.status === 'failed' && data.originalUrl) {
+                    if ((data.status === 'failed' || data.status === 'pending_retry') && data.originalUrl) {
                         failedUrls.push(data.originalUrl);
                     }
                 }
@@ -96,6 +97,22 @@ class FailedUrlsProcessor {
             }
         } catch (e) {
             this.log(`⚠️ 无法读取历史数据库: ${e.message}`);
+        }
+        
+        // 从 failed_articles.json 收集 pending_retry 状态的URL
+        try {
+            const failedArticlesPath = path.join(__dirname, 'failed_articles.json');
+            if (fs.existsSync(failedArticlesPath)) {
+                const failedArticles = JSON.parse(fs.readFileSync(failedArticlesPath, 'utf8'));
+                for (const [url, data] of Object.entries(failedArticles)) {
+                    if (data.status === 'pending_retry' && !failedUrls.includes(url)) {
+                        failedUrls.push(url);
+                    }
+                }
+                this.log(`📄 从失败文章记录收集到 ${failedUrls.length} 个URL`);
+            }
+        } catch (e) {
+            this.log(`⚠️ 无法读取失败文章记录: ${e.message}`);
         }
         
         // 也可以从各个日期的article_urls.json收集

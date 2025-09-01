@@ -247,6 +247,23 @@ function generateEnhancedHTML(title, htmlContent) {
             const copySuccess = contentElements.querySelector('.copy-success');
             if (copySuccess) copySuccess.remove();
             
+            // 移除质量评分卡片
+            // 查找并删除包含"文章质量评分"的div容器
+            const qualityScoreCard = contentElements.querySelector('div[style*="background: #f5f5f5"][style*="border-radius: 8px"]');
+            if (qualityScoreCard && qualityScoreCard.innerHTML.includes('文章质量评分')) {
+                qualityScoreCard.remove();
+            }
+            
+            // 备用方案：通过文本内容查找
+            contentElements.querySelectorAll('div').forEach(div => {
+                if (div.textContent.includes('文章质量评分：') && 
+                    div.textContent.includes('文章长度') && 
+                    div.textContent.includes('图片数量') &&
+                    div.textContent.includes('文章结构')) {
+                    div.remove();
+                }
+            });
+            
             // 设置微信公众号专用样式
             contentElements.querySelectorAll('p').forEach(p => {
                 p.style.fontSize = '15px';

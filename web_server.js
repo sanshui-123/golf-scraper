@@ -4715,20 +4715,22 @@ app.post('/api/continue-processing', async (req, res) => {
         
         // 异步启动处理器
         setTimeout(() => {
-            console.log(`▶️ 继续处理 ${totalUrls} 个URL...`);
+            console.log(`▶️ 继续处理URL...`);
             
-            // 添加 --continue 参数，智能处理未完成的URL
-            const controller = spawn('node', ['intelligent_concurrent_controller.js', '--continue'], {
+            // 使用新的process_all_pending_urls.js处理所有待处理的URL
+            // 这包括：deep_urls文件中的新URL、failed_articles.json中的失败URL、pending_retry状态的URL等
+            const controller = spawn('node', ['process_all_pending_urls.js'], {
                 detached: true,
                 stdio: ['ignore', 'pipe', 'pipe']
             });
             
             // 将输出追加到日志文件
-            const logStream = fs.createWriteStream('intelligent_controller.log', { flags: 'a' });
-            logStream.write(`\n\n========== 继续处理 ${new Date().toISOString()} ==========\n`);
+            const logStream = fs.createWriteStream('process_all_pending.log', { flags: 'a' });
+            logStream.write(`\n\n========== 综合处理所有待处理URL ${new Date().toISOString()} ==========\n`);
             if (regenerateUrls) {
                 logStream.write(`[已重新生成URL]\n`);
             }
+            logStream.write(`[处理范围：新URL、失败URL、pending_retry状态URL等]\n`);
             controller.stdout.pipe(logStream);
             controller.stderr.pipe(logStream);
             
