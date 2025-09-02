@@ -726,14 +726,83 @@ class BatchArticleProcessor {
             console.log(`  🆕 新URL: ${localNewUrls.length}`);
             console.log(`  ✅ 已完成的文章: ${localDuplicates.length}`);
             
-            // 如果没有新URL，直接返回
+            // 如果没有新URL，检查是否需要强制重试
             if (localNewUrls.length === 0) {
+                // 在 --force-retry 模式下，检查所有URL（包括已处理的）是否有失败的
+                if (process.argv.includes('--force-retry')) {
+                    console.log('\n🔄 强制重试模式：检查所有URL的失败状态...');
+                    const failedUrls = [];
+                    const allUrls = [...localDuplicates, ...localNewUrls];
+                    
+                    try {
+                        const failedArticlesPath = path.join(__dirname, 'failed_articles.json');
+                        if (fs.existsSync(failedArticlesPath)) {
+                            const failedArticles = JSON.parse(fs.readFileSync(failedArticlesPath, 'utf8'));
+                            
+                            for (const url of allUrls) {
+                                if (failedArticles[url] && 
+                                    (failedArticles[url].status === 'failed' || 
+                                     failedArticles[url].status === 'pending_retry')) {
+                                    failedUrls.push(url);
+                                    console.log(`  ❌ 发现失败文章需要重试: ${url}`);
+                                }
+                            }
+                        }
+                    } catch (e) {
+                        console.log('  ⚠️ 无法读取失败文章状态');
+                    }
+                    
+                    if (failedUrls.length > 0) {
+                        console.log(`  📊 找到 ${failedUrls.length} 个失败的文章需要重试`);
+                        // 将失败的URL和新URL合并
+                        const combinedNewUrls = [...new Set([...failedUrls, ...localNewUrls])];
+                        return {
+                            newUrls: combinedNewUrls,
+                            duplicateUrls: localDuplicates.filter(url => !failedUrls.includes(url)),
+                            skippedCount: localDuplicates.length - failedUrls.length
+                        };
+                    }
+                }
+                
                 console.log('\n✅ 所有URL都已在本地处理过，无需重复处理');
                 return {
                     newUrls: [],
                     duplicateUrls: localDuplicates,
                     skippedCount: localDuplicates.length
                 };
+            }
+            
+            // 在 --force-retry 模式下，即使有新URL，也要检查失败的URL
+            if (process.argv.includes('--force-retry')) {
+                console.log('\n🔄 强制重试模式：额外检查失败的URL...');
+                const failedUrls = [];
+                
+                try {
+                    const failedArticlesPath = path.join(__dirname, 'failed_articles.json');
+                    if (fs.existsSync(failedArticlesPath)) {
+                        const failedArticles = JSON.parse(fs.readFileSync(failedArticlesPath, 'utf8'));
+                        
+                        // 检查所有URL（包括已处理的）
+                        for (const url of [...localDuplicates, ...localNewUrls]) {
+                            if (failedArticles[url] && 
+                                (failedArticles[url].status === 'failed' || 
+                                 failedArticles[url].status === 'pending_retry')) {
+                                if (!localNewUrls.includes(url)) {
+                                    failedUrls.push(url);
+                                    console.log(`  ❌ 发现额外的失败文章需要重试: ${url}`);
+                                }
+                            }
+                        }
+                        
+                        if (failedUrls.length > 0) {
+                            console.log(`  📊 额外找到 ${failedUrls.length} 个失败的文章需要重试`);
+                            // 将失败的URL添加到新URL列表
+                            localNewUrls.push(...failedUrls);
+                        }
+                    }
+                } catch (e) {
+                    console.log('  ⚠️ 无法读取失败文章状态');
+                }
             }
             
             // 🔧 第二步：对本地新URL再通过Web服务器检查是否已发布

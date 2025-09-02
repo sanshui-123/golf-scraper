@@ -287,7 +287,8 @@ class IntelligentConcurrentController {
         // 检查是否继续模式
         const continueMode = process.argv.includes('--continue');
         if (continueMode) {
-            console.log('▶️ 继续处理模式：智能检查并处理未完成的URL');
+            console.log('▶️ 继续处理模式：智能收集并处理所有待处理的URL');
+            console.log('   包括：失败的URL、未处理的URL、处理不完整的URL等');
         }
         
         // 加载处理状态
@@ -804,6 +805,11 @@ class IntelligentConcurrentController {
                 args.push('--retry-failed');
             }
             
+            // 如果是继续模式，传递 --force-retry 参数
+            if (process.argv.includes('--continue')) {
+                args.push('--force-retry');
+            }
+            
             const childProcess = spawn('node', args, {
                 detached: false,
                 stdio: ['ignore', 'pipe', 'pipe']
@@ -893,6 +899,16 @@ class IntelligentConcurrentController {
                 
                 // 清理去重临时文件
                 try {
+                    // 如果是重试文件或临时待处理文件，处理完成后删除
+                    if (urlFile.startsWith('retry_urls_') || urlFile.startsWith('temp_pending_urls_')) {
+                        try {
+                            fs.unlinkSync(urlFile);
+                            this.log(`🧹 已删除临时文件: ${urlFile}`);
+                        } catch (e) {
+                            this.log(`⚠️  无法删除临时文件: ${urlFile}`);
+                        }
+                    }
+                    
                     if (fs.existsSync(dedupedFile)) {
                         fs.unlinkSync(dedupedFile);
                         this.log(`🧹 清理临时文件: ${dedupedFile}`);
@@ -1604,6 +1620,17 @@ process.on('uncaughtException', (error) => {
 
 // 主程序
 async function main() {
+    // 在处理前先执行智能过滤，清理永久失败的文章
+    try {
+        const IntelligentFailureFilter = require('./intelligent_failure_filter.js');
+        const cleaned = await IntelligentFailureFilter.cleanBeforeProcessing();
+        if (cleaned) {
+            console.log('✅ 已完成失败文章智能过滤\n');
+        }
+    } catch (error) {
+        console.log('⚠️  智能过滤器未运行:', error.message);
+    }
+    
     // 检查是否使用 --process-all-failed 参数
     if (process.argv.includes('--process-all-failed')) {
         console.log('🔄 使用 --process-all-failed 模式处理所有历史失败文章');
@@ -1622,17 +1649,25 @@ async function main() {
         return;
     }
     
-    console.log('🤖 智能并发控制器启动 - 优化版');
+    // 缓存维护（除非使用 --skip-cache-check）
+    if (!process.argv.includes('--skip-cache-check')) {
+        console.log('🔧 执行智能缓存维护...');
+        await performCacheMaintenance();
+    }
+    
+    console.log('\n🤖 智能并发控制器启动 - 优化版');
     console.log('📊 特性：');
     console.log('  - 🎯 智能网站优先级排序');
     console.log('  - 📈 根据网站特性和API响应动态调整');
     console.log('  - ⚡ 最大并发数：2（永久规则）');
     console.log('  - 🛡️ 自适应负载均衡');
-    console.log('  - 📊 实时性能监控和优化\n');
+    console.log('  - 📊 实时性能监控和优化');
+    console.log('  - 🔧 自动缓存维护和状态修复\n');
     
     // 收集所有URL文件（过滤掉参数）
-    const urlFiles = process.argv.slice(2).filter(arg => !arg.startsWith('--'));
+    let urlFiles = process.argv.slice(2).filter(arg => !arg.startsWith('--'));
     
+    // 如果没有指定文件，自动查找所有deep_urls_*.txt文件
     if (urlFiles.length === 0) {
         // 自动查找所有deep_urls_*.txt文件（排除_deduped.txt临时文件）
         const allUrlFiles = fs.readdirSync('.')
@@ -1642,21 +1677,102 @@ async function main() {
                 return content.length > 0 && content.includes('http');
             });
         
-        if (allUrlFiles.length === 0) {
-            console.log('❌ 未找到任何URL文件');
-            console.log('\n用法:');
-            console.log('  处理特定文件: node intelligent_concurrent_controller.js deep_urls_golf_com.txt');
-            console.log('  处理所有文件: node intelligent_concurrent_controller.js');
-            console.log('  处理所有失败: node intelligent_concurrent_controller.js --process-all-failed');
-            console.log('\n可选参数:');
-            console.log('  --force              强制重新处理所有URL');
-            console.log('  --continue           智能继续处理（自动检测并处理未完成的URL）');
-            console.log('  --retry-failed       只处理失败的URL');
-            console.log('  --process-all-failed 自动扫描并处理所有历史失败的文章');
-            process.exit(1);
+        if (allUrlFiles.length > 0) {
+            urlFiles.push(...allUrlFiles);
+        }
+    }
+    
+    // 在 --continue 模式下，收集所有待处理的URL（包括失败的）
+    if (process.argv.includes('--continue')) {
+        console.log('\n🔍 收集所有待处理的URL...');
+        
+        const allPendingUrls = [];
+        const urlStats = {
+            failed: 0,
+            pending_retry: 0,
+            incomplete: 0,
+            new_urls: 0
+        };
+        
+        // 1. 收集失败的URL
+        try {
+            const failedArticlesPath = path.join(__dirname, 'failed_articles.json');
+            if (fs.existsSync(failedArticlesPath)) {
+                const failedArticles = JSON.parse(fs.readFileSync(failedArticlesPath, 'utf8'));
+                for (const [url, data] of Object.entries(failedArticles)) {
+                    if (data.status === 'pending_retry' || data.status === 'failed') {
+                        allPendingUrls.push(url);
+                        if (data.status === 'pending_retry') urlStats.pending_retry++;
+                        else urlStats.failed++;
+                    }
+                }
+                if (urlStats.failed + urlStats.pending_retry > 0) {
+                    console.log(`  📄 从 failed_articles.json 收集到 ${urlStats.failed + urlStats.pending_retry} 个待处理URL`);
+                }
+            }
+        } catch (e) {
+            console.log(`  ⚠️ 无法读取 failed_articles.json: ${e.message}`);
         }
         
-        urlFiles.push(...allUrlFiles);
+        // 2. 收集未完成的URL
+        try {
+            const historyDBPath = path.join(__dirname, 'master_history_database.json');
+            if (fs.existsSync(historyDBPath)) {
+                const historyDB = JSON.parse(fs.readFileSync(historyDBPath, 'utf8'));
+                for (const [hash, data] of Object.entries(historyDB.urls || {})) {
+                    const url = data.originalUrl;
+                    if (!url || allPendingUrls.includes(url)) continue;
+                    
+                    if (data.status === 'incomplete_processing') {
+                        allPendingUrls.push(url);
+                        urlStats.incomplete++;
+                    }
+                }
+                if (urlStats.incomplete > 0) {
+                    console.log(`  📊 从 master_history_database.json 收集到 ${urlStats.incomplete} 个未完成URL`);
+                }
+            }
+        } catch (e) {
+            console.log(`  ⚠️ 无法读取 master_history_database.json: ${e.message}`);
+        }
+        
+        // 3. 如果有收集到的待处理URL，创建临时文件
+        if (allPendingUrls.length > 0) {
+            const tempPendingFile = `temp_pending_urls_${Date.now()}.txt`;
+            fs.writeFileSync(tempPendingFile, allPendingUrls.join('\n'));
+            
+            // 将临时文件加入处理队列的开头（优先处理）
+            urlFiles.unshift(tempPendingFile);
+            
+            console.log(`\n📊 待处理URL统计：`);
+            console.log(`   失败重试: ${urlStats.pending_retry}`);
+            console.log(`   处理失败: ${urlStats.failed}`);
+            console.log(`   未完成: ${urlStats.incomplete}`);
+            console.log(`   总计: ${allPendingUrls.length} 个URL`);
+            console.log(`   已创建临时文件: ${tempPendingFile}\n`);
+        }
+    }
+    
+    // 优先处理重试文件（添加到队列开头）
+    if (global.retryFilesToProcess && global.retryFilesToProcess.length > 0) {
+        console.log(`🔄 优先处理 ${global.retryFilesToProcess.length} 个失败URL重试文件`);
+        urlFiles = [...global.retryFilesToProcess, ...urlFiles];
+        global.retryFilesToProcess = []; // 清空
+    }
+    
+    // 再次检查是否有文件
+    if (urlFiles.length === 0) {
+        console.log('❌ 未找到任何URL文件');
+        console.log('\n用法:');
+        console.log('  处理特定文件: node intelligent_concurrent_controller.js deep_urls_golf_com.txt');
+        console.log('  处理所有文件: node intelligent_concurrent_controller.js');
+        console.log('  处理所有失败: node intelligent_concurrent_controller.js --process-all-failed');
+        console.log('\n可选参数:');
+        console.log('  --force              强制重新处理所有URL');
+        console.log('  --continue           智能继续处理（收集并处理所有待处理的URL，包括失败的）');
+        console.log('  --retry-failed       只处理失败的URL');
+        console.log('  --process-all-failed 自动扫描并处理所有历史失败的文章');
+        process.exit(1);
     }
     
     console.log(`📁 找到${urlFiles.length}个URL文件:`);
@@ -1689,6 +1805,138 @@ process.on('SIGINT', () => {
     }
     process.exit(0);
 });
+
+/**
+ * 执行缓存维护
+ * 功能：
+ * 1. 清理过期的缓存状态
+ * 2. 修复状态不一致的问题
+ * 3. 准备失败URL的重试队列
+ */
+async function performCacheMaintenance() {
+    const stats = {
+        expired: 0,
+        fixed: 0,
+        readyForRetry: 0,
+        permanent: 0
+    };
+    
+    // 1. 清理过期的最大文章编号缓存
+    const maxArticleNumberCache = path.join('golf_content', '.max_article_number');
+    if (fs.existsSync(maxArticleNumberCache)) {
+        try {
+            const cacheData = JSON.parse(fs.readFileSync(maxArticleNumberCache, 'utf8'));
+            const cacheAge = (Date.now() - cacheData.timestamp) / (1000 * 60 * 60);
+            
+            if (cacheAge > 48) { // 48小时过期
+                fs.unlinkSync(maxArticleNumberCache);
+                console.log('  ✅ 清理过期的文章编号缓存');
+                stats.expired++;
+            }
+        } catch (e) {
+            fs.unlinkSync(maxArticleNumberCache);
+            console.log('  ✅ 清理损坏的缓存文件');
+            stats.expired++;
+        }
+    }
+    
+    // 2. 修复状态不一致
+    const processingStatusFile = 'processing_status.json';
+    const failedArticlesFile = 'failed_articles.json';
+    
+    if (fs.existsSync(processingStatusFile) && fs.existsSync(failedArticlesFile)) {
+        const processingStatus = JSON.parse(fs.readFileSync(processingStatusFile, 'utf8'));
+        const failedArticles = JSON.parse(fs.readFileSync(failedArticlesFile, 'utf8'));
+        
+        let statusModified = false;
+        const now = Date.now();
+        
+        // 清理超时的处理状态
+        for (const [file, fileStatus] of Object.entries(processingStatus)) {
+            if (fileStatus.urlStatus) {
+                for (const [url, urlInfo] of Object.entries(fileStatus.urlStatus)) {
+                    // 清理超过24小时的处理中状态
+                    if (urlInfo.status === 'processing' && urlInfo.startedAt) {
+                        const hoursSinceStarted = (now - new Date(urlInfo.startedAt).getTime()) / (1000 * 60 * 60);
+                        if (hoursSinceStarted > 24) {
+                            delete fileStatus.urlStatus[url];
+                            statusModified = true;
+                            stats.expired++;
+                        }
+                    }
+                    
+                    // 修复状态不一致：处理已标记为processed但在failed_articles中是pending_retry的URL
+                    if (urlInfo.status === 'processed' && 
+                        failedArticles[url] && 
+                        failedArticles[url].status === 'pending_retry') {
+                        delete fileStatus.urlStatus[url];
+                        statusModified = true;
+                        stats.fixed++;
+                    }
+                }
+            }
+        }
+        
+        if (statusModified) {
+            fs.writeFileSync(processingStatusFile, JSON.stringify(processingStatus, null, 2));
+            console.log(`  ✅ 修复 ${stats.fixed} 个状态不一致，清理 ${stats.expired} 个过期状态`);
+        }
+        
+        // 3. 准备重试队列
+        const retryUrls = [];
+        const permanentFailureKeywords = [
+            'HTTP 404',
+            'HTTP 403',
+            '文章不存在或已被删除',
+            'Target page, context or browser has been closed'
+        ];
+        
+        for (const [url, info] of Object.entries(failedArticles)) {
+            if (info.status === 'pending_retry') {
+                // 检查是否应该永久失败
+                const isPermanent = info.reason && 
+                    permanentFailureKeywords.some(keyword => info.reason.includes(keyword));
+                
+                if (isPermanent) {
+                    info.status = 'permanent_failed';
+                    info.markedAt = new Date().toISOString();
+                    stats.permanent++;
+                } else if (!info.attemptCount || info.attemptCount < 3) {
+                    // 重试次数少于3次的添加到重试队列
+                    retryUrls.push(url);
+                    stats.readyForRetry++;
+                }
+            }
+        }
+        
+        // 保存更新的失败文章
+        fs.writeFileSync(failedArticlesFile, JSON.stringify(failedArticles, null, 2));
+        
+        // 生成重试文件
+        if (retryUrls.length > 0) {
+            const retryFile = `retry_urls_${Date.now()}.txt`;
+            fs.writeFileSync(retryFile, retryUrls.join('\n'));
+            console.log(`  ✅ 生成重试文件: ${retryFile} (${retryUrls.length} 个URL)`);
+            
+            // 将重试文件添加到处理队列的开头
+            if (!global.retryFilesToProcess) {
+                global.retryFilesToProcess = [];
+            }
+            global.retryFilesToProcess.push(retryFile);
+        }
+    }
+    
+    // 显示统计
+    if (stats.expired + stats.fixed + stats.readyForRetry + stats.permanent > 0) {
+        console.log('  📊 缓存维护完成:');
+        if (stats.expired > 0) console.log(`     - 清理过期: ${stats.expired}`);
+        if (stats.fixed > 0) console.log(`     - 修复状态: ${stats.fixed}`);
+        if (stats.permanent > 0) console.log(`     - 永久失败: ${stats.permanent}`);
+        if (stats.readyForRetry > 0) console.log(`     - 待重试: ${stats.readyForRetry}`);
+    } else {
+        console.log('  ✅ 缓存状态健康，无需维护');
+    }
+}
 
 // 启动
 if (require.main === module) {
