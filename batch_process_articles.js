@@ -1869,13 +1869,16 @@ class BatchArticleProcessor {
                 }, 10000);
                 
                 // 直接在这里进行Claude改写
+                // 将变量定义移到try块外部，避免在catch块中使用未定义的变量
+                let contentSize = 0;
+                let domain = '';
                 try {
                     const articleStart = Date.now();
                     
                     // 固定3分钟超时
                     const FIXED_REWRITE_TIMEOUT = 180000; // 3分钟
-                    const contentSize = (article.content?.length || 0) / 1024; // KB
-                    const domain = new URL(url).hostname.replace('www.', '');
+                    contentSize = (article.content?.length || 0) / 1024; // KB
+                    domain = new URL(url).hostname.replace('www.', '');
                     
                     console.log(`  ⏱️ 开始改写文章（限时3分钟）...`);
                     console.log(`     📊 内容大小: ${contentSize.toFixed(1)}KB`);
