@@ -2508,10 +2508,12 @@ async function collectSystemStatus(skipCache = false) {
                         const articleUrlsPath = path.join(contentDir, dateDir, 'article_urls.json');
                         try {
                             const articleData = JSON.parse(await fs.promises.readFile(articleUrlsPath, 'utf8'));
-                            if (articleData.articles) {
-                                articleData.articles.forEach(article => {
-                                    articleStatusMap.set(article.url, article.status || 'pending');
-                                });
+                            // 修复：正确处理article_urls.json的格式
+                            // 格式是 { "12924": { "url": "...", "status": "completed" }, ... }
+                            for (const [articleNum, articleInfo] of Object.entries(articleData)) {
+                                if (articleInfo && articleInfo.url) {
+                                    articleStatusMap.set(articleInfo.url, articleInfo.status || 'pending');
+                                }
                             }
                         } catch (e) {
                             // 忽略读取失败的文件
@@ -4923,24 +4925,40 @@ app.post('/api/continue-processing', async (req, res) => {
         setTimeout(() => {
             console.log(`▶️ 继续处理URL...`);
             
-            // 使用新的process_all_pending_urls.js处理所有待处理的URL
-            // 这包括：deep_urls文件中的新URL、failed_articles.json中的失败URL、pending_retry状态的URL等
-            const controller = spawn('node', ['process_all_pending_urls.js'], {
-                detached: true,
-                stdio: ['ignore', 'pipe', 'pipe']
-            });
-            
-            // 将输出追加到日志文件
-            const logStream = fs.createWriteStream('process_all_pending.log', { flags: 'a' });
-            logStream.write(`\n\n========== 综合处理所有待处理URL ${new Date().toISOString()} ==========\n`);
+            // 根据是否重新生成URL选择不同的处理策略
             if (regenerateUrls) {
+                // 如果重新生成了URL，使用综合处理器
+                const controller = spawn('node', ['process_all_pending_urls.js'], {
+                    detached: true,
+                    stdio: ['ignore', 'pipe', 'pipe']
+                });
+                
+                // 将输出追加到日志文件
+                const logStream = fs.createWriteStream('process_all_pending.log', { flags: 'a' });
+                logStream.write(`\n\n========== 综合处理所有待处理URL ${new Date().toISOString()} ==========\n`);
                 logStream.write(`[已重新生成URL]\n`);
+                logStream.write(`[处理范围：新URL、失败URL、pending_retry状态URL等]\n`);
+                controller.stdout.pipe(logStream);
+                controller.stderr.pipe(logStream);
+                
+                controller.unref();
+            } else {
+                // 如果用户选择"取消"，直接使用智能并发控制器处理现有的URL文件
+                // 使用 --force 参数确保处理
+                const controller = spawn('node', ['intelligent_concurrent_controller.js', '--force'], {
+                    detached: true,
+                    stdio: ['ignore', 'pipe', 'pipe']
+                });
+                
+                // 将输出追加到日志文件
+                const logStream = fs.createWriteStream('intelligent_controller.log', { flags: 'a' });
+                logStream.write(`\n\n========== 直接处理现有URL文件 ${new Date().toISOString()} ==========\n`);
+                logStream.write(`[不重新生成URL，使用 --force 参数]\n`);
+                controller.stdout.pipe(logStream);
+                controller.stderr.pipe(logStream);
+                
+                controller.unref();
             }
-            logStream.write(`[处理范围：新URL、失败URL、pending_retry状态URL等]\n`);
-            controller.stdout.pipe(logStream);
-            controller.stderr.pipe(logStream);
-            
-            controller.unref();
         }, 100);
         
     } catch (error) {

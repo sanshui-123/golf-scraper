@@ -476,6 +476,19 @@ class BatchArticleProcessor {
                             skippedAt: new Date().toISOString()
                         };
                         fs.writeFileSync(urlMapFile, JSON.stringify(urlMapping, null, 2));
+                        
+                        // 同步到历史数据库
+                        this.historyDB.addProcessedUrl(url, {
+                            articleNum: num,
+                            date: todayDate,
+                            status: 'duplicate',
+                            duplicateInfo: {
+                                date: globalCheck.date,
+                                articleNum: globalCheck.articleNum
+                            },
+                            source: 'duplicate_check'
+                        });
+                        
                         return null; // 返回null表示跳过此URL
                     }
                     
@@ -670,7 +683,7 @@ class BatchArticleProcessor {
             const urlCache = new Map();
             const baseDir = 'golf_content';
             
-            // 预加载所有URL到内存
+            // 预加载所有URL到内存 - 但必须验证实际文件存在
             if (fs.existsSync(baseDir)) {
                 const dateDirs = fs.readdirSync(baseDir)
                     .filter(dir => /^\d{4}-\d{2}-\d{2}$/.test(dir));
@@ -681,8 +694,16 @@ class BatchArticleProcessor {
                         try {
                             const urlMapping = JSON.parse(fs.readFileSync(urlsJsonPath, 'utf8'));
                             for (const [articleNum, recordedUrl] of Object.entries(urlMapping)) {
-                                const normalizedUrl = normalizeUrl(typeof recordedUrl === 'string' ? recordedUrl : recordedUrl.url);
-                                urlCache.set(normalizedUrl, { dateDir, articleNum });
+                                // 检查实际的.md文件是否存在
+                                const mdFilePath = path.join(baseDir, dateDir, 'wechat_ready', `wechat_article_${articleNum}.md`);
+                                if (fs.existsSync(mdFilePath)) {
+                                    // 只有文件真实存在时才添加到缓存
+                                    const normalizedUrl = normalizeUrl(typeof recordedUrl === 'string' ? recordedUrl : recordedUrl.url);
+                                    urlCache.set(normalizedUrl, { dateDir, articleNum });
+                                } else {
+                                    // 文件不存在，记录但不缓存（允许重新处理）
+                                    console.log(`⚠️  发现状态不一致: ${dateDir}/article_${articleNum} 在JSON中标记但文件不存在`);
+                                }
                             }
                         } catch (e) {
                             // 忽略解析错误
@@ -1027,6 +1048,43 @@ class BatchArticleProcessor {
                 console.log(`\n⚠️  防御性去重：跳过第 ${i + 1}/${reorderedUrls.length} 篇文章（历史数据库已记录）`);
                 console.log(`🔗 URL: ${url}`);
                 console.log(`📅 原处理时间: ${historyRecord.date}\n`);
+                
+                // 立即更新article_urls.json状态为duplicate
+                const urlMapFile = path.join(this.baseDir, 'article_urls.json');
+                let urlMapping = {};
+                if (fs.existsSync(urlMapFile)) {
+                    try {
+                        urlMapping = JSON.parse(fs.readFileSync(urlMapFile, 'utf8'));
+                        urlMapping[articleNum] = {
+                            url: url,
+                            timestamp: new Date().toISOString(),
+                            status: 'duplicate',
+                            duplicateInfo: {
+                                date: historyRecord.date,
+                                articleNum: historyRecord.articleNum,
+                                source: 'history_database'
+                            },
+                            skippedAt: new Date().toISOString()
+                        };
+                        fs.writeFileSync(urlMapFile, JSON.stringify(urlMapping, null, 2));
+                        console.log(`   ✅ 已更新状态为 duplicate`);
+                        
+                        // 同步到历史数据库
+                        this.historyDB.addProcessedUrl(url, {
+                            articleNum: articleNum,
+                            date: historyRecord.date,
+                            status: 'duplicate',
+                            duplicateInfo: {
+                                date: historyRecord.date,
+                                articleNum: historyRecord.articleNum,
+                                source: 'history_database'
+                            },
+                            source: 'batch_processor'
+                        });
+                    } catch (err) {
+                        console.log(`   ⚠️ 更新状态失败: ${err.message}`);
+                    }
+                }
                 continue;
             }
             
