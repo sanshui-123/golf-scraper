@@ -3227,72 +3227,7 @@ app.get('/monitor', (req, res) => {
         .warning {
             color: #f39c12;
         }
-        .url-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .url-item {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        .url-item::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s;
-        }
-        .url-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .url-item:hover::before {
-            animation: shine 0.5s ease-in-out;
-        }
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        .url-site-name {
-            font-size: 1.1rem;
-            color: #bdc3c7;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .url-count {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #00d4ff;
-            text-shadow: 0 0 20px rgba(0,212,255,0.5);
-            line-height: 1;
-        }
-        .url-stats-highlight {
-            background: #16213e;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }
-        .url-stats-highlight h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: #3498db;
-            text-align: center;
-            border-bottom: 3px solid #2c3e50;
-            padding-bottom: 15px;
-        }
+        /* 简单卡片视图样式已移除 */
         .progress-bar {
             width: 100%;
             height: 25px;
@@ -3811,83 +3746,7 @@ app.get('/monitor', (req, res) => {
                 // 更新AI检测统计
                 const aiStatsDiv = document.getElementById('ai-stats');
                 
-                // 显示网站详细状态
-                console.log('开始显示网站状态，websites数据:', data.websites);
-                if (data.websites && data.websites.length > 0) {
-                    console.log('找到', data.websites.length, '个网站');
-                    
-                    // 先移除已存在的网站状态卡片（如果有的话）
-                    const existingWebsiteStatus = document.getElementById('website-status-card');
-                    if (existingWebsiteStatus) {
-                        existingWebsiteStatus.remove();
-                        console.log('移除已存在的网站状态卡片');
-                    }
-                    
-                    const websiteStatusDiv = document.createElement('div');
-                    websiteStatusDiv.id = 'website-status-card';
-                    websiteStatusDiv.className = 'status-card';
-                    websiteStatusDiv.style.marginTop = '20px';
-                    websiteStatusDiv.innerHTML = '<h3>🌐 网站处理状态</h3>';
-                    console.log('创建网站状态div');
-                    
-                    const websiteGrid = document.createElement('div');
-                    websiteGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 15px;';
-                    
-                    data.websites.forEach(site => {
-                        const siteCard = document.createElement('div');
-                        siteCard.style.cssText = 'background: #16213e; padding: 8px; border-radius: 6px; border: 1px solid #2c3e50; border-left: 3px solid ' + (site.statusColor || '#3498db') + ';';
-                        
-                        const detailStats = site.detailStats || {};
-                        const totalProcessed = detailStats.processed || 0;
-                        const totalUrls = site.totalUrls || 0;
-                        
-                        // 创建横向进度条
-                        let progressHTML = '';
-                        if (totalUrls > 0) {
-                            const successRate = (detailStats.success || 0) / totalUrls * 100;
-                            const failedRate = (detailStats.failed || 0) / totalUrls * 100;
-                            const skippedRate = ((detailStats.skipped || 0) + (detailStats.duplicate || 0)) / totalUrls * 100;
-                            const pendingRate = (detailStats.pending || 0) / totalUrls * 100;
-                            
-                            progressHTML = '<div style="width: 100%; height: 14px; background: #34495e; border-radius: 6px; overflow: hidden; display: flex; margin-bottom: 5px;">' +
-                                (successRate > 0 ? '<div style="background: #27ae60; width: ' + successRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
-                                (failedRate > 0 ? '<div style="background: #e74c3c; width: ' + failedRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
-                                (skippedRate > 0 ? '<div style="background: #f39c12; width: ' + skippedRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
-                                (pendingRate > 0 ? '<div style="background: #3498db; width: ' + pendingRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
-                            '</div>' +
-                            '<div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #95a5a6; margin-bottom: 2px;">' +
-                                '<div>总: ' + totalUrls + '</div>' +
-                                '<div style="display: flex; gap: 4px;">' +
-                                    (detailStats.success > 0 ? '<span style="color: #27ae60;">✓' + detailStats.success + '</span>' : '') +
-                                    (detailStats.failed > 0 ? '<span style="color: #e74c3c;">✗' + detailStats.failed + '</span>' : '') +
-                                    ((detailStats.skipped || 0) + (detailStats.duplicate || 0) > 0 ? '<span style="color: #f39c12;">⟩' + ((detailStats.skipped || 0) + (detailStats.duplicate || 0)) + '</span>' : '') +
-                                    (detailStats.pending > 0 ? '<span style="color: #3498db;">◔' + detailStats.pending + '</span>' : '') +
-                                '</div>' +
-                            '</div>';
-                        }
-                        
-                        siteCard.innerHTML = '<div style="font-weight: bold; font-size: 0.85rem; margin-bottom: 4px; color: ' + (site.statusColor || '#ecf0f1') + '; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' +
-                            (site.statusIcon || '📄') + ' ' + site.name +
-                            '</div>' +
-                            progressHTML;
-                        
-                        websiteGrid.appendChild(siteCard);
-                    });
-                    
-                    websiteStatusDiv.appendChild(websiteGrid);
-                    
-                    // 添加到status-grid容器
-                    const statusGrid = document.querySelector('.status-grid');
-                    console.log('查找status-grid容器:', statusGrid);
-                    if (statusGrid) {
-                        statusGrid.appendChild(websiteStatusDiv);
-                        console.log('成功添加网站状态到status-grid');
-                    } else {
-                        console.error('错误: 找不到status-grid容器!');
-                    }
-                } else {
-                    console.log('没有websites数据或为空数组');
-                }
+                // 删除了第一个视图（简洁的卡片式进度条视图），保留第二个详细视图
                 aiStatsDiv.innerHTML = '';
                 if (data.aiStats) {
                     const stats = data.aiStats;
@@ -4148,16 +4007,12 @@ app.get('/monitor', (req, res) => {
                         '<button class="filter-btn" data-filter="active" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">仅活跃网站</button>' +
                         '<button class="filter-btn" data-filter="processing" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">处理中</button>' +
                         '<button class="filter-btn" data-filter="pending" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">待处理</button>' +
-                    '</div>' +
-                    '<div style="display: flex; align-items: center; gap: 10px;">' +
-                        '<label style="color: #95a5a6; font-size: 0.9rem;">显示模式:</label>' +
-                        '<button id="view-toggle" style="padding: 6px 16px; background: #16a085; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">切换详细视图</button>' +
                     '</div>';
                 progressDiv.appendChild(filterBar);
                 
                 // 6. 创建网格容器 - 响应式4列布局
                 const gridContainer = document.createElement('div');
-                gridContainer.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px;';
+                gridContainer.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; width: 100%;';
                 
                 // 7. 显示各状态组（优先级：处理中 > 待处理 > 已完成）
                 const displayOrder = ['processing', 'pending', 'completed', 'no-file', 'no-urls'];
@@ -4194,108 +4049,93 @@ app.get('/monitor', (req, res) => {
                             card.setAttribute('data-has-pending', site.pendingUrls > 0 ? 'true' : 'false');
                             card.className = 'website-card';
                             
-                            // 简洁的头部设计
+                            // 优化的统一视图设计
                             card.innerHTML = 
-                                '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">' +
-                                    '<div style="font-size: 0.95rem; font-weight: 600; color: #ecf0f1;">' + site.name + '</div>' +
+                                '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">' +
+                                    '<div style="font-size: 1rem; font-weight: 600; color: #ecf0f1;">' + site.name + '</div>' +
                                     '<div style="font-size: 0.8rem; padding: 3px 10px; background: ' + site.statusColor + '20; color: ' + (site.statusColor || '#3498db') + '; border-radius: 10px; display: inline-flex; align-items: center; gap: 3px;">' +
                                         '<span style="font-size: 0.9rem;">' + (site.statusIcon || '') + '</span>' +
                                         '<span>' + (site.statusText || statusTitles[site.status] || site.status) + '</span>' +
                                     '</div>' +
                                 '</div>' +
                                 
-                                // 简洁视图内容
-                                '<div class="card-simple-view">' +
-                                    // 如果正在处理，显示进度条
-                                    (isProcessing && site.currentUrl ? 
-                                        '<div style="margin-bottom: 6px;">' +
-                                            '<div style="background: #2c3e50; height: 14px; border-radius: 7px; overflow: hidden; position: relative;">' +
-                                                '<div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: ' + ((site.processedArticles || 0) / (site.totalUrls || 1) * 100) + '%; height: 100%; transition: width 0.3s;"></div>' +
-                                                '<div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">' +
-                                                    (site.processedArticles || 0) + '/' + (site.totalUrls || 0) +
-                                                '</div>' +
-                                            '</div>' +
-                                        '</div>'
-                                     : '') +
-                                    
-                                    // 主要统计信息 - 单行显示
-                                    '<div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">' +
-                                        '<div style="display: flex; gap: 12px;">' +
-                                            (site.totalUrls > 0 ? '<span>📊 <strong>' + site.totalUrls + '</strong></span>' : '') +
-                                            ((site.detailStats?.processed || site.processedUrls || 0) > 0 ? 
-                                                '<span style="color: #2ecc71;">✅ <strong>' + (site.detailStats?.processed || site.processedUrls || 0) + '</strong></span>' : '') +
-                                            (site.pendingUrls > 0 ? 
-                                                '<span style="color: #f39c12;">⏳ <strong>' + site.pendingUrls + '</strong></span>' : '') +
-                                            (site.articlesToday > 0 ? 
-                                                '<span style="color: #3498db;">📅 <strong>' + site.articlesToday + '</strong></span>' : '') +
-                                        '</div>' +
-                                        (site.status === 'processing' && site.estimatedRemaining ? 
-                                            '<span style="font-size: 0.75rem; color: #95a5a6;">' + Math.ceil(site.estimatedRemaining / 60000) + '分钟</span>' : '') +
-                                    '</div>' +
-                                '</div>' +
-                                
-                                // 详细视图内容 - 默认隐藏
-                                '<div class="card-detail-view" style="display: none; margin-top: 10px; border-top: 1px solid #34495e; padding-top: 10px;">' +
-                                (isProcessing && site.currentUrl ? 
-                                    '<div style="margin-bottom: 8px;">' +
-                                        '<div style="background: #2c3e50; height: 18px; border-radius: 9px; overflow: hidden;">' +
-                                            '<div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: ' + ((site.processedArticles || 0) / (site.totalUrls || 1) * 100) + '%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">' +
-                                                (site.processedArticles || 0) + '/' + (site.totalUrls || 0) +
-                                            '</div>' +
-                                        '</div>' +
-                                    '</div>' +
-                                    '<div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px;">' +
-                                        '<span>' + (site.stageText === '抓取中' ? '🔍' : site.stageText === '改写中' ? '✍️' : '💾') + ' ' + (site.stageText || '处理中') + '</span>' +
-                                        (site.estimatedRemaining ? '<span style="color: #95a5a6;">剩余: ' + Math.ceil(site.estimatedRemaining / 60000) + '分钟</span>' : '') +
-                                    '</div>'
-                                 : 
-                                    '<div style="font-size: 0.9rem; line-height: 1.6;">' +
-                                        (site.totalUrls ? 
-                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
-                                                '<span>📊 总计:</span>' +
-                                                '<span style="font-weight: 600;">' + site.totalUrls + ' 篇</span>' +
-                                            '</div>'
-                                         : '') +
-                                        ((site.detailStats || site.processedUrls > 0) ? 
-                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
-                                                '<span>✅ 已处理:</span>' +
-                                                '<span style="font-weight: 600; color: #2ecc71;">' + (site.detailStats?.processed || site.processedUrls || 0) + ' 篇 (' + (site.totalUrls > 0 ? (((site.detailStats?.processed || site.processedUrls || 0) / site.totalUrls) * 100).toFixed(1) : '0') + '%)</span>' +
-                                            '</div>' +
+                                // 进度条（总是显示）
+                                (site.totalUrls > 0 ? 
+                                    '<div style="margin-bottom: 10px;">' +
+                                        '<div style="background: #2c3e50; height: 16px; border-radius: 8px; overflow: hidden; position: relative;">' +
+                                            // 多段进度条
                                             (site.detailStats ? 
-                                                '<div style="margin-left: 20px; font-size: 0.85rem; color: #95a5a6; padding-left: 10px; border-left: 2px solid #34495e;">' +
-                                                    '<div>├─ 成功: ' + site.detailStats.success + ' 篇</div>' +
-                                                    '<div>├─ 重复: ' + site.detailStats.skipped + ' 篇</div>' +
-                                                    '<div>└─ 失败: ' + site.detailStats.failed + ' 篇</div>' +
+                                                '<div style="display: flex; height: 100%;">' +
+                                                    ((site.detailStats.success || 0) > 0 ? 
+                                                        '<div style="background: #27ae60; width: ' + ((site.detailStats.success / site.totalUrls) * 100) + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                                    ((site.detailStats.failed || 0) > 0 ? 
+                                                        '<div style="background: #e74c3c; width: ' + ((site.detailStats.failed / site.totalUrls) * 100) + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                                    (((site.detailStats.skipped || 0) + (site.detailStats.duplicate || 0)) > 0 ? 
+                                                        '<div style="background: #f39c12; width: ' + (((site.detailStats.skipped || 0) + (site.detailStats.duplicate || 0)) / site.totalUrls * 100) + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                                    ((site.detailStats.processing || 0) > 0 ? 
+                                                        '<div style="background: #3498db; width: ' + ((site.detailStats.processing / site.totalUrls) * 100) + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
                                                 '</div>'
-                                             : '')
-                                         : '') +
-                                        (site.pendingUrls > 0 ? 
-                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
-                                                '<span>⏳ 待处理:</span>' +
-                                                '<span style="font-weight: 600; color: #f39c12;">' + site.pendingUrls + ' 篇 (' + (site.totalUrls > 0 ? ((site.pendingUrls / site.totalUrls) * 100).toFixed(1) : '0') + '%)</span>' +
-                                            '</div>'
-                                         : '') +
-                                        (site.articlesToday ? 
-                                            '<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px; padding-top: 5px; border-top: 1px solid #34495e;">' +
-                                                '<span>📅 今日成功:</span>' +
-                                                '<span style="font-weight: 600; color: #3498db;">' + site.articlesToday + ' 篇</span>' +
-                                            '</div>'
-                                         : '') +
-                                    '</div>') +
-                                ((site.successCount > 0 || site.failedCount > 0) ? 
-                                    '<div style="display: flex; gap: 15px; margin-top: 8px; font-size: 0.85rem;">' +
-                                        '<span style="color: #2ecc71;">✅ 成功: ' + site.successCount + '</span>' +
-                                        '<span style="color: #e74c3c;">❌ 失败: ' + site.failedCount + '</span>' +
+                                             : 
+                                                // 简单进度条（用于处理中状态）
+                                                '<div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: ' + ((site.processedArticles || site.processedUrls || 0) / site.totalUrls * 100) + '%; height: 100%; transition: width 0.3s;"></div>'
+                                            ) +
+                                            '<div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); font-weight: 600;">' +
+                                                (site.detailStats?.processed || site.processedArticles || site.processedUrls || 0) + '/' + site.totalUrls +
+                                            '</div>' +
+                                        '</div>' +
                                     '</div>'
                                  : '') +
+                                
+                                // 主要统计数据
+                                '<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; font-size: 0.85rem;">' +
+                                    (site.totalUrls > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(255,255,255,0.05); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">📊 总计</span>' +
+                                            '<span style="font-weight: 600;">' + site.totalUrls + '</span>' +
+                                        '</div>' : '') +
+                                    ((site.detailStats?.success || 0) > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(39,174,96,0.1); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">✅ 成功</span>' +
+                                            '<span style="color: #2ecc71; font-weight: 600;">' + (site.detailStats.success || 0) + '</span>' +
+                                        '</div>' : '') +
+                                    ((site.detailStats?.failed || 0) > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(231,76,60,0.1); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">❌ 失败</span>' +
+                                            '<span style="color: #e74c3c; font-weight: 600;">' + (site.detailStats.failed || 0) + '</span>' +
+                                        '</div>' : '') +
+                                    ((site.detailStats?.skipped || site.detailStats?.duplicate || 0) > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(243,156,18,0.1); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">⟩ 跳过</span>' +
+                                            '<span style="color: #f39c12; font-weight: 600;">' + ((site.detailStats?.skipped || 0) + (site.detailStats?.duplicate || 0)) + '</span>' +
+                                        '</div>' : '') +
+                                    (site.pendingUrls > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(52,152,219,0.1); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">⏳ 待处理</span>' +
+                                            '<span style="color: #3498db; font-weight: 600;">' + site.pendingUrls + '</span>' +
+                                        '</div>' : '') +
+                                    (site.articlesToday > 0 ? 
+                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(155,89,182,0.1); border-radius: 6px;">' +
+                                            '<span style="color: #95a5a6;">📅 今日</span>' +
+                                            '<span style="color: #9b59b6; font-weight: 600;">' + site.articlesToday + '</span>' +
+                                        '</div>' : '') +
+                                '</div>' +
+                                
+                                // 处理状态详情（仅在处理中显示）
                                 (isProcessing && site.currentUrl ? 
-                                    '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #34495e;">' +
-                                        '<div style="font-size: 0.75rem; color: #95a5a6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' +
+                                    '<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #34495e;">' +
+                                        '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">' +
+                                            '<span style="font-size: 0.85rem; color: #95a5a6;">' + 
+                                                (site.stageText === '抓取中' ? '🔍' : site.stageText === '改写中' ? '✍️' : '💾') + ' ' + 
+                                                (site.stageText || '处理中') + 
+                                            '</span>' +
+                                            (site.estimatedRemaining ? 
+                                                '<span style="font-size: 0.75rem; color: #95a5a6;">剩余: ' + Math.ceil(site.estimatedRemaining / 60000) + '分钟</span>' : '') +
+                                        '</div>' +
+                                        '<div style="font-size: 0.75rem; color: #7f8c8d; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' +
                                             '[' + (site.currentIndex || '?') + '/' + (site.totalUrls || '?') + '] ' + site.currentUrl +
                                         '</div>' +
                                     '</div>'
-                                 : '') +
-                                '</div>';  // 关闭详细视图div
+                                 : '');
                             
                             gridContainer.appendChild(card);
                         });
@@ -4855,26 +4695,6 @@ app.get('/monitor', (req, res) => {
                     });
                 });
             });
-            
-            // 视图切换功能
-            const viewToggle = document.getElementById('view-toggle');
-            if (viewToggle) {
-                let isDetailView = false;
-                
-                viewToggle.addEventListener('click', function() {
-                    isDetailView = !isDetailView;
-                    
-                    document.querySelectorAll('.card-simple-view').forEach(el => {
-                        el.style.display = isDetailView ? 'none' : 'block';
-                    });
-                    
-                    document.querySelectorAll('.card-detail-view').forEach(el => {
-                        el.style.display = isDetailView ? 'block' : 'none';
-                    });
-                    
-                    this.textContent = isDetailView ? '切换简洁视图' : '切换详细视图';
-                });
-            }
         }
 
         // 页面加载时立即更新
