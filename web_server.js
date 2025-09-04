@@ -101,35 +101,79 @@ const htmlTemplate = {
     `,
     
     // 文章项模板
-    articleItem: (article, date) => `
-        <div class="article-item ${article.isDuplicate ? 'duplicate-article' : ''}" data-filename="${article.filename}">
-            <a href="${article.articleUrl}" class="article-title" onclick="viewArticle(event, '${article.articleUrl}', '${article.chineseTitle.replace(/'/g, "\\'")}'); return false;">
-                ${article.chineseTitle}
-                ${article.isDuplicate ? '<span class="duplicate-badge">🔁 重复</span>' : ''}
-            </a>
-            ${article.isDuplicate && article.duplicateInfo ? 
-                `<div class="duplicate-warning">
-                    ⚠️ 此文章已在 <strong>${article.duplicateInfo.date}</strong> 处理过
-                    <span style="font-size: 0.85rem; color: #6c757d;">（${article.duplicateInfo.filename}）</span>
-                </div>` : 
-                ''
-            }
-            <div class="article-meta">
-                <div class="meta-left">
-                    <span class="publish-time" style="font-weight: 600; color: #007bff;">📅 ${article.displayTime}</span>
-                    <span class="source-site">🌐 ${article.sourceSite}</span>
-                    ${article.sourceUrl ? 
-                        `<a href="${article.sourceUrl}" class="source-btn" target="_blank">🔗 查看原文</a>` : 
-                        '<span style="color: #6c757d;">暂无原文链接</span>'
-                    }
-                    ${htmlTemplate.aiDetectionBadge(article.aiDetection)}
+    articleItem: (article, date) => {
+        // 根据状态决定显示
+        let statusBadge = '';
+        let statusClass = '';
+        let statusWarning = '';
+        
+        switch (article.articleStatus) {
+            case 'completed':
+                statusBadge = '<span class="status-badge status-completed">✅ 成功</span>';
+                statusClass = 'status-completed';
+                break;
+            case 'failed':
+                statusBadge = '<span class="status-badge status-failed">❌ 失败</span>';
+                statusClass = 'status-failed';
+                if (article.statusReason) {
+                    statusWarning = `<div class="status-warning">💡 失败原因: ${article.statusReason}</div>`;
+                }
+                break;
+            case 'skipped':
+                statusBadge = '<span class="status-badge status-skipped">⏭️ 跳过</span>';
+                statusClass = 'status-skipped';
+                if (article.statusReason) {
+                    statusWarning = `<div class="status-warning">💡 跳过原因: ${article.statusReason}</div>`;
+                }
+                break;
+            case 'duplicate':
+                statusBadge = '<span class="status-badge status-duplicate">🔁 重复</span>';
+                statusClass = 'status-duplicate';
+                if (article.duplicateInfo) {
+                    statusWarning = `<div class="status-warning">
+                        ⚠️ 此文章已在 <strong>${article.duplicateInfo.date}</strong> 处理过
+                        <span style="font-size: 0.85rem; color: #6c757d;">（文章${article.duplicateInfo.articleNum || article.duplicateInfo.filename}）</span>
+                    </div>`;
+                }
+                break;
+            case 'processing':
+                statusBadge = '<span class="status-badge status-processing">🔧 处理中</span>';
+                statusClass = 'status-processing';
+                break;
+            case 'retrying':
+                statusBadge = '<span class="status-badge status-retrying">♻️ 重试中</span>';
+                statusClass = 'status-retrying';
+                break;
+            default:
+                // 默认为成功
+                statusBadge = '<span class="status-badge status-completed">✅ 成功</span>';
+                statusClass = 'status-completed';
+        }
+        
+        return `
+            <div class="article-item ${statusClass}" data-filename="${article.filename}" data-status="${article.articleStatus}">
+                <a href="${article.articleUrl}" class="article-title" onclick="viewArticle(event, '${article.articleUrl}', '${article.chineseTitle.replace(/'/g, "\\'")}'); return false;">
+                    ${article.chineseTitle}
+                    ${statusBadge}
+                </a>
+                ${statusWarning}
+                <div class="article-meta">
+                    <div class="meta-left">
+                        <span class="publish-time" style="font-weight: 600; color: #007bff;">📅 ${article.displayTime}</span>
+                        <span class="source-site">🌐 ${article.sourceSite}</span>
+                        ${article.sourceUrl ? 
+                            `<a href="${article.sourceUrl}" class="source-btn" target="_blank">🔗 查看原文</a>` : 
+                            '<span style="color: #6c757d;">暂无原文链接</span>'
+                        }
+                        ${htmlTemplate.aiDetectionBadge(article.aiDetection)}
+                    </div>
+                    <button class="delete-btn" onclick="confirmDelete('${article.filename}', '${article.chineseTitle.replace(/'/g, "\\'")}')">
+                        🗑️ 删除
+                    </button>
                 </div>
-                <button class="delete-btn" onclick="confirmDelete('${article.filename}', '${article.chineseTitle.replace(/'/g, "\\'")}')">
-                    🗑️ 删除
-                </button>
             </div>
-        </div>
-    `,
+        `;
+    },
     
     // AI检测标记模板
     aiDetectionBadge: (aiDetection) => {
@@ -708,6 +752,18 @@ async function getArticlesByDate(date) {
     const mdDir = path.join('golf_content', date, 'wechat_ready');
     const historyDB = new UnifiedHistoryDatabase();
     
+    // 读取article_urls.json来获取文章状态
+    const urlMapFile = path.join('golf_content', date, 'article_urls.json');
+    let urlMapping = {};
+    try {
+        if (await fileHelpers.fileExists(urlMapFile)) {
+            const content = await fileHelpers.readFileSafe(urlMapFile, '{}');
+            urlMapping = JSON.parse(content);
+        }
+    } catch (e) {
+        console.log(`无法读取URL映射文件: ${e.message}`);
+    }
+    
     try {
         // 检查目录是否存在
         try {
@@ -738,6 +794,21 @@ async function getArticlesByDate(date) {
                 const mdFilePath = path.join(mdDir, mdFileName);
                 const aiDetection = await extractAIDetection(mdFilePath);
                 
+                // 从文件名提取文章编号
+                const articleNumMatch = file.match(/wechat_article_(\d+)\.html/);
+                const articleNum = articleNumMatch ? articleNumMatch[1] : null;
+                
+                // 获取文章状态
+                let articleStatus = 'completed'; // 默认状态
+                let statusReason = '';
+                if (articleNum && urlMapping[articleNum]) {
+                    const mappingData = urlMapping[articleNum];
+                    if (typeof mappingData === 'object' && mappingData.status) {
+                        articleStatus = mappingData.status;
+                        statusReason = mappingData.reason || mappingData.error || '';
+                    }
+                }
+                
                 // 检查是否重复
                 let isDuplicate = false;
                 let duplicateInfo = null;
@@ -759,6 +830,13 @@ async function getArticlesByDate(date) {
                         }
                     }
                 }
+                
+                // 如果状态是duplicate，使用映射中的duplicateInfo
+                if (articleStatus === 'duplicate' && urlMapping[articleNum] && urlMapping[articleNum].duplicateInfo) {
+                    isDuplicate = true;
+                    duplicateInfo = urlMapping[articleNum].duplicateInfo;
+                }
+                
                 const sourceSite = extractWebsiteDomain(sourceUrl);
                 
                 return {
@@ -771,7 +849,10 @@ async function getArticlesByDate(date) {
                     displayTime: new Date(stats.mtime).toLocaleString('zh-CN'),
                     isDuplicate: isDuplicate,
                     duplicateInfo: duplicateInfo,
-                    aiDetection: aiDetection
+                    aiDetection: aiDetection,
+                    articleStatus: articleStatus,  // 添加状态信息
+                    statusReason: statusReason,    // 添加状态原因
+                    articleNum: articleNum          // 添加文章编号
                 };
             } catch (e) {
                 console.error(`处理文件失败: ${file}`, e.message);
@@ -1310,28 +1391,89 @@ app.get('/articles/:date', async (req, res) => {
             cursor: not-allowed;
         }
         
-        /* 重复文章样式 */
-        .duplicate-article {
-            background: #fff8dc;
-            border: 2px solid #ffc107;
-        }
-        .duplicate-badge {
-            background: #ffc107;
-            color: #333;
+        /* 状态标记通用样式 */
+        .status-badge {
             font-size: 0.8rem;
-            padding: 0.2rem 0.6rem;
+            padding: 0.25rem 0.6rem;
             border-radius: 12px;
             margin-left: 0.5rem;
-            font-weight: normal;
+            font-weight: 500;
+            display: inline-block;
+            vertical-align: middle;
         }
-        .duplicate-warning {
+        
+        /* 各种状态的样式 */
+        .status-completed .status-badge {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status-failed {
+            background: #fff5f5;
+            border-left: 4px solid #e74c3c;
+        }
+        .status-failed .status-badge {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status-skipped {
+            background: #f0f8ff;
+            border-left: 4px solid #3498db;
+        }
+        .status-skipped .status-badge {
+            background: #cfe2ff;
+            color: #084298;
+            border: 1px solid #b6d4fe;
+        }
+        
+        .status-duplicate {
+            background: #fff8dc;
+            border-left: 4px solid #ffc107;
+        }
+        .status-duplicate .status-badge {
             background: #fff3cd;
-            color: #856404;
+            color: #664d03;
+            border: 1px solid #ffecb5;
+        }
+        
+        .status-processing {
+            background: #f5f5f5;
+            border-left: 4px solid #6c757d;
+        }
+        .status-processing .status-badge {
+            background: #e9ecef;
+            color: #495057;
+            border: 1px solid #dee2e6;
+        }
+        
+        .status-retrying {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .status-retrying .status-badge {
+            background: #c8e6c9;
+            color: #1b5e20;
+            border: 1px solid #a5d6a7;
+        }
+        
+        /* 状态警告信息样式 */
+        .status-warning {
+            background: #f8f9fa;
+            color: #495057;
             padding: 0.5rem 1rem;
             border-radius: 8px;
             margin: 0.5rem 0;
             font-size: 0.9rem;
-            border-left: 4px solid #ffc107;
+            border: 1px solid #dee2e6;
+        }
+        
+        .status-duplicate .status-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
         }
         
         /* 确认对话框样式 */
@@ -1510,18 +1652,17 @@ app.get('/articles/:date', async (req, res) => {
         function showLocalOnlyMessage(title, articleUrl) {
             const modal = document.createElement('div');
             modal.className = 'local-only-modal';
-            modal.innerHTML = \`
-                <div class="local-only-content">
-                    <h2>📄 文章内容仅在本地可用</h2>
-                    <p>此文章的完整内容仅在本地系统中可用。</p>
-                    <div class="article-info">
-                        <strong>文章信息：</strong><br>
-                        标题: \${title}<br>
-                        路径: \${articleUrl}
-                    </div>
-                    <button onclick="this.closest('.local-only-modal').remove()">关闭</button>
-                </div>
-            \`;
+            modal.innerHTML = 
+                '<div class="local-only-content">' +
+                    '<h2>📄 文章内容仅在本地可用</h2>' +
+                    '<p>此文章的完整内容仅在本地系统中可用。</p>' +
+                    '<div class="article-info">' +
+                        '<strong>文章信息：</strong><br>' +
+                        '标题: ' + title + '<br>' +
+                        '路径: ' + articleUrl +
+                    '</div>' +
+                    '<button onclick="this.closest(&quot;.local-only-modal&quot;).remove()">关闭</button>' +
+                '</div>';
             document.body.appendChild(modal);
             
             // 点击模态框外部关闭
@@ -1536,7 +1677,7 @@ app.get('/articles/:date', async (req, res) => {
         function confirmDelete(filename, title) {
             deleteFilename = filename;
             document.getElementById('deleteMessage').textContent = 
-                \`确定要删除文章《\${title}》吗？此操作不可撤销！\`;
+                '确定要删除文章《' + title + '》吗？此操作不可撤销！';
             document.getElementById('deleteModal').style.display = 'block';
         }
         
@@ -1554,7 +1695,7 @@ app.get('/articles/:date', async (req, res) => {
             document.getElementById('deleteModal').style.display = 'none';
             
             // 找到对应的文章项并添加删除动画
-            const articleItem = document.querySelector(\`[data-filename="\${deleteFilename}"]\`);
+            const articleItem = document.querySelector('[data-filename="' + deleteFilename + '"]');
             if (articleItem) {
                 articleItem.classList.add('deleting');
             }
@@ -1567,7 +1708,7 @@ app.get('/articles/:date', async (req, res) => {
             }
             
             try {
-                const response = await fetch(\`/api/articles/${date}/\${deleteFilename}\`, {
+                const response = await fetch('/api/articles/' + date + '/' + deleteFilename, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json'
@@ -1604,7 +1745,7 @@ app.get('/articles/:date', async (req, res) => {
                     }
                 } else {
                     // 删除失败
-                    showNotification(\`删除失败: \${result.message}\`, 'error');
+                    showNotification('删除失败: ' + result.message, 'error');
                     
                     // 恢复按钮状态
                     if (articleItem) {
@@ -1635,7 +1776,7 @@ app.get('/articles/:date', async (req, res) => {
         // 显示通知
         function showNotification(message, type) {
             const notification = document.createElement('div');
-            notification.className = \`notification \${type}\`;
+            notification.className = 'notification ' + type;
             notification.textContent = message;
             document.body.appendChild(notification);
             
@@ -2352,41 +2493,82 @@ async function collectSystemStatus(skipCache = false) {
                 websiteData.statusIcon = '📭';
                 websiteData.statusColor = '#7f8c8d';
             } else {
-                // 批量检查URL是否已处理
-                const checkResult = historyDB.batchCheckUrls(urls);
+                // 读取所有日期目录的article_urls.json文件以获取真实状态
+                const articleStatusMap = new Map();
                 
-                // 优先从状态文件读取处理状态
+                // 获取所有日期目录
+                const contentDir = 'golf_content';
                 try {
-                    const statusData = JSON.parse(await fs.promises.readFile('processing_status.json', 'utf8'));
+                    const dateDirs = await fs.promises.readdir(contentDir);
                     
-                    if (statusData.urlStatus && statusData.urlStatus[file]) {
-                        const urlStatuses = statusData.urlStatus[file];
-                        websiteData.processedUrls = Object.keys(urlStatuses).filter(url => 
-                            urlStatuses[url].status === 'processed'
-                        ).length;
-                    } else {
-                        // 回退到原来的方式
-                        websiteData.processedUrls = checkResult.statistics.duplicate;
+                    // 遍历每个日期目录
+                    for (const dateDir of dateDirs) {
+                        if (!/^\d{4}-\d{2}-\d{2}$/.test(dateDir)) continue;
+                        
+                        const articleUrlsPath = path.join(contentDir, dateDir, 'article_urls.json');
+                        try {
+                            const articleData = JSON.parse(await fs.promises.readFile(articleUrlsPath, 'utf8'));
+                            if (articleData.articles) {
+                                articleData.articles.forEach(article => {
+                                    articleStatusMap.set(article.url, article.status || 'pending');
+                                });
+                            }
+                        } catch (e) {
+                            // 忽略读取失败的文件
+                        }
                     }
                 } catch (e) {
-                    // 如果读取失败，使用原来的方式
-                    websiteData.processedUrls = checkResult.statistics.duplicate;
+                    console.error('Error reading date directories:', e);
                 }
-                websiteData.pendingUrls = checkResult.statistics.new;
+                
+                // 统计当前网站URL的实际状态
+                let statusCounts = {
+                    pending: 0,
+                    success: 0,
+                    failed: 0,
+                    skipped: 0,
+                    duplicate: 0,
+                    processing: 0,
+                    permanent_failed: 0
+                };
+                
+                urls.forEach(url => {
+                    const status = articleStatusMap.get(url);
+                    if (!status) {
+                        statusCounts.pending++;
+                    } else if (status === 'completed') {
+                        statusCounts.success++;
+                    } else if (status === 'failed') {
+                        statusCounts.failed++;
+                    } else if (status === 'skipped') {
+                        statusCounts.skipped++;
+                    } else if (status === 'duplicate') {
+                        statusCounts.duplicate++;
+                    } else if (status === 'processing') {
+                        statusCounts.processing++;
+                    } else if (status === 'permanent_failed') {
+                        statusCounts.permanent_failed++;
+                    } else {
+                        statusCounts.pending++;
+                    }
+                });
+                
+                // 更新websiteData的统计信息
+                websiteData.processedUrls = statusCounts.success + statusCounts.failed + 
+                                           statusCounts.skipped + statusCounts.duplicate;
+                websiteData.pendingUrls = statusCounts.pending + statusCounts.processing;
                 totalPendingUrls += websiteData.pendingUrls;
                 
                 // 更新详细统计
-                websiteData.detailStats.pending = websiteData.pendingUrls;
-                websiteData.detailStats.processed = websiteData.processedUrls;
-                
-                // 从全局统计推算网站级别的详细数据
-                if (status.processingStats && websiteData.processedUrls > 0) {
-                    // 按比例分配成功、跳过和失败数
-                    const processedRatio = websiteData.processedUrls / (status.processingStats.processed || 1);
-                    websiteData.detailStats.success = Math.round((status.processingStats.success || 0) * processedRatio * 0.3);
-                    websiteData.detailStats.skipped = websiteData.processedUrls - websiteData.detailStats.success;
-                    websiteData.detailStats.failed = 0;
-                }
+                websiteData.detailStats = {
+                    pending: statusCounts.pending,
+                    processing: statusCounts.processing,
+                    success: statusCounts.success,
+                    failed: statusCounts.failed + statusCounts.permanent_failed,
+                    skipped: statusCounts.skipped,
+                    duplicate: statusCounts.duplicate,
+                    processed: websiteData.processedUrls
+                };
                 
                 // 判断网站状态
                 if (websiteData.totalUrls > 0 && websiteData.pendingUrls === 0) {
@@ -2757,6 +2939,15 @@ async function collectSystemStatus(skipCache = false) {
     
     // 6. 获取改写统计
     status.rewriteStats = await getRewriteStats();
+
+    // 7. 将websiteStatus转换为websites数组格式
+    status.websites = [];
+    for (const [name, data] of Object.entries(status.websiteStatus || {})) {
+        status.websites.push({
+            name: name,
+            ...data
+        });
+    }
 
     return status;
 }
@@ -3322,6 +3513,29 @@ app.get('/monitor', (req, res) => {
             border-radius: 5px;
             background: #34495e;
         }
+        
+        /* 卡片样式优化 */
+        .website-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .website-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            opacity: 1 !important;
+        }
+        
+        /* 过滤按钮样式 */
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .filter-btn.active {
+            background: #3498db !important;
+        }
     </style>
 </head>
 <body>
@@ -3520,12 +3734,12 @@ app.get('/monitor', (req, res) => {
                 const dataSourceEl = document.getElementById('data-source');
                 
                 if (fetchTimeEl) {
-                    fetchTimeEl.textContent = \`\${fetchTime}ms\`;
+                    fetchTimeEl.textContent = fetchTime + 'ms';
                 } else {
                     console.warn('fetch-time元素未找到');
                 }
                 if (cacheStatusEl) {
-                    cacheStatusEl.textContent = data.cached ? \`命中(\${data.cacheAge}ms)\` : '未命中';
+                    cacheStatusEl.textContent = data.cached ? '命中(' + data.cacheAge + 'ms)' : '未命中';
                 } else {
                     console.warn('cache-status元素未找到');
                 }
@@ -3574,10 +3788,17 @@ app.get('/monitor', (req, res) => {
                 
                 // 更新改写统计
                 if (data.rewriteStats) {
-                    document.getElementById('rewriting-count').textContent = data.rewriteStats.rewritingCount;
-                    document.getElementById('rewritten-count').textContent = data.rewriteStats.rewrittenCount;
-                    document.getElementById('ai-passed-count').textContent = data.rewriteStats.aiPassedCount;
-                    document.getElementById('avg-ai-rate').textContent = data.rewriteStats.avgAIRate > 0 ? 
+                    const rewritingCountEl = document.getElementById('rewriting-count');
+                    if (rewritingCountEl) rewritingCountEl.textContent = data.rewriteStats.rewritingCount;
+                    
+                    const rewrittenCountEl = document.getElementById('rewritten-count');
+                    if (rewrittenCountEl) rewrittenCountEl.textContent = data.rewriteStats.rewrittenCount;
+                    
+                    const aiPassedCountEl = document.getElementById('ai-passed-count');
+                    if (aiPassedCountEl) aiPassedCountEl.textContent = data.rewriteStats.aiPassedCount;
+                    
+                    const avgAiRateEl = document.getElementById('avg-ai-rate');
+                    if (avgAiRateEl) avgAiRateEl.textContent = data.rewriteStats.avgAIRate > 0 ? 
                         data.rewriteStats.avgAIRate + '%' : '-';
                 }
                 document.getElementById('batch-status').className = data.services.batchProcessor ? 'status-value running' : 'status-value stopped';
@@ -3587,48 +3808,111 @@ app.get('/monitor', (req, res) => {
                 // 网站文章统计已移除，直接跳过
                 // const siteStatsDiv = document.getElementById('site-stats');
                 
-                // 网站状态显示已移除
-                /*
-                if (data.websiteStatus) {
-                    const statusGroups = {
-                        'no-file': [],
-                        'no-urls': [],
-                        'pending': [],
-                        'processing': [],
-                        'completed': []
-                    };
-                    // 网站状态显示代码已全部移除
-                    */
-
                 // 更新AI检测统计
                 const aiStatsDiv = document.getElementById('ai-stats');
+                
+                // 显示网站详细状态
+                console.log('开始显示网站状态，websites数据:', data.websites);
+                if (data.websites && data.websites.length > 0) {
+                    console.log('找到', data.websites.length, '个网站');
+                    
+                    // 先移除已存在的网站状态卡片（如果有的话）
+                    const existingWebsiteStatus = document.getElementById('website-status-card');
+                    if (existingWebsiteStatus) {
+                        existingWebsiteStatus.remove();
+                        console.log('移除已存在的网站状态卡片');
+                    }
+                    
+                    const websiteStatusDiv = document.createElement('div');
+                    websiteStatusDiv.id = 'website-status-card';
+                    websiteStatusDiv.className = 'status-card';
+                    websiteStatusDiv.style.marginTop = '20px';
+                    websiteStatusDiv.innerHTML = '<h3>🌐 网站处理状态</h3>';
+                    console.log('创建网站状态div');
+                    
+                    const websiteGrid = document.createElement('div');
+                    websiteGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 15px;';
+                    
+                    data.websites.forEach(site => {
+                        const siteCard = document.createElement('div');
+                        siteCard.style.cssText = 'background: #16213e; padding: 8px; border-radius: 6px; border: 1px solid #2c3e50; border-left: 3px solid ' + (site.statusColor || '#3498db') + ';';
+                        
+                        const detailStats = site.detailStats || {};
+                        const totalProcessed = detailStats.processed || 0;
+                        const totalUrls = site.totalUrls || 0;
+                        
+                        // 创建横向进度条
+                        let progressHTML = '';
+                        if (totalUrls > 0) {
+                            const successRate = (detailStats.success || 0) / totalUrls * 100;
+                            const failedRate = (detailStats.failed || 0) / totalUrls * 100;
+                            const skippedRate = ((detailStats.skipped || 0) + (detailStats.duplicate || 0)) / totalUrls * 100;
+                            const pendingRate = (detailStats.pending || 0) / totalUrls * 100;
+                            
+                            progressHTML = '<div style="width: 100%; height: 14px; background: #34495e; border-radius: 6px; overflow: hidden; display: flex; margin-bottom: 5px;">' +
+                                (successRate > 0 ? '<div style="background: #27ae60; width: ' + successRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                (failedRate > 0 ? '<div style="background: #e74c3c; width: ' + failedRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                (skippedRate > 0 ? '<div style="background: #f39c12; width: ' + skippedRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                                (pendingRate > 0 ? '<div style="background: #3498db; width: ' + pendingRate + '%; height: 100%; transition: width 0.3s;"></div>' : '') +
+                            '</div>' +
+                            '<div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #95a5a6; margin-bottom: 2px;">' +
+                                '<div>总: ' + totalUrls + '</div>' +
+                                '<div style="display: flex; gap: 4px;">' +
+                                    (detailStats.success > 0 ? '<span style="color: #27ae60;">✓' + detailStats.success + '</span>' : '') +
+                                    (detailStats.failed > 0 ? '<span style="color: #e74c3c;">✗' + detailStats.failed + '</span>' : '') +
+                                    ((detailStats.skipped || 0) + (detailStats.duplicate || 0) > 0 ? '<span style="color: #f39c12;">⟩' + ((detailStats.skipped || 0) + (detailStats.duplicate || 0)) + '</span>' : '') +
+                                    (detailStats.pending > 0 ? '<span style="color: #3498db;">◔' + detailStats.pending + '</span>' : '') +
+                                '</div>' +
+                            '</div>';
+                        }
+                        
+                        siteCard.innerHTML = '<div style="font-weight: bold; font-size: 0.85rem; margin-bottom: 4px; color: ' + (site.statusColor || '#ecf0f1') + '; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">' +
+                            (site.statusIcon || '📄') + ' ' + site.name +
+                            '</div>' +
+                            progressHTML;
+                        
+                        websiteGrid.appendChild(siteCard);
+                    });
+                    
+                    websiteStatusDiv.appendChild(websiteGrid);
+                    
+                    // 添加到status-grid容器
+                    const statusGrid = document.querySelector('.status-grid');
+                    console.log('查找status-grid容器:', statusGrid);
+                    if (statusGrid) {
+                        statusGrid.appendChild(websiteStatusDiv);
+                        console.log('成功添加网站状态到status-grid');
+                    } else {
+                        console.error('错误: 找不到status-grid容器!');
+                    }
+                } else {
+                    console.log('没有websites数据或为空数组');
+                }
                 aiStatsDiv.innerHTML = '';
                 if (data.aiStats) {
                     const stats = data.aiStats;
                     const detectionRate = stats.total > 0 ? ((stats.detected / stats.total) * 100).toFixed(1) : 0;
                     
-                    aiStatsDiv.innerHTML = \`
-                        <div class="status-item">
-                            <span class="status-label">检测完成率:</span>
-                            <span class="status-value">\${detectionRate}% (\${stats.detected}/\${stats.total})</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">平均AI概率:</span>
-                            <span class="status-value">\${stats.avgProbability || 0}%</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">高风险(≥80%):</span>
-                            <span class="status-value" style="color: #e74c3c;">\${stats.highRisk}篇</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">中风险(50-79%):</span>
-                            <span class="status-value" style="color: #f39c12;">\${stats.mediumRisk}篇</span>
-                        </div>
-                        <div class="status-item">
-                            <span class="status-label">低风险(&lt;50%):</span>
-                            <span class="status-value" style="color: #2ecc71;">\${stats.lowRisk}篇</span>
-                        </div>
-                    \`;
+                    aiStatsDiv.innerHTML = '<div class="status-item">' +
+                        '<span class="status-label">检测完成率:</span>' +
+                        '<span class="status-value">' + detectionRate + '% (' + stats.detected + '/' + stats.total + ')</span>' +
+                        '</div>' +
+                        '<div class="status-item">' +
+                        '<span class="status-label">平均AI概率:</span>' +
+                        '<span class="status-value">' + (stats.avgProbability || 0) + '%</span>' +
+                        '</div>' +
+                        '<div class="status-item">' +
+                        '<span class="status-label">高风险(≥80%):</span>' +
+                        '<span class="status-value" style="color: #e74c3c;">' + stats.highRisk + '篇</span>' +
+                        '</div>' +
+                        '<div class="status-item">' +
+                        '<span class="status-label">中风险(50-79%):</span>' +
+                        '<span class="status-value" style="color: #f39c12;">' + stats.mediumRisk + '篇</span>' +
+                        '</div>' +
+                        '<div class="status-item">' +
+                        '<span class="status-label">低风险(&lt;50%):</span>' +
+                        '<span class="status-value" style="color: #2ecc71;">' + stats.lowRisk + '篇</span>' +
+                        '</div>';
                 } else {
                     aiStatsDiv.innerHTML = '<p style="text-align: center; color: #95a5a6;">暂无AI检测数据</p>';
                 }
@@ -3768,37 +4052,36 @@ app.get('/monitor', (req, res) => {
                 // 4. 显示顶部汇总状态
                 const summaryDiv = document.createElement('div');
                 summaryDiv.style.cssText = 'background: #2c3e50; padding: 20px; border-radius: 10px; margin-bottom: 20px;';
-                summaryDiv.innerHTML = \`
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                        <span style="font-size: 1.2rem; color: #3498db; font-weight: 600;">📊 处理队列状态</span>
-                        <div style="display: flex; gap: 25px; font-size: 1rem;">
-                            <span style="color: #2ecc71;">✅ 已完成: <strong>\${processedCount}</strong> 篇</span>
-                            <span style="color: #3498db;">⏳ 处理中: <strong>\${processingCount}</strong> 篇</span>
-                            <span style="color: #f39c12;">📋 待处理: <strong>\${pendingCount}</strong> 篇</span>
-                            <span style="color: #ecf0f1;">📊 总计: <strong>\${totalCount}</strong> 篇</span>
-                        </div>
-                    </div>
-                    \${totalCount > 0 ? \`
-                        <div style="background: #34495e; height: 25px; border-radius: 12px; overflow: hidden; position: relative;">
-                            <div style="background: #2ecc71; width: \${(processedCount/totalCount*100)}%; height: 100%; transition: width 0.5s ease;">
-                            </div>
-                            <div style="background: #3498db; width: \${(processingCount/totalCount*100)}%; height: 100%; position: absolute; left: \${(processedCount/totalCount*100)}%; transition: all 0.5s ease;">
-                            </div>
-                            <div style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
-                                \${((processedCount/totalCount)*100).toFixed(1)}% 完成
-                            </div>
-                        </div>
-                        \${pendingCount > 0 || processingCount > 0 ? \`
-                            <div style="text-align: center; margin-top: 10px; color: #95a5a6;">
-                                预计剩余时间: \${data.estimatedTime ? data.estimatedTime.estimatedTimeText : Math.ceil((pendingCount + processingCount) * 45 / 60) + '分钟'}
-                            </div>
-                        \` : \`
-                            <div style="text-align: center; margin-top: 10px; color: #2ecc71; font-size: 1.1rem;">
-                                ✅ 全部处理完成！
-                            </div>
-                        \`}
-                    \` : ''}
-                \`;
+                summaryDiv.innerHTML = 
+                    '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">' +
+                        '<span style="font-size: 1.2rem; color: #3498db; font-weight: 600;">📊 处理队列状态</span>' +
+                        '<div style="display: flex; gap: 25px; font-size: 1rem;">' +
+                            '<span style="color: #2ecc71;">✅ 已完成: <strong>' + processedCount + '</strong> 篇</span>' +
+                            '<span style="color: #3498db;">⏳ 处理中: <strong>' + processingCount + '</strong> 篇</span>' +
+                            '<span style="color: #f39c12;">📋 待处理: <strong>' + pendingCount + '</strong> 篇</span>' +
+                            '<span style="color: #ecf0f1;">📊 总计: <strong>' + totalCount + '</strong> 篇</span>' +
+                        '</div>' +
+                    '</div>' +
+                    (totalCount > 0 ? 
+                        '<div style="background: #34495e; height: 25px; border-radius: 12px; overflow: hidden; position: relative;">' +
+                            '<div style="background: #2ecc71; width: ' + (processedCount/totalCount*100) + '%; height: 100%; transition: width 0.5s ease;">' +
+                            '</div>' +
+                            '<div style="background: #3498db; width: ' + (processingCount/totalCount*100) + '%; height: 100%; position: absolute; left: ' + (processedCount/totalCount*100) + '%; transition: all 0.5s ease;">' +
+                            '</div>' +
+                            '<div style="position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">' +
+                                ((processedCount/totalCount)*100).toFixed(1) + '% 完成' +
+                            '</div>' +
+                        '</div>' +
+                        (pendingCount > 0 || processingCount > 0 ? 
+                            '<div style="text-align: center; margin-top: 10px; color: #95a5a6;">' +
+                                '预计剩余时间: ' + (data.estimatedTime ? data.estimatedTime.estimatedTimeText : Math.ceil((pendingCount + processingCount) * 45 / 60) + '分钟') +
+                            '</div>'
+                         : 
+                            '<div style="text-align: center; margin-top: 10px; color: #2ecc71; font-size: 1.1rem;">' +
+                                '✅ 全部处理完成！' +
+                            '</div>'
+                        )
+                     : '');
                 progressDiv.appendChild(summaryDiv);
                 
                 // 添加实时处理速度显示
@@ -3819,18 +4102,17 @@ app.get('/monitor', (req, res) => {
                             const speed = 60 / (data.estimatedTime.breakdown[site.name].perArticle || 45);
                             totalSpeed += speed;
                             activeCount++;
-                            console.log(\`\${site.name} 处理速度: \${speed.toFixed(2)} 篇/分钟\`);
+                            console.log(site.name + ' 处理速度: ' + speed.toFixed(2) + ' 篇/分钟');
                         }
                     });
                     
-                    console.log(\`总速度: \${totalSpeed.toFixed(1)} 篇/分钟, 活动网站数: \${activeCount}\`);
+                    console.log('总速度: ' + totalSpeed.toFixed(1) + ' 篇/分钟, 活动网站数: ' + activeCount);
                     
                     if (activeCount > 0) {
-                        speedInfo.innerHTML = \`
-                            <span style="color: #3498db; font-weight: 600; font-size: 1.1rem;">
-                                ⚡ 处理速度: <span style="color: #2ecc71;">\${totalSpeed.toFixed(1)}</span> 篇/分钟
-                            </span>
-                        \`;
+                        speedInfo.innerHTML = 
+                            '<span style="color: #3498db; font-weight: 600; font-size: 1.1rem;">' +
+                                '⚡ 处理速度: <span style="color: #2ecc71;">' + totalSpeed.toFixed(1) + '</span> 篇/分钟' +
+                            '</span>';
                         summaryDiv.appendChild(speedInfo);
                     } else {
                         console.log('没有正在处理的网站，不显示处理速度');
@@ -3857,18 +4139,34 @@ app.get('/monitor', (req, res) => {
                     group.push(site);
                 });
                 
-                // 6. 创建网格容器
+                // 添加过滤控制栏
+                const filterBar = document.createElement('div');
+                filterBar.style.cssText = 'margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;';
+                filterBar.innerHTML = 
+                    '<div style="display: flex; gap: 10px; flex-wrap: wrap;">' +
+                        '<button class="filter-btn active" data-filter="all" style="padding: 6px 16px; background: #3498db; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">全部显示</button>' +
+                        '<button class="filter-btn" data-filter="active" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">仅活跃网站</button>' +
+                        '<button class="filter-btn" data-filter="processing" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">处理中</button>' +
+                        '<button class="filter-btn" data-filter="pending" style="padding: 6px 16px; background: #2c3e50; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">待处理</button>' +
+                    '</div>' +
+                    '<div style="display: flex; align-items: center; gap: 10px;">' +
+                        '<label style="color: #95a5a6; font-size: 0.9rem;">显示模式:</label>' +
+                        '<button id="view-toggle" style="padding: 6px 16px; background: #16a085; color: white; border: none; border-radius: 20px; cursor: pointer; transition: all 0.3s; font-size: 0.9rem;">切换详细视图</button>' +
+                    '</div>';
+                progressDiv.appendChild(filterBar);
+                
+                // 6. 创建网格容器 - 响应式4列布局
                 const gridContainer = document.createElement('div');
-                gridContainer.style.cssText = 'display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;';
+                gridContainer.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px;';
                 
                 // 7. 显示各状态组（优先级：处理中 > 待处理 > 已完成）
                 const displayOrder = ['processing', 'pending', 'completed', 'no-file', 'no-urls'];
                 const statusTitles = {
-                    'processing': '⏳ 正在处理',
-                    'pending': '📋 待处理',
-                    'completed': '✅ 已完成',
-                    'no-file': '❌ 未生成URL',
-                    'no-urls': '⚠️ URL为空'
+                    'processing': '⏳ Processing 处理中',
+                    'pending': '📋 Pending 待处理',
+                    'completed': '✅ Completed 已完成',
+                    'no-file': '❌ No File 未生成URL',
+                    'no-urls': '⚠️ Empty 无URL'
                 };
                 
                 displayOrder.forEach(status => {
@@ -3879,84 +4177,125 @@ app.get('/monitor', (req, res) => {
                             const isProcessing = site.status === 'processing';
                             const isCompleted = site.status === 'completed';
                             
-                            card.style.cssText = \`
-                                background: \${isCompleted ? '#1a3a52' : '#0f3460'};
-                                padding: 15px;
-                                border-radius: 8px;
-                                border-left: 4px solid \${site.statusColor || '#3498db'};
-                                opacity: \${isCompleted ? '0.8' : '1'};
-                                transition: all 0.3s ease;
-                            \`;
+                            card.style.cssText = 
+                                'background: ' + (isCompleted ? '#1a3a52' : '#0f3460') + ';' +
+                                'padding: 12px;' +
+                                'border-radius: 8px;' +
+                                'border-left: 4px solid ' + (site.statusColor || '#3498db') + ';' +
+                                'opacity: ' + (isCompleted ? '0.7' : '1') + ';' +
+                                'transition: all 0.3s ease;' +
+                                'position: relative;' +
+                                'overflow: hidden;';
                             
-                            card.innerHTML = \`
-                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                    <div style="font-weight: 600; color: #ecf0f1;">\${site.name}</div>
-                                    <div style="font-size: 0.9rem; padding: 4px 12px; background: \${site.statusColor}20; color: \${site.statusColor || '#3498db'}; border-radius: 12px; display: inline-flex; align-items: center; gap: 4px;">
-                                        <span>\${site.statusIcon || ''}</span>
-                                        <span>\${site.statusText || statusTitles[site.status] || site.status}</span>
-                                    </div>
-                                </div>
-                                \${isProcessing && site.currentUrl ? \`
-                                    <div style="margin-bottom: 8px;">
-                                        <div style="background: #2c3e50; height: 18px; border-radius: 9px; overflow: hidden;">
-                                            <div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: \${((site.processedArticles || 0) / (site.totalUrls || 1) * 100)}%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">
-                                                \${site.processedArticles || 0}/\${site.totalUrls || 0}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px;">
-                                        <span>\${site.stageText === '抓取中' ? '🔍' : site.stageText === '改写中' ? '✍️' : '💾'} \${site.stageText || '处理中'}</span>
-                                        \${site.estimatedRemaining ? \`<span style="color: #95a5a6;">剩余: \${Math.ceil(site.estimatedRemaining / 60000)}分钟</span>\` : ''}
-                                    </div>
-                                \` : \`
-                                    <div style="font-size: 0.9rem; line-height: 1.6;">
-                                        \${site.totalUrls ? \`
-                                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                                <span>📊 总计:</span>
-                                                <span style="font-weight: 600;">\${site.totalUrls} 篇</span>
-                                            </div>
-                                        \` : ''}
-                                        \${(site.detailStats || site.processedUrls > 0) ? \`
-                                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                                <span>✅ 已处理:</span>
-                                                <span style="font-weight: 600; color: #2ecc71;">\${site.detailStats?.processed || site.processedUrls || 0} 篇 (\${site.totalUrls > 0 ? (((site.detailStats?.processed || site.processedUrls || 0) / site.totalUrls) * 100).toFixed(1) : '0'}%)</span>
-                                            </div>
-                                            \${site.detailStats ? \`
-                                                <div style="margin-left: 20px; font-size: 0.85rem; color: #95a5a6; padding-left: 10px; border-left: 2px solid #34495e;">
-                                                    <div>├─ 成功: \${site.detailStats.success} 篇</div>
-                                                    <div>├─ 重复: \${site.detailStats.skipped} 篇</div>
-                                                    <div>└─ 失败: \${site.detailStats.failed} 篇</div>
-                                                </div>
-                                            \` : ''}
-                                        \` : ''}
-                                        \${site.pendingUrls > 0 ? \`
-                                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                                <span>⏳ 待处理:</span>
-                                                <span style="font-weight: 600; color: #f39c12;">\${site.pendingUrls} 篇 (\${site.totalUrls > 0 ? ((site.pendingUrls / site.totalUrls) * 100).toFixed(1) : '0'}%)</span>
-                                            </div>
-                                        \` : ''}
-                                        \${site.articlesToday ? \`
-                                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px; padding-top: 5px; border-top: 1px solid #34495e;">
-                                                <span>📅 今日成功:</span>
-                                                <span style="font-weight: 600; color: #3498db;">\${site.articlesToday} 篇</span>
-                                            </div>
-                                        \` : ''}
-                                    </div>
-                                \`}
-                                \${(site.successCount > 0 || site.failedCount > 0) ? \`
-                                    <div style="display: flex; gap: 15px; margin-top: 8px; font-size: 0.85rem;">
-                                        <span style="color: #2ecc71;">✅ 成功: \${site.successCount}</span>
-                                        <span style="color: #e74c3c;">❌ 失败: \${site.failedCount}</span>
-                                    </div>
-                                \` : ''}
-                                \${isProcessing && site.currentUrl ? \`
-                                    <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #34495e;">
-                                        <div style="font-size: 0.75rem; color: #95a5a6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
-                                            [\${site.currentIndex || '?'}/\${site.totalUrls || '?'}] \${site.currentUrl}
-                                        </div>
-                                    </div>
-                                \` : ''}
-                            \`;
+                            // 添加唯一ID和数据属性
+                            card.setAttribute('data-site', site.name);
+                            card.setAttribute('data-status', site.status);
+                            card.setAttribute('data-has-urls', site.totalUrls > 0 ? 'true' : 'false');
+                            card.setAttribute('data-has-pending', site.pendingUrls > 0 ? 'true' : 'false');
+                            card.className = 'website-card';
+                            
+                            // 简洁的头部设计
+                            card.innerHTML = 
+                                '<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">' +
+                                    '<div style="font-size: 0.95rem; font-weight: 600; color: #ecf0f1;">' + site.name + '</div>' +
+                                    '<div style="font-size: 0.8rem; padding: 3px 10px; background: ' + site.statusColor + '20; color: ' + (site.statusColor || '#3498db') + '; border-radius: 10px; display: inline-flex; align-items: center; gap: 3px;">' +
+                                        '<span style="font-size: 0.9rem;">' + (site.statusIcon || '') + '</span>' +
+                                        '<span>' + (site.statusText || statusTitles[site.status] || site.status) + '</span>' +
+                                    '</div>' +
+                                '</div>' +
+                                
+                                // 简洁视图内容
+                                '<div class="card-simple-view">' +
+                                    // 如果正在处理，显示进度条
+                                    (isProcessing && site.currentUrl ? 
+                                        '<div style="margin-bottom: 6px;">' +
+                                            '<div style="background: #2c3e50; height: 14px; border-radius: 7px; overflow: hidden; position: relative;">' +
+                                                '<div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: ' + ((site.processedArticles || 0) / (site.totalUrls || 1) * 100) + '%; height: 100%; transition: width 0.3s;"></div>' +
+                                                '<div style="position: absolute; top: 0; left: 0; right: 0; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">' +
+                                                    (site.processedArticles || 0) + '/' + (site.totalUrls || 0) +
+                                                '</div>' +
+                                            '</div>' +
+                                        '</div>'
+                                     : '') +
+                                    
+                                    // 主要统计信息 - 单行显示
+                                    '<div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem;">' +
+                                        '<div style="display: flex; gap: 12px;">' +
+                                            (site.totalUrls > 0 ? '<span>📊 <strong>' + site.totalUrls + '</strong></span>' : '') +
+                                            ((site.detailStats?.processed || site.processedUrls || 0) > 0 ? 
+                                                '<span style="color: #2ecc71;">✅ <strong>' + (site.detailStats?.processed || site.processedUrls || 0) + '</strong></span>' : '') +
+                                            (site.pendingUrls > 0 ? 
+                                                '<span style="color: #f39c12;">⏳ <strong>' + site.pendingUrls + '</strong></span>' : '') +
+                                            (site.articlesToday > 0 ? 
+                                                '<span style="color: #3498db;">📅 <strong>' + site.articlesToday + '</strong></span>' : '') +
+                                        '</div>' +
+                                        (site.status === 'processing' && site.estimatedRemaining ? 
+                                            '<span style="font-size: 0.75rem; color: #95a5a6;">' + Math.ceil(site.estimatedRemaining / 60000) + '分钟</span>' : '') +
+                                    '</div>' +
+                                '</div>' +
+                                
+                                // 详细视图内容 - 默认隐藏
+                                '<div class="card-detail-view" style="display: none; margin-top: 10px; border-top: 1px solid #34495e; padding-top: 10px;">' +
+                                (isProcessing && site.currentUrl ? 
+                                    '<div style="margin-bottom: 8px;">' +
+                                        '<div style="background: #2c3e50; height: 18px; border-radius: 9px; overflow: hidden;">' +
+                                            '<div style="background: linear-gradient(90deg, #3498db, #2ecc71); width: ' + ((site.processedArticles || 0) / (site.totalUrls || 1) * 100) + '%; height: 100%; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: 600;">' +
+                                                (site.processedArticles || 0) + '/' + (site.totalUrls || 0) +
+                                            '</div>' +
+                                        '</div>' +
+                                    '</div>' +
+                                    '<div style="display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 5px;">' +
+                                        '<span>' + (site.stageText === '抓取中' ? '🔍' : site.stageText === '改写中' ? '✍️' : '💾') + ' ' + (site.stageText || '处理中') + '</span>' +
+                                        (site.estimatedRemaining ? '<span style="color: #95a5a6;">剩余: ' + Math.ceil(site.estimatedRemaining / 60000) + '分钟</span>' : '') +
+                                    '</div>'
+                                 : 
+                                    '<div style="font-size: 0.9rem; line-height: 1.6;">' +
+                                        (site.totalUrls ? 
+                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
+                                                '<span>📊 总计:</span>' +
+                                                '<span style="font-weight: 600;">' + site.totalUrls + ' 篇</span>' +
+                                            '</div>'
+                                         : '') +
+                                        ((site.detailStats || site.processedUrls > 0) ? 
+                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
+                                                '<span>✅ 已处理:</span>' +
+                                                '<span style="font-weight: 600; color: #2ecc71;">' + (site.detailStats?.processed || site.processedUrls || 0) + ' 篇 (' + (site.totalUrls > 0 ? (((site.detailStats?.processed || site.processedUrls || 0) / site.totalUrls) * 100).toFixed(1) : '0') + '%)</span>' +
+                                            '</div>' +
+                                            (site.detailStats ? 
+                                                '<div style="margin-left: 20px; font-size: 0.85rem; color: #95a5a6; padding-left: 10px; border-left: 2px solid #34495e;">' +
+                                                    '<div>├─ 成功: ' + site.detailStats.success + ' 篇</div>' +
+                                                    '<div>├─ 重复: ' + site.detailStats.skipped + ' 篇</div>' +
+                                                    '<div>└─ 失败: ' + site.detailStats.failed + ' 篇</div>' +
+                                                '</div>'
+                                             : '')
+                                         : '') +
+                                        (site.pendingUrls > 0 ? 
+                                            '<div style="display: flex; justify-content: space-between; align-items: center;">' +
+                                                '<span>⏳ 待处理:</span>' +
+                                                '<span style="font-weight: 600; color: #f39c12;">' + site.pendingUrls + ' 篇 (' + (site.totalUrls > 0 ? ((site.pendingUrls / site.totalUrls) * 100).toFixed(1) : '0') + '%)</span>' +
+                                            '</div>'
+                                         : '') +
+                                        (site.articlesToday ? 
+                                            '<div style="display: flex; justify-content: space-between; align-items: center; margin-top: 5px; padding-top: 5px; border-top: 1px solid #34495e;">' +
+                                                '<span>📅 今日成功:</span>' +
+                                                '<span style="font-weight: 600; color: #3498db;">' + site.articlesToday + ' 篇</span>' +
+                                            '</div>'
+                                         : '') +
+                                    '</div>') +
+                                ((site.successCount > 0 || site.failedCount > 0) ? 
+                                    '<div style="display: flex; gap: 15px; margin-top: 8px; font-size: 0.85rem;">' +
+                                        '<span style="color: #2ecc71;">✅ 成功: ' + site.successCount + '</span>' +
+                                        '<span style="color: #e74c3c;">❌ 失败: ' + site.failedCount + '</span>' +
+                                    '</div>'
+                                 : '') +
+                                (isProcessing && site.currentUrl ? 
+                                    '<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #34495e;">' +
+                                        '<div style="font-size: 0.75rem; color: #95a5a6; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' +
+                                            '[' + (site.currentIndex || '?') + '/' + (site.totalUrls || '?') + '] ' + site.currentUrl +
+                                        '</div>' +
+                                    '</div>'
+                                 : '') +
+                                '</div>';  // 关闭详细视图div
                             
                             gridContainer.appendChild(card);
                         });
@@ -3984,7 +4323,7 @@ app.get('/monitor', (req, res) => {
                         data.structuredLogs.errors.slice(-3).forEach(log => {
                             const line = document.createElement('div');
                             line.style.cssText = 'margin-left: 20px; margin-top: 5px;';
-                            line.textContent = \`[\${log.time || ''}] \${log.msg}\`;
+                            line.textContent = '[' + (log.time || '') + '] ' + log.msg;
                             errorSection.appendChild(line);
                         });
                         logContainer.appendChild(errorSection);
@@ -3999,7 +4338,7 @@ app.get('/monitor', (req, res) => {
                         data.structuredLogs.success.slice(-3).forEach(log => {
                             const line = document.createElement('div');
                             line.style.cssText = 'margin-left: 20px; margin-top: 5px;';
-                            line.textContent = \`[\${log.time || ''}] \${log.msg}\`;
+                            line.textContent = '[' + (log.time || '') + '] ' + log.msg;
                             successSection.appendChild(line);
                         });
                         logContainer.appendChild(successSection);
@@ -4014,7 +4353,7 @@ app.get('/monitor', (req, res) => {
                         data.structuredLogs.controller.slice(-5).forEach(log => {
                             const line = document.createElement('div');
                             line.style.cssText = 'margin-left: 20px; margin-top: 5px;';
-                            line.textContent = \`[\${log.time || ''}] \${log.msg}\`;
+                            line.textContent = '[' + (log.time || '') + '] ' + log.msg;
                             progressSection.appendChild(line);
                         });
                         logContainer.appendChild(progressSection);
@@ -4029,7 +4368,7 @@ app.get('/monitor', (req, res) => {
                         data.structuredLogs.urlGen.slice(-3).forEach(log => {
                             const line = document.createElement('div');
                             line.style.cssText = 'margin-left: 20px; margin-top: 5px;';
-                            line.textContent = \`[\${log.time || ''}] \${log.msg}\`;
+                            line.textContent = '[' + (log.time || '') + '] ' + log.msg;
                             urlSection.appendChild(line);
                         });
                         logContainer.appendChild(urlSection);
@@ -4049,9 +4388,9 @@ app.get('/monitor', (req, res) => {
                             // 高亮显示进度百分比
                             let formattedMsg = log.msg;
                             if (log.progress) {
-                                formattedMsg = formattedMsg.replace(/(\d+\.?\d*%)/, '<span style="color: #3498db; font-weight: bold;">$1</span>');
+                                formattedMsg = formattedMsg.replace(/(\\d+\\.?\\d*%)/, '<span style="color: #3498db; font-weight: bold;">$1</span>');
                             }
-                            line.innerHTML = \`[\${log.time || ''}] \${formattedMsg}\`;
+                            line.innerHTML = '[' + (log.time || '') + '] ' + formattedMsg;
                             rewriteSection.appendChild(line);
                         });
                         logContainer.appendChild(rewriteSection);
@@ -4069,7 +4408,7 @@ app.get('/monitor', (req, res) => {
                             line.style.cssText = 'margin-left: 20px; margin-top: 5px;';
                             // 根据AI率显示不同颜色
                             const color = log.aiRate && log.aiRate > 40 ? '#e74c3c' : '#2ecc71';
-                            line.innerHTML = \`[\${log.time || ''}] <span style="color: \${color};">\${log.msg}</span>\`;
+                            line.innerHTML = '[' + (log.time || '') + '] <span style="color: ' + color + ';">' + log.msg + '</span>';
                             aiSection.appendChild(line);
                         });
                         logContainer.appendChild(aiSection);
@@ -4184,7 +4523,7 @@ app.get('/monitor', (req, res) => {
         // 继续处理现有URL
         async function continueProcessing() {
             // 先询问是否要重新生成URL
-            const regenerateUrls = confirm('是否需要重新生成最新URL？\n\n选择"确定"：重新抓取最新文章URL后处理（推荐）\n选择"取消"：直接处理现有URL文件');
+            const regenerateUrls = confirm('是否需要重新生成最新URL？\\n\\n选择"确定"：重新抓取最新文章URL后处理（推荐）\\n选择"取消"：直接处理现有URL文件');
             
             const btn = document.getElementById('continue-btn');
             const statusDiv = document.getElementById('restart-status');
@@ -4305,28 +4644,26 @@ app.get('/monitor', (req, res) => {
         async function stopAllProcesses() {
             const modal = document.createElement('div');
             modal.className = 'modal-overlay';
-            modal.innerHTML = \`
-                <div class="modal-content">
-                    <h3>⚠️ 停止所有处理进程</h3>
-                    <div class="process-info">
-                        <p><strong>此操作将：</strong></p>
-                        <ul style="text-align: left; margin: 10px 0;">
-                            <li>🛑 停止所有批处理进程</li>
-                            <li>🧹 清理超长运行进程（>12小时）</li>
-                            <li>🗑️ 删除临时文件</li>
-                            <li>📁 创建今天的目录结构</li>
-                            <li>✅ 保留Web服务器运行</li>
-                        </ul>
-                        <p style="color: #e74c3c; margin-top: 15px;">
-                            <strong>警告：</strong>正在处理的文章将被中断
-                        </p>
-                    </div>
-                    <div class="modal-buttons">
-                        <button class="modal-btn cancel" onclick="this.closest('.modal-overlay').remove()">取消</button>
-                        <button class="modal-btn confirm" onclick="executeStopAll(this)">确认停止</button>
-                    </div>
-                </div>
-            \`;
+            modal.innerHTML = '<div class="modal-content">' +
+                '<h3>⚠️ 停止所有处理进程</h3>' +
+                '<div class="process-info">' +
+                '<p><strong>此操作将：</strong></p>' +
+                '<ul style="text-align: left; margin: 10px 0;">' +
+                '<li>🛑 停止所有批处理进程</li>' +
+                '<li>🧹 清理超长运行进程（>12小时）</li>' +
+                '<li>🗑️ 删除临时文件</li>' +
+                '<li>📁 创建今天的目录结构</li>' +
+                '<li>✅ 保留Web服务器运行</li>' +
+                '</ul>' +
+                '<p style="color: #e74c3c; margin-top: 15px;">' +
+                '<strong>警告：</strong>正在处理的文章将被中断' +
+                '</p>' +
+                '</div>' +
+                '<div class="modal-buttons">' +
+                '<button class="modal-btn cancel" onclick="this.closest(&quot;.modal-overlay&quot;).remove()">取消</button>' +
+                '<button class="modal-btn confirm" onclick="executeStopAll(this)">确认停止</button>' +
+                '</div>' +
+                '</div>';
             document.body.appendChild(modal);
         }
 
@@ -4335,13 +4672,12 @@ app.get('/monitor', (req, res) => {
             const originalContent = modalContent.innerHTML;
             
             // 显示处理中状态
-            modalContent.innerHTML = \`
-                <div class="processing-status">
-                    <div class="spinner"></div>
-                    <h3>正在停止进程...</h3>
-                    <p>请稍候，正在执行清理操作</p>
-                </div>
-            \`;
+            modalContent.innerHTML = 
+                '<div class="processing-status">' +
+                    '<div class="spinner"></div>' +
+                    '<h3>正在停止进程...</h3>' +
+                    '<p>请稍候，正在执行清理操作</p>' +
+                '</div>';
             
             try {
                 const response = await fetch('/api/stop-all-processes', {
@@ -4353,32 +4689,30 @@ app.get('/monitor', (req, res) => {
                 
                 if (data.success) {
                     // 显示详细结果
-                    let resultHTML = \`
-                        <div class="result-success">
-                            <h3>✅ 清理完成</h3>
-                            <div class="result-stats">
-                                <p><strong>操作结果：</strong></p>
-                                <ul style="text-align: left;">
-                                    <li>成功停止: \${data.stoppedCount} 个进程</li>
-                    \`;
+                    let resultHTML = 
+                        '<div class="result-success">' +
+                            '<h3>✅ 清理完成</h3>' +
+                            '<div class="result-stats">' +
+                                '<p><strong>操作结果：</strong></p>' +
+                                '<ul style="text-align: left;">' +
+                                    '<li>成功停止: ' + data.stoppedCount + ' 个进程</li>';
                     
                     if (data.analysis.longRunning > 0) {
-                        resultHTML += \`<li>清理超长进程: \${data.analysis.longRunning} 个</li>\`;
+                        resultHTML += '<li>清理超长进程: ' + data.analysis.longRunning + ' 个</li>';
                     }
                     if (data.analysis.highCPU > 0) {
-                        resultHTML += \`<li>停止高CPU进程: \${data.analysis.highCPU} 个</li>\`;
+                        resultHTML += '<li>停止高CPU进程: ' + data.analysis.highCPU + ' 个</li>';
                     }
                     if (data.analysis.stuck > 0) {
-                        resultHTML += \`<li>清理卡死进程: \${data.analysis.stuck} 个</li>\`;
+                        resultHTML += '<li>清理卡死进程: ' + data.analysis.stuck + ' 个</li>';
                     }
                     
-                    resultHTML += \`
-                                    <li>创建目录: \${data.todayDir}</li>
-                                </ul>
-                            </div>
-                            <button class="modal-btn confirm" onclick="location.reload()">刷新页面</button>
-                        </div>
-                    \`;
+                    resultHTML += 
+                                    '<li>创建目录: ' + data.todayDir + '</li>' +
+                                '</ul>' +
+                            '</div>' +
+                            '<button class="modal-btn confirm" onclick="location.reload()">刷新页面</button>' +
+                        '</div>';
                     
                     modalContent.innerHTML = resultHTML;
                     
@@ -4392,99 +4726,86 @@ app.get('/monitor', (req, res) => {
                 }
                 
             } catch (error) {
-                modalContent.innerHTML = \`
-                    <div class="result-error">
-                        <h3>❌ 操作失败</h3>
-                        <p>\${error.message}</p>
-                        <button class="modal-btn cancel" onclick="this.closest('.modal-overlay').remove()">关闭</button>
-                    </div>
-                \`;
+                modalContent.innerHTML = 
+                    '<div class="result-error">' +
+                        '<h3>❌ 操作失败</h3>' +
+                        '<p>' + error.message + '</p>' +
+                        '<button class="modal-btn cancel" onclick="this.closest(&quot;.modal-overlay&quot;).remove()">关闭</button>' +
+                    '</div>';
             }
         }
 
         // 添加必要的CSS动画
         const styleSheet = document.createElement('style');
-        styleSheet.textContent = \`
-            .modal-overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.7);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                z-index: 1000;
-            }
-            
-            .modal-content {
-                background: #1e3a5f;
-                padding: 30px;
-                border-radius: 15px;
-                max-width: 500px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                animation: modalSlideIn 0.3s ease;
-            }
-            
-            @keyframes modalSlideIn {
-                from {
-                    transform: translateY(-50px);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateY(0);
-                    opacity: 1;
-                }
-            }
-            
-            .processing-status {
-                text-align: center;
-                padding: 30px;
-            }
-            
-            .spinner {
-                width: 50px;
-                height: 50px;
-                margin: 0 auto 20px;
-                border: 5px solid #f3f3f3;
-                border-top: 5px solid #e74c3c;
-                border-radius: 50%;
-                animation: spin 1s linear infinite;
-            }
-            
-            @keyframes spin {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-            
-            .result-success {
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .result-success h3 {
-                color: #27ae60;
-                margin-bottom: 20px;
-            }
-            
-            .result-error {
-                text-align: center;
-                padding: 20px;
-            }
-            
-            .result-error h3 {
-                color: #e74c3c;
-                margin-bottom: 20px;
-            }
-            
-            .result-stats {
-                background: #0f1c2e;
-                border-radius: 8px;
-                padding: 15px;
-                margin: 15px 0;
-            }
-        \`;
+        styleSheet.textContent = '.modal-overlay {' +
+            'position: fixed;' +
+            'top: 0;' +
+            'left: 0;' +
+            'right: 0;' +
+            'bottom: 0;' +
+            'background: rgba(0, 0, 0, 0.7);' +
+            'display: flex;' +
+            'align-items: center;' +
+            'justify-content: center;' +
+            'z-index: 1000;' +
+            '}' +
+            '.modal-content {' +
+            'background: #1e3a5f;' +
+            'padding: 30px;' +
+            'border-radius: 15px;' +
+            'max-width: 500px;' +
+            'box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);' +
+            'animation: modalSlideIn 0.3s ease;' +
+            '}' +
+            '@keyframes modalSlideIn {' +
+            'from {' +
+            'transform: translateY(-50px);' +
+            'opacity: 0;' +
+            '}' +
+            'to {' +
+            'transform: translateY(0);' +
+            'opacity: 1;' +
+            '}' +
+            '}' +
+            '.processing-status {' +
+            'text-align: center;' +
+            'padding: 30px;' +
+            '}' +
+            '.spinner {' +
+            'width: 50px;' +
+            'height: 50px;' +
+            'margin: 0 auto 20px;' +
+            'border: 5px solid #f3f3f3;' +
+            'border-top: 5px solid #e74c3c;' +
+            'border-radius: 50%;' +
+            'animation: spin 1s linear infinite;' +
+            '}' +
+            '@keyframes spin {' +
+            '0% { transform: rotate(0deg); }' +
+            '100% { transform: rotate(360deg); }' +
+            '}' +
+            '.result-success {' +
+            'text-align: center;' +
+            'padding: 20px;' +
+            '}' +
+            '.result-success h3 {' +
+            'color: #27ae60;' +
+            'margin-bottom: 20px;' +
+            '}' +
+            '.result-error {' +
+            'text-align: center;' +
+            'padding: 20px;' +
+            '}' +
+            '.result-error h3 {' +
+            'color: #e74c3c;' +
+            'margin-bottom: 20px;' +
+            '}' +
+            '.result-stats {' +
+            'background: #0f1c2e;' +
+            'border-radius: 8px;' +
+            'padding: 15px;' +
+            'margin: 15px 0;' +
+            '}';
         document.head.appendChild(styleSheet);
 
         // 点击模态框外部关闭
@@ -4494,11 +4815,76 @@ app.get('/monitor', (req, res) => {
             }
         });
 
+        // 过滤和视图切换功能
+        function initializeFilterAndView() {
+            // 过滤功能
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('active');
+                        b.style.background = '#2c3e50';
+                    });
+                    this.classList.add('active');
+                    this.style.background = '#3498db';
+                    
+                    const filter = this.getAttribute('data-filter');
+                    const cards = document.querySelectorAll('.website-card');
+                    
+                    cards.forEach(card => {
+                        const status = card.getAttribute('data-status');
+                        const hasUrls = card.getAttribute('data-has-urls') === 'true';
+                        const hasPending = card.getAttribute('data-has-pending') === 'true';
+                        
+                        let show = false;
+                        switch(filter) {
+                            case 'all':
+                                show = true;
+                                break;
+                            case 'active':
+                                show = hasUrls && (status === 'processing' || hasPending);
+                                break;
+                            case 'processing':
+                                show = status === 'processing';
+                                break;
+                            case 'pending':
+                                show = hasPending;
+                                break;
+                        }
+                        
+                        card.style.display = show ? 'block' : 'none';
+                    });
+                });
+            });
+            
+            // 视图切换功能
+            const viewToggle = document.getElementById('view-toggle');
+            if (viewToggle) {
+                let isDetailView = false;
+                
+                viewToggle.addEventListener('click', function() {
+                    isDetailView = !isDetailView;
+                    
+                    document.querySelectorAll('.card-simple-view').forEach(el => {
+                        el.style.display = isDetailView ? 'none' : 'block';
+                    });
+                    
+                    document.querySelectorAll('.card-detail-view').forEach(el => {
+                        el.style.display = isDetailView ? 'block' : 'none';
+                    });
+                    
+                    this.textContent = isDetailView ? '切换简洁视图' : '切换详细视图';
+                });
+            }
+        }
+
         // 页面加载时立即更新
         updateStatus();
         
         // 启动倒计时
         startCountdown();
+        
+        // 初始化过滤和视图功能 - 延迟执行以确保DOM已加载
+        setTimeout(initializeFilterAndView, 500);
 
         // 键盘快捷键
         document.addEventListener('keydown', (e) => {
