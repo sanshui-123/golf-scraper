@@ -3788,40 +3788,54 @@ app.get('/monitor', (req, res) => {
                     const statsPanel = document.createElement('div');
                     statsPanel.className = 'processing-stats-panel';
                     statsPanel.style.cssText = 'background: #16213e; padding: 20px; border-radius: 10px; margin-bottom: 20px;';
-                    statsPanel.innerHTML = '<h3 style="color: #3498db; margin-bottom: 15px; font-size: 1.3rem;">📊 处理统计</h3>' +
+                    statsPanel.innerHTML = '<h3 style="color: #3498db; margin-bottom: 15px; font-size: 1.3rem;">📊 系统概览</h3>' +
                         '<div style="font-family: monospace; line-height: 1.8;">' +
-                            '<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #2c3e50;">' +
-                                '<span style="color: #95a5a6;">今日成功改写:</span>' +
-                                '<span style="color: #2ecc71; font-weight: bold; font-size: 1.2rem;">' + stats.articlesToday + '篇 ✅</span>' +
+                            // 实际文章生成情况（突出显示）
+                            '<div style="background: rgba(155,89,182,0.2); padding: 15px; border-radius: 8px; border: 2px solid rgba(155,89,182,0.4); margin-bottom: 20px;">' +
+                                '<h4 style="color: #9b59b6; margin-bottom: 10px; font-size: 1.1rem;">📝 实际文章生成</h4>' +
+                                '<div style="display: flex; justify-content: space-between; padding: 8px 0;">' +
+                                    '<span style="color: #ecf0f1; font-weight: 600;">🆕 今日新增文章:</span>' +
+                                    '<span style="color: #9b59b6; font-weight: bold; font-size: 1.4rem;">' + stats.articlesToday + ' 篇 ✨</span>' +
+                                '</div>' +
+                                '<div style="font-size: 0.85rem; color: #95a5a6; margin-top: 5px; text-align: center;">' +
+                                    '这是今天实际生成的新文章数量' +
+                                '</div>' +
                             '</div>' +
-                            '<div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #2c3e50;">' +
-                                '<span style="color: #95a5a6;">URL抓取总数:</span>' +
-                                '<span style="color: #ecf0f1; font-weight: bold;">' + stats.urlTotal + '个</span>' +
-                            '</div>' +
-                            '<div style="margin: 15px 0; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px;">' +
-                                '<h4 style="color: #3498db; margin-bottom: 10px;">处理详情:</h4>' +
-                                '<div style="margin-left: 20px;">' +
+                            
+                            // 批处理统计
+                            '<div style="background: rgba(52,152,219,0.1); padding: 15px; border-radius: 8px; border: 1px solid rgba(52,152,219,0.2);">' +
+                                '<h4 style="color: #3498db; margin-bottom: 10px;">🔄 本次批处理统计</h4>' +
+                                '<div style="display: flex; justify-content: space-between; padding: 5px 0; margin-bottom: 10px;">' +
+                                    '<span style="color: #95a5a6;">URL总数:</span>' +
+                                    '<span style="color: #ecf0f1; font-weight: bold;">' + stats.urlTotal + ' 个</span>' +
+                                '</div>' +
+                                '<div style="margin-left: 10px;">' +
                                     '<div style="display: flex; justify-content: space-between; padding: 5px 0;">' +
-                                        '<span style="color: #95a5a6;">✅ 成功处理:</span>' +
-                                        '<span style="color: #2ecc71;">' + stats.success + '篇 (' + (stats.successRate || '0.0') + '%)</span>' +
+                                        '<span style="color: #95a5a6;">✅ 处理完成:</span>' +
+                                        '<span style="color: #2ecc71;">' + stats.success + ' 个 <span style="font-size: 0.8rem; color: #7f8c8d;">(' + (stats.successRate || '0.0') + '%)</span></span>' +
                                     '</div>' +
                                     '<div style="display: flex; justify-content: space-between; padding: 5px 0;">' +
-                                        '<span style="color: #95a5a6;">🔁 重复跳过:</span>' +
-                                        '<span style="color: #f39c12;">' + stats.skipped + '篇 (' + (stats.skipRate || '0.0') + '%)</span>' +
+                                        '<span style="color: #95a5a6;">📚 历史已存:</span>' +
+                                        '<span style="color: #f39c12;">' + stats.skipped + ' 个 <span style="font-size: 0.8rem; color: #7f8c8d;">(' + (stats.skipRate || '0.0') + '%)</span></span>' +
                                     '</div>' +
                                     '<div style="display: flex; justify-content: space-between; padding: 5px 0;">' +
                                         '<span style="color: #95a5a6;">❌ 处理失败:</span>' +
-                                        '<span style="color: #e74c3c;">' + stats.failed + '篇 (' + (stats.failureRate || '0.0') + '%)</span>' +
+                                        '<span style="color: #e74c3c;">' + stats.failed + ' 个 <span style="font-size: 0.8rem; color: #7f8c8d;">(' + (stats.failureRate || '0.0') + '%)</span></span>' +
                                     '</div>' +
                                     '<div style="display: flex; justify-content: space-between; padding: 5px 0;">' +
                                         '<span style="color: #95a5a6;">⏳ 待处理:</span>' +
-                                        '<span style="color: #3498db;">' + stats.pending + '篇 (' + (((stats.pending/stats.urlTotal)*100).toFixed(1) || '0.0') + '%)</span>' +
+                                        '<span style="color: #3498db;">' + stats.pending + ' 个 <span style="font-size: 0.8rem; color: #7f8c8d;">(' + (((stats.pending/stats.urlTotal)*100).toFixed(1) || '0.0') + '%)</span></span>' +
                                     '</div>' +
                                 '</div>' +
-                            '</div>' +
-                            '<div style="display: flex; justify-content: space-between; padding: 8px 0; border-top: 1px solid #2c3e50; margin-top: 10px;">' +
-                                '<span style="color: #95a5a6;">📈 处理效率:</span>' +
-                                '<span style="color: #ecf0f1; font-weight: bold;">成功率 ' + (stats.success > 0 ? ((stats.success / (stats.success + stats.failed)) * 100).toFixed(1) : '0.0') + '%</span>' +
+                                
+                                // 本次批处理新增文章估算
+                                '<div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #34495e;">' +
+                                    '<div style="font-size: 0.9rem; color: #95a5a6;">' +
+                                        '本次批处理预计新增: <span style="color: #ecf0f1; font-weight: 600;">' + 
+                                        Math.max(0, stats.success - stats.skipped) + ' 篇</span>' +
+                                        '<span style="font-size: 0.8rem; color: #7f8c8d;"> (处理完成 - 历史已存)</span>' +
+                                    '</div>' +
+                                '</div>' +
                             '</div>' +
                         '</div>';
                     progressDiv.appendChild(statsPanel);
@@ -4095,31 +4109,43 @@ app.get('/monitor', (req, res) => {
                                             '<span style="color: #95a5a6;">📊 总计</span>' +
                                             '<span style="font-weight: 600;">' + site.totalUrls + '</span>' +
                                         '</div>' : '') +
-                                    ((site.detailStats?.success || 0) > 0 ? 
-                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(39,174,96,0.1); border-radius: 6px;">' +
-                                            '<span style="color: #95a5a6;">✅ 成功</span>' +
-                                            '<span style="color: #2ecc71; font-weight: 600;">' + (site.detailStats.success || 0) + '</span>' +
-                                        '</div>' : '') +
-                                    ((site.detailStats?.failed || 0) > 0 ? 
-                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(231,76,60,0.1); border-radius: 6px;">' +
-                                            '<span style="color: #95a5a6;">❌ 失败</span>' +
-                                            '<span style="color: #e74c3c; font-weight: 600;">' + (site.detailStats.failed || 0) + '</span>' +
-                                        '</div>' : '') +
-                                    ((site.detailStats?.skipped || site.detailStats?.duplicate || 0) > 0 ? 
-                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(243,156,18,0.1); border-radius: 6px;">' +
-                                            '<span style="color: #95a5a6;">⟩ 跳过</span>' +
-                                            '<span style="color: #f39c12; font-weight: 600;">' + ((site.detailStats?.skipped || 0) + (site.detailStats?.duplicate || 0)) + '</span>' +
-                                        '</div>' : '') +
-                                    (site.pendingUrls > 0 ? 
-                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(52,152,219,0.1); border-radius: 6px;">' +
-                                            '<span style="color: #95a5a6;">⏳ 待处理</span>' +
-                                            '<span style="color: #3498db; font-weight: 600;">' + site.pendingUrls + '</span>' +
-                                        '</div>' : '') +
-                                    (site.articlesToday > 0 ? 
-                                        '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(155,89,182,0.1); border-radius: 6px;">' +
-                                            '<span style="color: #95a5a6;">📅 今日</span>' +
-                                            '<span style="color: #9b59b6; font-weight: 600;">' + site.articlesToday + '</span>' +
-                                        '</div>' : '') +
+                                    // 分组显示：本次批处理统计
+                                    '<div style="border-bottom: 1px solid #34495e; padding-bottom: 8px; margin-bottom: 8px;">' +
+                                        '<div style="color: #95a5a6; font-size: 0.8rem; margin-bottom: 5px;">📊 本次批处理统计</div>' +
+                                        ((site.detailStats?.success || 0) > 0 ? 
+                                            '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(39,174,96,0.1); border-radius: 6px; margin-bottom: 3px;">' +
+                                                '<span style="color: #95a5a6;">✅ 处理完成</span>' +
+                                                '<span style="color: #2ecc71; font-weight: 600;">' + (site.detailStats.success || 0) + ' <span style="font-size: 0.75rem; color: #95a5a6;">(含重复)</span></span>' +
+                                            '</div>' : '') +
+                                        ((site.detailStats?.skipped || site.detailStats?.duplicate || 0) > 0 ? 
+                                            '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(243,156,18,0.1); border-radius: 6px; margin-bottom: 3px;">' +
+                                                '<span style="color: #95a5a6;">📚 历史已存</span>' +
+                                                '<span style="color: #f39c12; font-weight: 600;">' + ((site.detailStats?.skipped || 0) + (site.detailStats?.duplicate || 0)) + ' <span style="font-size: 0.75rem; color: #95a5a6;">(跳过)</span></span>' +
+                                            '</div>' : '') +
+                                        ((site.detailStats?.failed || 0) > 0 ? 
+                                            '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(231,76,60,0.1); border-radius: 6px; margin-bottom: 3px;">' +
+                                                '<span style="color: #95a5a6;">❌ 处理失败</span>' +
+                                                '<span style="color: #e74c3c; font-weight: 600;">' + (site.detailStats.failed || 0) + '</span>' +
+                                            '</div>' : '') +
+                                        (site.pendingUrls > 0 ? 
+                                            '<div style="display: flex; justify-content: space-between; padding: 5px 8px; background: rgba(52,152,219,0.1); border-radius: 6px;">' +
+                                                '<span style="color: #95a5a6;">⏳ 待处理</span>' +
+                                                '<span style="color: #3498db; font-weight: 600;">' + site.pendingUrls + '</span>' +
+                                            '</div>' : '') +
+                                    '</div>' +
+                                    // 实际生成文章统计
+                                    '<div>' +
+                                        '<div style="color: #95a5a6; font-size: 0.8rem; margin-bottom: 5px;">📝 实际生成文章</div>' +
+                                        '<div style="display: flex; justify-content: space-between; padding: 8px; background: rgba(155,89,182,0.15); border-radius: 6px; border: 1px solid rgba(155,89,182,0.3);">' +
+                                            '<span style="color: #ecf0f1; font-weight: 600;">🆕 今日新增</span>' +
+                                            '<span style="color: #9b59b6; font-weight: 700; font-size: 1.1rem;">' + (site.articlesToday || 0) + ' 篇</span>' +
+                                        '</div>' +
+                                        // 计算本次新增（不准确，仅供参考）
+                                        ((site.detailStats?.success || 0) > 0 && ((site.detailStats?.skipped || 0) + (site.detailStats?.duplicate || 0)) > 0 ? 
+                                            '<div style="margin-top: 5px; font-size: 0.75rem; color: #7f8c8d; text-align: center;">' +
+                                                '本次批处理新增约: ' + Math.max(0, (site.detailStats.success || 0) - ((site.detailStats?.skipped || 0) + (site.detailStats?.duplicate || 0))) + ' 篇' +
+                                            '</div>' : '') +
+                                    '</div>' +
                                 '</div>' +
                                 
                                 // 处理状态详情（仅在处理中显示）
