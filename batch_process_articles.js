@@ -1871,18 +1871,18 @@ class BatchArticleProcessor {
                 // 直接在这里进行Claude改写
                 // 将变量定义移到try块外部，避免在catch块中使用未定义的变量
                 let contentSize = 0;
-                let domain = '';
+                let rewriteDomain = ''; // 改名为rewriteDomain避免重复声明
                 try {
                     const articleStart = Date.now();
                     
                     // 固定3分钟超时
                     const FIXED_REWRITE_TIMEOUT = 180000; // 3分钟
                     contentSize = (article.content?.length || 0) / 1024; // KB
-                    domain = new URL(url).hostname.replace('www.', '');
+                    rewriteDomain = new URL(url).hostname.replace('www.', '');
                     
                     console.log(`  ⏱️ 开始改写文章（限时3分钟）...`);
                     console.log(`     📊 内容大小: ${contentSize.toFixed(1)}KB`);
-                    console.log(`     🌐 网站: ${domain}`);
+                    console.log(`     🌐 网站: ${rewriteDomain}`);
                     
                     // 🔧 验证文章内容是否有效
                     if (!this.isValidArticleContent(article.content)) {
@@ -2128,7 +2128,7 @@ class BatchArticleProcessor {
                         // 记录超时统计
                         if (error.message.includes('超时')) {
                             this.timeoutStats.total++;
-                            this.timeoutStats.byWebsite[domain] = (this.timeoutStats.byWebsite[domain] || 0) + 1;
+                            this.timeoutStats.byWebsite[rewriteDomain] = (this.timeoutStats.byWebsite[rewriteDomain] || 0) + 1;
                             this.timeoutStats.urls.push(article.url);
                             
                             // 记录详细的超时信息
