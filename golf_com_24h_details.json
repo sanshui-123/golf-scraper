@@ -1,75 +1,291 @@
 [
   {
-    "url": "https://golf.com/news/keegan-bradley-robbed-ryder-cup-dream/",
-    "title": "Keegan Bradley got robbed of his Ryder Cup dream. He’s built a new one",
-    "publishTime": "2025-08-27T17:47:13-04:00",
+    "url": "https://golf.com/news/features/cypress-point-allure-far-beyond-setting/",
+    "title": "The Cypress Point you don’t know: Club insiders reveal property’s hidden allure",
+    "publishTime": "2025-09-05T13:11:47-04:00",
     "hasTime": true,
     "isRecent": true,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/gear/putters/lab-golf-heel-shafted-putter-what-you-misssed/",
-    "title": "L.A.B. Golf’s new OZ.1i HS putter — What you missed",
-    "publishTime": "2025-08-27T08:55:11-04:00",
-    "hasTime": true,
-    "isRecent": true,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/travel/met-links-metacomet-brad-faxon-rhode-island-public-golf/",
-    "title": "This private Donald Ross course closed. Now, it’s been revived and is open to all",
-    "publishTime": "2025-08-27T09:21:05-04:00",
+    "url": "https://golf.com/travel/tiger-woods-designed-augusta-course-patch/",
+    "title": "First look: Tiger Woods-designed Augusta course comes into focus",
+    "publishTime": "2025-09-05T12:38:49-04:00",
     "hasTime": true,
     "isRecent": true,
     "section": "旅游"
   },
   {
-    "url": "https://golf.com/news/ryder-cup-fans-lost-something-we-may-never-get-it/",
-    "title": "Ryder Cup fans just lost something special. Now, we may never get it",
+    "url": "https://golf.com/news/on-walker-cup-eve-all-order/",
+    "title": "On Walker Cup eve, all is in order. The matches will put an end to that",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/news/the-u-s-ryder-cup-snub-keegan-bradley-advice/",
-    "title": "The top-ranked U.S. Ryder Cup snub? Keegan Bradley gave him advice",
+    "url": "https://golf.com/news/ian-poulter-problem-americans-son-ian/",
+    "title": "Ian Poulter won’t pose problem for U.S. Walker Cup team. But his son might",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/news/ryder-cup-snubs-2025-u-s-ryder-cup/",
-    "title": "Ryder Cup snubs: 9 bubble players left off 2025 U.S. Ryder Cup team",
+    "url": "https://golf.com/news/rory-mcilroy-caddie-request-bethpage-weekend-9/",
+    "title": "Rory McIlroy caddie makes 1 request, and a Bethpage mystery | Weekend 9",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/news/bryson-dechambeau-ryder-cup-weapon/",
-    "title": "‘Above and beyond’: U.S. Ryder Cup team’s biggest ‘weapon’ lurking in plain sight",
+    "url": "https://golf.com/news/50th-walker-cup-captain-first/",
+    "title": "At 50th Walker Cup, this captain is first of his kind",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/news/brandel-chamblee-keegan-bradley-bold-claim/",
-    "title": "Brandel Chamblee makes bold claim after Keegan Bradley’s surprise decision",
+    "url": "https://golf.com/instruction/swing-faults-causing-tops-golftec/",
+    "title": "2 swing faults causing you to top the ball — and how to fix them",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
   },
   {
-    "url": "https://golf.com/instruction/setup-checklist-jeff-smith-play-smart/",
-    "title": "Go through this setup checklist before every shot for guaranteed solid contact",
+    "url": "https://golf.com/gear/tour-reps-job-changed-fully-equipped/",
+    "title": "How a Tour rep’s job has changed over last 20 years | Fully Equipped",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
     "section": "首页"
+  },
+  {
+    "url": "https://golf.com/news/bryson-dechambeau-makes-epic-trick-shot-win-car/",
+    "title": "Bryson DeChambeau makes epic trick shot (and now you can win a car)",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "首页"
+  },
+  {
+    "url": "https://golf.com/instruction/every-golfer-needs-know-hitting-uneven-lies/",
+    "title": "What every golfer needs to know about hitting from uneven lies",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "首页"
+  },
+  {
+    "url": "https://golf.com/news/2025-amgen-irish-open-saturday-tee-times-round-3/",
+    "title": "2025 Amgen Irish Open Saturday tee times: Round 3 pairings",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
+    "url": "https://golf.com/news/how-novak-djokovic-helping-european-ryder-cup-team/",
+    "title": "How Novak Djokovic is helping European Ryder Cup team (according to Rory McIlroy)",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
+    "url": "https://golf.com/news/features/golfer-turned-terrifying-diagnosis-award-winning-endeavor/",
+    "title": "After scary diagnosis, this junior golfer found inspiration in helping others",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
+    "url": "https://golf.com/news/new-rory-mcilroy-scottie-scheffler-tv-event/",
+    "title": "New Rory McIlroy-Scottie Scheffler TV event answers golf fans’ plea",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
+    "url": "https://golf.com/news/rory-mcilroy-questions-rules-officials/",
+    "title": "‘Frustrated’ Rory McIlroy questions rules officials’ ‘common sense’",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "新闻"
+  },
+  {
+    "url": "https://golf.com/instruction/90-percent-golfers-get-this-wrong-mark-durland/",
+    "title": "Most golfers make this mistake. Here’s how to make sure you don’t",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/rules/rules-guy-partners-ball-collided-before-mark/",
+    "title": "Rules Guy: My playing partner’s ball collided with mine before I could mark. Now what?",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/approach-shots/generate-more-spin-from-rough-titleist/",
+    "title": "How can you generate more spin out of the rough?",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/avoid-common-mistake-fairway-woods/",
+    "title": "Avoid this common mistake with your fairway woods, says top instructor",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/rules/what-are-local-rules-and-why-do-they-exist/",
+    "title": "What are Local Rules, and why do they exist?",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/tee-trick-hit-every-fairway/",
+    "title": "A tee trick to hit every fairway",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/putting/how-hit-every-single-putt-target/",
+    "title": "Here’s how to hit every single putt on target",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/one-thing-every-player-needs-better-ball-striker/",
+    "title": "The 1 thing every player needs to be a better ballstriker",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/instruction/perfect-takeaway-gia-liwski-play-smart/",
+    "title": "Perfect your takeaway by grooving this simple feel during the backswing",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "教学"
+  },
+  {
+    "url": "https://golf.com/gear/titleists-innovative-fitting-process-focuses-on-these-3-key-swing-metrics/",
+    "title": "Titleist’s innovative fitting process focuses on these 3 key swing metrics",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/drivers/pga-tour-winningest-drivers-2025/",
+    "title": "From 2025’s winningest drivers an interesting trend emerged",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/need-new-clubs-how-figure-out/",
+    "title": "Will buying new gear help your game? Ask yourself these 5 questions",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/create-ultimate-game-improvement-area-12-products/",
+    "title": "Create the ultimate at-home game-improvement area with these 12 products",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/miranda-wangs-fm-championship-witb/",
+    "title": "Miranda Wang’s clubs: Inside her FM Championship-winning setup",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/putters/l-a-b-golf-not-using-zero-torque/",
+    "title": "Why L.A.B. Golf isn’t using this trendy tagline anymore | Fully Equipped",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/5-labor-day-golf-sales-shop-this-weekend/",
+    "title": "5 Labor Day golf sales to shop this weekend",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/gear/drivers/driver-versus-mini-driver/",
+    "title": "Why you shouldn’t replace your driver with a mini driver | Bag Builders",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "装备"
+  },
+  {
+    "url": "https://golf.com/travel/as-ireland-course-choice-applauded-why/",
+    "title": "As I was leaving Ireland, my course choice was applauded. Here’s why",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "旅游"
+  },
+  {
+    "url": "https://golf.com/travel/cabot-citrus-farms-florida-golf-fishing-48-hours/",
+    "title": "Inside Cabot Citrus Farms: 48 hours at the most un-Florida of Florida golf resorts",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "旅游"
+  },
+  {
+    "url": "https://golf.com/travel/costa-navarino-dogs-starring-role/",
+    "title": "At this seaside golf resort, dogs play a surprising (and lovable) role",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "旅游"
+  },
+  {
+    "url": "https://golf.com/travel/design-boot-camp-american-society-golf-architects-pinehurst/",
+    "title": "Want to design your own golf course? This boot camp will prepare you",
+    "publishTime": null,
+    "hasTime": false,
+    "isRecent": false,
+    "section": "旅游"
   },
   {
     "url": "https://golf.com/travel/maui-kapalua-water-drought-plantation-course-sentry-closure/",
@@ -77,191 +293,15 @@
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
-    "section": "首页"
+    "section": "旅游"
   },
   {
-    "url": "https://golf.com/gear/fairway-wood-hybrid-driving-iron-fitting/",
-    "title": "Is a fairway wood, hybrid or driving iron right for you? Here’s how to know",
+    "url": "https://golf.com/travel/met-links-metacomet-brad-faxon-rhode-island-public-golf/",
+    "title": "This private Donald Ross course closed. Now, it’s been revived and is open to all",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,
-    "section": "首页"
-  },
-  {
-    "url": "https://golf.com/news/2025-us-ryder-cup-captains-picks-announced/",
-    "title": "U.S. Ryder Cup team finalized with 6 captain’s picks (and 1 major surprise)",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/keegan-bradley-us-ryder-cup-picks-watch-wednesday/",
-    "title": "Keegan Bradley’s U.S. Ryder Cup picks: How to watch announcement on Wednesday",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/news/tom-watson-keegan-bradley-big-ryder-cup-mistake/",
-    "title": "‘You can’t do it’: Tom Watson warns Keegan Bradley of big Ryder Cup mistake",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "新闻"
-  },
-  {
-    "url": "https://golf.com/instruction/tell-correct-distance-stance-golf-ball/",
-    "title": "How to tell if you’re standing the correct distance from the golf ball",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/rules/rules-guy-provisional-ball-gimme-length-ignore-original-shot/",
-    "title": "Rules Guy: I hit my provisional ball to gimme-length. Can I choose to ignore my original wayward shot?",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/tommy-fleetwood-drill-win-east-lake/",
-    "title": "The go-to drill that helped Tommy Fleetwood win big at Tour Championship",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/putting/putting-warm-up-adapt-green-speeds/",
-    "title": "This putting warm-up will prep you for any putt you’ll face on the course",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/three-keys-translating-simulator-success-outdoors/",
-    "title": "3 keys for translating golf simulator practice to the course",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/dustin-johnson-improved-wedge-play-clever-tactic/",
-    "title": "Dustin Johnson improved his wedge play with this genius tactic",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/bunker-shots/need-open-stance-bunker-shots-parker-mclachlin-play-smart/",
-    "title": "Do you *really* need an open stance for bunker shots?",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/approach-shots/key-adjustment-knockdown-shots-play-smart/",
-    "title": "1 key adjustment that makes knockdown shots a breeze",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/putting/lottie-woad-credits-putting-success-gear-change/",
-    "title": "Lottie Woad’s putting success? She credits a $2 gear change",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/approach-shots/why-you-chunk-how-to-fix-golftec/",
-    "title": "Why you can’t stop chunking the golf ball — and how to fix it",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/instruction/short-game/lee-trevino-crucial-solid-contact-pitch-shots/",
-    "title": "Lee Trevino says this is crucial for solid contact on pitch shots",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "教学"
-  },
-  {
-    "url": "https://golf.com/gear/golf-accessories/taylormade-releases-pizza-themed-headcovers-balls/",
-    "title": "TaylorMade releases must-have pizza-themed headcovers and balls",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/putters/lab-golf-oz1i-hs-launch/",
-    "title": "L.A.B. Golf’s latest putter removes the biggest barrier for skeptics",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/wedges/cleveland-cbz-wedges-launch/",
-    "title": "Cleveland CBZ wedges bring Tour-level feel to cavity-back design",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/fujikura-ventus-domination-in-2025/",
-    "title": "This golf shaft dominated 2025, but why? Exploring Fujikura Ventus’ domination",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/fairway-woods/tommy-fleetwood-9-wood-tour-championship/",
-    "title": "The most unique club in Tommy Fleetwood’s bag will help you too",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/tommy-fleetwoods-tour-championship-witb/",
-    "title": "Tommy Fleetwood’s clubs: Inside his Tour Championship-winning setup",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/irons/titleist-educates-golfers-fully-equipped/",
-    "title": "How Titleist shows golfers how to build the best bag | Fully Equipped",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
-  },
-  {
-    "url": "https://golf.com/gear/bryson-dechambeau-rubber-cement-grips/",
-    "title": "Bryson DeChambeau installs his grips with rubber cement. Here’s why",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "装备"
+    "section": "旅游"
   },
   {
     "url": "https://golf.com/travel/olympic-club-downtown-san-francisco-golf-histroy-clubhouses/",
@@ -274,54 +314,6 @@
   {
     "url": "https://golf.com/travel/nfl-themed-golf-course-upgrade/",
     "title": "This NFL-themed golf course is getting major upgrade",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/tour-championship-east-lake-tom-cousins-bobby-jones/",
-    "title": "East Lake history: 15 key moments in Tour Championship site’s evolution",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/wild-spring-dunes-tom-doak-texas-course/",
-    "title": "Tom Doak’s new Texas course site evokes Pinehurst, Pine Valley",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/rees-jones-destination-golf-podcast-penal-designs/",
-    "title": "This course-design trend is making the game harder, noted architect says",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/pinehurst-4-reopens-blazing-fast-green-renovation/",
-    "title": "Pinehurst No. 4 reopens after blazing-fast green renovation",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/11-golf-travel-tips-tattoo-remember/",
-    "title": "11 ironclad golf travel tips from the 2025 season",
-    "publishTime": null,
-    "hasTime": false,
-    "isRecent": false,
-    "section": "旅游"
-  },
-  {
-    "url": "https://golf.com/travel/punta-mita-invitational-boo-weekley/",
-    "title": "Why the Punta Mita Invitational is a pro-am unlike any other",
     "publishTime": null,
     "hasTime": false,
     "isRecent": false,

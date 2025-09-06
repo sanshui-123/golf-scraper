@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>监控页面调试</title>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .status-grid { border: 2px solid red; padding: 20px; min-height: 200px; background: #f9f9f9; }
+        .status-card { background: #fff; padding: 10px; margin: 10px 0; border: 1px solid #ddd; }
+        pre { background: #333; color: #fff; padding: 10px; overflow: auto; height: 400px; }
+        button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>监控页面调试测试</h1>
+    
+    <button onclick="fetchAndDisplay()">获取并显示网站状态</button>
+    <button onclick="clearConsole()">清空控制台</button>
+    <button onclick="window.open('http://localhost:8080', '_blank')">Web主页</button>
+    <button onclick="window.open('http://localhost:8080/monitor', '_blank')">监控页面</button>
+    
+    <h2>status-grid容器:</h2>
+    <div class="status-grid">
+        <div class="status-card">
+            <h3>📦 默认卡片</h3>
+            <p>这是一个默认的status-card</p>
+        </div>
+    </div>
+    
+    <h2>控制台输出:</h2>
+    <pre id="console"></pre>
+    
+    <script>
+        const consoleDiv = document.getElementById('console');
+        
+        function log(msg) {
+            const time = new Date().toISOString().substr(11,8);
+            consoleDiv.innerHTML += time + ' ' + msg + '\n';
+            consoleDiv.scrollTop = consoleDiv.scrollHeight;
+        }
+        
+        function clearConsole() {
+            consoleDiv.innerHTML = '';
+            log('控制台已清空');
+        }
+        
+        async function fetchAndDisplay() {
+            try {
+                log('=== 开始获取系统状态 ===');
+                const response = await fetch('/api/system-status');
+                const data = await response.json();
+                
+                log('API响应状态: ' + response.status);
+                log('API返回数据字段:');
+                log('  - running: ' + data.running);
+                log('  - processCount: ' + data.processCount);
+                log('  - todayArticles: ' + data.todayArticles);
+                log('  - websites: ' + (data.websites ? data.websites.length + '个' : '无'));
+                
+                // 显示网站详细状态
+                log('\n=== 开始渲染网站状态 ===');
+                if (data.websites && data.websites.length > 0) {
+                    log('找到 ' + data.websites.length + ' 个网站，准备渲染...');
+                    
+                    // 先移除已存在的网站状态卡片
+                    const existingWebsiteStatus = document.getElementById('website-status-card');
+                    if (existingWebsiteStatus) {
+                        existingWebsiteStatus.remove();
+                        log('已移除旧的网站状态卡片');
+                    }
+                    
+                    const websiteStatusDiv = document.createElement('div');
+                    websiteStatusDiv.id = 'website-status-card';
+                    websiteStatusDiv.className = 'status-card';
+                    websiteStatusDiv.style.marginTop = '20px';
+                    websiteStatusDiv.style.background = '#e3f2fd';
+                    websiteStatusDiv.innerHTML = '<h3>🌐 网站处理状态</h3>';
+                    log('创建新的网站状态卡片');
+                    
+                    const websiteGrid = document.createElement('div');
+                    websiteGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 10px;';
+                    
+                    // 显示所有网站
+                    log('\n网站详情:');
+                    data.websites.forEach((site, index) => {
+                        log('\n网站 ' + (index + 1) + ': ' + site.name);
+                        log('  - URL文件: ' + site.urlFile);
+                        log('  - 状态: ' + site.status + ' (' + site.statusText + ')');
+                        log('  - URL总数: ' + site.totalUrls);
+                        log('  - 待处理: ' + site.pendingUrls);
+                        log('  - 已处理: ' + site.processedUrls);
+                        log('  - 今日文章: ' + site.articlesToday);
+                        
+                        const siteCard = document.createElement('div');
+                        siteCard.style.cssText = 'background: white; padding: 10px; border-radius: 5px; border: 1px solid #ccc;';
+                        
+                        const detailStats = site.detailStats || {};
+                        log('  - 详细统计: ' + JSON.stringify(detailStats));
+                        
+                        const totalProcessed = detailStats.processed || 0;
+                        
+                        // 创建状态徽章
+                        const badges = [];
+                        if (detailStats.success > 0) badges.push(`<span style="color: green;">✅ 成功:${detailStats.success}</span>`);
+                        if (detailStats.failed > 0) badges.push(`<span style="color: red;">❌ 失败:${detailStats.failed}</span>`);
+                        if (detailStats.skipped > 0) badges.push(`<span style="color: orange;">⏭️ 跳过:${detailStats.skipped}</span>`);
+                        if (detailStats.duplicate > 0) badges.push(`<span style="color: purple;">🔁 重复:${detailStats.duplicate}</span>`);
+                        if (detailStats.pending > 0) badges.push(`<span style="color: blue;">⏳ 待处理:${detailStats.pending}</span>`);
+                        
+                        siteCard.innerHTML = `
+                            <div style="font-weight: bold; font-size: 1rem; margin-bottom: 5px;">
+                                ${site.statusIcon || '📄'} ${site.name}
+                            </div>
+                            <div style="font-size: 0.85rem; color: #666; margin-bottom: 5px;">
+                                总计: ${site.totalUrls || 0} | 已处理: ${totalProcessed}
+                            </div>
+                            <div style="font-size: 0.8rem; line-height: 1.5;">
+                                ${badges.join(' ')}
+                            </div>
+                        `;
+                        
+                        websiteGrid.appendChild(siteCard);
+                    });
+                    
+                    websiteStatusDiv.appendChild(websiteGrid);
+                    
+                    // 添加到status-grid容器
+                    const statusGrid = document.querySelector('.status-grid');
+                    log('\n查找status-grid容器...');
+                    if (statusGrid) {
+                        statusGrid.appendChild(websiteStatusDiv);
+                        log('✅ 成功添加网站状态卡片到status-grid容器');
+                        log('当前status-grid子元素数量: ' + statusGrid.children.length);
+                    } else {
+                        log('❌ 错误: 找不到status-grid容器!');
+                    }
+                } else {
+                    log('⚠️ 没有websites数据或为空数组');
+                    log('data.websites = ' + JSON.stringify(data.websites));
+                }
+                
+                log('\n=== 完成 ===');
+                
+            } catch (error) {
+                log('\n❌ 错误: ' + error.message);
+                log('堆栈跟踪:');
+                log(error.stack);
+            }
+        }
+        
+        // 页面加载后自动执行一次
+        window.onload = function() {
+            log('页面加载完成');
+            log('当前时间: ' + new Date().toLocaleString());
+            log('\n自动获取数据...');
+            fetchAndDisplay();
+        };
+    </script>
+</body>
+</html>

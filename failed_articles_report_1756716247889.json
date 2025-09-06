@@ -1,0 +1,2951 @@
+{
+  "generatedAt": "2025-09-01T08:44:07.888Z",
+  "summary": {
+    "total": 725,
+    "byStatus": {
+      "success": 89,
+      "permanent_failed": 486,
+      "pending_retry": 150
+    },
+    "byWebsite": {
+      "www.golfmonthly.com": 73,
+      "golf.com": 122,
+      "mygolfspy.com": 59,
+      "www.golfwrx.com": 35,
+      "forums.golfwrx.com": 4,
+      "www.golfdigest.com": 52,
+      "www.todays-golfer.com": 32,
+      "www.nationalclubgolfer.com": 23,
+      "golfweek.usatoday.com": 29,
+      "www.golfmagic.com": 21,
+      "www.dpworldtour.com": 32,
+      "www.pgatour.com": 31,
+      "www.skysports.com": 8,
+      "www.golf.com": 3,
+      "www.yardbarker.com": 26,
+      "www.golf.net.cn": 11,
+      "www.si.com": 10,
+      "www.espn.com": 47,
+      "www.lpga.com": 49,
+      "sports.yahoo.com": 58
+    }
+  },
+  "details": [
+    {
+      "url": "https://www.golfmonthly.com/news/live/genesis-scottish-open-2025-leaderboard-live-updates",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:31:10.399Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/scottie-scheffler-philosophy-mcilroy-the-local-hero/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:31:45.184Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/sights-sounds-open-championship-thursday/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:32:15.833Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/the-open-championship-2025-leaderboard-scores",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:32:46.151Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/insights-and-opinion/cobra-2025-drivers-fairway-woods/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:03:58.281Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/first-look/new-ping-g440-max-10k-driver/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:04:11.036Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/taylormade-pens-5-year-deal-with-nick-dunlap/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:04:23.077Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/features/",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.headline, h1.article-headline, .article-header h1, h1.c-page-title__text') to be visible\n",
+      "lastAttempt": "2025-08-20T13:12:31.715Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/shane-lowry-receives-two-stroke-penalty-at-the-open",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:33:08.148Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/how-to-watch-the-open-final-round-live-streams-tv-details-timings-as-scottie-scheffler-aims-to-emulate-tiger-woods",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:33:34.077Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/the-open-2025-leaderboard-final-round-royal-portrush",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:33:58.607Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://forums.golfwrx.com/discover/204/",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:34:34.727Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/open-championship-2025-sunday-tee-times/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:34:53.578Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-players-react-scottie-scheffler-open/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:35:15.353Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/best-evnroll-putters-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:35:23.958Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/best-new-balance-golf-shoes-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:35:29.331Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/golf-news/2025-3m-open-prize-money/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:13:08.530Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/jordan-spieth-wrist-surgery-timeline/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:13:21.230Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/759875/witb-scottie-scheffler-2025-the-open-championship/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:35:34.106Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/759798/2025-best-utility-irons/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:35:39.663Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/scottie-rory-haotong-pint-thoughts-open/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:36:15.695Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/10-open-sights-sounds-portrush-2025/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T07:36:57.162Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/763752/tiger-woods-makes-equipment-change-ahead-of-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:37:01.781Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/763795/open-championship-equipment-trends-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:41:39.021Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/763802/callaway-apex-ti-fusion-irons-first-look/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:41:42.206Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/scottie-scheffler-wins-2025-open-championship-dominant/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:44:51.477Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/tips/driving-range-tips-scottie-scheffler-coach/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:45:06.160Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/drivers/2025-best-drivers-tested-ranked/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:45:24.207Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/liv-golf-bryson-dechambeau-future-tour/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:45:47.514Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/best-golf-resorts-america-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:45:59.607Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/tiger-woods-2025-schedule-pga-tour/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:13.420Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/golf-balls/best-golf-balls-2025-tested/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:31.004Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/rory-mcilroy-open-championship-reaction/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:43.785Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/scottie-scheffler-wins-open-championship-dominant-fashion",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:49.990Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/best-golf-pride-grips-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:54.381Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/best-evnroll-putters-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:46:58.529Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/final-liv-golf-leaderboard-open",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:47:03.405Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/scottie-scheffler-witb-open-championship-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:13:33.717Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/golf-balls/best-golf-balls-2025-robot-tested/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:13:46.700Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/ping-g440-max-driver-first-look/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:14:09.595Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/drivers/best-drivers-2025-most-wanted/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:14:22.118Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/callaway-ai-smoke-ti-driver-review/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:14:32.162Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/titleist-tsr-drivers-comparison/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:14:43.839Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/putters/best-putters-2025-tested/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:15:15.781Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/taylormade-stealth-2-plus-driver-review/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:15:32.648Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/999999/this-is-a-new-article-that-doesnt-exist-yet/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:47:06.732Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/british-open-2025-scottie-scheffler-tiger-woods-comparisons",
+      "reason": "文章抓取失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T07:32:54.391Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/ill-teach-you-the-greenside-bunker-shot-used-by-most-of-the-worlds-best-golfers",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:12.226Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guide/callaway-pre-owned-versus-marketplace-sellers-whats-the-difference/",
+      "reason": "文章抓取失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:18:40.921Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/763631/what-is-i-forged-a-deep-dive-into-srixons-impressive-new-iron-technology/?utm_source=Front&utm_medium=Featured_Latest&utm_campaign=GolfWRX_OnSite&utm_content=unused",
+      "reason": "文章抓取失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T07:26:25.754Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/golf-travel/mygolfspy-experiences-does-whistling-straits-belong-on-your-golfer-do-list/",
+      "reason": "文章抓取失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T07:55:13.445Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/how-this-new-pga-tour-winner-was-so-close-to-delivering-most-boss-move-in-golf-history",
+      "reason": "文章抓取失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:27:25.872Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/collin-morikawa-happy-gilmore-2-bull-dance-adam-sandler-us-bank-nervous-netflix",
+      "reason": "Claude改写失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:29:54.316Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/back-to-back-holes-in-one-on-par-4s---this-father-and-son-just-a",
+      "reason": "Claude改写失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:32:18.191Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/jon-rahm-tyrrell-hatton-liv-golf-uk-wine-beer-golf-drinking",
+      "reason": "Claude改写失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:33:35.665Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/xander-schauffele-break-through-first-two-majors-get-more-game-cover-story",
+      "reason": "Claude改写失败: urlsWithNumbers is not defined",
+      "lastAttempt": "2025-07-24T09:36:39.281Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/british-open-2025-scottie-scheffler-claret-jug-notice",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T15:03:27.096Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/cabot-highlands-old-petty-unforgettable-first-look-tom-doak-designed-golf-course",
+      "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.golfdigest.com/story/cabot-highlands-old-petty-unforgettable-first-look-tom-doak-designed-golf-course\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "lastAttempt": "2025-07-25T09:21:44.240Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/first-look/malbon-teams-up-with-etnies-for-skateshoe-crossover/",
+      "reason": "Claude改写失败: Claude执行失败 (代码1): 未知错误",
+      "lastAttempt": "2025-07-25T14:55:23.698Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/this-masters-week-tradition-is-coming-to-an-end-hint-john-daly-must-be-sad",
+      "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.golfdigest.com/story/this-masters-week-tradition-is-coming-to-an-end-hint-john-daly-must-be-sad\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "lastAttempt": "2025-07-25T17:06:28.145Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/rules-of-golf-review-using-powder-dry-grips-legal-penalty-or-not",
+      "reason": "Claude改写失败: 改写超时（367.50703125秒）",
+      "lastAttempt": "2025-07-25T19:06:43.357Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/liv-golf-uk-2025-leaderboard-live-updates",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:27:00.015Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/from-lack-of-sleep-to-the-surprise-of-2019-what-open-golf-courses-are-to-shane-lowry",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:22.092Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/hes-a-flusher-with-a-good-track-record-on-links-courses-shane-lowrys-caddie-on-why-hes-backing-the-irishman-this-week",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:33.283Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/how-to-watch-the-open-championship-2025-potentially-for-free",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:38.646Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/5-modern-links-courses-that-could-be-great-open-venues",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:49.430Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/ill-never-forget-the-experience-of-people-cheering-me-on-golf-influencer-grace-charis-talks-playing-with-john-daly",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:03:55.958Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/the-relative-safety-of-3-wood-off-the-tee-is-a-myth-and-the-data-proves-it",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:04.906Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/how-is-a-remote-electric-golf-trolley-actually-made-i-headed-behind-the-scenes-to-find-out",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:08.980Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/how-many-1-putts-does-the-average-pga-tour-player-make-per-round",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:13.701Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/the-historic-links-that-could-one-day-be-the-republic-of-irelands-first-open-venue",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:23.726Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/open-weather-forecast-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:30.291Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/meet-the-9-amateurs-vying-for-the-silver-medal-at-royal-portrush",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:35.611Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/tiger-does-this-all-the-time-5-tour-pro-tips-to-help-you-hit-more-fairways",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:41.093Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/stop-digging-and-start-gliding-my-chip-shot-makeover-that-improved-my-consistency",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:46.597Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/my-short-game-was-utterly-horrific-until-i-discovered-this-1-simple-technique",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:51.763Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/6-pro-golf-observations-3-weeks-abroad/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:27:35.346Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/titleist-custom-irons-are-on-the-way/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T01:55:30.769Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/srixon-expands-soft-feel-family-with-soft-feel-brite/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T02:48:40.064Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/pxg-black-ops-driver-woods-hybrids/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T02:48:53.506Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/jon-rahm-switches-to-mallet-putter/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T02:49:03.917Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/763963/shane-lowry-witb-2025-july/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T01:56:32.853Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/tiger-woods-continues-to-recover/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T02:49:15.893Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/fedexcup2025-playoffs-bmw-championship-preview",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:47:20.539Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news/callaway-opus-wedges-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T08:16:00.487Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T03:54:55.505Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/2025-pga-championship-preview",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-12T03:51:19.099Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/tiger-woods-latest-injury-update",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-09T07:37:56.373Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/best-drivers-2025-tested",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-12T03:51:43.943Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/rory-mcilroy-swing-changes",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T03:18:06.966Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/masters-2025-predictions",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T03:55:29.090Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/golf-bags/best-golf-cart-bags-of-2025/",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-09T09:40:06.651Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/us-womens-amateur-championship-2025-scores-live-updates",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:41:16.255Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/fedex-st-jude-championship-2025-leaderboard-live-updates",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:41:39.468Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/nexo-championship-leaderboard-updates-dp-world-tour",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:41:46.567Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/tours/2025-fedex-st-jude-championship-sunday-pairings/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:09:35.379Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-fedex-playoffs-bubble-players/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:09:47.686Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/driving/bryson-dechambeau-driver-setup-tips/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:10:08.779Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/putting/jordan-spieth-putting-routine/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:10:20.284Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/drivers/taylormade-qi35-driver-launch/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:10:29.783Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/courses/best-public-golf-courses-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:10:39.125Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/lpga/nelly-korda-withdraws-injury/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:10:51.982Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/approach-shots/tiger-woods-iron-tips/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:11:04.265Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/tours/ryder-cup-2025-team-predictions/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:11:13.213Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/irons/ping-i530-irons-review/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:11:25.323Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/short-game/phil-mickelson-chipping-secrets/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:11:41.419Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-schedule-2025-changes/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:11:55.428Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/destinations/scotland-golf-trip-guide/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:00.687Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/fitness/golf-workout-routine-pros/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:18.023Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/putters/scotty-cameron-2025-putters/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:34.641Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/justin-rose-fedex-st-jude-championship-winner",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:41.351Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/scottie-scheffler-caddie-teddy-scott-baby",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:45.671Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/golf-etiquette-rules-everyone-breaks",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:17:51.198Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/tips/how-to-improve-driver-distance",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-11T05:17:55.014Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/wentworth-bids-farewell-to-martin-slumbers/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:28:58.928Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/2025-us-womens-amateur-leaderboard/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:02.506Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/liv-golf-chicago-prize-money-payout-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:05.091Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/fedex-st-jude-championship-prize-money-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:13.297Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/cam-smith-withdraws-fedex-st-jude-championship/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:17.364Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/rory-mcilroy-new-3-wood-fedex-playoffs/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:20.009Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/scottie-scheffler-caddie-ted-scott-surgery/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:32.625Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/justin-rose-new-putter-fedex-playoffs/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:35.900Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/tommy-fleetwood-caddie-ian-finnis-injury/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:39.105Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news/tiger-woods-pga-tour-policy-board-meeting/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:29:42.292Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/justin-rose-wins-fedex-st-jude-championship-analysis",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:00.826Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/scottie-scheffler-caddie-ted-scott-absence-explained",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:10.443Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/equipment/best/best-drivers-2025-test/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:25.266Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/tommy-fleetwood-fedex-playoffs-interview",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:26.379Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/equipment/best/best-irons-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:28.758Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/rory-mcilroy-equipment-changes-fedex",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:35.188Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/equipment/best/best-putters-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:44.668Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/equipment/best/best-golf-balls-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:48.315Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/pga-tour-fall-schedule-2025-preview",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:50.859Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/equipment/best/best-wedges-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:51:56.631Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/tiger-woods-pga-tour-board-meeting-update",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T05:52:01.790Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/fedex-st-jude-championship-justin-rose-tommy-fleetwood-analysis",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T09:28:00.590Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/megha-ganne-us-womens-amateur-final-zoe-campos",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T09:28:13.293Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/five-questions-heading-bmw-championship-fedex-cup-playoffs",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T09:28:21.397Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/us-womens-amateur-semifinals-asterisk-winner-debate",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-11T09:28:29.510Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/rory-mcilroy-charley-hull-golf-art-gift/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T01:27:15.810Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/fleetwood-rose-europe-ryder-cup-monday-finish/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T02:07:54.556Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/fleetwood-rose-ryder-cup-monday-finish/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T03:39:01.229Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/ludvig-aberg-injury-update-fedex-st-jude-championship",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-23T08:52:00.765Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/keegan-bradley-ryder-cup-captain-picks",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-12T06:46:22.625Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/tiger-woods-pga-tour-policy-board",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-13T01:19:16.388Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/best-golf-balls-2025-hot-list",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-23T08:52:19.694Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/scottie-scheffler-olympics-gold-medal",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-23T08:52:28.666Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/best-golf-courses-in-america-ranking-2025-2026",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-12T06:22:09.017Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/equipment-news/under-armour-golf-shoe-fitting-stoke-park/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T07:01:02.720Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/equipment-news/todays-golfer-awards/",
+      "reason": "Claude改写失败: 改写超时（600秒）",
+      "lastAttempt": "2025-08-12T08:08:21.605Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/equipment-news/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T08:56:02.734Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/general-news/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T08:57:09.763Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/tour-news/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T08:58:21.404Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/opinion/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T09:02:20.599Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/tips-and-tuition/rules-of-golf/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T09:06:55.434Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/tips-and-tuition/rescuetips/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T09:15:55.029Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/tips-and-tuition/swing-setup/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-12T09:20:19.904Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/drive-for-defibs/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-12T09:42:44.014Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/nothing-wrong-with-taking-advantage-of-opportunities-golf-fans-debate-rickie-fowlers-pga-tour-sponsor-invite-scrutiny",
+      "reason": "Claude改写失败: 改写超时（375.48984375秒）",
+      "lastAttempt": "2025-08-12T12:01:11.917Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/buying-advice/best-golf-travel-bags-under-dollar100-year",
+      "reason": "Claude改写失败: 改写超时（391.66640625秒）",
+      "lastAttempt": "2025-08-13T01:33:04.705Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/rules/ranking-donald-trump-cheating-claims/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-13T03:48:38.260Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/golf-tips/long-game/how-to-hold-a-golf-club/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-13T07:22:27.147Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/news/best-shots-at-the-masters-bubba-watson-tiger-woods-phil-mickelson/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-13T08:46:37.899Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/news/donald-trump-blasts-joe-biden-golf-claim-in-us-election-debate/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-13T09:01:43.635Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/4-reasons-rory-mcilroy-ryder-cup-playing-captain-unwise/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-14T01:08:02.564Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/13/us-amateur-2025-round-of-64-scores-highlights/85636571007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-14T01:31:19.307Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/hot-list-2025-highest-launching-drivers",
+      "reason": "Claude改写失败: 改写超时（304.384765625秒）",
+      "lastAttempt": "2025-08-14T04:33:53.889Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/pga-tour/scottie-scheffler-shuts-down-reporters-question-about-caddie-ted-scott",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-14T06:53:44.582Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/dp-world-tour-championship-dubai",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/dp-world-tour-championship-dubai\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/dp-world-tour-championship-dubai\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T14:39:36.417Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/ryder-cup/keegan-bradley-reveals-whether-he-will-pick-himself-ryder-cup-team",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-14T06:54:24.246Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/ryder-cup-qualification-update",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/ryder-cup-qualification-update\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/ryder-cup-qualification-update\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-18T07:00:11.534Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/dubai-desert-classic-preview",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/dubai-desert-classic-preview\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/dubai-desert-classic-preview\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-19T08:36:27.238Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/abu-dhabi-championship-results",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/abu-dhabi-championship-results\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/abu-dhabi-championship-results\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T12:44:03.452Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/rolex-series-events-schedule",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-18T12:27:34.559Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/bmw-pga-championship-wentworth",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/bmw-pga-championship-wentworth\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/bmw-pga-championship-wentworth\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-18T07:39:03.166Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/scottish-open-renaissance-club",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/scottish-open-renaissance-club\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/scottish-open-renaissance-club\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T02:45:58.234Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/irish-open-royal-county-down",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/irish-open-royal-county-down\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/irish-open-royal-county-down\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T07:13:09.526Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/italian-open-marco-simone",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/italian-open-marco-simone\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/italian-open-marco-simone\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T14:10:31.045Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/andalucia-masters-valderrama",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/andalucia-masters-valderrama\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/andalucia-masters-valderrama\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T07:14:46.413Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/portugal-masters-vilamoura",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/portugal-masters-vilamoura\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/portugal-masters-vilamoura\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T07:16:17.958Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/czech-masters-pga-national",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/czech-masters-pga-national\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/czech-masters-pga-national\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T14:15:05.544Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/hero-cup-abu-dhabi",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/hero-cup-abu-dhabi\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/hero-cup-abu-dhabi\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-18T06:38:12.209Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/nedbank-golf-challenge",
+      "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/nedbank-golf-challenge\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T04:23:51.012Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/dp-world-tour-playoffs",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/dp-world-tour-playoffs\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/dp-world-tour-playoffs\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-19T02:37:16.404Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/qualifying-school-final-stage",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/qualifying-school-final-stage\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/qualifying-school-final-stage\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T07:17:49.501Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/player-interview-rory-mcilroy",
+      "reason": "文章抓取失败: page.goto: net::ERR_ABORTED at https://www.dpworldtour.com/news/2025/08/player-interview-rory-mcilroy\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/player-interview-rory-mcilroy\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T07:19:07.063Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/player-interview-jon-rahm",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/player-interview-jon-rahm\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/player-interview-jon-rahm\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T03:36:28.960Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/08/player-interview-viktor-hovland",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/08/player-interview-viktor-hovland\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/08/player-interview-viktor-hovland\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:30:11.895Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/10/live-blog-fedex-st-jude-championship-playoffs-memphis-tennessee-tpc-southwind-bubble-watch-fowler-spieth-scheffler-rose-fleetwood",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-14T07:28:34.211Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13409792/fedexcup-playoffs-justin-rose-claims-st-jude-championship-on-third-play-off-hole-against-jj-spaun-after-tommy-fleetwood-fades",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-14T07:33:17.449Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/short-game/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-15T01:07:19.574Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/15/2025-bmw-championship-leaderboard-updates-friday-tee-times-pga-tour-fedex-cup-playoffs/85612200007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-16T01:49:33.287Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/fred-couples-gesture-fight-in-golf-weekend-9/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-16T03:28:51.597Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/joel-dahmen-double-hit-pga-tour-fedex-cup-playoffs",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-16T05:23:30.053Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/golfers-can-not-find-2025-u-s-open-course/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-16T05:24:21.929Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/equipment/buying-guides/best-golf-irons-low-handicap-players-2025-buyers-guide-and-things-you-need",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-16T07:07:55.040Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13406186/lottie-woad-where-will-english-star-play-next-on-lpga-tour-after-aig-womens-open-and-career-changing-month",
+      "reason": "Claude改写失败: 改写超时（309.330078125秒）",
+      "lastAttempt": "2025-08-16T07:36:46.374Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/liv-relegation-bonuses-pipe-fitter-sunday/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-17T07:28:40.524Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-bmw-championship-sunday-tee-times-round-4/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-17T07:30:33.843Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/5-pitching-mistakes-didnt-know/",
+      "reason": "Claude改写失败: 改写超时（308.861328125秒）",
+      "lastAttempt": "2025-08-17T07:52:20.530Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/keegan-bradley-decision-ryder-cup-captain-player/",
+      "reason": "Claude改写失败: 改写超时（308.009765625秒）",
+      "lastAttempt": "2025-08-17T08:56:30.789Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/putters/broomstick-putters-4-models/",
+      "reason": "文章抓取失败: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://golf.com/gear/putters/broomstick-putters-4-models/\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-17T10:01:19.439Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/dustin-johnson-warming-up-5-lessons-37-minutes/",
+      "reason": "Claude改写失败: 改写超时（315.88671875秒）",
+      "lastAttempt": "2025-08-17T11:25:23.135Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-bmw-championship-saturday-tv-coverage-round-3/",
+      "reason": "Claude改写失败: 改写超时（309.486328125秒）",
+      "lastAttempt": "2025-08-17T13:27:41.134Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/16/2025-bmw-championship-leaderboard-updates-saturday-tee-times-pga-tour-fedex-cup-playoffs/85613304007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-17T15:43:51.633Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/best-golf-deals/best-garmin-golf-devices/",
+      "reason": "Claude改写失败: 改写超时（393.8484375秒）",
+      "lastAttempt": "2025-08-17T17:49:51.427Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/reviews/distance-measuring-devices/mileseey-pf1-pro-golf-rangefinder-review/",
+      "reason": "Claude改写失败: 改写超时（380.8453125秒）",
+      "lastAttempt": "2025-08-17T20:41:17.865Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/liv-golf-indianapolis-prize-money-payout-2025",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-18T01:51:02.628Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/17/bmw-championship-2025-scottie-scheffler-wins/85702605007/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-18T01:56:03.952Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/08/17/akie-iwai-wins-2025-standard-portland-classic-twin-sister-ties-third/85703123007/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-18T02:20:09.668Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/tour-news/test-async-ai-detection",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-18T05:22:54.580Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/6-golfers-facing-relegation-from-2026-liv-golf-season/",
+      "reason": "Claude改写失败: this.aiDetector.setDetectionMode is not a function",
+      "lastAttempt": "2025-08-18T06:07:53.748Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/news/54-hole-mini-tour-beats-liv-golf-to-world-ranking-points/",
+      "reason": "Claude改写失败: this.aiDetector.setDetectionMode is not a function",
+      "lastAttempt": "2025-08-18T09:37:27.283Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/news/former-liv-golfer-wild-scorecard-asian-tour/",
+      "reason": "Claude改写失败: 改写超时（308.8515625秒）",
+      "lastAttempt": "2025-08-18T10:41:02.877Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/scottie-scheffler-clubs-used-to-win-the-2025-bmw-championship",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-18T11:22:11.477Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/5-big-names-to-miss-the-tour-championship",
+      "reason": "Claude改写失败: 改写超时（371.71875秒）",
+      "lastAttempt": "2025-08-18T11:44:10.664Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/07/2025-fedex-st-jude-championship-leaderboard-live-updates-scores-where-to-watch/85511362007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-18T11:56:00.169Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.com/news/breaking-pga-tour-announces-2025-schedule-changes/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-18T13:11:17.512Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/tour/lpga-tour/latest-lpga-tour-news-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-18T13:10:46.823Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/irons/top-3-longest-super-game-improvement-irons-2025/",
+      "reason": "文章抓取失败: MyGolfSpy页面加载失败（3次重试后）: page.goto: Timeout 60000ms exceeded.\nCall log:\n  - navigating to \"https://mygolfspy.com/buyers-guides/irons/top-3-longest-super-game-improvement-irons-2025/\", waiting until \"networkidle\"\n",
+      "lastAttempt": "2025-08-19T08:26:29.909Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/news/politics/2025/08/14/trump-putin-alaska-summit-chess-game-russia-failure/85656200007/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-18T13:57:21.392Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/weve-tested-everything-and-these-are-5-most-underrated-clubs-of-2025",
+      "reason": "Claude改写失败: 改写超时（379.3921875秒）",
+      "lastAttempt": "2025-08-18T16:42:41.982Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/weekend-stories-missed-schauffele-griffin-iwai-poulter",
+      "reason": "Claude改写失败: 改写超时（376.021875秒）",
+      "lastAttempt": "2025-08-18T20:14:07.826Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/2025/08/18/pga-tour-considers-moving-tour-championship-from-east-lake/85705016007/",
+      "reason": "Claude改写失败: 改写超时（312.572265625秒）",
+      "lastAttempt": "2025-08-18T23:19:55.324Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/ryder-cup-dilemma-liv-relegation-monday-finish/",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-19T01:10:23.929Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-tv-schedule-watch-tee-times/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:57:15.082Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/buyers-guides/all/2025-golf-ball-test/",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-21T19:01:43.131Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/dp-world-tour-championship-dubai",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/dp-world-tour-championship-dubai\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/dp-world-tour-championship-dubai\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:31:43.405Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/ryder-cup-qualification-update",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/ryder-cup-qualification-update\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/ryder-cup-qualification-update\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T05:30:28.244Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/dubai-desert-classic-preview",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/dubai-desert-classic-preview\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/dubai-desert-classic-preview\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:33:14.919Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/abu-dhabi-championship-results",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/abu-dhabi-championship-results\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/abu-dhabi-championship-results\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T09:27:17.215Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/rolex-series-events-schedule",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/rolex-series-events-schedule\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/rolex-series-events-schedule\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:34:51.661Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/courses/uk-and-ireland/why-we-cant-wait-get-154th-open-championship-venue-royal-birkdale-2026",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-20T02:29:01.751Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/courses/uk-and-ireland/royal-portrush-golf-club-course-review",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-20T02:29:43.183Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tips/getting-started/how-get-perfect-golf-grip-padraig-harrington",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-20T02:43:47.502Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/18/does-the-hot-hand-exist-in-golf-fedexcup-playoffs-tour-championship-scheffler-hovland-horschel",
+      "reason": "Claude改写失败: 改写超时（138.400390625秒）",
+      "lastAttempt": "2025-08-21T22:25:52.167Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/xander_schauffele_to_miss_pga_tour_championship_after_playing_like_a/s1_17118_42605905",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-19T08:18:38.164Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/zhishi/5405.html",
+      "reason": "文章抓取失败: page.waitForSelector: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-19T08:47:48.664Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/rules/rules-guy-local-rule-in-effect/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:18:02.006Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/features/robert-macintyre-stays-grounded-unglamorous-life/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:57:05.575Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/zhishi/5398.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-22T04:45:34.309Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/zhishi/5395.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-20T13:15:05.875Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/qiuchang/44.html",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-19T23:57:18.344Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/news/3209.html",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-20T00:27:14.650Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/news/2608.html",
+      "reason": "Claude改写失败: 改写超时（310.15234375秒）",
+      "lastAttempt": "2025-08-20T00:50:34.087Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-return-trump-doral-pro-golf-shift/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T01:09:03.144Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/fitness/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:55:45.328Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-schedule-changes-2026/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:56:30.199Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/features/annika-sorenstam-us-open-this-week/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:56:38.471Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/features/usga-intern-program-shaping-golf-leaders/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:56:47.387Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/short-game/3-crucial-fundamentals-chipping/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T07:22:24.292Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/fitness/3-easy-exercises-every-golfer-needs-to-protect-their-shoulders/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:15:08.725Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/how-full-sending-shots-range-help-you-course/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:16:31.877Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.si.com/golf/tour-championship-preview-field-course-history-tee-times-how-to-watch",
+      "reason": "Claude改写失败: 改写超时（312.73828125秒）",
+      "lastAttempt": "2025-08-20T04:24:56.577Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.si.com/golf/us-ryder-cup-team-uniforms-revealed-ralph-lauren",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-20T04:26:38.608Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/39868929/who-won-most-pga-tour-tournaments",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（46字符）",
+      "lastAttempt": "2025-08-23T14:07:12.505Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46007656/biggest-questions-keegan-bradley-ryder-cup-captain-picks-bethpage-black",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（83字符）",
+      "lastAttempt": "2025-08-23T14:07:49.598Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46022236/rory-mcilroy-cleaned-masters-shop-1100-flag-buys",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-22T04:44:49.855Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46023213/tour-championship-format-talking-point-mcilroy-others",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+      "lastAttempt": "2025-08-22T01:58:41.221Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46015761/trump-national-doral-returns-2026-pga-tour-schedule",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（58字符）",
+      "lastAttempt": "2025-08-22T01:00:37.786Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46017524/ted-scott-scottie-scheffler-caddie-returns-tour-championship",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（72字符）",
+      "lastAttempt": "2025-08-22T01:00:44.597Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46007855/tgl-season-tees-dec-28-championship-series-rematch",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+      "lastAttempt": "2025-08-20T13:53:47.321Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46004038/dechambeau-henley-english-qualify-us-ryder-cup-team",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-20T13:53:50.869Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46003239/rahm-defends-liv-points-title-loses-playoff-munoz",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "lastAttempt": "2025-08-20T13:53:54.499Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46016359/how-watch-2025-pga-tour-championship-espn-schedule",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-22T04:45:07.304Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/field-breakdown-2025-cpkc-womens-open",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T02:47:48.107Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/five-things-to-know-about-the-2025-cpkc-womens-open",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T17:37:45.682Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/sister-sister-meet-the-four-sets-of-sisters-who-have-won-on-the-lpga-tour",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T17:39:22.985Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/amateur-kiara-romero-earns-two-leap-points-with-t7-finish-at-portland-classic",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T02:35:29.784Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/erika-hara-secures-lpga-tour-status-through-epson-tour-race-for-the-card",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T02:48:19.147Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/akie-iwai-wins-portland-classic-to-join-twin-sister-chisato-as-rookie-lpga-tour-champion",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-20T13:19:40.750Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/haeran-ryu-aces-16th-hole-at-the-standard-portland-classic-and-wins-50k-towards-car",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-20T13:20:16.236Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/fm-championship/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:31:35.261Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/kroger-queen-city-championship/overview",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T07:57:13.582Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/walmartnwarkansaschampionshippresentedbypg/overview",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-20T09:38:40.723Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/lotte-championship/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:33:32.152Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/buick-lpga-shanghai/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:33:37.682Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/bmw-lpga-international/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:33:42.787Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/international-crown/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:33:46.423Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/maybank-championship/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:33:55.716Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/toto-japan-classic/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:34:08.187Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/cme-group-tour-championship/overview",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:35:03.995Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/tournaments/grant-thornton-invitational/overview",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+      "lastAttempt": "2025-08-23T07:35:09.112Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-odds-scheffler-favorite-fedex-cup/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T13:13:59.936Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/approach-shots/arnold-palmer-secrets-mastering-long-iron-timeless-tips/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:21:54.869Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/zhishi/5411.html",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-20T07:50:17.921Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/bmw-pga-championship-wentworth",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/bmw-pga-championship-wentworth\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/bmw-pga-championship-wentworth\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:36:23.168Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.com/travel/courses/best-public-golf-courses-in-america-top-100-courses-you-can-play/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-20T08:55:46.951Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/irish-open-royal-county-down",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/irish-open-royal-county-down\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/irish-open-royal-county-down\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-20T14:31:51.832Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/reviews/golf-technology/rapsodo-mlm2pro-personal-launch-monitor-review/",
+      "reason": "文章抓取失败: MyGolfSpy访问受限，请使用RSS方法: MyGolfSpy页面无内容，可能遇到403错误",
+      "lastAttempt": "2025-08-21T08:04:01.908Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/reviews/drivers/ping-g430-max-10k/",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-21T19:18:50.103Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/andalucia-masters-valderrama",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/andalucia-masters-valderrama\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/andalucia-masters-valderrama\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T06:37:54.669Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/golf/breaking-news/article/bmw-championship-scottie-scheffler-overtakes-robert-macintyre-uses-wild-chip-in-birdie-to-win-at-caves-valley-215641333.html",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-20T13:37:14.685Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/golf/article/masters-2025-rory-mcilroy-at-last-claims-green-jacket-career-grand-slam-231725337.html",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-20T13:37:26.794Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/czech-masters-pga-national",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-21T06:38:13.161Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/tour-championship-east-lake-tom-cousins-bobby-jones/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:23:18.531Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/mason-howells-u-s-amateur-witb/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T16:13:28.772Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-thursday-tee-times-round-1-pairings/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-20T14:56:11.688Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/pga-tour-championship-broken-here-how-to-fix-it/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T16:44:39.233Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/irons/rickie-fowler-iron-shaft-change/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:21:59.927Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/wild-spring-dunes-tom-doak-texas-course/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T07:23:24.684Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/tour-championship-picks-2025",
+      "reason": "Claude改写失败: 改写超时（148.7265625秒）",
+      "lastAttempt": "2025-08-20T15:09:12.846Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/brian-rolapp-pga-tour-ceo-debut/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:11:27.406Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/travel/nfl-themed-golf-course-upgrade/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:05:30.591Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/theo-epstein-tiger-woods-pga-tour-committee/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:09:52.498Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/new-pga-tour-ceo-wont-read-this/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:11:11.639Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/two-drills-emilio-gonzalez-tony-ruggiero/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:13:50.457Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/short-game/why-pros-love-clever-wedge-shot-around-green/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T09:42:47.417Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/rory-mcilroy-post-masters-merch-haul/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:14:04.364Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/rory-mcilroy-pga-tour-2026-schedule/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T09:23:23.795Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-subpar-picks/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:12:46.110Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/rickie-fowler-blasts-internet-trolls-fedex-cup-ouster/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T01:15:22.660Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/justin-thomas-tiger-woods-dig-backfires-green-jacket/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-21T16:53:53.143Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46019715/ranking-tour-championship-field-scottie-scheffler-rory-mcilroy-fedex-cup",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（73字符）",
+      "lastAttempt": "2025-08-23T14:07:20.480Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46030414/tiger-woods-led-group-eyes-significant-change-pga-tour",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "lastAttempt": "2025-08-22T04:44:43.193Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46029930/scottie-scheffler-prefers-new-tour-championship-format",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（58字符）",
+      "lastAttempt": "2025-08-22T04:44:46.389Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/ryder-cup/luke-donald-admits-golf-legend-needs-show-more-if-he-wants-captains-pick-bethpage",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-21T01:24:50.819Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/critical-week-ahead-epson-tour-players-battle-to-improve-race-for-the-card-rankings-as-the-season-concludes",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T07:52:02.682Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/field-finalized-for-2025-fm-championship",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-21T17:36:42.765Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/whs/how-to-improve-the-world-handicap-system/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T02:43:19.239Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/pga-tour/pga-tour-2026-schedule-and-results/",
+      "reason": "Claude改写失败: 改写超时（135.80078125秒）",
+      "lastAttempt": "2025-08-21T02:50:01.449Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.si.com/golf/new-pga-tour-ceo-brian-rolapp-liv-golf-deal",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-21T02:53:24.854Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/nedbank-golf-challenge",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/nedbank-golf-challenge\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/nedbank-golf-challenge\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T03:45:19.915Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/dp-world-tour-playoffs",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/dp-world-tour-playoffs\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/dp-world-tour-playoffs\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T05:56:16.842Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/player-interview-rory-mcilroy",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/player-interview-rory-mcilroy\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/player-interview-rory-mcilroy\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T05:57:48.372Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.dpworldtour.com/news/2025/07/player-interview-viktor-hovland",
+      "reason": "文章抓取失败: page.goto: net::ERR_TIMED_OUT at https://www.dpworldtour.com/news/2025/07/player-interview-viktor-hovland\nCall log:\n  - navigating to \"https://www.dpworldtour.com/news/2025/07/player-interview-viktor-hovland\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-21T05:59:19.985Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/approach-shots/key-adjustment-knockdown-shots-play-smart/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:12:32.097Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/featured-groups-2025-cpkc-womens-open",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T04:36:41.870Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/20/pga-tour-creates-future-competition-committee-to-define-optimal-competitive-model-for-tour",
+      "reason": "Claude改写失败: 改写结果不包含中文内容",
+      "lastAttempt": "2025-08-21T08:16:18.072Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/video/fleetwood-due-win-pga-tour-163954218.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T12:47:56.021Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/scottie_scheffler_claims_he_doesnt_love_comparisons_with_goat_tiger_woods_following_bmw_championship_victory/s1_17325_42617410",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T08:32:20.110Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/storylines_for_the_tour_championship_scottie_scheffler_eyeing_history/s1_13132_42615010",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T08:42:11.209Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/rory-mcilroy-left-mark-augusta-132030817.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T12:47:57.018Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/superior-girls-kick-off-golf-124600601.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T13:02:31.217Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/yahoo-pga-dfs-picks-tour-111300766.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T13:02:32.296Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/concerning-news-emerges-rickie-fowler-104500670.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T13:02:33.320Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tour-championship-prediction-best-bets-080000352.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T13:02:34.383Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/pennsylvania-highlands-community-college-releases-223300974.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T13:02:35.464Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tiger-woods-once-used-masters-213110191.html",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-21T13:19:14.090Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/rbc-agrees-multi-deal-remain-203021193.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:12.616Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/trump-national-doral-returns-pga-202913274.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:13.596Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/popular-houston-municipal-golf-course-200037451.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:15.287Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/more-scheduling-challenges-await-top-194925944.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:16.752Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/president-trump-makes-promise-future-193411346.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:18.081Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/7-golfers-playing-tour-championship-190032412.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:19.036Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/scottie-scheffler-appears-called-european-184916492.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:19.992Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/president-trump-given-very-special-184411074.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:21.075Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/great-pace-play-debate-why-172656132.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:22.090Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/golfer-says-overdosed-creatine-during-103227422.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:22.987Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/popular-japanese-player-latest-epson-170100319.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:23.974Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/why-jon-rahm-18-million-165956368.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:24.905Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/pga-tour-announces-2026-fedex-164829877.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-21T08:43:26.908Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/keegan_bradley_says_whether_he_has_already_decided_about_the_ryder_cup_playing_captain_role/s1_17664_42609856",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T09:00:57.323Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/jon_rahms_18_million_payday_highlights_flawed_system/s1_13132_42603535",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T22:07:40.371Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/liv/2025/08/21/what-liv-golfers-said-about-michigan-golf-course-after-first-look/85746149007/",
+      "reason": "Claude改写失败: 改写超时（126.611328125秒）",
+      "lastAttempt": "2025-08-21T18:14:48.148Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/17/ben-griffin-disastrous-start-creatine-overdose-round-4-bmw-championship-caves-valley",
+      "reason": "Claude改写失败: 改写超时（127.91015625秒）",
+      "lastAttempt": "2025-08-21T22:25:52.123Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/insane_stat_shows_how_dominant_scottie_scheffler_has_been/s1_13132_42601256",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-21T22:25:55.849Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/scottie_scheffler_gets_shoutouts_from_patrick_mahomes_lebron_james/s1_13132_42601492",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-21T22:41:29.056Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-friday-tee-times-round-2-pairings/",
+      "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
+      "lastAttempt": "2025-08-22T02:04:35.911Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46043490/akie-iwai-atop-cpkc-women-open-days-first-lpga-win",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "lastAttempt": "2025-08-23T14:07:42.189Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46043225/henley-leads-61-scheffler-2-back-tour-championship",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-23T14:07:45.741Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/khang-readied-for-two-big-weeks-on-tour-opens-with-66",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T04:28:45.315Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/15-year-old-amateur-soars-up-leaderboard-on-day-one-her-national-open",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T04:29:18.725Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46044326/annika-sorenstam-shoots-70-take-1st-round-lead-us-senior-women-open",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（65字符）",
+      "lastAttempt": "2025-08-23T14:07:38.705Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/annika-sorenstam-leads-the-way-at-us-senior-womens-open",
+      "reason": "文章抓取失败: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('h1.entry-title, h1.article-title, .article-header h1, .entry-header h1, h1') to be visible\n",
+      "lastAttempt": "2025-08-22T04:27:30.555Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/features/the-unspoken-rule-of-club-golf-why-its-okay-to-ditch-your-regular-playing-partner",
+      "reason": "Claude改写失败: 改写超时（164.2265625秒）",
+      "lastAttempt": "2025-08-22T04:29:50.605Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/tiger_woods_unintentionally_molded_scottie_scheffler_into_the_best_golfer_in_the_world/s1_13132_42619257",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-22T05:13:24.201Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/morgan-looks-to-join-history-as-us-senior-womens-open-enters-weekend",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-23T07:31:28.576Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/45908463/what-fedex-cup-2025-playoff-format-schedule-prize",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（63字符）",
+      "lastAttempt": "2025-08-23T14:07:16.415Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46053406/morgan-atop-us-senior-women-open-sorenstam-fades",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+      "lastAttempt": "2025-08-23T14:07:27.793Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46052896/akie-iwai-opens-3-stroke-lead-cpkc-women-open",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（64字符）",
+      "lastAttempt": "2025-08-23T14:07:31.164Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46052425/ryder-cup-playing-captain-biggest-decision-life",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（65字符）",
+      "lastAttempt": "2025-08-23T14:07:23.902Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46051705/fleetwood-henley-share-tour-championship-lead-tight-race-10m-prize",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（62字符）",
+      "lastAttempt": "2025-08-23T14:07:35.352Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/erika-hara-leans-on-global-success-to-secure-lpga-tour-card",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-23T07:31:31.628Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/draws-and-fades/2025/08/14/bmw-championship-round-1-odds-robert-macintyre-blitz-shakes-up-board-but-who-has-staying-power-scottie-scheffler-viktor-hovland-tommy-fleetwood-bets",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-23T09:55:15.354Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/latest/2025/08/14/with-back-against-wall-viktor-hovland-finds-swing-feel-and-success-bmw-championship-caves-valley-fedexcup-playoffs",
+      "reason": "文章抓取失败: page.goto: net::ERR_NETWORK_CHANGED at https://www.pgatour.com/article/news/latest/2025/08/14/with-back-against-wall-viktor-hovland-finds-swing-feel-and-success-bmw-championship-caves-valley-fedexcup-playoffs\nCall log:\n  - navigating to \"https://www.pgatour.com/article/news/latest/2025/08/14/with-back-against-wall-viktor-hovland-finds-swing-feel-and-success-bmw-championship-caves-valley-fedexcup-playoffs\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-23T11:29:05.652Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.pgatour.com/article/news/equipment-report/2025/08/13/lucky-no-7-justin-rose-gamble-on-driver-switch-pays-off-fedex-st-jude-championship-fedexcup-playoffs",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-23T14:41:20.181Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/courses/uk-and-ireland/portmarnock-golf-club-course-review-we-can-see-why-tiger-woods-regularly",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-23T15:40:50.083Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/keegan-bradley-agonizing-over-his-ryder-cup-fate/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-23T15:46:03.544Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/phil-mickelson-stars-big-liv-upset-hyflyers-advance/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-23T15:53:32.784Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-tour-championship-sunday-tee-times-round-4/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-23T23:50:31.858Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/cameron-young-public-case-ryder-cup-captains-pick/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-23T23:50:55.523Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/keegan-bradley-has-chance-to-win-fed-ex-cup-2025-but-really-just-wants-it-to-all-be-over",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-24T00:22:44.029Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46060033/morgan-kelepouris-mcbride-atop-us-senior-women-open",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-24T00:54:35.149Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46060185/facing-ryder-cup-decision-bradley-3-back-tour-championship",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（66字符）",
+      "lastAttempt": "2025-08-24T00:54:38.155Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46059956/brooke-henderson-minjee-lee-fire-65-share-cpkc-lead",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-24T00:54:41.440Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46059383/ryder-cup-hopeful-matt-fitzpatrick-leads-british-masters-1",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（65字符）",
+      "lastAttempt": "2025-08-24T00:54:44.711Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46057806/dechambeau-rahm-squads-move-liv-golf-team-final",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+      "lastAttempt": "2025-08-24T00:54:47.961Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/pga-tour/tour-championship-round-3-leaderboard-fleetwood-and-cantlay-share-lead",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-24T01:04:08.971Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/pga-tour/scottie-scheffler-criticised-after-being-late-1st-tee-tour-championship",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-24T01:04:43.224Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/23/gbi-walker-cup-captain-pick-unconventional/85798334007/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-24T01:48:23.729Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/liu-kicks-zombie-feelings-shoots-67-to-climb-leaderboard-in-canada",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-24T01:51:34.689Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/happy-gilmore-2-streaming-record-masters-popular/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-24T15:07:44.350Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/tommy-fleetwood-tour-championship-mindset-hack/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-24T15:26:07.642Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-liv-michigan-sunday-tv-coverage-how-watch-finals/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-24T15:40:32.626Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/Scottie-Scheffler-frustrated-but-in-contention-with-one-round-remaining-in-his-already-historic-season",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-24T16:57:58.415Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/canadas-brooke-henderson-closes-strong-is-tied-with-chance-to-win-national-championship-2025",
+      "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-24T17:15:36.799Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/kelepouris-mcbride-morgan-share-round-3-lead-at-us-senior-womens-open",
+      "reason": "文章抓取失败: browser.newPage: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-24T19:46:57.169Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/pga/2025/08/24/tour-championship-sunday-final-round-live-updates-scores-tee-times/85717029007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-24T19:47:00.707Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46066843/becky-morgan-wins-us-senior-women-open-six-strokes",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-25T01:04:17.117Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46066352/canadian-star-brooke-henderson-wins-cpkc-women-open",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（57字符）",
+      "lastAttempt": "2025-08-25T01:04:20.429Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46066010/stewart-cink-defeats-ernie-els-win-ally-challenge",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-25T01:04:28.579Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46064480/alex-noren-wins-british-masters-rasmus-hojgaard-secures-ryder-cup-spot",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（61字符）",
+      "lastAttempt": "2025-08-25T01:04:31.682Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/you-wont-believe-how-many-golfers-have-earned-10-million-on-the-pga-tour-without-winning-an-event",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T01:11:30.586Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.net.cn/zhishi/5426.html",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T01:11:58.814Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/liv-golf-team-championship-prize-money-payout-2025",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T01:39:45.788Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/live/british-masters-leaderboard-dp-world-tour",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T01:41:55.416Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/golf/article/tour-championship-tommy-fleetwood-finally-has-his-moment--and-a-10-million-check-to-boot-214637206.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-25T01:46:24.654Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/golf/breaking-news/article/2025-tour-championship-purse-payouts-how-much-did-tommy-fleetwood-earn-for-his-fedexcup-win-192511686.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-25T01:46:25.912Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/rahm-legion-xiii-outlast-dechambeau-232407606.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-25T01:46:27.603Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/brooke-henderson-returns-lpga-winners-231936786.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-25T01:46:28.554Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/justin_rose_had_classy_social_media_post_about_tommy_fleetwoods_win/s1_13132_42634087",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T01:48:07.445Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/tommy_fleetwood_secures_elusive_first_pga_victory_to_win_fedex_cup_title/s1_17051_42633973",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T01:49:43.327Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.nationalclubgolfer.com/tour/let/ladies-european-tour-schedule-and-results/",
+      "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/let/ladies-european-tour-schedule-and-results/\", waiting until \"domcontentloaded\"\n",
+      "lastAttempt": "2025-08-25T01:48:46.834Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/team_europe_announces_six_automatic_qualifiers_for_ryder_cup/s1_13132_42633427",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T01:51:16.347Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/2025/08/24/dp-world-tour-betfred-british-masters-alex-noren-wins/85807756007/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T01:54:14.523Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13417662/tour-championship-tommy-fleetwood-secures-fedexcup-title-and-claims-maiden-pga-tour-title-with-impressive-win-at-east-lake",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T01:53:54.542Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/liv/2025/08/24/liv-golf-michigan-phil-mickelson-jon-rahm/85807436007/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T02:11:02.470Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13417917/ladies-european-tour-amateur-meja-ortengren-recovers-from-late-wobble-to-win-maiden-title-as-englands-thalia-martin-finishes-fourth",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T02:11:08.933Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/equipment/2025/08/24/top-picks-from-johnnie-o-collegiate-collection-polos-hoodies-q-zips/85749481007/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T02:13:28.540Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.si.com/golf/2025-pga-tour-schedule-complete-dates-winners-purses",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T02:22:22.016Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/tommy-fleetwood-tour-championship-revealed-something/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T03:47:32.491Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/2025-ryder-cup-keegan-bradley-captains-picks/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T03:57:39.408Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/tommy-fleetwoods-tour-championship-witb/",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T04:09:01.090Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/tommy-fleetwood-tour-championship-starting-strokes",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T05:18:07.853Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46066199/fleetwood-wins-tour-championship-first-pga-tour-title",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（61字符）",
+      "lastAttempt": "2025-08-25T05:18:12.168Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46066473/lebron-james-tiger-woods-caitlin-clark-react-tommy-fleetwood-fedex-cup",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-25T05:18:17.117Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.espn.com/golf/story/_/id/46067192/jon-rahm-legion-xiii-outlast-bryan-dechambeau-crushers-liv-golf-team-final",
+      "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
+      "lastAttempt": "2025-08-25T05:18:27.470Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/president_trump_to_attend_ryder_cup_backs_keegan_bradley_as_playing_captain/s1_17051_42634452",
+      "reason": "文章抓取失败: page.waitForSelector: Target page, context or browser has been closed",
+      "lastAttempt": "2025-08-25T05:19:46.449Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/video/were-best-mens-golf-moments-015517946.html",
+      "reason": "文章内容无效（可能是抓取失败）",
+      "lastAttempt": "2025-08-25T05:32:50.348Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/scottie_scheffler_nukes_tour_championship_comeback_attempt_with_water_disaster/s1_17118_42633785",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T05:39:45.601Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13415204/pga-tour-2026-schedule-dates-venues-events-for-the-new-fedexcup-season-signature-events-and-golf-majors",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T07:52:10.231Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.skysports.com/golf/news/12176/13417663/ryder-cup-2025-keegan-bradley-leaves-fedexcup-finale-with-decision-needed-on-playing-captain-role-and-his-team-usa-picks-for-bethpage-black",
+      "reason": "文章抓取失败: contentSize is not defined",
+      "lastAttempt": "2025-08-25T08:35:28.754Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/no_more_deserving_champ_justin_rose_lauds_tommy_fleetwood_after_1st_pga_tour_title_win/s1_17325_42634964",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-25T08:38:48.570Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/golfs-best-bromance-fleetwoodmania-erupts/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T01:07:37.348Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/defiant-rory-mcilroy-flees-east-lake-us-open/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T01:28:45.736Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/7-revealing-stats-2025-pga-tour-season/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T01:37:55.456Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/broing-ways-tour-players-get-better-golf-digest-tips",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T02:40:08.675Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/765256/tour-rundown-fleetwood-breaks-through/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T03:02:27.966Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/keegan_bradley_ryder_cup_decisions_going_to_be_pretty_wild/s1_17051_42637793",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T03:27:57.996Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/fellow_players_excited_for_tommy_fleetwoods_first_pga_tour_win/s1_17615_42638052",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T03:28:18.237Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/predicting_the_ryder_cup_captains_picks_will_keegan_bradley_pick_himself/s1_13132_42635741",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T03:28:44.787Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/tommy_fleetwood_finally_proves_you_dont_need_a_tiger_woods_mindset_to_win/s1_13132_42635740",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-26T03:29:38.126Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-wins-tour-championship-221219461.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:47.717Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-exorcises-demons-finally-221054935.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:49.073Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/finally-tommy-fleetwood-breaks-pga-220110697.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:50.359Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/caitlin-clark-premonition-pga-tour-215950714.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:51.440Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tour-championship-tommy-fleetwood-breaks-215731572.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:52.382Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-won-pga-tour-105502052.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:53.373Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-finally-call-himself-215130121.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:54.427Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwod-slays-pga-tour-214704861.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:55.420Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/tommy-fleetwood-england-wins-fedex-214616324.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:56.219Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/alex-noren-wins-dp-world-170038608.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:57.135Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://sports.yahoo.com/article/theres-growing-worry-president-trumps-170000275.html",
+      "reason": "文章抓取失败: HTTP 403: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-26T09:06:58.033Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/phil_mickelson_takes_sarcastic_jab_at_patrick_cantlay_regarding_slow_play_at_2025_tour_championship/s1_17325_42640160",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-27T01:21:43.793Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/dp-world-tour/european-masters-golf-betting-tips-dont-rule-him-out-ryder-cup-spot-yet",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-27T01:22:52.099Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://mygolfspy.com/news-opinion/tour/what-the-hell-happened-to-max-homa/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-27T01:33:32.794Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/keegan-bradley-robbed-ryder-cup-dream/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-28T01:23:08.031Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/ryder-cup-snubs-2025-u-s-ryder-cup/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-28T01:58:00.215Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/ranking_us_ryder_cup_pairings_by_how_much_you_would_hate_to_play_with_them/s1_13132_42652670",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-29T02:17:58.429Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/gear/best-golf-drivers-2024",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:01:49.782Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/gear/drivers/best-golf-drivers-2024/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:03.930Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/test-new-architecture-url-1753866800/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:19.050Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/test-fixed-architecture-1753867997/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:31.652Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/equipment/what-drivers-are-the-longest-hitters-on-the-pga-tour-using-in-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:36.943Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/pga-tour/charlie-woods-climbs-junior-pga-leaderboard-with-no-pressure-swing",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:41.822Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/equipment/best-srixon-drivers-2025",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:02:46.877Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/755027/titleist-t-series-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:42.936Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/golf-instruction-putting-tips",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:52.325Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfwrx.com/nonexistent-article-test-123456/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:04:56.809Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/joel-dahmen-understands-the-assignment-opens-with-10-birdies-to-lead-wyndham",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:05:06.413Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/ryder-cup-qualifications-points-update-august-2025/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:05:24.030Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmonthly.com/news/professional-golf-latest-news-updates/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:05:33.340Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfdigest.com/story/charlie-woods-9-birdies-second-straight-day-t-2-junior-pga",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-08-29T08:05:42.565Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/grading-keegan-bradley-phil-mickelson-weekend-9/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-30T00:55:21.694Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golfmagic.com/tour/pga-tour/tiger-woods-son-charlie-woods-slow-start-junior-players-championship",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-30T01:02:46.465Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.todays-golfer.com/news-and-events/tour-news/pga-tour-2025-stats-surprising/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-31T10:27:21.818Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.si.com/golf/awards-pga-tour-milestone-2025-season",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-31T12:05:18.536Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.lpga.com/news/2025/after-riding-the-struggle-bus-rose-zhang-is-rounding-into-form-at-the-fm-championship",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-08-31T16:11:51.498Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/beat_us_again_if_you_can_4x_major_champion_urges_tiger_woods_to_come_play_on_pga_champions_tour_in_2026/s1_17325_42661148",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T01:20:15.092Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/news/best-interview-moments-from-fm-championship-rogers-report/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T02:07:44.154Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/08/31/junior-players-championship-2025-scores-highlights-miles-russell/85923314007/",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T02:30:04.309Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://golf.com/instruction/short-game/greenside-bunker-basics/",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T02:31:28.851Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/chinas_miranda_wang_sinks_clutch_putt_to_collect_first_lpga_win/s1_17063_42668267",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T03:41:12.266Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.yardbarker.com/golf/articles/tiger_woods_son_charlie_sinks_hole_in_one_at_junior_players_championship/s1_17118_42668044",
+      "reason": "实时赛事报道内容过长，已跳过",
+      "lastAttempt": "2025-09-01T03:41:42.532Z",
+      "attemptCount": 1
+    },
+    {
+      "url": "https://www.golf.com/news/golfer-year-argue-after-win",
+      "reason": "文章抓取失败: HTTP 404: 文章不存在或已被删除",
+      "lastAttempt": "2025-09-01T07:30:56.877Z",
+      "attemptCount": 1
+    }
+  ]
+}

@@ -485,11 +485,18 @@ function consolidateUrls(discoveryResults) {
                 try {
                     const urlMapping = JSON.parse(fs.readFileSync(urlsJsonPath, 'utf8'));
                     for (const [articleNum, recordedUrl] of Object.entries(urlMapping)) {
+                        // 检查状态，包括duplicate状态
+                        const status = typeof recordedUrl === 'object' ? recordedUrl.status : 'completed';
                         const normalizedUrl = (typeof recordedUrl === 'string' ? recordedUrl : recordedUrl.url)
                             .replace(/\/$/, '')
                             .replace(/\?.*$/, '')
                             .replace(/#.*$/, '');
-                        localUrlCache.set(normalizedUrl, { dateDir, articleNum });
+                        localUrlCache.set(normalizedUrl, { 
+                            dateDir, 
+                            articleNum, 
+                            status,
+                            duplicateInfo: recordedUrl.duplicateInfo || null
+                        });
                     }
                 } catch (e) {
                     // 忽略解析错误
@@ -504,6 +511,7 @@ function consolidateUrls(discoveryResults) {
     let duplicateCount = 0;
     let newUrlCount = 0;
     let localDuplicateCount = 0;
+    let statusDuplicateCount = 0; // 统计标记为duplicate状态的URL
     
     discoveryResults.forEach(result => {
         if (result.success && result.urls.length > 0) {
@@ -514,21 +522,33 @@ function consolidateUrls(discoveryResults) {
                         .replace(/\/$/, '')
                         .replace(/\?.*$/, '')
                         .replace(/#.*$/, '');
-                    const localProcessed = localUrlCache.has(normalizedUrl);
+                    const localInfo = localUrlCache.get(normalizedUrl);
                     
-                    if (localProcessed) {
+                    if (localInfo) {
                         localDuplicateCount++;
                         duplicateCount++;
+                        // 统计duplicate状态的URL
+                        if (localInfo.status === 'duplicate') {
+                            statusDuplicateCount++;
+                        }
                         if (process.env.DEBUG_DEDUP) {
-                            console.log(`  ⏭️  跳过本地已处理: ${url.substring(0, 80)}...`);
+                            const statusMsg = localInfo.status === 'duplicate' ? 
+                                `(状态:duplicate, 重复于${localInfo.duplicateInfo?.date}/${localInfo.duplicateInfo?.articleNum})` : 
+                                `(状态:${localInfo.status})`;
+                            console.log(`  ⏭️  跳过本地已处理: ${url.substring(0, 80)}... ${statusMsg}`);
                         }
                     } else {
                         // 再检查历史数据库（作为补充）
                         const processedRecord = historyDB.isUrlProcessed(url);
                         if (processedRecord) {
                             duplicateCount++;
+                            // 检查历史库中的duplicate状态
+                            if (processedRecord.status === 'duplicate') {
+                                statusDuplicateCount++;
+                            }
                             if (process.env.DEBUG_DEDUP) {
-                                console.log(`  ⏭️  跳过历史已处理: ${url.substring(0, 80)}...`);
+                                const statusMsg = processedRecord.status === 'duplicate' ? '(状态:duplicate)' : '';
+                                console.log(`  ⏭️  跳过历史已处理: ${url.substring(0, 80)}... ${statusMsg}`);
                             }
                         } else {
                             // 新URL，添加到处理队列
@@ -560,6 +580,7 @@ function consolidateUrls(discoveryResults) {
     console.log(`\n📊 URL整合结果:`);
     console.log(`  📁 本地已处理: ${localDuplicateCount} 篇`);
     console.log(`  📚 历史库已处理: ${duplicateCount - localDuplicateCount} 篇`);
+    console.log(`  🔄 标记为duplicate状态: ${statusDuplicateCount} 篇`);
     console.log(`  🔍 总重复URL: ${duplicateCount} 篇（已自动过滤）`);
     console.log(`  ✨ 真正的新URL: ${newUrlCount} 篇（需要处理）`);
     

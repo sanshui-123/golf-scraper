@@ -1,0 +1,7 @@
+{
+  "showLocalhostUrls": true,
+  "showWebInterface": true,
+  "quietMode": false,
+  "logLevel": "info",
+  "comment": "设置showLocalhostUrls为false可以隐藏所有localhost:8080的输出提示"
+}

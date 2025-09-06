@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>监控调试</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+        }
+        .status-grid {
+            border: 2px dashed #f00;
+            padding: 20px;
+            margin: 20px 0;
+            min-height: 100px;
+        }
+        .status-card {
+            background: #0f3460;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #000;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>监控页面调试</h1>
+    
+    <button onclick="testFetch()">测试API数据获取</button>
+    <button onclick="testRender()">测试渲染逻辑</button>
+    <button onclick="checkDOM()">检查DOM结构</button>
+    
+    <h2>status-grid容器:</h2>
+    <div class="status-grid">
+        <p>这是status-grid容器</p>
+    </div>
+    
+    <h2>调试输出:</h2>
+    <pre id="debug"></pre>
+    
+    <script>
+        const debug = document.getElementById('debug');
+        
+        function log(msg) {
+            debug.innerHTML += msg + '\n';
+        }
+        
+        async function testFetch() {
+            log('=== 测试API数据获取 ===');
+            try {
+                const response = await fetch('http://localhost:8080/api/system-status');
+                const data = await response.json();
+                
+                log('API响应成功');
+                log('websites数组长度: ' + (data.websites ? data.websites.length : 0));
+                
+                if (data.websites) {
+                    data.websites.forEach((site, index) => {
+                        log(`网站 ${index + 1}: ${site.name}`);
+                        log(`  - detailStats: ${JSON.stringify(site.detailStats)}`);
+                    });
+                } else {
+                    log('没有找到websites数据');
+                }
+                
+                // 保存到全局变量供测试渲染使用
+                window.testData = data;
+            } catch (error) {
+                log('错误: ' + error.message);
+            }
+        }
+        
+        function testRender() {
+            log('\n=== 测试渲染逻辑 ===');
+            
+            if (!window.testData) {
+                log('请先执行"测试API数据获取"');
+                return;
+            }
+            
+            const data = window.testData;
+            
+            if (data.websites && data.websites.length > 0) {
+                log('开始渲染网站状态...');
+                
+                // 先移除已存在的网站状态卡片
+                const existingWebsiteStatus = document.getElementById('website-status-card');
+                if (existingWebsiteStatus) {
+                    existingWebsiteStatus.remove();
+                    log('移除了已存在的网站状态卡片');
+                }
+                
+                const websiteStatusDiv = document.createElement('div');
+                websiteStatusDiv.id = 'website-status-card';
+                websiteStatusDiv.className = 'status-card';
+                websiteStatusDiv.style.marginTop = '20px';
+                websiteStatusDiv.innerHTML = '<h3>🌐 网站处理状态</h3>';
+                
+                const websiteGrid = document.createElement('div');
+                websiteGrid.style.cssText = 'display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; margin-top: 15px;';
+                
+                log(`准备渲染 ${data.websites.length} 个网站`);
+                
+                data.websites.forEach((site, index) => {
+                    log(`渲染网站 ${index + 1}: ${site.name}`);
+                    
+                    const siteCard = document.createElement('div');
+                    siteCard.style.cssText = 'background: #16213e; padding: 15px; border-radius: 8px; border: 1px solid #2c3e50;';
+                    
+                    const detailStats = site.detailStats || {};
+                    const totalProcessed = detailStats.processed || 0;
+                    const statusBadges = [];
+                    
+                    if (detailStats.success > 0) {
+                        statusBadges.push(`<span style="background: #27ae60; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px;">✅ 成功:${detailStats.success}</span>`);
+                    }
+                    if (detailStats.failed > 0) {
+                        statusBadges.push(`<span style="background: #e74c3c; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px;">❌ 失败:${detailStats.failed}</span>`);
+                    }
+                    if (detailStats.skipped > 0) {
+                        statusBadges.push(`<span style="background: #f39c12; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px;">⏭️ 跳过:${detailStats.skipped}</span>`);
+                    }
+                    if (detailStats.duplicate > 0) {
+                        statusBadges.push(`<span style="background: #9b59b6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-right: 5px;">🔁 重复:${detailStats.duplicate}</span>`);
+                    }
+                    if (detailStats.pending > 0) {
+                        statusBadges.push(`<span style="background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem;">⏳ 待处理:${detailStats.pending}</span>`);
+                    }
+                    
+                    siteCard.innerHTML = `
+                        <div style="font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; color: ${site.statusColor || '#ecf0f1'};">
+                            ${site.statusIcon || '📄'} ${site.name}
+                        </div>
+                        <div style="font-size: 0.9rem; color: #95a5a6; margin-bottom: 8px;">
+                            总计: ${site.totalUrls || 0} | 已处理: ${totalProcessed}
+                        </div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 5px;">
+                            ${statusBadges.join('')}
+                        </div>
+                    `;
+                    
+                    websiteGrid.appendChild(siteCard);
+                });
+                
+                websiteStatusDiv.appendChild(websiteGrid);
+                
+                // 添加到status-grid容器
+                const statusGrid = document.querySelector('.status-grid');
+                if (statusGrid) {
+                    statusGrid.appendChild(websiteStatusDiv);
+                    log('成功添加到status-grid容器');
+                } else {
+                    log('错误: 找不到status-grid容器!');
+                }
+            } else {
+                log('没有网站数据可渲染');
+            }
+        }
+        
+        function checkDOM() {
+            log('\n=== 检查DOM结构 ===');
+            
+            const statusGrid = document.querySelector('.status-grid');
+            log('status-grid容器存在: ' + (statusGrid ? '是' : '否'));
+            
+            if (statusGrid) {
+                log('status-grid子元素数量: ' + statusGrid.children.length);
+                for (let i = 0; i < statusGrid.children.length; i++) {
+                    const child = statusGrid.children[i];
+                    log(`  子元素 ${i + 1}: ${child.tagName} (id="${child.id}", class="${child.className}")`);
+                }
+            }
+            
+            const websiteStatusCard = document.getElementById('website-status-card');
+            log('website-status-card存在: ' + (websiteStatusCard ? '是' : '否'));
+        }
+        
+        // 页面加载时自动测试
+        window.onload = function() {
+            log('页面加载完成');
+            testFetch();
+        };
+    </script>
+</body>
+</html>

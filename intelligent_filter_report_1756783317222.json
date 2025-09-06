@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-09-02T03:21:57.222Z",
+  "stats": {
+    "total": 150,
+    "permanent": 145,
+    "temporary": 2,
+    "unknown": 3,
+    "byCategory": {
+      "invalid_content": 47,
+      "code_error": 98
+    },
+    "byWebsite": {
+      "forums.golfwrx.com": 3,
+      "www.golfwrx.com": 4,
+      "www.golfdigest.com": 1,
+      "golf.com": 11,
+      "mygolfspy.com": 15,
+      "www.lpga.com": 16,
+      "www.todays-golfer.com": 4,
+      "www.pgatour.com": 16,
+      "golfweek.usatoday.com": 16,
+      "www.si.com": 5,
+      "sports.yahoo.com": 19,
+      "www.espn.com": 13,
+      "www.golfmagic.com": 9,
+      "www.nationalclubgolfer.com": 11,
+      "www.skysports.com": 4,
+      "www.yardbarker.com": 2,
+      "www.golf.net.cn": 1
+    }
+  },
+  "recommendations": [
+    {
+      "type": "bug_fix",
+      "priority": "high",
+      "description": "修复contentSize和urlsWithNumbers相关错误"
+    },
+    {
+      "type": "process_optimization",
+      "priority": "medium",
+      "description": "考虑定期自动运行过滤器"
+    }
+  ]
+}

@@ -315,15 +315,15 @@
     "completedAt": "2025-07-21T14:53:59.338Z"
   },
   "https://forums.golfwrx.com/topic/2059168-vote-now-the-polls-are-open-for-members-choice-2025-presented-by-2nd-swing/": {
-    "reason": "文章抓取失败: page.goto: net::ERR_NETWORK_CHANGED at https://forums.golfwrx.com/topic/2059168-vote-now-the-polls-are-open-for-members-choice-2025-presented-by-2nd-swing/\nCall log:\n  - navigating to \"https://forums.golfwrx.com/topic/2059168-vote-now-the-polls-are-open-for-members-choice-2025-presented-by-2nd-swing/\", waiting until \"domcontentloaded\"\n",
+    "reason": "文章抓取失败: 文章内容抓取失败：返回数据为空",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T17:07:33.948Z",
+    "lastAttempt": "2025-09-06T01:35:48.919Z",
     "status": "pending_retry"
   },
   "https://forums.golfwrx.com/discover/206/": {
-    "reason": "文章抓取失败: page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://forums.golfwrx.com/discover/206/\", waiting until \"domcontentloaded\"\n",
+    "reason": "文章抓取失败: 文章内容抓取失败：返回数据为空",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T17:24:21.448Z",
+    "lastAttempt": "2025-09-06T01:35:58.318Z",
     "status": "pending_retry"
   },
   "https://forums.golfwrx.com/discover/204/": {
@@ -334,9 +334,9 @@
     "cleanedAt": "2025-09-01T08:44:07.884Z"
   },
   "https://forums.golfwrx.com/topic/2058978-giveaway-vortex-golf-survey-anarch-rangefinder-giveaway": {
-    "reason": "文章抓取失败: page.goto: Timeout 90000ms exceeded.\nCall log:\n  - navigating to \"https://forums.golfwrx.com/topic/2058978-giveaway-vortex-golf-survey-anarch-rangefinder-giveaway\", waiting until \"domcontentloaded\"\n",
+    "reason": "文章抓取失败: 文章内容抓取失败：返回数据为空",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T17:56:39.425Z",
+    "lastAttempt": "2025-09-06T01:36:04.291Z",
     "status": "pending_retry"
   },
   "https://golf.com/news/open-championship-2025-sunday-tee-times/": {
@@ -1637,9 +1637,11 @@
   "https://www.nationalclubgolfer.com/golf-tips/long-game/how-to-hold-a-golf-club/": {
     "reason": "实时赛事报道内容过长，已跳过",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-13T07:22:27.147Z",
+    "lastAttempt": "2025-09-06T01:36:46.043Z",
     "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.884Z"
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://www.nationalclubgolfer.com/tour/news/best-shots-at-the-masters-bubba-watson-tiger-woods-phil-mickelson/": {
     "reason": "实时赛事报道内容过长，已跳过",
@@ -2055,11 +2057,11 @@
     "cleanedAt": "2025-09-01T08:44:07.884Z"
   },
   "https://www.golfmonthly.com/features/weve-tested-everything-and-these-are-5-most-underrated-clubs-of-2025": {
-    "reason": "Claude改写失败: 改写超时（379.3921875秒）",
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 93秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-18T16:42:41.982Z",
-    "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.884Z"
+    "lastAttempt": "2025-09-05T02:08:19.731Z",
+    "status": "success",
+    "completedAt": "2025-09-06T01:32:22.917Z"
   },
   "https://www.golfmonthly.com/news/weekend-stories-missed-schauffele-griffin-iwai-poulter": {
     "reason": "Claude改写失败: 改写超时（376.021875秒）",
@@ -2169,9 +2171,11 @@
   "https://www.golfmagic.com/tips/getting-started/how-get-perfect-golf-grip-padraig-harrington": {
     "reason": "实时赛事报道内容过长，已跳过",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-20T02:43:47.502Z",
+    "lastAttempt": "2025-09-06T01:37:23.551Z",
     "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.884Z"
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://www.pgatour.com/article/news/latest/2025/08/18/does-the-hot-hand-exist-in-golf-fedexcup-playoffs-tour-championship-scheffler-hovland-horschel": {
     "reason": "Claude改写失败: 改写超时（138.400390625秒）",
@@ -2328,11 +2332,13 @@
     "cleanedAt": "2025-09-01T08:44:07.884Z"
   },
   "https://www.espn.com/golf/story/_/id/39868929/who-won-most-pga-tour-tournaments": {
-    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（46字符）",
+    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（8字符）",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-23T14:07:12.505Z",
+    "lastAttempt": "2025-09-05T16:33:59.152Z",
     "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.884Z"
+    "failureCategory": "invalid_content",
+    "failureDescription": "内容太短",
+    "filteredAt": "2025-09-06T01:05:31.766Z"
   },
   "https://www.espn.com/golf/story/_/id/46007656/biggest-questions-keegan-bradley-ryder-cup-captain-picks-bethpage-black": {
     "reason": "文章抓取失败: 文章内容抓取失败：内容过短（83字符）",
@@ -2688,8 +2694,9 @@
     "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
     "attemptCount": 1,
     "lastAttempt": "2025-08-22T01:05:30.591Z",
-    "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.885Z"
+    "status": "success",
+    "cleanedAt": "2025-09-01T08:44:07.885Z",
+    "completedAt": "2025-09-06T08:07:19.211Z"
   },
   "https://golf.com/news/theo-epstein-tiger-woods-pga-tour-committee/": {
     "reason": "文章抓取失败: 文章内容抓取失败：缺少标题",
@@ -2799,9 +2806,11 @@
   "https://www.nationalclubgolfer.com/whs/how-to-improve-the-world-handicap-system/": {
     "reason": "实时赛事报道内容过长，已跳过",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-21T02:43:19.239Z",
+    "lastAttempt": "2025-09-06T01:38:04.517Z",
     "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.885Z"
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://www.nationalclubgolfer.com/tour/pga-tour/pga-tour-2026-schedule-and-results/": {
     "reason": "Claude改写失败: 改写超时（135.80078125秒）",
@@ -3268,9 +3277,11 @@
   "https://www.golfmagic.com/courses/uk-and-ireland/portmarnock-golf-club-course-review-we-can-see-why-tiger-woods-regularly": {
     "reason": "实时赛事报道内容过长，已跳过",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-23T15:40:50.083Z",
+    "lastAttempt": "2025-09-06T01:38:46.135Z",
     "status": "permanent_failed",
-    "cleanedAt": "2025-09-01T08:44:07.885Z"
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://golf.com/news/phil-mickelson-stars-big-liv-upset-hyflyers-advance/": {
     "reason": "实时赛事报道内容过长，已跳过",
@@ -4019,13 +4030,13 @@
     "cleanedAt": "2025-09-01T08:44:07.885Z"
   },
   "https://www.espn.com/golf/story/_/id/46070604/ryder-cup-2025-complete-team-europe-luke-donald-make-final-captain-picks": {
-    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（92字符）",
+    "reason": "文章抓取失败: 文章内容抓取失败：内容过短（71字符）",
     "attemptCount": 1,
-    "lastAttempt": "2025-08-30T00:54:46.885Z",
+    "lastAttempt": "2025-09-05T16:50:57.119Z",
     "status": "permanent_failed",
     "failureCategory": "invalid_content",
     "failureDescription": "内容太短",
-    "filteredAt": "2025-09-02T03:21:57.221Z"
+    "filteredAt": "2025-09-06T01:05:31.767Z"
   },
   "https://golf.com/news/grading-keegan-bradley-phil-mickelson-weekend-9/": {
     "reason": "实时赛事报道内容过长，已跳过",
@@ -4295,18 +4306,15 @@
     "cleanedAt": "2025-09-02T03:20:27.477Z"
   },
   "https://www.lpga.com/news/2025/jeeno-thitikul-tallies-eighth-top-five-finish-of-season-at-fm-championship": {
-    "reason": "文章内容无效（可能是抓取失败）",
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 65秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-02T02:35:20.123Z",
-    "status": "permanent_failed",
-    "failureCategory": "invalid_content",
-    "failureDescription": "内容无效",
-    "filteredAt": "2025-09-02T03:21:57.221Z"
+    "lastAttempt": "2025-09-06T01:44:59.580Z",
+    "status": "pending_retry"
   },
   "https://www.nationalclubgolfer.com/best-golf-deals/best-waterproof-golf-trousers/": {
-    "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-waterproof-golf-trousers/\", waiting until \"domcontentloaded\"\n",
+    "reason": "Claude改写失败: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应2次, 超时2次, API错误0次",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T16:04:38.323Z",
+    "lastAttempt": "2025-09-06T02:00:55.129Z",
     "status": "pending_retry"
   },
   "https://www.espn.com/golf/story/_/id/46127792/donald-fills-europe-ryder-cup-team-familiar-names": {
@@ -4427,11 +4435,11 @@
   "https://www.lpga.com/news/2025/nelly-kordas-statistics-indicate-a-good-year-she-still-hasnt-won-a-tournament": {
     "reason": "文章内容无效（可能是抓取失败）",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T09:23:19.105Z",
+    "lastAttempt": "2025-09-06T02:01:12.071Z",
     "status": "permanent_failed",
     "failureCategory": "invalid_content",
     "failureDescription": "内容无效",
-    "filteredAt": "2025-09-04T08:25:53.128Z"
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://www.nationalclubgolfer.com/tour/ryder-cup/ryder-cup-tickets/": {
     "reason": "实时赛事报道内容过长，已跳过",
@@ -4443,9 +4451,9 @@
     "filteredAt": "2025-09-04T08:25:53.128Z"
   },
   "https://www.yardbarker.com/golf/articles/john_daly_tells_craziest_tiger_woods_story_involving_drunk_escapades_at_1994_tournament/s1_17118_42677786": {
-    "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.yardbarker.com/golf/articles/john_daly_tells_craziest_tiger_woods_story_involving_drunk_escapades_at_1994_tournament/s1_17118_42677786\", waiting until \"domcontentloaded\"\n",
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 71秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时2次, API错误0次",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-03T13:01:38.491Z",
+    "lastAttempt": "2025-09-06T02:08:35.657Z",
     "status": "pending_retry"
   },
   "https://www.espn.com/golf/story/_/id/46140126/sergio-garcia-play-irish-open-ryder-cup-omission": {
@@ -4485,22 +4493,20 @@
     "filteredAt": "2025-09-04T08:25:53.128Z"
   },
   "https://www.si.com/golf/scottie-scheffler-rory-mcilroy-new-golf-channel-games": {
-    "reason": "保存失败: 文章内容验证失败: 内容过短 (980字符，最小要求1000字符)",
+    "reason": "保存失败: 文章内容验证失败: 内容过短 (900字符，最小要求1000字符)",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-04T02:57:53.107Z",
-    "status": "permanent_failed",
-    "failureCategory": "invalid_content",
-    "failureDescription": "内容太短",
-    "filteredAt": "2025-09-04T08:25:53.128Z"
+    "lastAttempt": "2025-09-06T02:02:14.196Z",
+    "status": "success",
+    "completedAt": "2025-09-06T02:05:20.926Z"
   },
   "https://www.lpga.com/news/2025/1000km-journey-to-mark-one-year-to-go-until-the-2026-solheim-cup": {
     "reason": "文章抓取失败: 文章内容抓取失败：内容过短（59字符）",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-04T04:02:06.550Z",
+    "lastAttempt": "2025-09-06T02:13:03.808Z",
     "status": "permanent_failed",
     "failureCategory": "invalid_content",
     "failureDescription": "内容太短",
-    "filteredAt": "2025-09-04T08:25:53.128Z"
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://mygolfspy.com/buyers-guide/is-the-bushnell-pro-x3link-worth-the-upgrade/": {
     "reason": "文章抓取失败: page.waitForTimeout: Target page, context or browser has been closed",
@@ -4512,11 +4518,11 @@
   "https://www.lpga.com/news/2025/50-days-to-go-golf-legend-seri-pak-named-official-ambassador-of-2025-hanwha-lifeplus-international-crown": {
     "reason": "文章内容无效（可能是抓取失败）",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-04T07:21:32.515Z",
+    "lastAttempt": "2025-09-06T02:13:16.994Z",
     "status": "permanent_failed",
     "failureCategory": "invalid_content",
     "failureDescription": "内容无效",
-    "filteredAt": "2025-09-04T08:25:53.128Z"
+    "filteredAt": "2025-09-06T03:23:47.801Z"
   },
   "https://mygolfspy.com/news-opinion/instruction/golf-club-gapping-tool/": {
     "reason": "文章内容无效（可能是抓取失败）",
@@ -4553,5 +4559,860 @@
     "failureCategory": "invalid_content",
     "failureDescription": "内容太短",
     "filteredAt": "2025-09-04T08:25:53.128Z"
+  },
+  "https://www.golfmonthly.com/news/brian-rolapp-is-aggressively-focused-on-improving-the-pga-tour-heres-what-he-should-focus-on": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 98秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T05:49:23.497Z",
+    "status": "success",
+    "completedAt": "2025-09-06T06:48:51.745Z"
+  },
+  "https://www.golfmonthly.com/features/stop-frazzling-your-brain-i-used-this-one-swing-thought-to-unlock-a-whole-new-level-of-consistency": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T01:51:48.131Z",
+    "status": "success",
+    "completedAt": "2025-09-06T01:26:10.977Z"
+  },
+  "https://www.golfmonthly.com/features/i-got-new-grips-on-my-clubs-and-i-was-amazed-at-how-much-they-boosted-my-confidence": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 60秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T02:19:31.761Z",
+    "status": "success",
+    "completedAt": "2025-09-06T02:24:04.256Z"
+  },
+  "https://www.golfmonthly.com/features/i-lost-to-a-5-handicapper-with-a-chipper-should-more-golfers-consider-this-club": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 66秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T02:33:12.771Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/buying-advice/best-golf-brush": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 79秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T05:57:38.897Z",
+    "status": "success",
+    "completedAt": "2025-09-06T06:50:57.831Z"
+  },
+  "https://www.golfmonthly.com/buying-advice/best-golf-fitness-equipment-year": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 114秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T06:07:01.187Z",
+    "status": "success",
+    "completedAt": "2025-09-06T06:58:04.602Z"
+  },
+  "https://www.golfmonthly.com/features/which-titleist-iron-is-right-for-you-in-2025": {
+    "reason": "Claude改写失败: 改写失败 - Claude执行失败 (代码1): node:fs:1658\n  const stats = binding.stat(\n                        ^\n\nError: ENOENT: no such file or directory, stat '/Users/sanshui/.claude/projects/-Users-sanshui-Desktop-cursor/9d63fead-d377-4a01-af9a-bc3eedb196fb.jsonl'\n    at Module.statSync (node:fs:1658:25)\n    at Object.statSync (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:680:7241)\n    at file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:2955:427\n    at Array.sort (<anonymous>)\n    at BH8 (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:2955:385)\n    at nfB (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:2956:175)\n    at Uv (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:2978:8064)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async wM0.<anonymous> (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:2988:624)\n    at async wM0.parseAsync (file:///usr/local/lib/node_modules/@anthropic-ai/claude-code/cli.js:665:4184) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'stat',\n  path: '/Users/sanshui/.claude/projects/-Users-sanshui-Desktop-cursor/9d63fead-d377-4a01-af9a-bc3eedb196fb.jsonl'\n}\n\nNode.js v22.12.0\n | 尝试次数: 2 | 错误统计: 空响应3次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T02:56:30.439Z",
+    "status": "success",
+    "completedAt": "2025-09-06T06:10:54.777Z"
+  },
+  "https://www.golfmonthly.com/features/why-the-grind-of-your-wedge-matters": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 66秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:03:34.311Z",
+    "status": "success",
+    "completedAt": "2025-09-06T06:59:51.098Z"
+  },
+  "https://www.golfmonthly.com/news/watch-tour-championship-2025": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 58秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T06:24:57.661Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:05:00.984Z"
+  },
+  "https://golf.com/travel/as-ireland-course-choice-applauded-why/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 72秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:11:11.507Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/new-rory-mcilroy-scottie-scheffler-tv-event/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 58秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:18:39.444Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/rory-mcilroy-questions-rules-officials/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 83秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T03:50:59.460Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:54:20.591Z"
+  },
+  "https://golf.com/news/10-things-know-2025-walker-cup/": {
+    "reason": "实时赛事报道内容过长，已跳过",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T03:52:01.327Z",
+    "status": "permanent_failed",
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T01:05:31.767Z"
+  },
+  "https://golf.com/travel/cabot-citrus-farms-florida-golf-fishing-48-hours/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 82秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T04:00:27.634Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:03:09.685Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/2025/09/04/rory-mcilroy-mad-slow-play-warning-2025-irish-open-use-common-sense/85978621007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/2025/09/04/rory-mcilroy-mad-slow-play-warning-2025-irish-open-use-common-sense/85978621007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/2025/09/04/rory-mcilroy-mad-slow-play-warning-2025-irish-open-use-common-sense/85978621007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T05:45:38.527Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:26:26.107Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-jackson-koivun-cypress-point-pencil/85981431007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-jackson-koivun-cypress-point-pencil/85981431007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-jackson-koivun-cypress-point-pencil/85981431007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T05:45:39.950Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:22:39.977Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-luke-poulter-first-ace-cypress-point/85981160007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-luke-poulter-first-ace-cypress-point/85981160007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/walker-cup-2025-luke-poulter-first-ace-cypress-point/85981160007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:02:35.080Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:23:49.515Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-t-mobile-match-play-event-shadow-creek-dropped-2026-schedule/85961480007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-t-mobile-match-play-event-shadow-creek-dropped-2026-schedule/85961480007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-t-mobile-match-play-event-shadow-creek-dropped-2026-schedule/85961480007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:02:36.602Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/jordan-spieth-byron-nelson-rule-course-record-cypress-point/85941806007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/jordan-spieth-byron-nelson-rule-course-record-cypress-point/85941806007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/jordan-spieth-byron-nelson-rule-course-record-cypress-point/85941806007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:02:38.054Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/2025/09/04/eglin-air-force-base-eagle-golf-course-prime-candidate-for-historical-restoration-florida/85963237007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/2025/09/04/eglin-air-force-base-eagle-golf-course-prime-candidate-for-historical-restoration-florida/85963237007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/2025/09/04/eglin-air-force-base-eagle-golf-course-prime-candidate-for-historical-restoration-florida/85963237007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:02:39.505Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/03/tv-schedule-lead-new-lpga-commissioner-craig-kessler-to-do-list/85952727007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/03/tv-schedule-lead-new-lpga-commissioner-craig-kessler-to-do-list/85952727007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/03/tv-schedule-lead-new-lpga-commissioner-craig-kessler-to-do-list/85952727007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:04:06.124Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/courses/2025/08/22/man-electrocuted-dies-at-closed-ivy-league-golf-course/85783717007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/courses/2025/08/22/man-electrocuted-dies-at-closed-ivy-league-golf-course/85783717007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/courses/2025/08/22/man-electrocuted-dies-at-closed-ivy-league-golf-course/85783717007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:04:07.573Z",
+    "status": "pending_retry"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/champions/2025/08/29/tiger-woods-pga-tour-champions-ernie-els-message/85887787007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/champions/2025/08/29/tiger-woods-pga-tour-champions-ernie-els-message/85887787007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/champions/2025/08/29/tiger-woods-pga-tour-champions-ernie-els-message/85887787007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:04:09.018Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:34:11.452Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-kroger-queen-city-championship-field-strongest-tournament-history/85975966007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-kroger-queen-city-championship-field-strongest-tournament-history/85975966007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/04/lpga-kroger-queen-city-championship-field-strongest-tournament-history/85975966007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:04:10.461Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:27:39.131Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/florida-high-school-senior-alex-parker-59-putter-borrowed-instructor/85974021007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/florida-high-school-senior-alex-parker-59-putter-borrowed-instructor/85974021007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/amateur/2025/09/04/florida-high-school-senior-alex-parker-59-putter-borrowed-instructor/85974021007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:04:11.902Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:29:09.171Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/2025/09/04/carlos-alcaraz-golf-with-sergio-garcia-off-day-us-open/85975567007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/2025/09/04/carlos-alcaraz-golf-with-sergio-garcia-off-day-us-open/85975567007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/2025/09/04/carlos-alcaraz-golf-with-sergio-garcia-off-day-us-open/85975567007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:44.706Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:30:25.184Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/tiger-woods-sun-day-red-fall-winter-golf-apparel-collection-2025/85952150007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/tiger-woods-sun-day-red-fall-winter-golf-apparel-collection-2025/85952150007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/tiger-woods-sun-day-red-fall-winter-golf-apparel-collection-2025/85952150007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:46.146Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:31:38.583Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/pxg-fat-brandon-putter-joins-tour-series-lineup-with-wide-blade-design/85961478007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/pxg-fat-brandon-putter-joins-tour-series-lineup-with-wide-blade-design/85961478007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/equipment/2025/09/04/pxg-fat-brandon-putter-joins-tour-series-lineup-with-wide-blade-design/85961478007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:47.587Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:32:48.547Z"
+  },
+  "https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/02/charley-hull-headlines-pif-event-texas-health-scare/85937135007/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/02/charley-hull-headlines-pif-event-texas-health-scare/85937135007/\nCall log:\n  - navigating to \"https://golfweek.usatoday.com/story/sports/golf/lpga/2025/09/02/charley-hull-headlines-pif-event-texas-health-scare/85937135007/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:49.026Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/rory-mcilroy-frustrated-slow-play-warning-irish-open": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/rory-mcilroy-frustrated-slow-play-warning-irish-open\nCall log:\n  - navigating to \"https://www.si.com/golf/rory-mcilroy-frustrated-slow-play-warning-irish-open\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:56.323Z",
+    "status": "success",
+    "completedAt": "2025-09-06T08:48:24.830Z"
+  },
+  "https://www.si.com/golf/best-golf-bags": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/best-golf-bags\nCall log:\n  - navigating to \"https://www.si.com/golf/best-golf-bags\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:57.744Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup\nCall log:\n  - navigating to \"https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:05:59.177Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open\nCall log:\n  - navigating to \"https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:06:00.617Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau\nCall log:\n  - navigating to \"https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:22:42.978Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs\nCall log:\n  - navigating to \"https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:22:44.420Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team\nCall log:\n  - navigating to \"https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:38:27.632Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster\nCall log:\n  - navigating to \"https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:38:29.087Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub\nCall log:\n  - navigating to \"https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:38:30.533Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/why-us-ryder-cup-team-set-up-success": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/why-us-ryder-cup-team-set-up-success\nCall log:\n  - navigating to \"https://www.si.com/golf/why-us-ryder-cup-team-set-up-success\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:38:31.965Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right\nCall log:\n  - navigating to \"https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:04.221Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/best-golf-balls": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/best-golf-balls\nCall log:\n  - navigating to \"https://www.si.com/golf/best-golf-balls\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:05.680Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/us-womens-amateur-champion-shares-inside-golf-bag": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/us-womens-amateur-champion-shares-inside-golf-bag\nCall log:\n  - navigating to \"https://www.si.com/golf/us-womens-amateur-champion-shares-inside-golf-bag\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:07.137Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/2025-fm-championship-final-payouts-prize-money-winnings-lpga-boston": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/2025-fm-championship-final-payouts-prize-money-winnings-lpga-boston\nCall log:\n  - navigating to \"https://www.si.com/golf/2025-fm-championship-final-payouts-prize-money-winnings-lpga-boston\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:08.594Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/new-pga-tour-ceo-should-start-making-changes": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/new-pga-tour-ceo-should-start-making-changes\nCall log:\n  - navigating to \"https://www.si.com/golf/new-pga-tour-ceo-should-start-making-changes\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:10.061Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/us-open-future-locations-year-courses": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/us-open-future-locations-year-courses\nCall log:\n  - navigating to \"https://www.si.com/golf/us-open-future-locations-year-courses\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:11.520Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/2024/01/22/dp-world-tour-keith-pelley-global-game": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/2024/01/22/dp-world-tour-keith-pelley-global-game\nCall log:\n  - navigating to \"https://www.si.com/golf/2024/01/22/dp-world-tour-keith-pelley-global-game\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:12.961Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/2024/01/22/tommy-fleetwood-tyrrell-hatton-downplay-rumors-liv-golf": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/2024/01/22/tommy-fleetwood-tyrrell-hatton-downplay-rumors-liv-golf\nCall log:\n  - navigating to \"https://www.si.com/golf/2024/01/22/tommy-fleetwood-tyrrell-hatton-downplay-rumors-liv-golf\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:14.384Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/2024/01/20/pxg-black-ops-driver-step-forward-clubmaker": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/2024/01/20/pxg-black-ops-driver-step-forward-clubmaker\nCall log:\n  - navigating to \"https://www.si.com/golf/2024/01/20/pxg-black-ops-driver-step-forward-clubmaker\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:15.821Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/2024/01/16/tv-times-american-express-lpga-season-opener": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/2024/01/16/tv-times-american-express-lpga-season-opener\nCall log:\n  - navigating to \"https://www.si.com/golf/2024/01/16/tv-times-american-express-lpga-season-opener\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:17.263Z",
+    "status": "pending_retry"
+  },
+  "https://www.si.com/golf/news/learning-from-great-seasons-and-swings-of-rory-mcilroy-lydia-ko-scottie-scheffler": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/news/learning-from-great-seasons-and-swings-of-rory-mcilroy-lydia-ko-scottie-scheffler\nCall log:\n  - navigating to \"https://www.si.com/golf/news/learning-from-great-seasons-and-swings-of-rory-mcilroy-lydia-ko-scottie-scheffler\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:18.703Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13418602/ryder-cup-2025-who-is-playing-for-team-usa-keegan-bradleys-full-line-up-for-bethpage-black-and-how-they-qualified": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13418602/ryder-cup-2025-who-is-playing-for-team-usa-keegan-bradleys-full-line-up-for-bethpage-black-and-how-they-qualified\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13418602/ryder-cup-2025-who-is-playing-for-team-usa-keegan-bradleys-full-line-up-for-bethpage-black-and-how-they-qualified\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:25.781Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13294298/rory-mcilroy-schedule-latest-results-confirmed-events-tgl-majors-ryder-cup-and-where-he-could-play-in-2025": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13294298/rory-mcilroy-schedule-latest-results-confirmed-events-tgl-majors-ryder-cup-and-where-he-could-play-in-2025\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13294298/rory-mcilroy-schedule-latest-results-confirmed-events-tgl-majors-ryder-cup-and-where-he-could-play-in-2025\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:42:27.234Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12177/13366524/rory-mcilroys-major-wins-and-grand-slam-glory-every-victory-at-the-masters-pga-championship-us-open-and-the-open-so-far": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12177/13366524/rory-mcilroys-major-wins-and-grand-slam-glory-every-victory-at-the-masters-pga-championship-us-open-and-the-open-so-far\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12177/13366524/rory-mcilroys-major-wins-and-grand-slam-glory-every-victory-at-the-masters-pga-championship-us-open-and-the-open-so-far\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:59:15.170Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13349205/rory-mcilroy-wins-the-masters-what-was-it-like-to-be-at-augusta-national-to-witness-grand-slam-history": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13349205/rory-mcilroy-wins-the-masters-what-was-it-like-to-be-at-augusta-national-to-witness-grand-slam-history\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13349205/rory-mcilroy-wins-the-masters-what-was-it-like-to-be-at-augusta-national-to-witness-grand-slam-history\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:59:16.641Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13424944/amgen-irish-open-rory-mcilroy-feels-pretty-good-for-ryder-cup-despite-late-slump-at-the-k-club": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13424944/amgen-irish-open-rory-mcilroy-feels-pretty-good-for-ryder-cup-despite-late-slump-at-the-k-club\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13424944/amgen-irish-open-rory-mcilroy-feels-pretty-good-for-ryder-cup-despite-late-slump-at-the-k-club\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T06:59:18.078Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13423942/walker-cup-2025-format-schedule-how-to-watch-as-luke-poulter-features-for-great-britain-and-ireland-against-united-states-at-cypress-point": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13423942/walker-cup-2025-format-schedule-how-to-watch-as-luke-poulter-features-for-great-britain-and-ireland-against-united-states-at-cypress-point\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13423942/walker-cup-2025-format-schedule-how-to-watch-as-luke-poulter-features-for-great-britain-and-ireland-against-united-states-at-cypress-point\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:05:06.059Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13422667/ryder-cup-2025-team-europes-luke-donald-selects-six-returning-players-as-captains-picks-to-face-team-usa-at-bethpage-black": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13422667/ryder-cup-2025-team-europes-luke-donald-selects-six-returning-players-as-captains-picks-to-face-team-usa-at-bethpage-black\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13422667/ryder-cup-2025-team-europes-luke-donald-selects-six-returning-players-as-captains-picks-to-face-team-usa-at-bethpage-black\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:05:07.518Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13422970/ryder-cup-2025-who-is-playing-for-team-europe-luke-donalds-full-line-up-for-bethpage-black-and-how-they-qualified": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13422970/ryder-cup-2025-who-is-playing-for-team-europe-luke-donalds-full-line-up-for-bethpage-black-and-how-they-qualified\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13422970/ryder-cup-2025-who-is-playing-for-team-europe-luke-donalds-full-line-up-for-bethpage-black-and-how-they-qualified\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:05:08.962Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/33606/13419207/ryder-cup-keegan-bradley-and-luke-donald-could-be-dreading-epic-says-rich-beem-as-he-backs-us-captain-to-play-in-future-contests": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/33606/13419207/ryder-cup-keegan-bradley-and-luke-donald-could-be-dreading-epic-says-rich-beem-as-he-backs-us-captain-to-play-in-future-contests\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/33606/13419207/ryder-cup-keegan-bradley-and-luke-donald-could-be-dreading-epic-says-rich-beem-as-he-backs-us-captain-to-play-in-future-contests\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:05:10.407Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/29745/13418699/ryder-cup-2025-how-keegan-bradleys-debate-over-possible-player-captain-role-has-helped-team-usa-find-form-ahead-of-bethpage-black": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/29745/13418699/ryder-cup-2025-how-keegan-bradleys-debate-over-possible-player-captain-role-has-helped-team-usa-find-form-ahead-of-bethpage-black\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/29745/13418699/ryder-cup-2025-how-keegan-bradleys-debate-over-possible-player-captain-role-has-helped-team-usa-find-form-ahead-of-bethpage-black\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:05:11.850Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/33606/13418175/tommy-fleetwood-wins-fedexcup-how-tour-championship-victory-can-spark-more-pga-tour-success-and-boost-future-major-hopes": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/33606/13418175/tommy-fleetwood-wins-fedexcup-how-tour-championship-victory-can-spark-more-pga-tour-success-and-boost-future-major-hopes\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/33606/13418175/tommy-fleetwood-wins-fedexcup-how-tour-championship-victory-can-spark-more-pga-tour-success-and-boost-future-major-hopes\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:09:16.855Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13422234/omega-european-masters-thriston-lawrence-beats-ryder-cup-hopefuls-matt-wallace-and-matt-fitzpatrick-to-emotional-dp-world-tour-win": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13422234/omega-european-masters-thriston-lawrence-beats-ryder-cup-hopefuls-matt-wallace-and-matt-fitzpatrick-to-emotional-dp-world-tour-win\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13422234/omega-european-masters-thriston-lawrence-beats-ryder-cup-hopefuls-matt-wallace-and-matt-fitzpatrick-to-emotional-dp-world-tour-win\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:09:18.327Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13419205/ryder-cup-2025-team-europe-hopefuls-in-action-at-omega-european-masters-and-pushing-for-captains-pick-from-luke-donald": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13419205/ryder-cup-2025-team-europe-hopefuls-in-action-at-omega-european-masters-and-pushing-for-captains-pick-from-luke-donald\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13419205/ryder-cup-2025-team-europe-hopefuls-in-action-at-omega-european-masters-and-pushing-for-captains-pick-from-luke-donald\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:09:19.761Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13415713/ryder-cup-2025-justin-rose-on-why-experience-puts-team-europe-in-good-position-to-claim-away-win-over-team-usa-at-bethpage-black": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13415713/ryder-cup-2025-justin-rose-on-why-experience-puts-team-europe-in-good-position-to-claim-away-win-over-team-usa-at-bethpage-black\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13415713/ryder-cup-2025-justin-rose-on-why-experience-puts-team-europe-in-good-position-to-claim-away-win-over-team-usa-at-bethpage-black\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:09:21.200Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13417662/tour-championship-tommy-fleetwood-secures-fedexcup-title-and-claims-maiden-pga-tour-title-with-impressive-win-at-east-lake": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13417662/tour-championship-tommy-fleetwood-secures-fedexcup-title-and-claims-maiden-pga-tour-title-with-impressive-win-at-east-lake\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13417662/tour-championship-tommy-fleetwood-secures-fedexcup-title-and-claims-maiden-pga-tour-title-with-impressive-win-at-east-lake\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:09:22.647Z",
+    "status": "pending_retry"
+  },
+  "https://www.skysports.com/golf/news/12176/13415204/pga-tour-2026-schedule-dates-venues-events-for-the-new-fedexcup-season-signature-events-and-golf-majors": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.skysports.com/golf/news/12176/13415204/pga-tour-2026-schedule-dates-venues-events-for-the-new-fedexcup-season-signature-events-and-golf-majors\nCall log:\n  - navigating to \"https://www.skysports.com/golf/news/12176/13415204/pga-tour-2026-schedule-dates-venues-events-for-the-new-fedexcup-season-signature-events-and-golf-majors\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:10:55.355Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/liv-golf/exclusive-sergio-garcia-reveals-carlos-alcaraz-beat-him-latest-golf-match": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/liv-golf/exclusive-sergio-garcia-reveals-carlos-alcaraz-beat-him-latest-golf-match\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/liv-golf/exclusive-sergio-garcia-reveals-carlos-alcaraz-beat-him-latest-golf-match\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:11:07.814Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/ryder-cup/justin-thomas-shocking-accident-ahead-ryder-cup": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/ryder-cup/justin-thomas-shocking-accident-ahead-ryder-cup\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/ryder-cup/justin-thomas-shocking-accident-ahead-ryder-cup\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:11:09.243Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/ryder-cup/amgen-irish-open-round-1-leaderboard-rory-mcilroy-five-shots-behind-k-club": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/ryder-cup/amgen-irish-open-round-1-leaderboard-rory-mcilroy-five-shots-behind-k-club\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/ryder-cup/amgen-irish-open-round-1-leaderboard-rory-mcilroy-five-shots-behind-k-club\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:16:18.843Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/liv-golf/golf-legend-slams-british-horse-racing-owners-are-being-taken-p-out": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/liv-golf/golf-legend-slams-british-horse-racing-owners-are-being-taken-p-out\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/liv-golf/golf-legend-slams-british-horse-racing-owners-are-being-taken-p-out\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:16:20.318Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/dp-world-tour/rory-mcilroy-reacts-sloppy-finish-r1-amgen-irish-open": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/dp-world-tour/rory-mcilroy-reacts-sloppy-finish-r1-amgen-irish-open\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/dp-world-tour/rory-mcilroy-reacts-sloppy-finish-r1-amgen-irish-open\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:16:21.914Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/ryder-cup/marco-penge-makes-incredible-claim-ahead-2025-ryder-cup": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/ryder-cup/marco-penge-makes-incredible-claim-ahead-2025-ryder-cup\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/ryder-cup/marco-penge-makes-incredible-claim-ahead-2025-ryder-cup\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:16:23.630Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/news/rory-mcilroy-and-scottie-scheffler-headline-rapid-fire-golf-channel-games": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/news/rory-mcilroy-and-scottie-scheffler-headline-rapid-fire-golf-channel-games\nCall log:\n  - navigating to \"https://www.golfmagic.com/news/rory-mcilroy-and-scottie-scheffler-headline-rapid-fire-golf-channel-games\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:16:25.399Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/ryder-cup/scottie-scheffler-ryder-cup-record": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/ryder-cup/scottie-scheffler-ryder-cup-record\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/ryder-cup/scottie-scheffler-ryder-cup-record\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:32:21.505Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/news/padraig-harrington-too-busy-playing-golf-run-irish-presidency": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/news/padraig-harrington-too-busy-playing-golf-run-irish-presidency\nCall log:\n  - navigating to \"https://www.golfmagic.com/news/padraig-harrington-too-busy-playing-golf-run-irish-presidency\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:32:23.057Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/news/jackson-im-butch-its-time-crack-down-slow-play-scourge": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/news/jackson-im-butch-its-time-crack-down-slow-play-scourge\nCall log:\n  - navigating to \"https://www.golfmagic.com/news/jackson-im-butch-its-time-crack-down-slow-play-scourge\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:32:24.547Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/news/tiger-woods-sun-day-red-autumn-winter-2025": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/news/tiger-woods-sun-day-red-autumn-winter-2025\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/news/tiger-woods-sun-day-red-autumn-winter-2025\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:32:25.986Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/gps-rangefinders/garmin-approach-g20-solar-golf-gps-review-big-battery-life-big-price-tag": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/gps-rangefinders/garmin-approach-g20-solar-golf-gps-review-big-battery-life-big-price-tag\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/gps-rangefinders/garmin-approach-g20-solar-golf-gps-review-big-battery-life-big-price-tag\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:28.797Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-golf-hoodies": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-golf-hoodies\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-golf-hoodies\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:30.245Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-golf-stand-bags": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-golf-stand-bags\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-golf-stand-bags\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:31.688Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/bags-trolleys/vessel-lux-air-golf-bag-review-new-lightweight-champ": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/bags-trolleys/vessel-lux-air-golf-bag-review-new-lightweight-champ\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/bags-trolleys/vessel-lux-air-golf-bag-review-new-lightweight-champ\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:33.136Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-super-game-improvement-golf-irons": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-super-game-improvement-golf-irons\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-super-game-improvement-golf-irons\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:34.559Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/gps-rangefinders/mileseey-genepro-g1-rangefinder-review": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/gps-rangefinders/mileseey-genepro-g1-rangefinder-review\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/gps-rangefinders/mileseey-genepro-g1-rangefinder-review\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:35.995Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-golf-mid-layers": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-golf-mid-layers\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-golf-mid-layers\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:37.432Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-zero-torque-putters": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-zero-torque-putters\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-zero-torque-putters\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:38.873Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment-news/best-golf-wedges": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment-news/best-golf-wedges\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment-news/best-golf-wedges\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:40.305Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/equipment/buying-guides/best-golf-polo-shirts": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/equipment/buying-guides/best-golf-polo-shirts\nCall log:\n  - navigating to \"https://www.golfmagic.com/equipment/buying-guides/best-golf-polo-shirts\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:41.745Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/rest-world/national-golf-club-turkey-review-beleks-first-elite-course-still-its-best": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/rest-world/national-golf-club-turkey-review-beleks-first-elite-course-still-its-best\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/rest-world/national-golf-club-turkey-review-beleks-first-elite-course-still-its-best\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:43.187Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/rest-world/antalya-pga-sultan-golf-course-review": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/rest-world/antalya-pga-sultan-golf-course-review\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/rest-world/antalya-pga-sultan-golf-course-review\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:44.634Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/rest-world/montgomerie-maxx-royal-golf-club-course-review-fun-and-varied-test": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/rest-world/montgomerie-maxx-royal-golf-club-course-review-fun-and-varied-test\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/rest-world/montgomerie-maxx-royal-golf-club-course-review-fun-and-varied-test\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:46.077Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/best-golf-courses-dublin": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/uk-and-ireland/best-golf-courses-dublin\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/uk-and-ireland/best-golf-courses-dublin\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:47.496Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/royal-dublin-golf-course-review-your-chance-walk-footsteps-legends": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/uk-and-ireland/royal-dublin-golf-course-review-your-chance-walk-footsteps-legends\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/uk-and-ireland/royal-dublin-golf-course-review-your-chance-walk-footsteps-legends\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:40:48.934Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/jameson-golf-links-course-review-more-just-club-next-portmarnock": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/uk-and-ireland/jameson-golf-links-course-review-more-just-club-next-portmarnock\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/uk-and-ireland/jameson-golf-links-course-review-more-just-club-next-portmarnock\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:55:51.664Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/uk-and-ireland/island-golf-club-course-review": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/uk-and-ireland/island-golf-club-course-review\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/uk-and-ireland/island-golf-club-course-review\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:55:53.110Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/courses/news/motorbike-vandals-cause-shocking-ps40000-carnage-sheffield-golf-course": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/courses/news/motorbike-vandals-cause-shocking-ps40000-carnage-sheffield-golf-course\nCall log:\n  - navigating to \"https://www.golfmagic.com/courses/news/motorbike-vandals-cause-shocking-ps40000-carnage-sheffield-golf-course\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T07:55:56.005Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tour/open-championship/former-rory-mcilroy-ally-confident-donald-trump-will-get-open-turnberry-sure": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tour/open-championship/former-rory-mcilroy-ally-confident-donald-trump-will-get-open-turnberry-sure\nCall log:\n  - navigating to \"https://www.golfmagic.com/tour/open-championship/former-rory-mcilroy-ally-confident-donald-trump-will-get-open-turnberry-sure\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T08:06:08.432Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tips/getting-started/how-think-pga-tour-and-liv-golf-caddie-secret-help-you-play-smarter-golf": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tips/getting-started/how-think-pga-tour-and-liv-golf-caddie-secret-help-you-play-smarter-golf\nCall log:\n  - navigating to \"https://www.golfmagic.com/tips/getting-started/how-think-pga-tour-and-liv-golf-caddie-secret-help-you-play-smarter-golf\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T08:06:09.876Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/tips/getting-started/ready-shoot-lower-golf-scores-get-yourgolf365-former-european-tour-pro-your": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/tips/getting-started/ready-shoot-lower-golf-scores-get-yourgolf365-former-european-tour-pro-your\nCall log:\n  - navigating to \"https://www.golfmagic.com/tips/getting-started/ready-shoot-lower-golf-scores-get-yourgolf365-former-european-tour-pro-your\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T08:06:11.308Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmagic.com/news/10-golf-rules-youve-probably-never-heard-will-wish-you-had": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.golfmagic.com/news/10-golf-rules-youve-probably-never-heard-will-wish-you-had\nCall log:\n  - navigating to \"https://www.golfmagic.com/news/10-golf-rules-youve-probably-never-heard-will-wish-you-had\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T08:06:12.738Z",
+    "status": "pending_retry"
+  },
+  "https://www.lpga.com/news/2025/yana-wilson-finds-quick-success-and-lpga-tour-card-on-epson-tour-in-2025": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.lpga.com/news/2025/yana-wilson-finds-quick-success-and-lpga-tour-card-on-epson-tour-in-2025\nCall log:\n  - navigating to \"https://www.lpga.com/news/2025/yana-wilson-finds-quick-success-and-lpga-tour-card-on-epson-tour-in-2025\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T08:57:16.316Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/whs/golf-ireland-whs-handicap-allowances-pilot-feedback/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/whs/golf-ireland-whs-handicap-allowances-pilot-feedback/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/whs/golf-ireland-whs-handicap-allowances-pilot-feedback/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:25:12.271Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/rules/are-these-the-five-worst-golf-rules/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/rules/are-these-the-five-worst-golf-rules/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/rules/are-these-the-five-worst-golf-rules/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:25:13.740Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/whs/general-play-scores-your-views/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/whs/general-play-scores-your-views/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/whs/general-play-scores-your-views/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:40:37.101Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-high-handicappers/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-high-handicappers/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-high-handicappers/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:40:40.344Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-mid-handicappers/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-mid-handicappers/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-mid-handicappers/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:57:56.300Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-seniors/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-seniors/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-for-seniors/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:57:58.397Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/best-electric-trolleys/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/best-electric-trolleys/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-electric-trolleys/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T09:58:00.077Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/adidas-golf-sale-alert-golf-deals-you-cant-miss-offers-end-september-4th/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/adidas-golf-sale-alert-golf-deals-you-cant-miss-offers-end-september-4th/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/adidas-golf-sale-alert-golf-deals-you-cant-miss-offers-end-september-4th/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:07:41.156Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-golf-clubs/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-golf-clubs/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/best-golf-deals/best-hybrids-golf-clubs/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:07:42.769Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/golf-tips/learn-from-the-pros/what-makes-it-work-scottie-scheffler-swing-analysis/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/golf-tips/learn-from-the-pros/what-makes-it-work-scottie-scheffler-swing-analysis/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/golf-tips/learn-from-the-pros/what-makes-it-work-scottie-scheffler-swing-analysis/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:07:44.428Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/golf-tips/fitness/how-to-increase-clubhead-speed/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/golf-tips/fitness/how-to-increase-clubhead-speed/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/golf-tips/fitness/how-to-increase-clubhead-speed/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:07:45.957Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/justin-thomas-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/justin-thomas-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/justin-thomas-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:10:09.349Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/rory-mcilroy-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/rory-mcilroy-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/rory-mcilroy-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:10:10.790Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/tyrrell-hatton-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/tyrrell-hatton-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/tyrrell-hatton-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:10:12.231Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-prize-money/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-prize-money/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-prize-money/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:10:13.674Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/shane-lowry-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/shane-lowry-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/shane-lowry-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:17:29.408Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-at-wentworth/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-at-wentworth/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/dp-world-tour/bmw-pga-championship-at-wentworth/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:17:30.848Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/patrick-cantlay-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/patrick-cantlay-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/patrick-cantlay-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:17:32.291Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/tour/witb/tommy-fleetwood-witb/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/tour/witb/tommy-fleetwood-witb/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/tour/witb/tommy-fleetwood-witb/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:17:33.731Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/travel/ncg-top-100s-spotlight-portmarnock-resort-jameson-golf-links/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/travel/ncg-top-100s-spotlight-portmarnock-resort-jameson-golf-links/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/travel/ncg-top-100s-spotlight-portmarnock-resort-jameson-golf-links/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:17:35.169Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/travel/walter-hagen-the-open-54-hole-trek/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/travel/walter-hagen-the-open-54-hole-trek/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/travel/walter-hagen-the-open-54-hole-trek/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:34:26.601Z",
+    "status": "pending_retry"
+  },
+  "https://www.nationalclubgolfer.com/equipment/news/reflo-collection-for-the-open/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.nationalclubgolfer.com/equipment/news/reflo-collection-for-the-open/\nCall log:\n  - navigating to \"https://www.nationalclubgolfer.com/equipment/news/reflo-collection-for-the-open/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T10:34:28.016Z",
+    "status": "pending_retry"
+  },
+  "https://mygolfspy.com/news-opinion/callaway-supersoft-aces-for-golfers-who-never-fold-under-pressure/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://mygolfspy.com/news-opinion/callaway-supersoft-aces-for-golfers-who-never-fold-under-pressure/\nCall log:\n  - navigating to \"https://mygolfspy.com/news-opinion/callaway-supersoft-aces-for-golfers-who-never-fold-under-pressure/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T11:08:41.308Z",
+    "status": "pending_retry"
+  },
+  "https://mygolfspy.com/buyers-guides/irons/first-versus-worst-game-improvement-iron-2025-whats-the-difference/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://mygolfspy.com/buyers-guides/irons/first-versus-worst-game-improvement-iron-2025-whats-the-difference/\nCall log:\n  - navigating to \"https://mygolfspy.com/buyers-guides/irons/first-versus-worst-game-improvement-iron-2025-whats-the-difference/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T11:21:40.776Z",
+    "status": "pending_retry"
+  },
+  "https://mygolfspy.com/news-opinion/first-take-an-honest-review-of-the-callaway-elyte-mini-driver/": {
+    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://mygolfspy.com/news-opinion/first-take-an-honest-review-of-the-callaway-elyte-mini-driver/\nCall log:\n  - navigating to \"https://mygolfspy.com/news-opinion/first-take-an-honest-review-of-the-callaway-elyte-mini-driver/\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T11:37:31.039Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfdigest.com/story/brian-rolapp-pga-tour-ceo-wednesday-east-lake-tour-championship-2025": {
+    "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.golfdigest.com/story/brian-rolapp-pga-tour-ceo-wednesday-east-lake-tour-championship-2025\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T18:30:30.923Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfdigest.com/story/fedexcup2025-new-pga-tour-competition-committee-tiger-woods-ssg-sports-ceo-brian-rolapp": {
+    "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.golfdigest.com/story/fedexcup2025-new-pga-tour-competition-committee-tiger-woods-ssg-sports-ceo-brian-rolapp\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T19:02:03.996Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfdigest.com/story/nelly-korda-lpga-tour-winless-season-statistics-comparison": {
+    "reason": "文章抓取失败: page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://www.golfdigest.com/story/nelly-korda-lpga-tour-winless-season-statistics-comparison\", waiting until \"domcontentloaded\"\n",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-05T19:34:04.992Z",
+    "status": "pending_retry"
+  },
+  "https://www.golfmonthly.com/news/rory-mcilroy-press-conference-tour-championship-2025": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 81秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T06:33:21.882Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:07:23.454Z"
+  },
+  "https://www.golfmonthly.com/tips/20-best-driving-tips-and-drills-in-golf-from-expert-top-50-coaches": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 98秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T02:51:49.679Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:22:04.879Z"
+  },
+  "https://golf.com/news/features/cypress-point-allure-far-beyond-setting/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 84秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:44:51.754Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:25:45.904Z"
+  },
+  "https://golf.com/news/rory-mcilroy-caddie-request-bethpage-weekend-9/": {
+    "reason": "实时赛事报道内容过长，已跳过",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:53:26.797Z",
+    "status": "permanent_failed",
+    "failureCategory": "live_content",
+    "failureDescription": "实时内容不适合处理",
+    "filteredAt": "2025-09-06T04:44:11.306Z"
+  },
+  "https://golf.com/news/50th-walker-cup-captain-first/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 73秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T03:52:38.819Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:35:05.617Z"
+  },
+  "https://golf.com/gear/tour-reps-job-changed-fully-equipped/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 69秒) | 尝试次数: 2 | 错误统计: 空响应4次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T04:00:03.369Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:36:50.016Z"
+  },
+  "https://golf.com/instruction/every-golfer-needs-know-hitting-uneven-lies/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 89秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T04:16:52.131Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:44:56.568Z"
+  },
+  "https://golf.com/gear/golf-apparel/shop-holderness-bournes-new-2025-ryder-cup-collection/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 57秒) | 尝试次数: 2 | 错误统计: 空响应3次, 超时1次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T04:24:02.367Z",
+    "status": "pending_retry"
+  },
+  "https://golf.com/news/features/golfer-turned-terrifying-diagnosis-award-winning-endeavor/": {
+    "reason": "Claude改写失败: 改写失败 - Claude返回空内容 (响应时间: 91秒) | 尝试次数: 2 | 错误统计: 空响应2次, 超时0次, API错误0次",
+    "attemptCount": 1,
+    "lastAttempt": "2025-09-06T04:39:41.032Z",
+    "status": "success",
+    "completedAt": "2025-09-06T07:52:06.605Z"
   }
 }

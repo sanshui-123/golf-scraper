@@ -353,7 +353,11 @@ class UnifiedHistoryDatabase {
             statistics: {
                 total: urls.length,
                 new: 0,
-                duplicate: 0
+                duplicate: 0,
+                completed: 0,
+                failed: 0,
+                skipped: 0,
+                other: 0
             }
         };
 
@@ -366,15 +370,48 @@ class UnifiedHistoryDatabase {
         urlsWithKeys.forEach(({url, key}) => {
             if (this.urlKeysSet.has(key)) {
                 const record = this.masterDB.urls[key];
-                if (record && record.status === 'completed') {
-                    results.duplicateUrls.push({
-                        url: url,
-                        reason: 'url_already_processed',
-                        originalDate: record.date,
-                        status: record.status,
-                        articleNum: record.articleNum
-                    });
-                    return;
+                if (record && record.status) {
+                    // 所有已处理的状态都应该被认为是"已处理"，而不是"新"URL
+                    const processedStatuses = ['completed', 'duplicate', 'failed', 'skipped', 'permanent_failed'];
+                    
+                    if (processedStatuses.includes(record.status)) {
+                        results.duplicateUrls.push({
+                            url: url,
+                            reason: 'url_already_processed',
+                            originalDate: record.date,
+                            status: record.status,
+                            articleNum: record.articleNum
+                        });
+                        
+                        // 统计各种状态
+                        if (record.status === 'completed') results.statistics.completed++;
+                        else if (record.status === 'failed') results.statistics.failed++;
+                        else if (record.status === 'skipped') results.statistics.skipped++;
+                        else if (record.status === 'duplicate') results.statistics.duplicate++;
+                        else results.statistics.other++;
+                        
+                        return;
+                    } else if (record.status === 'processing') {
+                        // processing状态特殊处理：如果超过1小时，认为是处理中断，算作新URL
+                        const processedAt = new Date(record.processedAt || record.date);
+                        const hoursSinceProcessing = (Date.now() - processedAt) / (1000 * 60 * 60);
+                        
+                        if (hoursSinceProcessing > 1) {
+                            console.log(`⚠️ URL处理超时，将重新处理: ${url}`);
+                            results.newUrls.push(url);
+                        } else {
+                            // 仍在处理中，算作已处理
+                            results.duplicateUrls.push({
+                                url: url,
+                                reason: 'currently_processing',
+                                originalDate: record.date,
+                                status: record.status,
+                                articleNum: record.articleNum
+                            });
+                            results.statistics.other++;
+                        }
+                        return;
+                    }
                 }
             }
             results.newUrls.push(url);
@@ -383,7 +420,12 @@ class UnifiedHistoryDatabase {
         results.statistics.new = results.newUrls.length;
         results.statistics.duplicate = results.duplicateUrls.length;
 
-        console.log(`🔍 批量检查结果: ${results.statistics.new}个新URL, ${results.statistics.duplicate}个重复URL`);
+        console.log(`🔍 批量检查结果: ${results.statistics.new}个新URL, ${results.statistics.duplicate}个已处理URL`);
+        if (results.statistics.completed > 0) console.log(`   ✅ completed: ${results.statistics.completed}`);
+        if (results.statistics.failed > 0) console.log(`   ❌ failed: ${results.statistics.failed}`);
+        if (results.statistics.skipped > 0) console.log(`   ⏭️ skipped: ${results.statistics.skipped}`);
+        if (results.statistics.duplicate > 0) console.log(`   🔄 duplicate: ${results.statistics.duplicate}`);
+        
         return results;
     }
     
