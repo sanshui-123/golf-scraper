@@ -1,0 +1,16 @@
+【快速提醒语句 - 复制粘贴使用】
+
+选项1（最简单）：
+停！只能1个控制器。查看 PERFORMANCE_CRITICAL_REMINDER.md
+
+选项2（带数据）：
+警告：1控制器=10秒，4控制器=60秒。性能降3-5倍！查看CLAUDE.md第5-17行。
+
+选项3（带命令）：
+先运行 ./check_controllers.sh 检查。超过1个控制器会导致严重性能问题！
+
+选项4（紧急）：
+性能告警！运行 ./performance_reminder.sh 查看关键规则。
+
+选项5（完整）：
+2025-09-06验证：多控制器导致API响应从10秒飙升到60秒。永久规定只能运行1个intelligent_concurrent_controller.js。即使$200订阅也不能改变。使用./safe_single_controller.sh启动。

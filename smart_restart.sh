@@ -32,19 +32,32 @@ else
     sleep 2
 fi
 
-# 4. 生成URL（6个网站）
-echo "🔍 生成URL（6个网站）..."
+# 4. 检查是否有残留的控制器进程
+echo "🔍 检查控制器状态..."
+controller_count=$(ps aux | grep -E 'node.*intelligent_concurrent_controller' | grep -v grep | wc -l)
+if [ $controller_count -gt 0 ]; then
+    echo "  ⚠️  发现 $controller_count 个残留控制器进程，正在终止..."
+    ps aux | grep -E 'node.*intelligent_concurrent_controller' | grep -v grep | awk '{print $2}' | xargs kill 2>/dev/null || true
+    sleep 2
+fi
+
+# 5. 清理失败文章队列
+echo "🧹 清理永久失败的文章..."
+node intelligent_failure_filter.js 2>/dev/null || echo "  ⚠️  过滤器未运行"
+
+# 6. 生成URL（18个网站）
+echo "🔍 生成URL（18个网站）..."
 node auto_scrape_three_sites.js --all-sites
 
-# 5. 计算新URL数量
+# 7. 计算新URL数量
 echo -e "\n📊 计算实际需要处理的新URL..."
 node calculate_new_urls.js
 
-# 6. 启动智能并发控制器
+# 8. 启动智能并发控制器（传递所有deep_urls文件）
 echo -e "\n🚀 启动智能并发控制器..."
-nohup node intelligent_concurrent_controller.js > intelligent_controller.log 2>&1 &
+nohup node intelligent_concurrent_controller.js deep_urls_*.txt > intelligent_controller.log 2>&1 &
 
-# 7. 等待并显示状态
+# 9. 等待并显示状态
 sleep 3
 echo -e "\n✅ 重启完成！"
 echo "📝 查看进度: tail -f intelligent_controller.log"
