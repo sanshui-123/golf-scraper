@@ -10,7 +10,7 @@ class ArticleRewriterAPI {
         });
         
         // 配置
-        this.model = 'claude-3-sonnet-20240229'; // 可以改为 claude-3-haiku-20240307 更快
+        this.model = 'claude-opus-4-20250514'; // Claude Opus 4 - 你的Claude Code版本
         this.maxTokens = 4000;
         this.temperature = 0.7;
         
