@@ -16,7 +16,7 @@ async function testTencentAI() {
             { 
                 headers: { 
                     'Content-Type': 'application/json',
-                    'x-api-key': '34f2d7b955974ed8ae29759243693681'
+                    'x-api-key': process.env.TEST_API_KEY || 'test-key-placeholder'
                 },
                 proxy: false 
             }
@@ -37,7 +37,7 @@ async function testTencentAI() {
             { 
                 headers: { 
                     'Content-Type': 'application/json',
-                    'x-api-key': '34f2d7b955974ed8ae29759243693681'
+                    'x-api-key': process.env.TEST_API_KEY || 'test-key-placeholder'
                 },
                 proxy: false 
             }
@@ -163,7 +163,7 @@ async function testTencentAI() {
             { 
                 headers: { 
                     'Content-Type': 'application/json',
-                    'x-api-key': '34f2d7b955974ed8ae29759243693681'
+                    'x-api-key': process.env.TEST_API_KEY || 'test-key-placeholder'
                 },
                 proxy: false 
             }

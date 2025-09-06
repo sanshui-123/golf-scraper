@@ -19,13 +19,13 @@ class ArticleRewriterEnhanced {
         
         // 重试配置
         this.maxRetries = 2;        // 最大重试次数（改为2，增加成功率）
-        this.retryDelay = 20000;    // 重试间隔（20秒，给Claude更多恢复时间）
+        this.retryDelay = 15000;    // $200订阅优化：从20秒降到15秒    // 重试间隔（20秒，给Claude更多恢复时间）
         this.fixedTimeout = 180000; // 固定3分钟超时
         this.enableDynamicTimeout = false; // 禁用动态超时
         
         // 添加Claude调用保护机制
         this.lastClaudeCall = 0;
-        this.minClaudeInterval = 3000; // Claude调用最小间隔（3秒）
+        this.minClaudeInterval = 2000; // $200订阅优化：从3秒降到2秒 // Claude调用最小间隔（3秒）
         
         // API响应时间记录
         this.apiResponseLogFile = path.join(__dirname, 'api_response_times.json');
@@ -510,7 +510,7 @@ class ArticleRewriterEnhanced {
         
         // 根据错误类型调整
         if (error.message.includes('Claude返回空内容')) {
-            baseWait = 45000; // 空内容等待45秒
+            baseWait = 30000; // $200订阅优化：空内容等待30秒
         } else if (error.message.includes('超时')) {
             baseWait = 60000; // 超时等待60秒
         } else if (error.message.includes('rate limit')) {
