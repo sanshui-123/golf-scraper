@@ -17866,6 +17866,111 @@
       "rewriteCount": 0,
       "mdFile": "wechat_article_13208.md",
       "htmlFile": "wechat_article_13208.html"
+    },
+    "b5ec793d8445ae4e1688d9c9e8e7f8f3": {
+      "originalUrl": "https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup",
+      "normalizedUrl": "https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13210",
+      "processedAt": "2025-09-06T09:07:23.329Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Tiger Woods Will Rejuvenate the PGA Tour Champions",
+      "aiProbability": 29,
+      "rewriteCount": 1,
+      "mdFile": "wechat_article_13210.md",
+      "htmlFile": "wechat_article_13210.html"
+    },
+    "b701f21a4f4fe054f00c6c24a18ad00e": {
+      "originalUrl": "https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open",
+      "normalizedUrl": "https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13211",
+      "processedAt": "2025-09-06T09:08:52.781Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Rory McIlroy Confused Over Why Sergio Garcia Withdrew From Irish Open",
+      "aiProbability": 17,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_13211.md",
+      "htmlFile": "wechat_article_13211.html"
+    },
+    "8db7eb9abe2f8472d5df8a9c000f2a98": {
+      "originalUrl": "https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs",
+      "normalizedUrl": "https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13212",
+      "processedAt": "2025-09-06T09:10:15.129Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Taking a Deep Dive on Cameron Young’s Journey and the Revamped PGA Tour Playoffs",
+      "aiProbability": 33,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_13212.md",
+      "htmlFile": "wechat_article_13212.html"
+    },
+    "84616442eb510041c4e99db45162da3b": {
+      "originalUrl": "https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team",
+      "normalizedUrl": "https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13213",
+      "processedAt": "2025-09-06T09:17:52.764Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Here Are the Picks We'd Make for the U.S. Ryder Cup Team",
+      "aiProbability": 100,
+      "rewriteCount": 2,
+      "mdFile": "wechat_article_13213.md",
+      "htmlFile": "wechat_article_13213.html"
+    },
+    "a7c6dee17483cb269e7e03564132f1e7": {
+      "originalUrl": "https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster",
+      "normalizedUrl": "https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13214",
+      "processedAt": "2025-09-06T09:19:30.123Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Europe Makes Final Six Picks to Complete Ryder Cup Team Roster",
+      "aiProbability": 20,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_13214.md",
+      "htmlFile": "wechat_article_13214.html"
+    },
+    "8c7b85dfe7335b8de658aab09fbbfb92": {
+      "originalUrl": "https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub",
+      "normalizedUrl": "https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13215",
+      "processedAt": "2025-09-06T09:21:46.005Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Keegan Bradley’s U.S. Ryder Cup Captain’s Picks Did Not Snub Anyone",
+      "aiProbability": 33,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_13215.md",
+      "htmlFile": "wechat_article_13215.html"
+    },
+    "7a4560befbe70ceca7105efa06b7b16a": {
+      "originalUrl": "https://www.si.com/golf/why-us-ryder-cup-team-set-up-success",
+      "normalizedUrl": "https://www.si.com/golf/why-us-ryder-cup-team-set-up-success",
+      "status": "completed",
+      "date": "2025-09-06",
+      "articleNum": "13216",
+      "processedAt": "2025-09-06T09:23:46.614Z",
+      "source": "batch_processor",
+      "siteName": "si.com",
+      "title": "Why This U.S. Ryder Cup Team Is Set Up for Success",
+      "aiProbability": 33,
+      "rewriteCount": 0,
+      "mdFile": "wechat_article_13216.md",
+      "htmlFile": "wechat_article_13216.html"
     }
   },
   "contents": {
@@ -18201,8 +18306,8 @@
     "565666ed871bcdf50ecf9541f2b6b45a": "c140d0a2f1b6034cdf51524e1d517f5baa2a523bcd49c9db7ea6dccda0a7bb9f"
   },
   "metadata": {
-    "lastUpdate": "2025-09-06T08:48:24.832Z",
-    "totalRecords": 1536,
+    "lastUpdate": "2025-09-06T09:23:46.614Z",
+    "totalRecords": 1543,
     "version": "2.0"
   },
   "failedUrls": {
@@ -29929,12 +30034,16 @@
     },
     "e92107efa6e7f007f20bc0dfe56f737f": {
       "url": "https://www.si.com/golf/best-golf-bags",
-      "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/best-golf-bags\nCall log:\n  - navigating to \"https://www.si.com/golf/best-golf-bags\", waiting until \"domcontentloaded\"\n",
-      "failedAt": "2025-09-05T06:05:57.745Z",
-      "attempts": 1,
+      "reason": "改写超时（3分钟）",
+      "failedAt": "2025-09-06T09:03:42.634Z",
+      "attempts": 3,
       "metadata": {
         "source": "batch_processor",
-        "errorType": "scraping_error",
+        "articleTitle": "Best Golf Bags for 2025",
+        "contentSize": 24,
+        "timeout": true,
+        "timeoutDuration": 180000,
+        "errorType": "timeout",
         "canRetry": true
       },
       "history": [
@@ -29943,6 +30052,26 @@
           "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/best-golf-bags\nCall log:\n  - navigating to \"https://www.si.com/golf/best-golf-bags\", waiting until \"domcontentloaded\"\n",
           "metadata": {
             "source": "batch_processor"
+          }
+        },
+        {
+          "timestamp": "2025-09-06T09:03:42.627Z",
+          "reason": "Claude改写失败: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应0次, 超时2次, API错误0次",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Best Golf Bags for 2025",
+            "errorDetails": "Error: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应0次, 超时2次, API错误0次\n    at ArticleRewriterEnhanced.rewriteArticle (/Users/sanshui/Desktop/cursor/article_rewriter_enhanced.js:466:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async BatchArticleProcessor.processArticles (/Users/sanshui/Desktop/cursor/batch_process_articles.js:1992:48)"
+          }
+        },
+        {
+          "timestamp": "2025-09-06T09:03:42.634Z",
+          "reason": "改写超时（3分钟）",
+          "metadata": {
+            "source": "batch_processor",
+            "articleTitle": "Best Golf Bags for 2025",
+            "contentSize": 24,
+            "timeout": true,
+            "timeoutDuration": 180000
           }
         }
       ]

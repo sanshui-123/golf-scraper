@@ -4764,22 +4764,24 @@
     "completedAt": "2025-09-06T08:48:24.830Z"
   },
   "https://www.si.com/golf/best-golf-bags": {
-    "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/best-golf-bags\nCall log:\n  - navigating to \"https://www.si.com/golf/best-golf-bags\", waiting until \"domcontentloaded\"\n",
+    "reason": "Claude改写失败: 改写失败 - 改写超时（3分钟） | 尝试次数: 2 | 错误统计: 空响应0次, 超时2次, API错误0次",
     "attemptCount": 1,
-    "lastAttempt": "2025-09-05T06:05:57.744Z",
+    "lastAttempt": "2025-09-06T09:03:42.633Z",
     "status": "pending_retry"
   },
   "https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup\nCall log:\n  - navigating to \"https://www.si.com/golf/tiger-woods-rejuvenate-pga-tour-champions-ryder-cup\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:05:59.177Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:07:23.325Z"
   },
   "https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open\nCall log:\n  - navigating to \"https://www.si.com/golf/rory-mcilroy-confused-sergio-garcia-withdrew-irish-open\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:06:00.617Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:08:52.779Z"
   },
   "https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau\nCall log:\n  - navigating to \"https://www.si.com/golf/tiger-woods-2026-champions-tour-ryder-cup-bryson-dechambeau\", waiting until \"domcontentloaded\"\n",
@@ -4791,31 +4793,36 @@
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs\nCall log:\n  - navigating to \"https://www.si.com/golf/deep-dive-cameron-young-revamped-pga-tour-fedexcup-playoffs\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:22:44.420Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:10:15.126Z"
   },
   "https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team\nCall log:\n  - navigating to \"https://www.si.com/golf/staff-picks-2025-us-ryder-cup-team\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:38:27.632Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:17:52.759Z"
   },
   "https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster\nCall log:\n  - navigating to \"https://www.si.com/golf/europe-final-six-picks-2025-ryder-cup-team-roster\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:38:29.087Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:19:30.122Z"
   },
   "https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub\nCall log:\n  - navigating to \"https://www.si.com/golf/keegan-bradley-us-ryder-cup-captains-picks-snub\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:38:30.533Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:21:46.003Z"
   },
   "https://www.si.com/golf/why-us-ryder-cup-team-set-up-success": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/why-us-ryder-cup-team-set-up-success\nCall log:\n  - navigating to \"https://www.si.com/golf/why-us-ryder-cup-team-set-up-success\", waiting until \"domcontentloaded\"\n",
     "attemptCount": 1,
     "lastAttempt": "2025-09-05T06:38:31.965Z",
-    "status": "pending_retry"
+    "status": "success",
+    "completedAt": "2025-09-06T09:23:46.612Z"
   },
   "https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right": {
     "reason": "文章抓取失败: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right\nCall log:\n  - navigating to \"https://www.si.com/golf/keegan-bradley-ryder-cup-captains-picks-exactly-right\", waiting until \"domcontentloaded\"\n",
