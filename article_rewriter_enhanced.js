@@ -27,6 +27,9 @@ class ArticleRewriterEnhanced {
         this.lastClaudeCall = 0;
         this.minClaudeInterval = 2000; // $200订阅优化：从3秒降到2秒 // Claude调用最小间隔（3秒）
         
+        // 模型配置 - Claude Opus 4
+        this.model = 'claude-opus-4-20250514'; // 指定使用Claude Opus 4模型
+        
         // API响应时间记录
         this.apiResponseLogFile = path.join(__dirname, 'api_response_times.json');
         this.apiResponseTimes = this.loadApiResponseTimes();
@@ -134,7 +137,7 @@ class ArticleRewriterEnhanced {
         
         return new Promise((resolve, reject) => {
             // 在重试时添加额外提示
-            let cmd = `cat "${this.promptFile}" "${tempFile}" | claude --dangerously-skip-permissions --print`;
+            let cmd = `cat "${this.promptFile}" "${tempFile}" | claude --model ${this.model} --dangerously-skip-permissions --print`;
             let retryHintFile = null;
             
             // 检测是否为golf.com文章
@@ -167,7 +170,7 @@ class ArticleRewriterEnhanced {
                 }
                 
                 fs.writeFileSync(retryHintFile, retryHint, 'utf8');
-                cmd = `cat "${retryHintFile}" "${this.promptFile}" "${tempFile}" | claude --dangerously-skip-permissions --print`;
+                cmd = `cat "${retryHintFile}" "${this.promptFile}" "${tempFile}" | claude --model ${this.model} --dangerously-skip-permissions --print`;
                 
                 console.log(`  🔄 第${attemptNum}次尝试Claude改写（${isGolfCom ? 'Golf.com增强' : '增强'}提示）... (限时3分钟)`);
             } else {
@@ -483,7 +486,7 @@ class ArticleRewriterEnhanced {
         try {
             console.log('🔍 测试Claude是否可用...');
             const result = await new Promise((resolve, reject) => {
-                exec('echo "Hello" | claude --dangerously-skip-permissions --print', (error, stdout, stderr) => {
+                exec(`echo "Hello" | claude --model ${this.model} --dangerously-skip-permissions --print`, (error, stdout, stderr) => {
                     if (error) {
                         reject(new Error(`Claude不可用: ${stderr || error.message}`));
                     } else {
